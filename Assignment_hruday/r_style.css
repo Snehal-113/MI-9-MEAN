@@ -1,0 +1,63 @@
+body{
+    background-image: url(img5.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    border: 2px solid black;
+}
+
+h2{
+   text-align: right;
+}
+h3{
+    text-align: right;
+    color: rgb(41, 77, 238);
+    font-size: 30px;
+}
+h5{
+    color: rgb(204, 0, 102);
+    font-size: 20px;
+}
+.heading{
+    font-size: 60px;
+    text-align: center;
+    color: rgb(23, 9, 94);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.about_me{
+  width: 1175px;
+  height: 200px;
+  padding: 15px;
+  background-color: yellow;
+  box-shadow: 10px 10px 3px rgb(165, 166, 167);
+}
+.about_me img{
+    float: right;
+    width: 200px;
+    height: 200px;
+}
+.gallery img{
+    height: 200px;
+    width: 200px;
+    border: 10px solid rgb(255, 240, 24);
+    border-radius: 10px 30px 10px 30px;
+    margin: 5px;
+    
+}
+.gallery{
+  width: 1175px;
+  height: 500px;
+  padding: 15px;
+  background-color: rgb(111, 0, 255);
+  box-shadow: 10px 10px 3px rgb(165, 166, 167);
+}
+.about_me ul li{
+    list-style-type: square;
+    font-size:larger;
+}
+
+li a{
+    text-decoration: none;
+}
