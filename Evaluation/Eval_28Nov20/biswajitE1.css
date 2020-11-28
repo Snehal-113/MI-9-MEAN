@@ -1,0 +1,25 @@
+body {
+background-color: grey;
+}
+
+.field {
+	background-color: silver;
+}
+
+table,tr,td {
+border: 2px solid black;
+padding: 15px;
+border-collapse: collapse;
+}
+
+legend {
+	color: red;
+}
+
+h1,h3 {
+	color: blue;
+}
+
+button {
+	color: blue;
+}
