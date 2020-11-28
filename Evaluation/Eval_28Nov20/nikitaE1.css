@@ -1,0 +1,18 @@
+h1{
+    background-color:lawngreen;
+    text-align: center;
+}
+table{
+    border-style:solid;
+    border-collapse: collapse;
+}
+td,th{
+    border-style:solid;
+    padding:30px;
+}
+th{
+    text-align: left;
+}
+.t1{
+    text-align: center;
+}
