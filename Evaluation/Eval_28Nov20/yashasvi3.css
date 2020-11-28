@@ -1,0 +1,14 @@
+.label-details, .user-details
+    {
+    font-weight: bold;
+    }
+.main-heading, .user-details, 
+    {
+        background-color: rgb(148, 188, 226);
+        text-align:left;
+        border-radius: 0px 10px;
+    }
+.body
+    {
+        font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
