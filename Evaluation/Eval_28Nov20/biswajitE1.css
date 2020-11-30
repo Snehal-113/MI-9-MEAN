@@ -6,10 +6,11 @@ background-color: grey;
 	background-color: silver;
 }
 
-table,tr,td {
+table,tr,td,th {
 border: 2px solid black;
 padding: 15px;
 border-collapse: collapse;
+text-align: center;
 }
 
 legend {
@@ -21,5 +22,9 @@ h1,h3 {
 }
 
 button {
+	color: blue;
+}
+
+marquee {
 	color: blue;
 }
