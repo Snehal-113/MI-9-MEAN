@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Assignment 6</title>
+        <link rel="stylesheet" href="ShivnandaA6.css">
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif;">
+        <h1 class="frmt_cls fnt_cls "> MI-9 Intern HTML Assesment</h1>
+        <hr>
+        <h1 class="frmt_cls fnt_cls "> Personal Details</h1>
+        <form>
+            <label for="iFname"><b> First Name &nbsp;:&nbsp;&nbsp; </b></label>
+            <input type="text" id="iFname" name="fname" value="" placeholder="First Name"> 
+            <br><br>
+            <label for="iLname"><b> Last Name &nbsp;:&nbsp;&nbsp; </b></label>
+            <input type="text" id="iLname" name="fname" value="" placeholder="Last Name">
+            <br><br>
+            <label for="Gender">  <b>Gender &nbsp;&nbsp;&nbsp;&nbsp; :</b></label>
+            <input type="radio" id="Male" name="Gender" value="male">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="Gender" value="Female">
+            <label for="Female">Female</label>
+            <input type="radio" id="other" name="Gender" value="other">
+            <label for="other">Other</label>
+            <br><br>
+            <label for="Age"><b> Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :</b></label>
+            <input type="radio" id="Less" name="Age" value="Less">
+            <label for="Less">Less than 18</label>
+            <input type="radio" id="18_25" name="Age" value="18_25" checked>
+            <label for="18_25"> 18-25</label>
+            <input type="radio" id="26_40" name="Age" value="@6_40">
+            <label for="26_40">26-40</label>
+            <br><br>
+            <hr>
+            <h1 class="frmt_cls fnt_cls "> Professional Details</h1>
+            <fieldset>
+            <legend> Acadamic Details </legend>
+            <label for="Skill"><b>Skill Set : &nbsp;&nbsp;</b></label>
+            <input type="checkbox" id="course" value="HTML">
+            <label for="chtml">HTML</label>
+            <input type="checkbox" id="course1" value="Java script">
+            <label for="chtml">Java script</label>
+            <input type="checkbox" id="course2" value="JAVA">
+            <label for="chtml">JAVA</label>
+            <input type="checkbox" id="course3" value="Oracal">
+            <label for="chtml">Oracal</label>
+            <br><br>
+            <h3><em> High Qualification </em></h3>
+            <label for="HighQual"> <b>High Qualification </b></label>
+            <select name="quali" id="quali">
+                <option value="none"> Nothing</option>
+                <option value="DCS"> Diploma in computer science</option>
+                <option value="SG"> Science Graduate</option>
+                <option value="BE"> Bachelor in engg</option>
+                <option value="MCS"> Master in Computer Science</option>
+                <option value="ME"> Master in Engg</option>
+                <option value="other"> Other</option>
+            </select>
+            <br><br> 
+            <label for="Uni"> <b>University Name :</b> </label>
+            <input list="u" id="uni" name="uni"/>
+            <datalist id="u">
+                <option value="Mumbai University">
+                <option value="Pune University">
+                <option value="Chennai University">
+                <option value="Nagpur University">
+                <option value="Badoda University">
+            </datalist>
+            <br><br>
+            <label for="field">Area Of Expertise :</label>
+            <select id="field" name="field"size="4" multiple>
+                <option value="soft">Software</option>
+                <option value="tra">Training</option>
+                <option value="net">Networking</option>
+                <option value="man">Management</option>
+                <option value="mart"> Marketing</option>
+            </select>
+            <br><br>
+            </fieldset>
+            <fieldset>
+                <legend> Resume </legend>
+                <label for="myfile"> Upload Resume :</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+                <label for="comm"> Comments </label>
+                <textarea id="comm" name="comm" placeholder="Comment here..." style="height: 200px;"></textarea>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>
