@@ -1,0 +1,29 @@
+.a1 {
+    border :2px solid black;
+     }
+.a2 {
+   background-color: yellow;
+   border: 1px solid black;
+   font-size: 30px;
+   text-align: right;
+   padding: 3px;
+}
+.a3 {
+background-color: orange;
+border: 1px solid black;
+font-size: 18px;
+padding-bottom:10px;
+}
+.a4{
+   background-color: yellow;
+   border: 1px solid black;
+   font-size: 30px;
+   text-align: right;
+   padding-top: 30px;
+}
+.a5{
+   background-color: orange;
+border: 1px solid black;
+font-size: 18px;
+padding-bottom:10px;
+}
