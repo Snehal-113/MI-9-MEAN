@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Table Tag1</title>
+<style>
+#d1{
+width:140px;height:70px;
+overflow-x:hidden;
+}
+
+h1{;
+text-align:right;
+}
+
+.format_head{
+background-color:purple;
+text-align:right;
+}
+
+p{
+width=240px;
+display:inline-block;
+}
+
+</style>
+</head>
+
+<body>
+<form>
+
+<h1 class="format_head">MI-9 Intern HTML Assesment</h1><br><br>
+
+<hr color="black">
+
+<h2 class="format_head">PersonalDetails</h2>
+
+<b>
+First Name:
+<input type="text" placeholder="First Name" name="Bipin">
+<br><br>
+
+Last Name:
+<input type="text" placeholder="Last Name" name="">
+<br><br>
+
+Gender:
+<input type="radio" name="Gender">Male
+<input type="radio" name="Gender">Female
+<input type="radio" name="Gender">Other
+<br><br>
+
+Age:
+<input type="radio" name="Age">less than 18
+<input type="radio" name="Age">18-25
+<input type="radio" name="Age">26-40
+<br><br>
+
+<h2 class="format_head">Professional Details</h2>
+<fieldset>
+<legend align="left" style="text-transform: uppercase;"><h2>Academic Details</h2></legend>
+
+Skill Set:
+<input type="checkbox" name="HTML">HTML
+<input type="checkbox" name="Java Script">Java Script
+<input type="checkbox" name="Java">Java
+<input type="checkbox" name="Oracle">Oracle
+
+<br><br>
+Highest Qualification: 
+
+<select>
+<option>Diploma in Computer Science</option>
+<option>Science Graduate</option>
+<option>Bachelor in Engg.</option>
+<option>Masters in Computer Science</option>
+<option>Masters in Engg.</option>
+<option>Others</option>
+</select>
+
+<br><br>
+
+University:
+<select>
+<option></option>
+<option>Mumbai University</option>
+<option>Pune University </option>
+<option>Chennnai University</option>
+<option>Nagpur University</option>
+<option>Badoda University</option>
+</select>
+
+<br><br>
+
+Areas of Expertise:<p id="d1">
+<input type="checkbox" name="Software">Software<br>
+<input type="checkbox" name="Training">Training<br>
+<input type="checkbox" name="Networking">Networking<br>
+<input type="checkbox" name="Management">Management<br>
+<input type="checkbox" name="Marketing">Marketing<br>
+</p>You can select multiple fields
+
+</fieldset>
+<br> <br>
+
+<fieldset>
+<legend align="left" style="text-transform: uppercase;"><h2>Resume</h2></legend>
+
+Upload Resume:<input type="file" name ="resume">
+
+<br><br>
+
+Comments:<textarea rows="10" columns="60" ></textarea>
+
+<br>
+</fieldset>
+<br>
+
+<table align="center">
+<tr>
+<td>
+<input type="submit" value="Submit">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
