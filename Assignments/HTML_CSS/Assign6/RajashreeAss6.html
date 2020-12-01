@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Form Ass6</title>
+    </head>
+    <link type="text/css" rel="stylesheet" href="file:///home/shree/HTML/form.css">
+    <body>
+        <h2 class="Arial">MI-9 Intern HTML Assesment</h2>
+         <hr>
+         <h2 class="Helvetica"><i>Personal Details</i></h2>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="firstname" placeholder="First name..">
+            <br>
+            <br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" placeholder="Last name..">
+            <br>
+            <br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gen" value="Male">
+            <label for="gender">male</label>
+            <input type="radio" id="female" name="gen" value="Female">
+            <label for="gender">Female</label>
+            <input type="radio" id="other" name="gen" value="other">
+            <label for="gender">Other</label>
+            <br>
+            <br>
+            <label for="age">Age:</label>
+            <input type="radio" id="less" name="ag" value="lesstheneight">
+            <label for="age">Less than 18</label>
+            <input type="radio" id="middle" name="ag" value="midd">
+            <label for="age">18-25</label>
+            <input type="radio" id="hight" name="ag" value="hig">
+            <label for="age">26-40</label>
+            <br>
+            <br>
+            <fieldset>
+            <legend>   Academic Details</legend>
+            <br>
+            <label for="skill">Skill Set:</label>
+            <input type="checkbox" id="html" name="html" value="HTML">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="js" name="js" value="JS">
+            <label for="JS">Java Script</label>
+            <input type="checkbox" id="java" name="java" value="JV">
+            <label for="JV">Java</label>
+            <input type="checkbox" id="ora" name="ora" value="Ora">
+            <label for="Ora">Oracle</label>
+            <br>
+            <br>
+            <label for="qual">Highest Qualification:</label>
+            <select name="qual" id="qual">
+            <option value="DCS">Diploma in Computer Science</option>
+            <option value="science">Science Graduate</option>
+            <option value="BE">Bachelor in Engg</option>
+            <option value="MCS">Master in Computer Science</option>
+            <option value="ME">Master in Engg</option>
+            <option value="other">Other</option>
+            </select>
+            <br>
+            <br>
+            <label for="University">University:</label>
+            <input list="uni" name="University" id="University">
+            <datalist id="uni">
+              <option value="Mumbai University">
+              <option value="Pune University">
+              <option value="Chennai University">
+              <option value="Nagpur University">
+              <option value="Badoda University">
+            </datalist>
+            <br>
+            <br>
+            <label for="area">Area of Experties:</label>
+            <select name="area" id="area" multiple>
+            <option value="sof">Software</option>
+            <option value="tra">Training</option>
+            <option value="net">Networking</option>
+            <option value="man">Management</option>
+            <option value="mar">Marketing</option>
+           </select>
+            </fieldset>
+          <br><br>
+          <fieldset>
+          <legend> Resume</legend>
+          <label for="myfile">Upload Resume:       </label>
+          <input type="file" id="myfile" name="myfile"><br><br>
+          <label for="comm">Comments</label>
+          <textarea id="comm" name="comm" placeholder="Comment here.." style="height:200px"></textarea>
+          </fieldset>
+          <input type="submit" value="Submit">
+        </form>
+        </body>
+</html>
