@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>
+        Assignment6
+    </title>
+    <link rel="stylesheet" href="PreetiA6_1.css">
+</head>
+
+<body>
+    <h1>MI-9 Intern HTML Assessment</h1>
+    <hr>
+    <h3>Personal details</h3>
+    <form>
+        <div id="basicDetails">
+            <label for="fn">Firstname:</label>
+            <input type="text" id="fn" name="fname"><br><br>
+            <label for="ln">Lastname:</label>
+            <input type="text" id="ln" name="lname"><br><br>
+            <p>Gender:</p>
+            <input type="radio" id="m" name="male">
+            <label for="m">Male</label>
+            <input type="radio" id="f" name="female">
+            <label for="f">Female</label>
+            <input type="radio" id="o" name="others">
+            <label for="o">Others</label>
+            <p>Age:</p>
+            <input type="radio" id="less" name="age1">
+            <label for="less">less than 18</label>
+            <input type="radio" id="equal" name="age2" checked>
+            <label for="equal">18-25</label>
+            <input type="radio" id="more" name="age3">
+            <label for="more">26-40</label>
+        </div>
+        <h3>Professional Details</h3>
+        <fieldset>
+            <legend>Academic Details</legend>
+            <label for="html">Skill Set:</label>
+            <input type="checkbox" id="html" name="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="js" name="javascript">
+            <label for="js">Javascript</label>
+            <input type="checkbox" id="java" name="java">
+            <label for="java">Java</label>
+            <input type="checkbox" id="oracle" name="oracle">
+            <label for="oracle">Oracle</label><br><br>
+            <label for="q">Highest Qualification</label>
+            <select name="qualification" id="q">
+                <option value="Diploma in Computer Science">Diploma in Computer Science </option>
+                <option value="Science Graduate">Science Graduate</option>
+                <option value="Bachelor in Engg.">Bachelor in Engg.</option>
+                <option value="Masters in Computer Science" selected>Masters in Computer Science</option>
+                <option value="Masters in Engg.">Masters in Engg.</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+            <label for="university">Enter the university name:</label>
+            <input list="universities" name="university" id="university">
+            <datalist id="universities">
+                <option value="Mumbai University">
+                <option value="Pune University">
+                <option value="Chennai University">
+                <option value="Nagpur University">
+                <option value="Badoda University">
+            </datalist><br><br>
+            <label for="expertise">Area of Expertise</label>
+            <select name="expertise" id="expertise" size="4">
+                <option value="Software">Software</option>
+                <option value="Training">Training</option>
+                <option value="Management">Management</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Networking">Networking</option>
+            </select>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="resume">Upload Resume</label>
+            <input type="file" id="resume" name="resume"><br><br>
+            <label for="comments">Comments</label>
+            <textarea rows="10" cols="30"></textarea>
+        </fieldset><br>
+        <div class="end">
+            <input type="submit"  value="Submit">
+        </div>
+
+
+
+    </form>
+</body>
+
+</html>

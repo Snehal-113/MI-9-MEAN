@@ -1,0 +1,15 @@
+h1{
+    text-align: right;
+    background-color: mediumblue;
+}
+h3{
+    text-align: right;
+    background-color: mediumslateblue;
+    font-style: italic;
+}
+#basicDetails{
+    padding: 20px;
+}
+.end{
+  text-align: center;
+}
