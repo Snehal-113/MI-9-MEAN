@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Assignment6</title>
+<style>
+ .akshay_desai{
+        background-color:rgba(84,103,212,0.397);
+        border-style: initial;
+        border-bottom-left-radius:10px;
+        border-top-left-radius:10px;
+    }
+    .akshay_desai2{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align:end;
+    }
+    label{
+    width: 240px;
+    display: inline-block;
+}
+</style>
+</head>
+<body>
+    <h1 class="akshay_desai akshay_desai2">MI-9-MEAN HTML Assesment</h1>
+    <br>
+   <hr>
+   <h1 class="akshay_desai akshay_desai2"><i>personal Detail</i></h1>
+   <form>
+    <label for="ifname">First Name:&nbsp;</label>
+    <input type="text" id="ifname" name="fname" placeholder="first name">
+    <br> <br>
+    <label for="ilname">Last Name:&nbsp;</label>
+    <input type="text" id="ilname" placeholder="last name">
+    <br> <br>
+    <label for="Gender">Gender:</label>
+    <input type="radio" id="Male" name="gender" value="Male">
+    <label for="Male">Male</label>
+    <input type="radio" id="Female" name="gender" value="Female">
+    <label for="Female">Female</label>
+    <input type="radio" id="others" name="gender" value="others">
+    <label for="others">others</label>
+    <br> <br>
+    <label for="age">Age:&nbsp;</label>
+    <input type="radio" id="age" name="age" value="age">
+    <label for="age">Less Than 18</label>
+    <input type="radio" id="age" name="age" value="age">
+    <label for="age">18-25</label>
+    <input type="radio" id="age" name="age" value="age">
+    <label for="age">26-40</label>
+    <h3 style="background: rgb(176, 176, 235); text-align: center;">
+    <h1 class="akshay_desai akshay_desai2"><i>Professional Detail</i></h1>
+    <fieldset>
+    <legend>Academic Details</legend>
+    <label for="Skill_Set">Skill Set:</label>
+    <input type="checkbox" id="Skill_Set" name="Skill_Set" value="Skill_Set">
+    <label for="Skill_Set">HTML</label>
+    <input type="checkbox" id="Skill_Set" name="Skill_Set" value="Skill_Set">
+    <label for="Skill_Set">Python</label>
+    <input type="checkbox" id="Skill_Set" name="Skill_Set" value="Skill_Set">
+    <label for="Skill_Set">Django</label>
+    <input type="checkbox" id="Skill_Set" name="Skill_Set" value="Skill_Set">
+    <label for="Skill_Set">CSS</label>
+    <br></br>
+    <lable for="Qualification">Highest Qualification:</lable>
+    <select id="Qualification" name="Qualification">
+        <option value="MI-9">MCVC</option>
+        <option value="MI-8">SSC</option>
+        <option value="MI-7">Bachelor in Computer Applications.</option>
+        <option value="MI-6">Master in Computer Application</option>
+        <option value="MI-6">Other</option>
+    </select><br></br>
+        <label for="university">University:&nbsp;</label>
+        <input type="university" id="university" name="university">
+        <br></br>
+        <lable for="field" name="field">Areas of Expertise:</lable>
+        <select id="field" name="field" size=4 multiple>
+        <option value="sw">software</option>
+        <option value="tr">training</option>
+        <option value="nw">Networking</option>
+        <option value="mgm">management</option>
+    </select>
+    You can select Multiple field.
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Resume</legend>
+        <label for="Resume">Upload Resume:&nbsp;</label>
+        <input type="Resume" id="Resume" name="Resume" placeholder="Browose....">&nbsp;&nbsp;No such file select.
+        <br></br>
+        <label for="Resume">comments:&nbsp;&nbsp;</label>
+        <textarea name="comments" id="Comments" cols="30" rows="10"></textarea>
+    </fieldset>
+    <br></br>
+       <centre><button>style="text-align: center;">Submit</button></centre>>
+   </form>
+ </body>
+</html>
