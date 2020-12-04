@@ -1,0 +1,21 @@
+body {
+	background-color:  	#F0F8FF;
+}
+
+h1 {
+	font-family: cursive;
+	color: blue;
+}
+
+h2 {
+	text-align: right;
+	color: lightblue;
+}
+
+p {
+	text-align: justify;
+}
+
+center {
+	color: red;
+}
