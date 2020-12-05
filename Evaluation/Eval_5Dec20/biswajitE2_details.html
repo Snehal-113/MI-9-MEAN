@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evaluation 2</title>
+	<link rel="stylesheet" type="text/css" href="biswajitE2_css.css">
+		<style type="text/css">
+		label {
+			display: inline-block;
+			width: 170px;
+			margin-left: 200px;
+}
+	</style>
+</head>
+<body>
+	<h1>Amber Academy</h1>
+	<br><hr>
+	<br><br>
+	<div class="centered">
+		<h2><ins>Fill Up Your Details</ins></h2>
+		<form style="text-align: left;">
+			<fieldset>
+				<legend>Personal Information</legend>
+				<br>
+				<label>First Name<i>*</i> :</label>
+				<input type="text" name="fname" required="required"><br><br>
+				<label>Middle Name :</label>
+				<input type="text" name="mname"><br><br>
+				<label>last Name<i>*</i> :</label>
+				<input type="text" name="lname" required="required"><br><br>
+				<label>Date Of Birth<i>*</i> :</label>
+				<input type="date" name="dob" required="required"><br><br>
+				<label>Mobile No.<i>*</i> :</label>
+				<select size="1" required="required">
+					<option>+91</option>
+					<option>+92</option>
+					<option>+93</option>
+					<option>+94</option>
+					<option>+95</option>
+				</select>
+				<input type="tel" name="mob" pattern="[0-9]" maxlength="10" minlength="10" required="required"><br><br>
+				<label>E-mail<i>*</i> :</label>
+				<input type="email" name="nmail" required="required"><br><br>
+				<label>City<i>*</i> :</label>
+				<input list="city" required>
+				<datalist id="city">
+					<option value="Pune"></option>
+					<option value="Mumbai"></option>
+					<option value="Banglore"></option>
+					<option value="Chennai"></option>
+					<option value="BBSR"></option>
+				</datalist>
+			</fieldset>
+			<fieldset>
+				<legend>Educational Information</legend>
+				<label for="quali">Highest Qualification<i>*</i> :</label>
+				<select id="quali" required="required">
+					<option>BE</option>
+					<option>BTech</option>
+					<option>BSc</option>
+					<option>Msc</option>
+					<option>MTech</option>
+					<option>Others</option>
+				</select><br><br>
+				<label for="clg">College<i>*</i> :</label>
+				<input type="text" name="clg" required="required"><br><br>
+				<label for="status">Educational status<i>*</i> :</label>
+				<select id="status" required="required">
+					<option>Final Year</option>
+					<option>Pass Out</option>
+				</select><br><br>
+				<label for="dop">Date Of Passing<i>*</i> :</label>
+				<input type="date" name="dop" required="required">
+			</fieldset>
+			<fieldset>
+				<legend>Additional Information</legend>
+				<br>
+				<label for="dp">Upload Your Profile Picture :</label>
+				<input type="file" name="dp"><br><br>
+				<label for="queries">Any Queries :</label>
+				<textarea id="queries" rows="5" cols="30px"></textarea>
+				<br><br>
+				<label>How did you find us?<i>*</i></label>
+				<select required="required">
+					<option>Friend</option>
+					<option>Naukri</option>
+					<option>Google</option>
+					<option>Other Source</option>
+				</select>
+			</fieldset>
+		</form>
+		<br>
+		<button><a href="biswajitE2_home.html">Save and Submit</a></button>
+	</div>
+</body>
+</html>
