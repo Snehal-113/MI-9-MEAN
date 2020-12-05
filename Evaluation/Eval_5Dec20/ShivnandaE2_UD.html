@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> User Details</title>
+        <link rel="stylesheet" href="AmberS.css">
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif;"class="back_img">
+    <form autocomplete="on">
+        <fieldset class="Fnt_cls">
+        <legend> Personal Info</legend>
+        <h3> User Details </h3>
+        <label for="iFname"><b> First  Name &nbsp;<sup style="color: darkred;">*</sup>&nbsp;&nbsp;: </b></label>
+        <input type="text" id="iFname" name="fname" value="" placeholder="First Name"required> 
+        <br><br>
+        <label for="imname"><b> Middle  Name &nbsp;<sup style="color: darkred;">*</sup>&nbsp;&nbsp;: </b></label>
+        <input type="text" id="imname" name="imname" value="" placeholder="Middle Name"required>
+        <br><br>
+        <label for="iLname"><b> Last  Name &nbsp;<sup style="color: darkred;">*</sup>&nbsp;&nbsp;: </b></label>
+        <input type="text" id="iLname" name="fname" value="" placeholder="Last Name"required>
+        <br><br>
+        <label for="mobile"><b> Mobile Number &nbsp;<sup style="color: darkred;">*</sup>&nbsp;&nbsp;:</b></label>
+        <input type="number" id="mobile"name="mobile" placeholder="Mobile Number" required>
+        <br><br>
+        <label for="email"><b>Email  Address &nbsp;<sup style="color: darkred;">*</sup>&nbsp;&nbsp;:</b></label>
+        <input type="email" id="email"name="email" placeholder="Email Address" required>
+        <br><br>
+        <label for="bdate"><b> Date Of Birth &nbsp;<sup style="color: darkred;">*</sup>&nbsp;&nbsp;: </b></label>
+        <input type="date" id="bdate" name="bdate" value="" placeholder="Date Of Birth" required>
+        <br><br><br>
+        <label for="cname"><b> College Name &nbsp;<sup style="color: darkred;">*</sup>&nbsp;&nbsp;: </b></label>
+        <input type="text" id="cname" name="cname" value="" placeholder="College Name" required> 
+        <br><br>
+        <label for="Uni"> <b>University Name &nbsp;<sup style="color: darkred;">*</sup>&nbsp;&nbsp;:</b> </label>
+            <input list="u" id="uni" name="uni"/>
+            <datalist id="u">
+                <option value="Mumbai University">
+                <option value="Pune University">
+                <option value="Chennai University">
+                <option value="Nagpur University">
+                <option value="Badoda University">
+            </datalist>
+            <br><br>
+            <label for="edu"> <b>Education </b></label>
+            <select name="edu" id="edu" >
+                <option value="none">BE </option>
+                <option value="DCS"> MCA</option>
+                <option value="SG"> BSc</option>
+                <option value="other"> Other</option>
+            </select>
+            <br><br>
+            <label for="edust"> <b>Education Status : </b></label>
+            <label for="FY">Final Year</label>
+            <input type="radio" id="FY" name="edust" value="FY">
+            <label for="pass"> Passout</label>
+            <input type="radio" id="pass" name="edust" value="pass">
+            <br><br>
+            <label for="yr"> <b>Start Year </b></label>
+            <select name="yr" id="yr">
+                <option value="2020"> 2020</option>
+                <option value="2019"> 2019</option>
+                <option value="2018"> 2018</option>
+                <option value="2017"> 2017</option>
+                <option value="2016"> 2016</option>
+                <option value="other"> Other</option>
+            </select>
+            <label for="yrr"> <b>Start Year </b></label>
+            <select name="yrr" id="yrr">
+                <option value="2020"> 2020</option>
+                <option value="2019"> 2019</option>
+                <option value="2018"> 2018</option>
+                <option value="2017"> 2017</option>
+                <option value="2016"> 2016</option>
+                <option value="other"> Other</option>
+            </select>
+            <br><br>
+            <br><br>
+            <label for="marks"> Marks (Aggregate %)</label>
+            <input type="number" id="imarks" name="imarks" min="40" max="100">
+            <br><br>
+            <input type="submit" value="Sign Up">
+            <input type="reset" value="Cancle">
+            </fieldset>
+      </form>
+</body>
+</html>

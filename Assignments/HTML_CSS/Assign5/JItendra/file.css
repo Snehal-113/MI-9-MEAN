@@ -1,0 +1,86 @@
+.name {
+    background-color: chartreuse;
+}
+
+h2 {
+    float: right;
+    box-shadow: 5px 5px 2px rgb(226, 151, 60);
+}
+
+.aboutme {
+    background-color: rgb(226, 151, 60);
+    width: 1175px;
+    height: 200px;
+    padding: 25px;
+    border: 10px dotted black;
+    background-clip: content-box;
+    box-shadow: 20px 20px 6px rgb(165, 166, 167);
+}
+
+h3 {
+    float: right;
+}
+
+.moreaboutme {
+    background-color: rgb(238, 213, 235);
+    width: 1175px;
+    height: 200px;
+    padding: 25px;
+    border: 10px dotted rgb(223, 120, 120);
+    background-clip: content-box;
+    box-shadow: 20px 20px 6px rgb(165, 166, 167);
+}
+
+ul.b {
+    list-style-type: square;
+    list-style: square inside url("sqpurple.gif");
+}
+
+.indoor {
+    float: left;
+}
+
+.p {
+    float: left;
+    padding-left: 20px;
+    font-size: large;
+    box-shadow: 10px 10px 5px rgb(226, 151, 60);
+}
+
+h1 {
+    box-shadow: 10px 10px 5px rgb(226, 151, 60);
+    padding-left: 300px;
+}
+
+.outdoor {
+    float: right;
+    box-shadow: 10px 10px 5px rgb(138, 207, 204);
+    padding-right: 130px;
+}
+
+.indoor {
+    float: left;
+    box-shadow: 10px 10px 5px rgb(138, 207, 204);
+    padding-left: 20px;
+}
+
+.edu {
+    box-shadow: 10px 10px 5px rgb(226, 131, 210);
+    float: left;
+    padding-left: 20px;
+    font-size: large;
+}
+
+.collection {
+    box-shadow: 10px 10px 5px rgb(207, 183, 45);
+    float: left;
+    padding-left: 20px;
+    font-size: large;
+}
+
+.jitendra {
+    box-shadow: 10px 10px 5px rgb(238, 123, 139);
+    float: left;
+    padding-left: 20px;
+    font-size: large;
+}
