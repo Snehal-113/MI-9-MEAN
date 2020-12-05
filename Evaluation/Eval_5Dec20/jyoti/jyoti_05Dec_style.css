@@ -1,0 +1,21 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.right {
+	text-align: right;
+	background-color: skyblue;
+}
+legend {
+    font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+	display: inline-block;
+	width: 150px;
+}
+
+#submit {
+	text-align: center;
+}
