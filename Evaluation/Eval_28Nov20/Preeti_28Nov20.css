@@ -1,0 +1,53 @@
+h1{
+    text-align: center;
+    color: indigo;
+}
+h4{
+    text-align: center;
+    color: lightcoral;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table, th{
+    border-width: 3px;
+}
+table{
+    margin: auto;
+}
+td{
+    width: 200px;
+    background-color: lightsgray  ;
+   
+}
+caption{
+    font-size: 18px;
+}
+th{
+    text-align: left;
+    background-color: green;
+}
+.kg{
+    text-align: center;
+}
+#yellowBg{
+    background-color: yellow;
+    margin: 20px 550px 20px 550px;
+}
+.product{
+    text-align: right;
+    font-size: 22px;
+}
+#tomato_border{
+    border: 5px solid tomato;
+    padding: 10px;
+}
+legend{
+    font-size: 18px;
+    font-family: cursive;
+}
+#greenBg{
+    background-color:limegreen;
+}
+
