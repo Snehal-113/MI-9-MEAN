@@ -1,0 +1,18 @@
+.pin{
+    background-color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    border: black;
+    padding: top 30px;
+    text-align: center;
+    border-radius: 0px 12px;
+    
+}
+.table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.body{
+    background-color: burlywood;
+}
+
+

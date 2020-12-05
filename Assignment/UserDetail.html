@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home Page </title>
+        <meta charset="keyword" content="HTML_script">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="pin">
+            <h1><b>Amber Academy</b></h1>
+            <a href="pratikI_Eval20.html" target="blank">About Me</a>
+            <a href="Apply.html" target="blank">Apply</a>
+            <a href="UserDetail.html">User Register</a>
+        </div>
+        <form>
+        <label for="ifname">First name:&nbsp;</label>
+        <input type="text" id="ifname" name="first name"><br><br>
+        <label for="ilname">Last name:&nbsp;</label>
+        <input type="text" id="ilname" name="last name"><br><br>
+        <label for="Email">EmailId:</label>
+        <input type="text" id="Email" name="Email Id"><br><br>
+        <label for="Mobile No.">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile number"><br><br>
+        <label for="college">College Name:</label>
+        <input type="text" id="college" name="college name"><br><br>
+        <label for="Education">Education:</label>
+        <input list="Education">
+        <datalist id="Education">
+            <option value="Diploma">Diploma in Computer Science</option>
+            <option value="Science">Science Graduate</option>
+            <option value="Bachlor">Bachlor in Engg.</option>
+            <option value="Master">Master in Computer Science</option>
+            <option value="Master">Master in Engg.</option>
+            <option value="other">other</option>
+        </datalist><br><br>
+
+        <label for="Education Status">Education Status:</label>
+          <table>
+              <tr>
+                  <th>Passout year</th>
+                  <th>Status</th>
+              </tr>
+              <tr>
+                  <td> 
+                  <select id="year" name="year" size="3" multiple>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                 </select>
+                  </td>
+                  <td><select id="Status" name="status" size="2"multiple>
+                      <option>Pass</option>
+                      <option>Fail</option>
+                  </select></td>
+              </tr>
+          </table>
+        </form>
+    </body> 

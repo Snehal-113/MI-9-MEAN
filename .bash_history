@@ -202,3 +202,114 @@ mkdir raju
 ls
 cd raju/
 ls
+path
+git status 
+git add .
+git commit -m "MY ASSIGNMEnt"
+git status 
+git push origin pratik
+git branch
+git checkout -b Pratik007
+git branch
+git push origin Pratik007 
+git commit -m"My new code"
+cd /home/pratik/
+ls
+cd MI-9-MEAN/pratik/
+ls
+git add Contact.html Home.html PratikA3_1.html PratikA3_2.html MI9-MEAN.html 'first image.jpg' 
+git commit -m"PRATIK ASSIGNMENT"
+git push -u origin Ivnathe007
+git push -u origin beta
+git remote -v
+git branch
+git checkout beta 
+git push --set-upstream origin Ivnathe007 
+git status 
+git push -u origin Ivnathe007
+git pull
+git push
+git push -u origin Ivnathe007
+git push origin Ivnathe007  --force
+ls
+cd
+ls
+cd MI-9-MEAN/
+ls
+cd
+git clone https://github.com/Snehal-113/MI-9-MEAN.git
+mkdir Project
+history
+cd /home/
+cd
+cd /home/
+ls
+cd
+ls
+cd MI-9-MEAN/
+ls
+cd
+git clone https://github.com/Snehal-113/MI-9-MEAN.git
+rm -rf MI-9-MEAN/
+ls
+git clone https://github.com/Snehal-113/MI-9-MEAN.git
+ls
+cd MI-9-MEAN/
+ls
+git branch 
+git checkout -b Pratik Ivnathe New
+git checkout -b Pratik-Ivnathe-New
+git status 
+ls
+cd Evaluation/
+cd
+git status 
+git add Evaluation/Eval_28Nov20/Pratik-Ivnathe-New
+git status
+git add Evaluation/
+git status 
+history
+git add Evaluation/Eval_28Nov20/Pratik-Ivnathe-New
+ls
+cd MI-9
+cd MI-9-MEAN/
+cd Evaluation/
+cat > Pratik-Ivnathe-New
+cat < Pratik-Ivnathe-New 
+git checkout Pratik-Ivnathe-New 
+git checkout status
+git checkout Pratik-Iv
+cd
+cd MI-9-MEAN/
+git add Evaluation/
+git status
+ls
+git commit -m"file1 added"
+history
+sudo apt remove zoom
+history
+cd MI-9-MEAN/
+cd Evaluation/
+git add x-special/nautilus-clipboard
+copy
+file:///home/pratik/Project/new.html
+file:///home/pratik/Project/new2.html
+git add new.html new2.html 
+cd /
+ls
+cd /ho
+cd /home/
+ls
+cd 
+cd ..
+ls
+/cd
+cd
+cd /home/pratik/
+ls
+cd Project/
+git add new.html new2.html 
+git commit -m "test"
+git push origin Pratik
+git push -u  origin Pratik-Ivnathe-New
+git push -u  origin Ivnathe007 
