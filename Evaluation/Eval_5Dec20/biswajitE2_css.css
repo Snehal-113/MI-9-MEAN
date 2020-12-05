@@ -24,15 +24,19 @@ i {
 	text-align: center;
 	margin : auto;
 }
-button,a {
-	text-decoration: none;
+button {
+	display: block;
 	color: white;
 	background-color: blue;
 	height: 30px;
-}
-button {
 	border-radius: 5px;
+	margin: auto;
 }
+a {
+	text-decoration: none;
+	color: white;
+}
+
 label {
 	display: inline-block;
 	width: 170px;
