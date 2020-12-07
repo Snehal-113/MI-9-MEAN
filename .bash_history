@@ -313,3 +313,56 @@ git commit -m "test"
 git push origin Pratik
 git push -u  origin Pratik-Ivnathe-New
 git push -u  origin Ivnathe007 
+mkdir Assignment
+ls
+history
+git push -u  origin Pratik-Ivnathe-New
+history
+git push -u  origin Pratik-Ivnathe-New
+git fetch origin 
+git merge origin Pratik-Ivnathe-New
+git pull origin Pratik-Ivnathe-New
+git status 
+git branch 
+git pull origin Ivnathe007 
+ls
+cd Assignment/
+ls
+git add pratikI_Eval20.html style.css Apply.html UserDetail.html 
+history
+git commit -m "Saturday test"
+git push origin Ivnathe007 
+git checkout -b mybranch
+git checkout -b Ivnathe007 
+git rm --cached myfile.txt
+git rm --cached 
+git rm --cached .cache
+git rm --cached mkdir .cache
+history
+git branch
+git status mybranch
+git checkout -b Pratik-Ivnathe-New
+git checkout status
+git status 
+git branch 
+git pull origin Pratik-Ivnathe-New
+git status 
+mkdir git-app
+cd git-app/
+git init
+echo this is text
+cd git-app/
+this is text > git-app.md
+git status 
+git add git-app.md
+git commit -m "first commit"
+git branch 
+git branch Pratik-Ivnathe-New
+git branch 
+git checkout Pratik-Ivnathe-New 
+git branch 
+cd
+ls
+history
+git pull origin Pratik-Ivnathe-New
+git checkout Ivnathe007 
