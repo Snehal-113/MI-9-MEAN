@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <title>User Details</title>
+        <style>
+            .details-container{font-weight:bold;font-size: large; background-color: blue;}
+            .label-heighlight{font-weight: bold;}
+        </style>
+    </head>
+    <body style="background-color: rgb(235, 145, 72);">
+        <h1>Naukri</h1>
+        <h3>Create Profile</h3><hr>
+        <form >
+            <div class="details-container">
+                Personal Details
+            </div><hr>
+            <label class="label-heighlight" for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+            <label class="label-heighlight" for="mname">Middle Name:</label>
+            <input type="text" id="mname" name="mname" placeholder="Middle Name"><br><br>
+            <label class="label-heighlight" for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+            <label class="label-heighlight" for="emailid">Email Id:</label>
+            <input type="email" id="emailid" name="emailid" placeholder="abc@gmail.com"><br><br>
+            <label class="label-heighlight" for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="1234-1234" pattern="[0-9]{4}-[0-9]{4}"><br><br>
+            <label class="label-heighlight" for="birthday">Date of Birth:</label>
+            <input type="date" id="birthday" name="birthday" placeholder="dd/mm/yy"><br><br>
+            <label class="label-heighlight" for="location">Current Location:</label>
+            <input list="locations" id="location" name="location" placeholder="Location">
+            <datalist id="locations">
+                <option value="Mumbai">
+                <option value="Nagpur">
+                <option value="Pune">
+                <option value="Amravati">
+                <option value="Nasik">
+            </datalist><br><br>
+            <label class="label-heighlight" for="gender">Gender:</label>
+            <input type="radio" id="gender" name="gender" value="male">Male
+            <input type="radio" id="gender" name="gender" value="female">Female
+            <input type="radio" id="gender" name="gender" value="Other">Other<br><br>
+            <hr>
+            <div class="details-container">
+                Academic Details
+            </div><hr>
+            <label class="label-heighlight" for="course">Course:</label>
+            <input list="Courses" id="Course" name="Course" placeholder="Select Course">
+            <datalist id="Courses">
+                <option value="B.E/B.Tech">
+                <option value="B.Com">
+                <option value="B.A">
+                <option value="B.Sc">
+                <option value="Diploma">
+                <option value="Other">
+            </datalist><br><br>
+            <label class="label-heighlight" for="specialization">Specialization In:</label>
+            <input list="specializations" id="specialization" name="specialization" placeholder="Select">
+            <datalist id="specialization">
+                <option value="Information Technalogy">
+                <option value="Computer Science">
+                <option value="Electrical">
+                <option value="Electronics">
+                <option value="Electronics and Telecommunication">
+                <option value="Mechanical">
+                <option value="Civil">
+                <option value="Automobile">
+            </datalist><br><br>
+            <label class="label-heighlight" for="language">Languages Known:</label>
+            <input type="text" id="language" name="language" placeholder="Add languages"><br><br>
+            <label class="label-heighlight" for="workstatus">Status:</label>
+            <input type="radio" id="workstatus" name="workstatus" value="fresher">Fresher
+            <input type="radio" id="workstatus" name="workstatus" value="expirence">Expirence <br><br>
+            <label class="label-heighlight" for="university">University Name:</label>
+            <input list="universitys" id="univercity" name="university" placeholder="University">
+            <datalist id="universitys">
+                <option value="Mumbai University">
+                <option value="Nagpur University">
+                <option value="Pune University">
+                <option value="Surat University">
+                <option value="Nasik University">
+                <option value="Dr.Babasaheb Ambedkar Technalogical University">
+            </datalist><br><br>
+            <label class="label-heighlight" for="year">Year Of Passing:</label>
+            <input type="radio" id="year" name="year" value="2019">2019
+            <input type="radio" id="year" name="year" value="2020">2020 
+            <input type="radio" id="year" name="year" value="2021">2021
+            <br><br> 
+            <label class="label-heighlight" for="marks">Marks%:</label>
+            <input type="number" min="0" max="100" step="0.01" value="0.00">
+            <hr>
+            <div class="label-heighlight">Class_12 <sup>th</sup></div><br>
+            <label class="label-heighlight" for="board">Board Name:</label>
+            <input list="boards" id="board" name="board" placeholder="Board">
+            <datalist id="boards">
+                <option value="****Board">
+                <option value="CBSE">
+                <option value="State Board">
+                <option value="Other">
+            </datalist><br><br>
+            <label class="label-heighlight" for="year">Passing Year:</label>
+            <input type="number" min="0" max="10000" step="0000" value="0000"> <br><br>
+            <label class="label-heighlight" for="medium">Medium:</label>
+            <input type="radio" id="medium" name="medium" value="eng">English
+            <input type="radio" id="medium" name="medium" value="mara">Marathi 
+            <input type="radio" id="medium" name="medium" value="hin">Hindi 
+            <input type="radio" id="medium" name="medium" value="Other">Other<br><br>
+            <label class="label-heighlight" for="marks">Marks%:</label>
+            <input type="number" min="0" max="10" step="0.01" value="0.00">
+            <hr>
+            <div class="label-heighlight">Class_10 <sup>th</sup></div><br>
+            <label class="label-heighlight" for="board">Board:</label>
+            <input list="boards" id="board" name="board" placeholder="Board">
+            <datalist id="boards">
+                <option value="State Board">
+                <option value="CBSE">
+                <option value="Diploma">
+                <option value="****Board">
+                <option value="Other">
+            </datalist><br><br>
+            <label class="label-heighlight" for="year">Passing Year:</label>
+            <input type="number" min="0" max="10000" step="0000" value="0000"> <br><br>
+            <label class="label-heighlight" for="medium">Medium:</label>
+            <input type="radio" id="medium" name="medium" value="eng">English
+            <input type="radio" id="medium" name="medium" value="mara">Marathi 
+            <input type="radio" id="medium" name="medium" value="hin">Hindi 
+            <input type="radio" id="medium" name="medium" value="guj">Other<br><br>
+            <label class="label-heighlight" for="marks">Marks%:</label>
+            <input type="number" min="0" max="10" step="0.01" value="0.00">
+            <hr>
+                    <div class="details-container">
+                        Professional Details
+                    </div><hr>
+                    <label class="label-heighlight" for="industry">Industry Type:</label>
+                    <input list="industrys" id="industry" name="industry">
+                    <datalist id="industrys">
+                        <option value="Account">
+                        <option value="Manufacturing">
+                        <option value="Core">
+                        <option value="Networking">
+                        <option value="Construction">
+                        <option value="Textile">
+                    </datalist><br><br>
+                    <label class="label-heighlight" for="functional">Work Area:</label>
+                    <input list="functionals" id="functional" name="functional">
+                    <datalist id="functionals">
+                        <option value="Agent">
+                        <option value="Field Engineer">
+                        <option value="Online employtype">
+                        <option value="Testing Field">
+                        <option value="Manageer">
+                    </datalist><br><br>
+                    <label class="label-heighlight" for="jobtype">Desired Job Type:</label>
+                    <input type="radio" id="jobtype" name="jobtype" value="permanent">Permanent
+                    <input type="radio" id="jobtype" name="jobtype" value="contra">Contractual <br><br>
+                    <label class="label-heighlight" for="jobtype">Job Type:</label>
+                    <input type="radio" id="employtype" name="employtype" value="full">Full Time
+                    <input type="radio" id="employtype" name="employtype" value="part">Part Time <br><br>
+                    <label class="label-heighlight" for="location">Desired Location:</label>
+                    <select name="location" id="location"  multiple>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Nagpur">Amravati</option>
+                        <option value="Nagpur">Nagpur</option>
+                        <option value="Nagpur">Wardha</option>
+                        <option value="Nagpur">Banglor</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Nasik">Nasik</option>
+                    </select><br><br>
+                    <label class="label-heighlight" for="file">Attach Resume:</label>
+                    <input type="file" id="file" name="file"><br><br>
+                    <hr>
+                </form>
+            </body>
+            <a href="A7_1_MD_<html>.html">Submit</a>
+        </form>
+    </body>
+</html>
