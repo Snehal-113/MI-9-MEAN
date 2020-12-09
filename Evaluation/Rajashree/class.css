@@ -1,0 +1,19 @@
+          <style>
+       .format_font{
+           font-family:cursive;
+          }
+          h2{
+              background-color:blue;
+              border-style: solid;
+          }
+          h3{
+             background-color:orange;
+              border-style: solid;
+              border-color:orange;
+          }
+          .format-head{
+              background-color: bisque;
+              border-style: solid;
+            
+          }
+          </style>
