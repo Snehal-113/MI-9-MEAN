@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="assignment6.css">
+        </head>  
+    <body>
+        <h1>MI-9 Intern HTML Assesment</h1>
+        <hr>
+        <h2>Personal Details</h2>
+        <lable for="ifname">First Name</lable>
+        <input type="text" id="ifname"name="ifname"value="" placeholder="First Name">
+        <br>
+        <br>
+        <lable for="ilname">Last Name</lable>
+        <input type="text" id="ilname"name="ilname"value=""placeholder="Last Name">
+        <br>
+        <br>
+        Gender:
+        <input type="radio"id=ikname name="Gender"value="Male">
+        <lable for="ikname">Male</lable>
+        
+        <input type="radio"id=imname name="Gender"value="Female">
+        <lable for="ikname">Female</lable>
+        
+        <input type="radio"id=inname name="Gender"value="Other">
+        <lable for="ikname">Other</lable>
+        <br>
+        <br>
+        Age:
+        <input type="radio"id=iqname name="Age"value="">
+        <lable for="iqname">less than 18</lable>
+
+        <input type="radio"id=isname name="Age"value=""checked >
+        <lable for="isname">18-25</lable>
+
+        <input type="radio"id=irname name="Age"value="">
+        <lable for="irname">26-40</lable>
+        <h2>Professional Details</h2>
+    <fieldset>
+        <legend>Academic Details</legend>
+        <b>Skill Set:</b>
+        <input type="checkbox"id=ixname name="Skill set"value="skillset">
+        <lable for="ixname">HTML</lable>
+
+        <input type="checkbox"id=iyname name="Skill set"value="">
+        <lable for="iyname">Java Script</lable>
+
+        <input type="checkbox"id=izname name="Skill set"value="">
+        <lable for="izname">Java</lable>
+
+        <input type="checkbox"id=ianame name="Skill set"value="">
+        <lable for="ianame">Oracle</lable><br><br>
+        <b>Highest Qualification:</b>
+        <select id="degree" name="degree" size="1">
+            <option>Master in computer science</option>
+            <option>Science Graduate</option>
+            <option>Bachelor in Computer Science</option>
+            <option>Master in Engg</option>
+            <option>Other</option>       
+        </select><br><br>
+        <b>University</b>
+        <input list="univ">
+        <datalist id="Univ">
+            <option>Mumbai University</option>
+            <option>Pune University</option>
+            <option>Chennai University</option>
+            <option>Nagpur University</option>
+            <option>Badoda University</option>
+        </datalist><br><br>
+        <b>Areas of Expertise:</b>
+        <select id="degree" name="degree" size="4" multiple>
+            <option>Software</option>
+            <option>Training</option>
+            <option>Networking</option>
+            <option>Management</option>
+            <option>Marketing</option>       
+        </select><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Resume</legend>
+        <b>Upload Resume:</b>
+        <input type="file" id="iresume" name="nresume"><br><br>
+        <b>Comments</b>
+        <textarea style="height: 100px;width: 100px;">
+        </textarea>
+        </fieldset>
+
+    </body>  
+</html>
