@@ -1,0 +1,158 @@
+<html>
+ <head>
+  <title>User Details</title>
+  <link rel="stylesheet" href="Amber Academy.css">   
+ </head>
+<body>
+ <h2 class="add add2">Amber Academy</h2>
+ <h2 style="text-align: center;"> Create profile</h2>
+ <form action="page1.html">
+ <fieldset>
+ <legend style="text-align: center;"><b>Personal Info</b></legend>
+ <label for="ifname">First Name:&nbsp;</label>
+ <input type="text" id="ifname" name="fname" placeholder="first name">
+ <br><br>
+ <label for="imname">Middle Name:&nbsp;</label>
+ <input type="text" id="ilname" placeholder="Middle name" >
+ <br><br>
+ <label for="ilname">Last Name:&nbsp;</label>
+ <input type="text" id="ifname" name="fname" placeholder="Last name">
+ <br><br>
+ <label for="gender">Gender:</label>
+ <input type="radio" id="male" name="gender" value="male">
+ <label1 for="male">male</label1>
+ <input type="radio" id="female" name="gender" value="female">
+ <label1 for="female">female</label1>
+ <input type="radio" id="other" name="gender" value="other">
+ <label1 for="other">other</label1>
+  <br><br>  
+ <label for="dob">date of birth:&nbsp;</label>
+ <input type="date" id="dob" name="dob">
+ <br><br>
+ <label for="address">Address:&nbsp;</label>
+ <input type="text" id="address" name="address" placeholder="address">
+ <br><br>
+ <label for="pcode">Pin Code:&nbsp;</label>
+ <input type="number" id="pcode" name="pcode">
+ <br><br>
+ </fieldset>
+ <fieldset>
+  <legend>Acadamic Details</legend>
+  <label for="skill set">SkillSet:</label>
+  <input type="checkbox" id="chtml" name="course" value="HTML">
+  <label1 for="chtml">HTML</label1>
+  <input type="checkbox" id="cjasp" name="course1" value="Java Script" >
+  <label1 for="cjasp">Java Script </label1>
+  <input type="checkbox" id="java" name="course2" value="Java">
+  <label1 for="java">Java</label1>
+  <input type="checkbox" id="oracle" name="course3" value="Oracle">
+  <label1 for="oracle">Oracle</label1>
+    <br><br>
+  <lable for="univ">University Name:&nbsp;</lable> 
+  <input list="univ">
+   <datalist id="univ">
+    <option value="mum">Mumbai</option>
+    <option value="pune">Pune</option>
+    <option value="Baroda">Baroda</option>
+    <option value="amt">Amravati</option>
+    <option value="Nag">Nagpur</option>
+   </datalist>
+  <lable for="qual">Qualification:&nbsp;</lable>
+   <select>
+    <option>B.E/B.Teach</option>
+    <option>B.sc</option>
+    <option>B.com</option>
+   </select>
+  <label1 for="syr">Start Year:&nbsp;</label1>
+   <select id="syr" name="syr">
+    <option value="2020">2020</option>
+    <option value="2019">2019</option>
+    <option value="2018">2018</option>
+    <option value="2017">2017</option>
+    <option value="2016">2016</option>    
+   </select>
+  <label1 for="eyr">End Year:&nbsp;</label1>
+   <select id="eyr" name="eyr">
+    <option value="2020">2020</option>
+    <option value="2019">2019</option>
+    <option value="2018">2018</option>
+    <option value="2017">2017</option>
+    <option value="2016">2016</option>    
+   </select>
+  <br><br>
+  <label for="marks">Marks(%):&nbsp;</label>
+  <input type="number" id="marks" name="marks" min="40" max="100">
+  <br></br>    
+ </fieldset>
+ <fieldset>
+  <legend>Certification</legend>   
+  <label for="cert">certification:&nbsp;</label>
+   <select id="selcert" name="selcert" size=4 multiple>
+    <option value="sel1">CCNA</option>
+    <option value="sel2">linux</option>
+    <option value="sel3">20-101</option>
+    <option value="sel4">aws-101</option>
+    <option value="sel5">hadoop-101</option>
+    <option value="other">other</option>    
+   </select>
+    <button type="button" id="sub" name="sub">&gt;</button>
+    <input type="file " id="icert" name="ncert">
+    <input type="submit" value="submit certification">
+</fieldset>
+<fieldset>
+ <legend>professional Details</legend>
+ <table>
+   <caption>Acadamic Project</caption>  
+  <tr>
+   <th>Project Name</th>
+   <th>Project Desc</th>
+  </tr>
+  <tr>
+    <td><input type="text" id="project Name" placeholder="Project Name" size="30"></td>
+    <td><input type="text" id="project desc" placeholder="Project desc" size="30"></td>   
+  </tr>
+ </table>
+ <table>
+ <br></br>
+  <caption>work experience</caption>  
+   <tr>
+    <th>sr no</th>
+    <th>organization name</th>
+    <th>start date</th>
+    <th>end date</th>
+    <th>duration</th>
+   </tr>
+   <tr>
+    <td>1</td>
+    <td><input type="text" id="org" name="org"></td>
+    <td><input type="date" id="sdate" name="sdate"></td>  
+    <td><input type="date" id="edate" name="edate"></td>
+    <td><input type="number" id="dur" name="duration"></td>    
+   </tr>
+ </table>      
+</fieldset>
+<fieldset>
+    <legend>Resume-</legend>
+    <label>Resume:-</label>
+    <textarea style="height:50px;width:250px;">Type your Resume here</textarea>
+    <lable for="ifile">Upload Resume</lable>
+</fieldset>
+<br></br>
+<div class="Academic-container">How did you find us?</div><br>
+        <label class="label-heighlight" for="skil">Choose From:</label>
+        <input type="checkbox" id="skil" name="skill">
+        <label for="skil">Friend</label>
+        <input type="checkbox" id="skil" name="skill">
+        <label for="skil">Naukri.com</label>
+        <input type="checkbox" id="skil" name="skill">
+        <label for="skil">Google</label>
+        <input type="checkbox" id="skil" name="skill">
+        <label for="skil">Other</label>
+        <br></br>
+        <p style="text-align: center;">
+          <form action="E.2__4Login Page.html"> 
+            <input type="submit" value="submit">
+            </form> 
+</form>
+</body>    
+</html>
