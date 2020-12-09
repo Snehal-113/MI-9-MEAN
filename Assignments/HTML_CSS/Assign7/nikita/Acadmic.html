@@ -5,10 +5,8 @@
                 display: inline;
                 width: 100px;
             }
-            
-                     
-            
-        </style>
+       </style>
+    </head>
         <body>
             <h1>Naukri</h1>
             <h3>Create Profile</h3>
@@ -17,8 +15,8 @@
                     <legend><b>Acadmic Details:</b></legend><br>
                     <label for="qual">Highest Qualification:&nbsp;</label>
                     <select>
-                        <option>B.E</option>
-                        <option>B.Sc</option>
+                        <option value="B.E">B.E</option>
+                        <option value="B.Sc">B.Sc</option>
                     </select><br><br>
                     <label for="cert">Certification :</label>
                     <select name="cert" id="selcert"  size=4 multiple>
@@ -27,7 +25,6 @@
                         <option value="HADOOP">HADOOP</option>
                         <option value="Z0-101">Z0-101</option>
                     </select>
-
                     <button type="button" id="sub" name="sub" >&gt;</button>
                     <select id="selcert" name="selcert" size=4 multiple>
                         <option value="sel1"></option>
@@ -41,12 +38,10 @@
                         <option>pune</option>
                     </select><br><br>
                     <label for="marks">Marks(Aggregate %):&nbsp;</label>
-                    <input type="number" id="imarks" name="marks" min="40" max="100"><br>
-
-                    <button>Submit</button>
-    
+                   <input type="number" id="imarks" name="marks" min="40" max="100"><br>
+                    <button>Submit</button>    
                 </fieldset>
             </form>
         </body>
-    </head>
-</html>
+    </html>
+    
