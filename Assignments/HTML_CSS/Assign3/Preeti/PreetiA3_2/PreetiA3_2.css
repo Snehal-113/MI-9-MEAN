@@ -1,0 +1,23 @@
+body{
+    background-color: coral;
+}
+.leftPic {
+    float: left;
+}
+.rightPic {
+    float: right;
+}
+
+  p{
+      font-size: 20;
+      
+      
+  }
+  h1,h2{
+      text-align: center;
+  }
+  #address{
+      text-align: center;
+      font-size: 22;
+  }
+

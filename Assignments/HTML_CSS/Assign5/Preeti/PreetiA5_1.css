@@ -1,0 +1,44 @@
+#yellowBg{
+    background-color: yellow;
+    padding-right: 15px;
+}
+h1{
+    font-family: cursive;
+}
+h2{
+    font-style: italic;
+    text-align: right;
+}
+.coralBg{
+    background-color: coral;
+    padding-right: 25px;
+    box-shadow: 2px 2px;
+}
+body{
+    border: 5px solid black;
+    background-color: thistle;
+}
+img{
+    width: 200;
+    height: 200;
+    padding: 15px;
+}
+#firstBg{
+    background-color: whitesmoke;
+}
+.photoBg{
+    background-color: tomato;
+    animation-name: colorchange;
+    animation-duration: 4s;
+    padding: 45px;
+}
+@keyframes colorchange{
+    from {
+        background-color: tomato;}
+        to {background-color: turquoise;}     
+        }
+    
+.hobbyBg{
+    background-color: springgreen;
+    box-shadow: 2px 2px;
+}
