@@ -1,0 +1,42 @@
+.home-bg, .style-head{
+    background-color: rgb(251, 179, 23);
+    margin-right: 38px;
+    box-shadow: 4px 3px;
+}
+
+h2{
+    text-align: right;
+    
+}
+.photo-style{
+    width:800px; 
+    height:600px;
+    background-color:rgb(251, 213, 142);
+}
+.table,td,th {
+    border: 1px solid black;
+    border-style: solid;
+    border-collapse: collapse;
+}
+.content{
+   
+    border: solid;
+    }
+.whole-body{
+        display: inline-block;
+        background-color:rgb(251, 213, 142);
+    width: 70%}
+.heading-info{
+    
+    display: inline;
+}
+.heading-container{
+display: inline;
+}
+.my-details{
+    background-color:rgb(251, 213, 142);
+    height: 218px;
+border-style: 2px solid black;
+}
+
+    

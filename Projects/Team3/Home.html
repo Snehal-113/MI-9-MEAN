@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Profile
+        </title>
+    </head>
+    <body>
+        <h1>Create Profile</h1>
+        <form action="naukari.html" autocomplete="on" novalidate>
+            <fieldset>
+            <label class="label-heighlight" for="fname">First Name :&nbsp;</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required><br><br>
+            <label class="label-heighlight" for="mname">Middle Name :&nbsp;</label>
+            <input type="text" id="mname" name="mname" placeholder="Middle Name" required><br><br>
+            <label class="label-heighlight" for="lname">Last Name :&nbsp;</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required><br><br>
+            <label class="label-heighlight" for="email">Email Id :&nbsp;</label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com"><br><br>
+            <label class="label-heighlight" for="no">Mobile Number:&nbsp;</label>
+            <input type="tel" id="no" name="no" placeholder="Mobile Number"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Details</legend>
+            <label class="label-heighlight" for="unv">University:&nbsp;</label>
+            <input list="uni">
+            <datalist id="uni">
+                <option value="mum">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="amr">Amravati</option>
+                <option value="baroda">Baroda</option>
+                <option value="nag">Nagpur</option>
+            </datalist><br><br>
+
+            <label for="qual">Qualification:&nbsp;</label>
+            <select id="qual" name="qual">
+                <option>B.E</option>
+                <option>B.Sc</option>
+                <option>B.A</option>
+                <option>B.C.A</option>
+                <option>B.Tech</option>
+                <option>M.Tech</option>
+            </select><br><br>
+
+            <label for="pyear">Passing Out Year</label>
+            <select id="pyear" name="pyear" required>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option>2016</option>
+                <option>2017</option>
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+            </select><br><br>
+            
+            <label for="marks">Marks (Aggregate):&nbsp;</label>
+            <input type="number"id="marks"name="marks" min="40"max="100" required>
+            <br><br>
+
+            <label for="prj">Academic Project&nbsp;</label><br>
+             <label for="prjn">Project Name:&nbsp;</label>
+            <input type="text"id="prjn"name="prjn" required> &nbsp; &nbsp;
+
+            <label for="prjd">Project Description:&nbsp;</label>
+            <textarea id="prjd"name="prjd" required></textarea>
+        </fieldset><br>
+        
+        <label class="label-heighlight" for="ifile">Upload Resume:&nbsp;</label>
+        <input type="file" id="ifile" name="ifile"><br><br>
+<fieldset>
+       <legend> IT Skills </legend>
+        <table>
+            <tr>
+                <th>Skills &nbsp;</th>
+                <th>Version &nbsp;</th>
+                <th>Last Use &nbsp;</th>
+                <th>Experience</th>
+            </tr>
+        </table>
+</fieldset>
+<fieldset>
+    <legend>Career Profile</legend>
+    <table>
+        <tr></tr>
+    </table>
+</fieldset>
+        
+
+    </body>
+</html>
