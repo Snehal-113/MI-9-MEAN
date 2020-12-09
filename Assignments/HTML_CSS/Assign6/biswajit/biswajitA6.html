@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 6</title>
+	<link rel="stylesheet" type="text/css" href="biswajitA6_css.css">
+</head>
+<body>
+	<h2 class="right">MI-9 Intern HTML Assesment</h2>
+	<br>
+	<hr>
+	<form>
+		<em><h3 class="right">Personal Details</h3></em>
+		<label for="fname">First Name:</label>
+		<input type="text" name="fname" placeholder="First Name">
+		<br><br>
+		<label for="lname">Last Name:</label>
+		<input type="text" name="lname" placeholder="Last Name">
+		<br><br>
+		<label for="gender">Gender:</label>
+		<input type="radio" name="gender">Male
+		<input type="radio" name="gender">Female
+		<input type="radio" name="gender">Others
+		<br><br>
+		<label for="age">Age:</label>
+		less than 18<input type="radio" name="age">
+		18-25<input type="radio" name="age" checked="checked">
+		26-40<input type="radio" name="age">
+		<br><br>
+		<em><h3 class="right">Professional Details</h3></em>
+		<br>
+		<fieldset>
+			<legend>Academic Details</legend>
+			<label for="skill">Skill Set:</label>
+			<input type="checkbox" name="skill">HTML
+			<input type="checkbox" name="skill">Javascript
+			<input type="checkbox" name="skill">Java
+			<input type="checkbox" name="skill">Oracle
+			<br><br>
+			<label for="hq">Highest Qualification:</label>
+			<select>
+				<option>Diploma in Computer Science</option>
+				<option>Science Graduate</option>
+				<option>Bachelor in Engg.</option>
+				<option>Masters in Computer Science</option>
+				<option>Masters in Engg.</option>
+				<option>Other</option>
+			</select>
+			<br><br>
+			<label for="uni">University:</label>
+			<input list="university" type="text" name="uni">
+			<datalist id="university">
+				<option value="Mumbai University"></option>
+				<option value="Pune University"></option>
+				<option value="Chennai University"></option>
+				<option value="Nagpur University"></option>
+				<option value="Badoda University"></option>
+			</datalist>
+			<br><br>
+			<label for="aofe">Areas of Expertise:</label>
+			<select multiple="multiple">
+				<option>Software</option>
+				<option>Training</option>
+				<option>Networking</option>
+				<option>Management</option>
+				<option>Marketing</option>
+				<option>Other</option>
+			</select>
+			<br><br>
+		</fieldset>
+		<fieldset>
+			<legend>Resume</legend>
+			<label for="resume">Upload Resume</label>
+			<input type="file" name="resume">
+			<br><br>
+			<label for="comments">Comments:</label>
+			<textarea rows="5" cols="20" name="comments"></textarea>
+		</fieldset>
+		<div id="submit">
+		<input type="submit" name="submit" value="submit">
+		</div>
+	</form>
+</body>
+</html>

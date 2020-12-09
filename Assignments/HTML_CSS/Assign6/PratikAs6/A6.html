@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form1</title>
+        <link rel="stylesheet" href="mystyle.css">
+
+    </head>
+  
+    <body>
+        
+        <h1 >MI-9 intern HTML assignment</h1>
+        <br><br>
+
+
+        <hr> 
+        <br><br>
+        <h2 >Personal details</h2>
+
+        <form>
+             <label for="ifname"><b>First name:</b></label>
+             <input type="text " id="ifname" name="fname"  placeholder="First Name">
+             <br><br>
+             <label for="ifname"><b>Lastname:</b></label>
+             <input type="text " id="ifname" name="fname" placeholder="Last Name"  ><br><br>
+             <label for="Gender"><b>Gender:</b></label>
+
+             <input type="radio" id="Male" name="gender" value="male">
+             <label for="cjsp">Male</label>
+             <input type="radio" id="Female" name="gender" value="female">
+             <label for="cjsp">Female</label>
+             <input type="radio" id="Other" name="gender" value="Other">
+             <label for="cjsp">Other</label>
+             <br><br>
+             <label for="Age"><b>Age:</b></label>
+             <input type="radio" id="Less then 18" Name="Age" value="Less then 18">
+             <label for="cjsp">Less then 18</label>
+             <input type="radio" id="18-25" Name="Age" value="18-25" checked>
+             <label for="cjsp">18-25</label>
+             
+             <input type="radio" id="26-60" Name="Age" value="26-60">
+             <label for="cjsp">26-60</label>
+
+             <h3>Academic Detail</h3><br>
+             <fieldset>
+                 <legend>Academic Details</legend>
+
+
+             <label for="Age"><b>Skill  set:</b></label>
+             
+            <input type="checkbox" id="html" name="Skill" value="html">
+            <label for="checkbox">html</label>
+            <input type="checkbox" id="java script" name="Skill" value="java script">
+            <label for="checkbox">java script</label>
+            <input type="checkbox" id="java" name="Skill" value="java">
+            <label for="checkbox">java</label>
+            <input type="checkbox" id="oracle" name="Skill" value="oracle">
+            <label for="checkbox">oracle</label>
+            <br><br>
+            <label id="filed">Highest Qualification:     &nbsp; &nbsp;  </label>
+            <select id="filed" id="filed">
+            <option value="Diploma ">Diploma in Computer Science</option>
+            <option value=" Graduate">Science Graduate</option>
+            <option value="Engg">Bachelor in Engg.</option>
+            <option value="Masters ">Masters in Computer Science</option>
+            <option value="Masters in Engg.">Masters in Engg.</option>
+            <option value="Other">Other</option>
+            </select><br><br>
+            <label for="University">University  : &nbsp; &nbsp;  </label>
+            <input list="University" name="university" id="university"></input>
+            <datalist id="university">
+            <option value="Mumbai University">
+            <option value="Pune University">
+            <option value="Chennai University">
+            <option value="Nagpur University">
+            <option value="Badoda University">
+            </datalist><br><br>
+            <label id="filed">Areas of Expertise:     &nbsp; &nbsp;  </label>
+            <select id="filed" id="filed" multiple>
+            <option value="Software">Software</option>
+            <option value=" Training">Training</option>
+            <option value="Networking">Networking</option>
+            <option value="Marketing">Marketing</option>
+            </select><br><br>
+             </fieldset>
+             <fieldset>
+                 <legend>Resume</legend>
+                 <label for="resume">select files:&nbsp;&nbsp;</label>
+                 <input type="file" id="resume" name="resume"><br><br>
+
+                 <label for="comments">comments: &nbsp; &nbsp;  </label>
+                 <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;"></textarea>
+
+             </fieldset>
+
+        
+        
+
+            
+             
+             
+
+        
+             
+
+         </form>
+    </body>
+
+</html>
