@@ -1,5 +1,4 @@
-          <style>
-       .format_font{
+        .format_font{
            font-family:cursive;
           }
           h2{
@@ -13,7 +12,5 @@
           }
           .format-head{
               background-color: bisque;
-              border-style: solid;
-            
+              border-style: solid;  
           }
-          </style>
