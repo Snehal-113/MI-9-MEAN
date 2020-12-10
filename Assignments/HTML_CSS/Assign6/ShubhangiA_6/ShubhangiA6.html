@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="ShubhangiA6.css">
+</head>
+
+<body>
+    <div class="main-heading">
+        <h1> MI-9 Intern HTML Assesment</h1>
+    </div><br>
+    <hr><br>
+    <div class="details-container">Personal Details</div><br>
+    <form>
+        <label class="label-heighlight" for="fname">First Name :</label>
+        <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+        <label class="label-heighlight" for="lname">Last Name :</label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+        <label class="label-heighlight" for="Gender">Gender :</label>
+        <input type="radio" id="Gender" name="Gender">
+        <label for="Gender">Male</label>
+        <input type="radio" id="Gender" name="Gender">
+        <label for="Gender">Female</label>
+        <input type="radio" id="Gender" name="Gender">
+        <label for="Gender">Others</label><br><br>
+        <label class="label-heighlight" for="Age">Age :</label>
+        <input type="radio" id="Age" name="Age">
+        <label for="Age">less than 18</label>
+        <input type="radio" checked id="Age" name="Age">
+        <label for="Age">18-25</label>
+        <input type="radio" id="Age" name="Age">
+        <label for="Age">26-40</label> <br><br>
+        <fieldset>
+            <legend>Academic Details</legend><br>
+            <label class="label-heighlight" for="skil">Skill Set :</label>
+            <input type="checkbox" id="skil" name="skill">
+            <label for="skil">HTML</label>
+            <input type="checkbox" id="skil" name="skill">
+            <label for="skil">Java Script</labe>
+                <input type="checkbox" id="skil" name="skill">
+                <label for="skil">Java</label>
+                <input type="checkbox" id="skil" name="skill">
+                <label for="skil">Oracle</label><br><br>
+                <label class="label-heighlight" for="Qualification">Highest Qualification :</label>
+                <select>
+                    <option>Diploma in computer science</option>
+                    <option>Science Graduate</option>
+                    <option> Bachelor in Engg.</option>
+                    <option> Masters in Computer Science</option>
+                    <option>Masters in Engg.</option>
+                    <option>Other</option>
+                </select><br><br>
+                <label class="label-heighlight" for="University">University</label>
+                <input type="text" id="University" name="University"><br><br>
+                <label class="label-heighlight" for="Qualification">Area of Expertise:</label>
+                <select size="5" multiple>
+                    <option>Software</option>
+                    <option>Training</option>
+                    <option> Networking</option>
+                    <option> Management</option>
+                    <option>Marketing</option>
+                </select>
+                <label for="Qualification">You can select multiplefields</label>
+        </fieldset>
+        <fieldset>
+            <legend>Resume</legend>
+            <label class="label-heighlight" for="Resume">Upload Resume</label>
+            <input type="text" name="Resume" id="Resume" value="Brows..">
+            <label for="Resume">No File Selected</label><br><br>
+            <label class="label-heighlight" for="comments">Comments</label>
+            <textarea rows="4" cols="50" name="comment" form="usrform">
+            Enter text here...</textarea>
+        </fieldset>
+        <input class="end" type="button" id="submit" name="submit" value="SUBMIT"></input>
+    </form>
+</body>
+
+</html>

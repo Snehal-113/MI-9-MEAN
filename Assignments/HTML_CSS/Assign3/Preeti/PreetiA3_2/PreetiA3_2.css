@@ -1,3 +1,4 @@
+
 body{
     background-color: coral;
 }
@@ -20,4 +21,29 @@ body{
       text-align: center;
       font-size: 22;
   }
+
+
+body{
+    background-color: coral;
+}
+.leftPic {
+    float: left;
+}
+.rightPic {
+    float: right;
+}
+
+  p{
+      font-size: 20;
+      
+      
+  }
+  h1,h2{
+      text-align: center;
+  }
+  #address{
+      text-align: center;
+      font-size: 22;
+  }
+
 

@@ -1,0 +1,126 @@
+#colorBg{
+ background-image: url(https://cutewallpaper.org/21/light-red-wallpaper/Light-Red-Background-Wallpaper-58+-images-.jpg);
+ height: 850;
+ width: 1520;
+}
+.amber{
+    color:red;
+    text-align: center;
+    font-style: initial;
+    font-size: 46px;
+    padding: 5px;
+    margin-bottom: -5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.empower{
+    text-align: center;
+    font-size: 18px;
+    color:red;
+   padding-left: 50px;
+   margin-top: -2px;
+   font-style: italic;
+}
+#mentorBg{
+    opacity: 0.8; 
+    position: relative;
+    bottom: 0px;
+    width: 100%;  
+}
+.description{
+    color: black;
+  padding-left: 20px;
+    font-size: 22px ;
+    font-family: monospace;
+    padding-top: 30px;
+    width: 70%;
+    margin: 0 auto;
+    
+}
+.mentor{
+    position: absolute;
+    bottom: -10px;
+}
+marquee{
+    font-size: 20px;
+    color: blue;
+    font-style: unset;
+    padding: 10px   ;
+}
+.curriculum{
+    padding-left: 20px;
+}
+p{
+    font-size: 18px;
+}
+.apply{
+    color:green;
+    font-size: 22px;
+    float: left;
+    width: 50%;
+}
+.applyNow{
+    text-decoration: none;
+    color:gainsboro;
+    border: 2px solid black;
+    background-color: black;
+    border-width: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+.applyNowButton{
+ 
+  float: right;
+  width: 50%;
+  margin-right: 10%;
+  text-align: right;
+}
+#register{
+    text-align: center;
+    padding: 60px;
+    font-size: 26px;
+    
+}
+#registrationDetails > form > input{
+    height: 27px;
+}
+
+.registerHere{
+    text-align: center;
+    padding-left: 200px;
+}
+.details{
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    border: 2px solid red;
+    border-width: 5px;
+    background-color: red;
+    border-radius: 10px;
+}
+h1{
+    color: gray;
+}
+
+#st_details{
+    padding: 20px;
+    border: 5px solid white;
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+
+}
+h2{
+    text-align: center;
+}
+.subHead{
+    text-align: center;
+   
+}
+
+fieldset {
+    padding: 0 40px;
+}
+fieldset > label {
+    width: 30%;
+}

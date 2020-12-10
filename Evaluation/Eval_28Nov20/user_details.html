@@ -1,0 +1,101 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+       
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background-image: url(image2.jpg.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+    </style>
+    <body>
+        <div class="container">  
+            <form id="contact" action="Asessment 2.html" method="post">
+              <h4>User Details</h4>
+                <input placeholder="first Name" type="text"  required >
+                <br>
+                <input placeholder="Last Name" type="text"  required>
+                <br>
+                <input placeholder="Mobile No." type="text" type="tel" required>
+                <br>
+                <input placeholder="Email" type="email"  required>
+                <br>
+                <input placeholder="College Name" type="text"  required>
+                <br>
+                <h3>Education</h3><br>
+                <select name="Education" id="">
+                  <option value=""> BE </option>
+                  <option value=""> MCA </option>
+                  <option value=""> BSC </option>
+                  <option value=""> Other </option>
+                </select>
+                <br>
+                <h3>Education Status</h3><br>
+                <select name="" id=""> 
+                  <option value=""> Final year </option>
+                  <option value=""> Pass Out </option>
+                </select>
+                <br>
+                <h3>How Did You Find Us ?</h3>
+                <br>
+                <input type="radio" id="friends" name="find" value="friends">
+                <label for="friends">Friendss</label><br>
+                <input type="radio" id="Naukari" name="find" value="Naukari">
+                <label for="Naukari">Naukari</label><br>
+                <input type="radio" id="Google" name="find" value="Google">
+                <label for="Google">Google</label>
+                
+                <button name="submit" type="submit" >Submit</button>
+            </form>
+          </div>
+    </body>
+</html>
