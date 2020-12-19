@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>profession</title>
+        <style>
+            .details-container{font-weight:bold;font-size: large; background-color: blue;}
+            .label-heighlight{font-weight: bold;}
+        </style> 
+    </head>
+    <body style="background-color: lightblue;">
+        <h1>Naukri</h1>
+        <h3>Create Profile</h3><hr>
+        <form action="">
+            <div class="details-container">
+                Professional Details
+            </div><hr>
+            <label class="label-heighlight" for="industry">Industry Type:</label>
+            <input list="industrys" id="industry" name="industry">
+            <datalist id="industrys">
+                <option value="Account">
+                <option value="Engineering">
+                <option value="Networking">
+                <option value="Construction">
+                <option value="BPO">
+            </datalist><br><br>
+            <label class="label-heighlight" for="functional">Functional Area/Department:</label>
+            <input list="functionals" id="functional" name="functional">
+            <datalist id="functionals">
+                <option value="Agent">
+                <option value="Engineer">
+                <option value="IT Client">
+                <option value="Testing">
+                <option value="Manageer">
+            </datalist><br><br>
+            <label class="label-heighlight" for="jobtype">Desired Job Type:</label>
+            <input type="radio" id="jobtype" name="jobtype" value="permanent">Permanent
+            <input type="radio" id="jobtype" name="jobtype" value="contra">Contractual <br><br>
+            <label class="label-heighlight" for="jobtype">Desired Job Type:</label>
+            <input type="radio" id="employtype" name="employtype" value="full">Full Time
+            <input type="radio" id="employtype" name="employtype" value="part">Part Time <br><br>
+            <label class="label-heighlight" for="location">Desired Location:</label>
+            <select name="location" id="location"  multiple>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Pune">Pune</option>
+                <option value="Surat">Surat</option>
+                <option value="Nasik">Nasik</option>
+            </select><br><br>
+            <label class="label-heighlight" for="certificate">Certificates:</label>
+            <select name="certificate" id="certificate"  multiple>
+                <option value="ccna">CCNA</option>
+                <option value="ccnp">CCNP</option>
+                <option value="linux">Linux</option>
+                <option value="hadoop">Hadoop</option>
+                <option value="aws">AWS-101</option>
+            </select><br><br>
+            <label class="label-heighlight" for="keyskills">Key Skills:</label>
+            <select name="keyskills" id="keyskills"  multiple>
+                <option value="routing">Routing</option>
+                <option value="swtiching">Swtiching</option>
+                <option value="firewall">Firewall</option>
+                <option value="it">IT</option>
+                <option value="software">Software</option>
+            </select><br><br>
+            <label class="label-heighlight" for="file">Attached Resume:</label>
+            <input type="file" id="file" name="file"><br><br>
+            <hr>
+        </form>
+    </body>
+</html>
