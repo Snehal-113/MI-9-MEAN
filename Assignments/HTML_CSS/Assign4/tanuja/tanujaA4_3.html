@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Table tag</title>
+		<style>
+			table{			  
+				border-left:solid grey;	
+				border-right:solid black;	
+				border-top:solid grey;	
+				border-bottom:solid black; 
+				left:650px;
+				position:relative;      
+			}
+			th,td{
+				border-left:solid black;  
+				border-right:solid grey; 
+				border-bottom:solid black; 
+				border-top:solid grey; 				 
+			}
+		</style>	
+	</head>
+	<body>	
+		<br><br><br>
+		<table>
+			<tr>
+				<th rowspan="3">Day</th>
+				<th colspan="3">Seminar</th>
+			</tr>
+			<tr>
+				<th colspan="2">Schedule</th>
+				<th rowspan="2">Topics</th>
+			</tr>
+			<tr>
+				<th>Begin</th>
+				<th>End</th>	
+			</tr>
+			<tr style="text-align:center";>
+				<td rowspan="2">Monday</td>
+				<td style="background-color:rgb(240, 240, 102)"rowspan="2";>8.00 a.m.</td>
+				<td style="background-color:rgb(139, 144, 206)"rowspan="2">5.00 p.m.</td>
+				<td>Introduction to XML</td>
+			</tr>
+			<tr style="text-align:center";>
+				<td>Validity</td>
+			</tr>						
+			<tr style="text-align:center";>
+				<td rowspan="5">Tuesday</td>
+				<td style="background-color:rgb(240, 240, 102)"rowspan="2">8.00 a.m.</td>
+				<td style="background-color:rgb(224, 224, 101)" rowspan="2">11.00 a.m.</td>
+				<td rowspan="3">Xpath</td>
+	   		</tr>
+			<tr></tr>	
+			<tr style="text-align:center";>
+				<td style="background-color:rgb(240, 240, 102)" rowspan="2">11.00a.m</td>
+				<td style="background-color:rgb(174, 235, 146)"rowspan="2">2.00 p.m.</td>
+			</tr>
+			<tr style="text-align:center";>
+				<td rowspan="2">XSl Transformations </td>	
+			</tr>
+			<tr style="text-align:center";>
+				<td style="background-color:rgb(174, 235, 146)">2.00 p.m.</td>
+				<td style="background-color:rgb(139, 144, 206)">5.00 p.m.</td>
+			</tr>
+			<tr style="text-align:center";>
+				<td>Wenesday</td>
+				<td style="background-color:rgb(240, 240, 102)">8.00 a.m.</td>
+				<td style="background-color:rgb(174, 235, 146)">12.00 a.m.</td>
+				<td >XSL formatting objects</td>
+		</table>
+	</body>
+</html>					

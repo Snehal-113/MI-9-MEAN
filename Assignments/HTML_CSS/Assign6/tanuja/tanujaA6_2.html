@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form 1</title>
+        <link rel="stylesheet" href="tanujaA6_1.css">
+    </head>
+    <body style:margin:30px;>
+        <h1>MI-9 Intern Details</h1>
+            <hr>
+            <h2><p>Personal Details</p></h2>
+            <label for ="ifname"><b>first name:&nbsp;</b></label>            
+            <input type="text" id="ifname" name="ifname" placeholder="User name"> 
+            <br><br>
+            <label for ="ilname"><b>Last name:&nbsp;</b></label>
+            <input type="text" id="ilname" name="ilname" placeholder="Last name">
+            <br><br>
+            <label for ="Gender"><b>Gender:</b></label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for ="male">male</label> 
+            <input type="radio" id="female" name="gender" value="female">
+            <label for ="female">female</label>  
+            <input type="radio" id="other" name="gender" value="other">
+            <label for ="other">other</label> 
+            <br><br>
+            <label for ="age"><b>Age:</b></label>
+            <input type="radio" id="age" name="age" value="age">
+            <label for ="age">less than 18</label> 
+            <input type="radio" id="age" name="age" value=""checked>
+            <label for ="age">18-25</label>  
+            <input type="radio" id="other" name="age" value="age">
+            <label for ="age">26-40</label> 
+            <br><br>
+            <h2><p>Academic Details</p></h2>
+            <fieldset>
+            <legend><h3>Academic Details</h3></legend>
+            <label for ="skill set"><b>Skill set:</b></label>
+            <input type="checkbox" id="chtml" name="course" value="HTML">
+            <label for ="chtml">HTML</label> 
+            <input type="checkbox" id="cjsp" name="course" value="Java Script">
+            <label for ="cjsp">Java Script</label> 
+            <input type="checkbox" id="java" name="course" value="java">
+            <label for ="java">Java</label> 
+            <input type="checkbox" id="oracle" name="course" value="oracle">
+            <label for ="oracle">Oracle</label> 
+            <br><br>
+            
+            <label for ="Qualification">Highest Qualification:</label>
+        <select name="Qualification" id="Qualification">
+            <option value="Diploma in computer science">Diploma in computer science</option>
+            <option value="Science Graduate">Science Graduate</option>
+            <option value="Bachelor in Engg">Bachelor in Engg</option>
+            <option value="Master in computer science">Master in computer science</option>
+            <option value="Master in Engg">Master in Engg</option>
+            <option value="other">other</option> 
+        </select> 
+            <br><br>                    
+            <label for ="University">University:</label>
+            <input list="University">
+            <datalist id="University">
+                <option value="Mumbai University">Mumbai University</option>
+                <option value="Pune University">Pune University</option>
+                <option value="Chennai University">Chennai University</option>
+                <option value="Nagpur University">Nagpur University</option>
+                <option value="Badoda University">Badoda University</option>
+            </datalist>
+            <br><br>
+            <label for ="Expertise">Area of Expertise:</label>
+            <select name="Expertise" id="Expertise" multiple>
+                <option value="Software">Software</option>
+                <option value="Training">Training</option>
+                <option value="Networking">Networking</option>
+                <option value="Management">Management</option>
+                <option value="Marketing">Marketing</option>
+            </select> 
+            </fieldset>            
+        </body>
+</html>
