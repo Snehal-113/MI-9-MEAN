@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+}
+#blackBg{
+    background-color: black;
+}
+.PVR{
+    color:yellow;
+    font-size: 28px; 
+    width: 10%;
+    float: left; 
+   margin-left: 30px;
+   margin-top: 20px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.searchBox{
+    padding: 20px;
+    float: left;
+    width: 30%; 
+    margin-right: 10px; 
+    margin-left: 100px; 
+}
+.citysearch{
+  padding: 20px;
+    float: left;
+    width: 20%; 
+    margin-left: 150px; 
+}
+.login{
+    padding: 20px;
+    float: left;
+    width: 5%;
+    margin-right: 55px;
+   
+   
+}
+#loginId{
+    color: yellow;
+    text-decoration: none;
+    font-size: 22px;
+}
+#bgimg{
+    position: relative;
+    top: 0;
+    left:0;
+    
+}
+#movie1{
+    position:absolute;
+    top: 80px;
+    left: 80px;
+}
+
+#movie1:hover {
+    transition: transform .1s; 
+    transform: scale(1.1);
+}
+
+#movie2{
+    position:absolute;
+    top: 80px;
+    left: 450px;
+}
+#movie2:hover {
+    transition: transform .1s; 
+    transform: scale(1.1);
+}
+#movie3{
+    position:absolute;
+    top: 80px;
+    left: 800px;
+}
+#movie3:hover {
+    transition: transform .1s; 
+    transform: scale(1.1);
+}
+#movie4{
+    position:absolute;
+    top: 80px;
+    left: 1150px;
+}
+#movie4:hover {
+    transition: transform .2s; 
+    transform: scale(1.1);
+}
+#about{
+    color: gainsboro;
+    margin: 25px;
+    font-size: 20px;
+}
+#loginBody {
+    background-image: url("https://i.pinimg.com/originals/bd/b9/79/bdb97971398ed0c452bc2a76ace56ac3.jpg");
+    background-size: 100%;
+}
+#signUp{
+   text-align: center;
+   /* border: 5px solid burlywood; */
+   text-align: center;
+   display: block;
+   background-color: black;
+   opacity: 0.75;
+    margin-top: 150px;
+    margin-left: 640px;
+    margin-right: 640px;
+   
+}
+#head1{
+    color: gainsboro;
+    padding: 32px;
+}
+#account{
+    color: yellow;
+    font-family: cursive;
+}
+#signupbody{
+    background-color: black;
+}
+#bookNow{
+    text-align: center;
+    display: block;
+}
+#book{
+    font-size: 22px;
+    margin: 20px;
+    text-decoration: none;
+    color: yellow;
+}
+#nextclick{
+    text-decoration: none;
+    color: yellow;
+    font-size: 22px;
+    font-style: inherit;
+    text-align: center;
+    display: block;
+    
+}
+#movieName{
+    color: gainsboro;
+}
+#movieDetails{
+    color: gainsboro;
+    text-align: center;
+}
+#bookNowBg{
+    background-color: black;
+}
+#signed{
+    color: yellow;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: monospace;
+}
+#snacks{
+    text-align: left;
+}
+.fnbList{
+    vertical-align: top;
+    width: 400px;
+    font-size: 16px;
+    margin-left: 16px;
+    padding: 16px;
+}
+
+.fnbList > option {
+    padding: 8px;
+}
+
+.fnbValue {
+    text-align: right;
+}
+
+.bookNow {
+    font-size: 20px;
+}
+
+.fieldSetFNB {
+    text-align: center;
+    margin-top: 32px;
+}
