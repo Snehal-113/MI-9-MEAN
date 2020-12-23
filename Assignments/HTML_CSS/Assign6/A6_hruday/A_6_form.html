@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form_1...</title>
+</head>
+<link rel="stylesheet" href="A_6_stylesheet.css">
+
+<body>
+    <h1 class="rightbg">MI_9 Intern HTML Assement...</h1>
+    <hr>
+    <h3 class="rightbg"> <i> Personal Details</i></h3>
+
+    <form action="">
+        <label for="ifname"> <b>First Name:</b></label>
+        <input type="text" id="ifname" name="fname" placeholder="First Name">
+        <br>
+        <br>
+        <label for="ifname"> <b>Last Name:</b></label>
+        <input type="text" id="ilname" name="lname" placeholder="Last Name">
+        <br>
+        <br>
+        <label for="male"> <b>Gender:</b> </label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br>
+        <br>
+        <label for="age1"> <b>Age:</b> </label>
+        <input type="radio" id="age1" name="age" value="30">
+        <label for="age1">lessthan 18</label>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">18-25</label>
+        <input type="radio" id="age3" name="age" value="100">
+        <label for="age3">26-40</label>
+
+
+        <h3 class="rightbg"> <i>Academic Details</i> </h3>
+
+
+        <label for="skillset"> <b>Skill Set:</b> </label>
+        <input type="checkbox" id="skillset" name="HTML" value="HTML">
+        <label for="skillset"> HTML</label>
+        <input type="checkbox" id="skillset" name="javascript" value="javascript">
+        <label for="skillset"> Java Script</label>
+        <input type="checkbox" id="skillset" name="Java" value="Java">
+        <label for="skillset"> Java</label>
+        <input type="checkbox" id="skillset" name="Oracle" value="Oracle">
+        <label for="skillset"> Oracle</label>
+
+        <h3 class="rightbg"> <i>Professional Details</i> </h3>
+
+        <fieldset>
+            <legend>Academic Details</legend>
+
+            <!-- dropdown started -->
+
+            <label for="heighqualification"> <b>Heighest Qualification:</b> </label>
+            <select>
+                <option>Diploma in Computer Science</option>
+                <option>Science Graduate</option>
+                <option>Bachelor in Engg.</option>
+                <option>Masters in Computer Science</option>
+                <option>Masters in Engg.</option>
+                <option>Other</option>
+            </select>
+            <br>
+            <br>
+            <label for="heighqualification"> <b>University:</b> </label>
+            <input list="university" name="university" required>
+            <datalist id="university">
+                <option value="Mumbai University">
+                <option value="Pune University">
+                <option value="Chennai University">
+                <option value="Nagpur University">
+                <option value="Badoda University">
+            </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="resumefile"> <b>Upload Your Resume:</b> </label>
+            <input type="file" id="resumefile" name="resumefile"><br><br>
+            <label for="comments"> <b>Comments:</b> </label>
+            <textarea id="comments" name="comments" rows="6" cols="40"> </textarea>
+        </fieldset>
+
+        <!-- submit button -->
+        <div class="tcenter">
+            <button type="submit" name="submit" value="Submit" class="bg1">Submit</button>
+            <button type="reset" name="reset" value="reset" class="bg2">Reset</button>
+        </div>
+
+
+
+
+    </form>
+    <!-- hruday -->
+</body>
+
+</html>
