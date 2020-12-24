@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <title>naukri</title>
+        <style>
+            .details-container{font-weight:bold;font-size: large; background-color: blue;}
+            .label-heighlight{font-weight: bold;}
+        </style>
+    </head>
+    <body style="background-color: lightblue;">
+        <h1>Naukri</h1>
+        <h3>Create Profile</h3><hr>
+        <form >
+            <div class="details-container">
+                Personal Details
+            </div><hr>
+            <label class="label-heighlight" for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+            <label class="label-heighlight" for="mname">Middle Name:</label>
+            <input type="text" id="mname" name="mname" placeholder="Middle Name"><br><br>
+            <label class="label-heighlight" for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+            <label class="label-heighlight" for="location">Current Location:</label>
+            <input list="locations" id="location" name="location" placeholder="Location">
+            <datalist id="locations">
+                <option value="Mumbai">
+                <option value="Nagpur">
+                <option value="Pune">
+                <option value="Surat">
+                <option value="Nasik">
+            </datalist><br><br>
+            <label class="label-heighlight" for="workstatus">Work Status:</label>
+            <input type="radio" id="workstatus" name="workstatus" value="fresher">Fresher
+            <input type="radio" id="workstatus" name="workstatus" value="expirence">Expirence <br><br>
+            <label class="label-heighlight" for="emailid">Email Id:</label>
+            <input type="email" id="emailid" name="emailid" placeholder="abc@gmail.com"><br><br>
+            <label class="label-heighlight" for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="1234-12-1234" pattern="[0-9]{4}-[0-9]{2}-[0-9]{4}"><br><br>
+            <label class="label-heighlight" for="birthday">Date of Birth:</label>
+            <input type="date" id="birthday" name="birthday" placeholder="dd/mm/yy"><br><br>
+            <label class="label-heighlight" for="gender">Gender:</label>
+            <input type="radio" id="gender" name="gender" value="male">Male
+            <input type="radio" id="gender" name="gender" value="female">Female
+            <input type="radio" id="gender" name="gender" value="transgender">Trangender<br><br>
+            <label class="label-heighlight" for="maritalstatus">Marital Status:</label>
+            <input type="radio" id="maritalstatus" name="maritalstatus" value="single/unmarried">Single/Unmarried
+            <input type="radio" id="maritalstatus" name="maritalstatus" value="married">Married
+            <input type="radio" id="maritalstatus" name="maritalstatus" value="widowed">Widowed
+            <input type="radio" id="maritalstatus" name="maritalstatus" value="divorced">Divorced
+            <input type="radio" id="maritalstatus" name="maritalstatus" value="seperated">Seperated
+            <input type="radio" id="maritalstatus" name="maritalstatus" value="other">Other <br><br>
+            <label class="label-heighlight" for="category">Category:</label>
+            <input type="radio" id="category" name="category" value="general">General
+            <input type="radio" id="category" name="category" value="sc">SC
+            <input type="radio" id="category" name="category" value="st">ST
+            <input type="radio" id="category" name="category" value="obccreamy">OBC-Creamy
+            <input type="radio" id="category" name="category" value="obcnoncreamy">OBC-Non_Creamy <br><br>
+            <label class="label-heighlight" for="abled">Differently Abled:</label>
+            <input type="radio" id="abled" name="abled" value="yes">Yes
+            <input type="radio" id="abled" name="abled" value="no">No <br><br>
+            <label class="label-heighlight" for="language">Languages Known:</label>
+            <input type="text" id="language" name="language" placeholder="Add languages"><br><br>
+            <hr>
+            <div class="details-container">
+                Academic Details
+            </div><hr>
+            <div class="label-heighlight">Education:Graduate or Diploma</div><br>
+            <label class="label-heighlight" for="course">Course:</label>
+            <input type="radio" id="course" name="course" value="be">B.E/B.Tech
+            <input type="radio" id="course" name="course" value="bcom">B.Com
+            <input type="radio" id="course" name="course" value="ba">B.A
+            <input type="radio" id="course" name="course" value="bsc">B.Sc
+            <input type="radio" id="course" name="course" value="diploma">Diploma
+            <input type="radio" id="course" name="course" value="other">Other <br><br>
+            <label class="label-heighlight" for="specialization">Specialization:</label>
+            <input type="radio" id="specialization" name="specialization" value="auto">Automobile
+            <input type="radio" id="specialization" name="specialization" value="civil">Civil
+            <input type="radio" id="specialization" name="specialization" value="mech">Mechanical
+            <input type="radio" id="specialization" name="specialization" value="EXTC">EXTC
+            <input type="radio" id="specialization" name="specialization" value="comp">Computer
+            <input type="radio" id="specialization" name="specialization" value="other">I.T
+            <input type="radio" id="specialization" name="specialization" value="elec">Electrical
+            <input type="radio" id="specialization" name="specialization" value="elecx">Electronics<br><br>
+            <label class="label-heighlight" for="university">University/Institute:</label>
+            <input list="universitys" id="univercity" name="university" placeholder="University">
+            <datalist id="universitys">
+                <option value="Mumbai University">
+                <option value="Nagpur University">
+                <option value="Pune University">
+                <option value="Surat University">
+                <option value="Nasik University">
+            </datalist><br><br>
+            <label class="label-heighlight" for="year">Passing out Year:</label>
+            <input type="radio" id="year" name="year" value="2019">2019
+            <input type="radio" id="year" name="year" value="2020">2020 <br><br> 
+            <label class="label-heighlight" for="grade">Grading System:</label> <br> 
+            <input type="radio" id="grade" name="grade" value="scale10">Scale 10 Grading System <br>
+            <input type="radio" id="grade" name="grade" value="scale4">Scale 4 Grading System <br> 
+            <input type="radio" id="grade" name="grade" value="%marks">%Marks of 100 Maximum <br> 
+            <input type="radio" id="grade" name="grade" value="passi">Course Required a Pass <br> <br>
+            <label class="label-heighlight" for="marks">Marks:</label>
+            <input type="number" min="0" max="10" step="0.01" value="0.00">
+            <hr>
+            <div class="label-heighlight">Education:Class 12 <sup>th</sup></div><br>
+            <label class="label-heighlight" for="board">Board Name:</label>
+            <input list="boards" id="board" name="board" placeholder="Board">
+            <datalist id="boards">
+                <option value="Maharashrta Board">
+                <option value="CBSE">
+                <option value="Diploma">
+                <option value="Goa Board">
+                <option value="Gujarat Board">
+            </datalist><br><br>
+            <label class="label-heighlight" for="year">Passing out Year:</label>
+            <input type="radio" id="year" name="year" value="2015">2015
+            <input type="radio" id="year" name="year" value="2016">2016 <br><br>
+            <label class="label-heighlight" for="medium">Medium:</label>
+            <input type="radio" id="medium" name="medium" value="eng">English
+            <input type="radio" id="medium" name="medium" value="mara">Marathi 
+            <input type="radio" id="medium" name="medium" value="hin">Hindi 
+            <input type="radio" id="medium" name="medium" value="guj">Gujarati<br><br>
+            <label class="label-heighlight" for="marks">Marks%:</label>
+            <input type="number" min="0" max="10" step="0.01" value="0.00">
+            <hr>
+            <div class="label-heighlight">Education:Class 10 <sup>th</sup></div><br>
+            <label class="label-heighlight" for="board">Board Name:</label>
+            <input list="boards" id="board" name="board" placeholder="Board">
+            <datalist id="boards">
+                <option value="Maharashrta Board">
+                <option value="CBSE">
+                <option value="Diploma">
+                <option value="Goa Board">
+                <option value="Gujarat Board">
+            </datalist><br><br>
+            <label class="label-heighlight" for="year">Passing out Year:</label>
+            <input type="radio" id="year" name="year" value="2013">2013
+            <input type="radio" id="year" name="year" value="2014">2014 <br><br>
+            <label class="label-heighlight" for="medium">Medium:</label>
+            <input type="radio" id="medium" name="medium" value="eng">English
+            <input type="radio" id="medium" name="medium" value="mara">Marathi 
+            <input type="radio" id="medium" name="medium" value="hin">Hindi 
+            <input type="radio" id="medium" name="medium" value="guj">Gujarati<br><br>
+            <label class="label-heighlight" for="marks">Marks%:</label>
+            <input type="number" min="0" max="10" step="0.01" value="0.00">
+            <hr>
+            <div class="label-heighlight">Enter Professional Details:</div><br>
+            <a href="YashasviA7_4.html">Click Here</a>
+        </form>
+    </body>
+</html>

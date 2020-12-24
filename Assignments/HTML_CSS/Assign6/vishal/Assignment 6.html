@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="AS6.css">
+    </head>
+    <body>
+    <h1 id="add">MI-9 intern HTML Assesment</h1>
+    <br>
+    <hr>
+    <h2><p id="add"><b> Personal Details</b></p></h2>
+    <form>
+        <label for="ifname"><b>First Name:</b></label>
+        <span style="padding: 25px;"></span><input type="text" id="ifname" name="fname">
+        <br>
+        <br>
+        <label for="ilname"><b>Last Name:</b></label>
+        <span style="padding: 26px;"></span><input type="text" id="ilname" name="lname">
+        <br>
+        <br>
+        <label for="Gender"><b>Gender:</b></label>
+        <span style="padding: 35px;"></span><input type="radio" id="Male" name="Gender" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="Gender" value="Female">
+        <label for="Female">Female</label>
+        <input type="radio" id="Other" name="Gender" value="Other">
+        <label for="Other">Other</label>
+        <br>
+        <br>
+        <label for="Age"><b>Age:</b></label>
+        <span style="padding: 45px;"></span><input type="radio" id="Less Than 18" name="Age" value="Less Than 18">
+        <default><label for="Less Than 18">Less Than 18</label></default>
+        <span style="padding: 25px;"></span><input type="radio" id="18-25" name="Age" value="18-25" checked="checked">
+        <label for="18-25">18-25</label>
+        <span style="padding: 25px;"></span><input type="radio" id="26-40" name="Age" value="26-40">
+        <label for="26-40">26-40</label>
+        <br>
+        <hr>
+        <h3><p id="add"><b>Professional Details</b></p></h3> 
+        <fieldset>
+            <legend>Acadenic Details</legend>
+        <label for="Age"><b>Skill Set:</b></label>
+        <span style="padding: 60px;"></span><input type="radio" id="HTML" name="Skill Set" value="HTML"> 
+        <label for="HTML">HTML</label>
+        <span style="padding: 25px;"></span><input type="radio" id="Java Script" name="Skill Set" value="Java Script">
+        <label for="Java Script">Java Script</label>
+        <span style="padding: 25px;"></span><input type="radio" id="Java" name="Skill Set" value="Java">
+        <label for="Java">Java</label>
+        <span style="padding: 25px;"></span><input type="radio" id="Oracle" name="Skill Set" value="Oracle">
+        <label for="Oracle">Oracle</label>
+        <br>
+        <br>
+        <label for="Highest Qualification"><b>Highest Qualification</b></label>
+        <span style="padding: 20px;"></span><select id="Highest Qualification" name="Highest Qualification">
+            <option value="Diploma in Computer Science">Diploma in Computer Science</option>
+            <option value="Science Graduate">Science Graduate</option>
+            <option value="Bachelor in Engg.">Bachelor in Engg.</option>
+            <option value="Masters in Computer Science">Masters in Computer Science</option>
+            <option value="Masters in Engg.">Masters in Engg..</option>
+            <option value="Other">Other</option>
+        </select>
+            <br>
+            <br>
+            <label for="University"><b>University</b></label>
+            <span style="padding: 58px;"></span><input list="University" name="University">
+            <datalist id="University">
+            <option value="Mumbai University">Mumbai University</option>
+            <option value="Pune University">Pune University</option>
+            <option value="Chennai University">Chennai University</option>
+            <option value="Nagpur University">Nagpur University</option>
+            <option value="Badoda University">Badoda University</option>
+            </datalist>
+            <br>
+            <br>
+            <label for="Areas of Expertise"><b>Areas of Expertise</b></label>
+            <span style="padding: 30px;"></span><select id="Areas of Expertise" name="Areas of Expertise" size="4" multiple>
+            <option value="Software">Software</option>
+            <option value="Training">Training</option>
+            <option value="Networking">Networking</option>
+            <option value="Management">Management</option>
+            <option value="Marketing">Marketing.</option>
+        </select>
+        You Can Select Multiple Field
+        </fieldset>
+        <br>
+        <hr>
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="Upload Resume"><b>Upload Resume</b></label>
+            <span style="padding: 25px;"></span><input type="file" id="Upload Resume">
+            <br>
+            <br>
+            <label for="Comments"><b>Comments</b></label>
+            <span style="padding: 35px;"></span><textarea id="Comments" name="Comments" rows="4" cols="50"></textarea>
+        </fieldset>
+        <p style="text-align: center;">Submit</p>
+        </form>
+    </body>
+</html>

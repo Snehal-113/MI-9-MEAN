@@ -1,0 +1,18 @@
+h1{
+    background-color: bisque;
+    text-align: center;
+}
+table{
+    border-style: solid;
+    border-collapse: collapse;
+}
+td,td{
+    border-style: solid;
+    padding: 30px;
+}
+th{
+    text-align: left;
+}
+.frnt_cls{
+    font-family: cursive;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form</title>
+        <link rel="stylesheet" href="jyoti_A6_2style.css">
+    </head>
+    <body>
+        <form>
+            <div class="main-heading">
+         <h1 >MI-9 Intern HTML Assesment</h1>
+        </div>
+         <hr>
+         <br>
+         <div class="details-container">
+            Personal Details
+        </div>
+         <h2 style="background-color: rgb(140, 140, 211);">Personal Detail</h2>
+          <label for="fname">First name:&nbsp;</label>
+          <input type="text" id="fname"  placeholder="Fname"name="fname"><br>
+          <br>
+          <label for="lname">Last name:&nbsp;</label>
+          <input type="text" id="lname"  placeholder="Lname"name="lname">
+          <br> <br>
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" value="male">
+         <label for="male">Male</label>
+         <input type="radio" id="female" name="gender" value="female">
+         <label for="female">Female</label>
+         <input type="radio" id="other" name="gender" value="other">
+         <label for="other">Other</label>
+         <br><br>
+         <label class="label-heighlight" for="Age">Age :</label>
+         <label for="Age">less than 18</label>
+         <input type="radio" id="Age" name="Age">
+         <label for="Age">18-25</label>
+         <input type="radio" id="Age" name="Age">
+         
+         <label for="Age">26-40</label>
+         <input type="radio" id="Age" name="Age"> <br><br>
+         <h2 style="background-color: rgb(140, 140, 211)";>Academic Detail</h2>
+         
+         <label>Skill Set:</label>
+          
+        <label for="HTML">HTML</label>
+        <input type="checkbox" id="HTML"name="Coures" value="HTML">
+         
+        <label for="Javascript"> Javascript</label>
+        <input type="checkbox" id="Javascript"name="Coures" value="Javascript">
+        <label for="Java"> Java</label>
+        <input type="checkbox" id="Java"name="Coures" value="Java"> 
+        <label for="Oracle"> Oracle</label>
+        <input type="checkbox" id="Oracle"name="Coures" value="Oracle"> <br>
+        <br>
+        <label for="List">User List :</label>
+        <select id="List" name="List">
+        <option value="Diploma in Computer Science">Diploma in Computer Science</option>
+        <option value="Science Graduate">Science Graduate</option>
+        <option value="Bachelor in Engg">Bachelor in Engg.</option>
+        <option value="Masters in Computer Science">Masters in Computer Science</option>
+        <option value="master in engg">Master in Engg</option>
+        <option value="other">Other</option>
+        </select> 
+        <br> <br>
+        <label for="datalist">University Datalist:</label>
+        <select id="datalist" name="datalist">
+            <option value="mumbai university">Mumbai University</option>
+            <option value="pune university">Pune University</option>
+            <option value="chennai university">Chennai University</option>
+            <option value="badoda university">Bododa University</option>
+            <option value="nagpur university">Nagpur University</option>
+        </select> 
+        <br>
+        <label for="feild">Goal:</label>
+        <select id="feild" name="feild" size="4" multiple>
+        <option value="software">software</option>
+        <option value="Networking">Networking</option>
+        <option value="traning">Traning</option>
+        <option value="Managment">Managment</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </body>
+</html>

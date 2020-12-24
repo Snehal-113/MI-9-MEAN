@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assessment 2</title>
+        <link rel="stylesheet" href="jyoti_05Dec_style.css">
+    </head>
+    <body>
+        <form>
+            <h2>User Details</h2>
+            <fieldset>
+            <legend>Personal Information</legend>
+            <br>
+            <label for="Fname">Firstname:&nbsp;</label>
+            <input type="text" id="Fname" name="firstname" placeholder="Enter your name" required>
+            <br><br>
+            <label for="Mname">Middle name:&nbsp;</label>
+            <input type="text" id="Mname" name="Middle name" placeholder="Enter your Middle name" required>
+            <br><br>
+            <label for="Lname">Last Name:&nbsp;</label>
+            <input type="text" id="Lname" name="lastname" placeholder="Enter your Last Name" required>
+            <br><br>
+            <label for="Email">Email:&nbsp;</label>
+            <input type="text" id="Email" name="Email" placeholder="Enter your Email" required>
+            <br><br>
+            <label for="Mno">Mobile No:&nbsp;</label>
+            <input type="tel" id="Mno" name="Mobile no" placeholder="Enter your Mobile no" required>
+            <br><br>
+            <label for="CCity">Current City:&nbsp;</label>
+            <input type="text" id="Ccity" name="Current City">
+        </fieldset>
+        <fieldset>
+            <legend>Academic Details:&nbsp;</legend>
+            <label for="uni">University Name:&nbsp;</label>
+            <input list="uni">
+            <datalist id="uni">
+             <option value="mumbai"> mumbai University</option>
+             <option value="Amravati">Amravati University</option>
+             <option value="pune">Pune University</option>
+             <option value="Nagpur">Nagpur University</option>
+            </datalist>
+            <br><br>
+            <label for="Edu">Education:&nbsp;</label>
+            <select>
+                <option>B.E</option>
+                <option>M.CA</option>
+                <option>B.S.C</option>
+                <option>Other</option>
+            </select>
+            <br><br>
+            <input type="radio" name="passout" value="passout"> passout
+            <input type="radio" name="Final Year" value="Final year" >Final Year
+            <br><br>
+            <legend>Education Status:&nbsp;</legend>
+            <br>
+            <label>Start Year:&nbsp;</label>
+            <select id="Syrr">
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+            </select>
+            <label>End Year:&nbsp;</label>
+            <select id="Eyrr">
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+            </select>
+            <br><br>
+            <label>How did you find us?</label>
+            <br>
+            <select size="3" multiple>
+                <option value="Friend">Frient</option>
+                <option value="Naukri">Naukri</option>
+                <option value="Google">Google</option>
+            </select>
+            <br><br>
+           <input type="Submit" name="Submit" value="Submit">
+
+            
+        </fieldset>
+
+
+        </form>
+    </body>
+</html>

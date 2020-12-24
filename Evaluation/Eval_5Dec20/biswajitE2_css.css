@@ -1,0 +1,46 @@
+body{
+	background: url(oned.jpg) no-repeat center center fixed;
+	background-size: cover;
+	height: 100%;
+}
+h1 {
+	font-family : cursive;
+	color: blue;
+}
+h2 {
+	color: blue;
+}
+marquee {
+	color: red;
+}
+b {
+	color: blue;
+}
+i {
+	color: red;
+}
+.centered {
+	width: 750px;
+	text-align: center;
+	margin : auto;
+}
+button {
+	display: block;
+	color: white;
+	background-color: blue;
+	height: 30px;
+	border-radius: 5px;
+	margin: auto;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+
+label {
+	display: inline-block;
+	width: 170px;
+}
+legend {
+	color: green;
+}

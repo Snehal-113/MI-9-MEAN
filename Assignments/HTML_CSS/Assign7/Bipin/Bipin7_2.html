@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Naukri</title>
+<style>
+label{
+display:inline-block;
+width:120px;
+}
+option{
+display:inline-block;
+width:120px;
+}
+input type{
+display:inline-block;
+width:120px;
+}
+</style>
+</head>
+<body bgcolor=silver>
+<form>
+<h1 align=center>Naukri</h1>
+<fieldset>
+<legend><h2>Personal info</h2></legend>
+
+<label for="iframe">First Name:&nbsp;</label>
+<input type="text" id="iframe" name="frame" placeholder="First Name" required><br><br>
+
+<label for="iframe">Last Name:&nbsp;</label>
+<input type="text" id="iframe" name="frame" placeholder="Last Name" required><br><br>
+
+<label for="email">Email:&nbsp;</label>
+<input type="email"  name="email" placeholder="Email" required><br><br>
+
+<label for="number">Mobile Number:&nbsp;</label>
+<select>
+<option>+91</option>
+<option>+92</option>
+<option>+93</option>
+<option>+94</option>
+<option>+95</option>
+<option>+96</option>
+</select>
+<input type="Tel" id="Mobile Number" name=mobile required pattern=[123-12-2344]><br><br>
+</fieldset>
+
+<br><br>
+
+<fieldset>
+<legend><h2>Academic Details</h2></legend>
+<label for="univ">University Name:&nbsp;</label>
+<input list="univ">
+<datalist id="univ">
+<option value="mum">Mumbai</option>
+<option value="Pune">Pune</option>
+<option value="Baroda">Baroda</option>
+</datalist>
+
+<br><br>
+<label for="qualification">Highest Qualification:&nbsp;</label>
+<select>
+<option>B.E</option>
+<option>M.E</option>
+<option>B.Sc</option>
+</select>
+
+<br><br><br>
+
+<label for="yr">Start Year&nbsp;</label>
+<select id="syr" name="syr">
+<option value="2020">2018</option>
+<option value="2019">2017</option>
+<option value="2018">2016</option>
+</select>
+
+<br><br>
+
+<label for="yr">End Year&nbsp;</label>
+<select id="eyr" name="eyr">
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+</select>
+
+<br><br>
+
+<label for="marks">Marks Aggregate:&nbsp;</label>
+<input type="number"  id="imarks" name="marks" min="40" max="100">
+<br><br>
+
+<label for="prj">Academic Projects Title:&nbsp;</label>
+<input type="text"  id="iprj" name="nprj">
+<br><br>
+<label for="doc">Upload Project Documentation:&nbsp</label>
+<input type="file" id="idoc name="ncert">
+<input type="submit" value="Submit Project Documentation">
+
+<br><br>
+
+<label for="cert">Certification:&nbsp</label>
+<select id="cert" name="cert">
+<option value="java">java</option>
+<option value="ccna">ccna</option>
+<option value="python">python</option>
+<option value="c">c</option>
+</select>
+
+
+<input type="file" id="icert name="ncert">
+<input type="submit" value="Submit Certification">
+<br><br>
+<a href="file:///home/bipin/Desktop/bipin7_3.html" target="_blank">Submit</a>
+</fieldset>
+</form>
+</body>
+</html>
