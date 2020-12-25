@@ -1,0 +1,35 @@
+.lef{
+    height: 200px;
+    width: 200px;
+    float: left;
+    clear: left;
+   }
+   .rig {
+    height: 200px;
+    width: 200px;
+    float: right;
+    clear: right;
+   }
+    .ove {
+      float:right;
+     border:2px solid cyan;
+     background-color:purple;
+     height: 200px;
+     width: 550px;
+     overflow: auto;
+   }
+   .over {
+      float:left;
+     border:2px solid cyan;
+     background-color:purple;
+     height: 200px;
+     width: 550px;
+     overflow: auto;
+   }
+   .outer {
+    border:2px solid red;
+    background-color :purple; 
+    height: 700px;
+    width: 800px;
+    padding: 70px;
+    }
