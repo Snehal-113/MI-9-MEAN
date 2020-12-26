@@ -1,0 +1,10 @@
+.contaner{
+    width: 90%;
+    height: 10%;
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    border: black;
+    border-radius: 2px;
+
+}
