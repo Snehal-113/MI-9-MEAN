@@ -1,0 +1,22 @@
+.cls_mar{
+    margin:10px;
+}        
+.frmt{
+    padding: 10px; 
+    }   
+.img{        
+opacity: 0.3;
+}
+.img2{
+    background-image: url('index.jpeg');
+}
+img:hover{
+    opacity:1;
+}
+.classa{
+    text-align:center;
+    margin:5px;            
+}
+.frmt_1{
+    text-align:center;
+}
