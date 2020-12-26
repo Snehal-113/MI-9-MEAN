@@ -1,0 +1,21 @@
+h1{
+    text-align:left;
+   
+}
+h2{
+    background-color:orange;
+    text-align:right;
+    font-family:cursive;
+}                                     
+div {
+    background-image:url('large.jpg');
+    background-size:cover;
+}
+body{
+    width:70%;
+    border:3px solid black;
+   
+}
+p{
+    background-color:rgb(236, 218, 55)
+}

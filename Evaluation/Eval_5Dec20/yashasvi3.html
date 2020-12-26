@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>userdetails</title>
+    </head>
+    <body style="background-color: lightblue;">
+        <link rel="stylesheet" href="style.css">
+        <h1 style="text-align: center;">Amber Academy</h1><hr>
+        <form action="">
+            <div class="details-container">
+                Enter User Details
+            </div><hr>
+            <label class="label-heighlight" for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required><br><br>
+            <label class="label-heighlight" for="mname">Middle Name:</label>
+            <input type="text" id="mname" name="mname" placeholder="Middle Name" required><br><br>
+            <label class="label-heighlight" for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required><br><br>
+            <label class="label-heighlight" for="emailid">Email Id:</label>
+            <input type="email" id="emailid" name="emailid" placeholder="abc@gmail.com" required><br><br>
+            <label class="label-heighlight" for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="1234-12-1234" pattern="[0-9]{4}-[0-9]{2}-[0-9]{4}" required><br><br>
+            <label class="label-heighlight" for="edu" >Education:</label>
+            <input type="radio" id="edu" name="edu" value="be">B.E/B.Tech
+            <input type="radio" id="edu" name="edu" value="mca">MCA
+            <input type="radio" id="edu" name="edu" value="bsc">B.Sc
+            <input type="radio" id="edu" name="edu" value="diploma">Diploma
+            <input type="radio" id="edu" name="edu" value="other">Other <br><br>
+            <label class="label-heighlight" for="clg">College Name:</label>
+            <input list="clgs" id="clg" name="clg" placeholder="college name" required>
+            <datalist id="clgs">
+                <option value="VJTI College">
+                <option value="ST Jhon College">
+                <option value="Viva College">
+                <option value="Vartak College">
+                <option value="Thakur College">
+            </datalist><br><br>
+            <label class="label-heighlight" for="edustatus" >Education Status:</label>
+            <input type="radio" id="edustatus" name="edustatus" value="fy">Final Year
+            <input type="radio" id="edustatus" name="edustatus" value="passout">Passout <br> <br>
+            <label class="label-heighlight" for="findus">How did you find us?</label><br>
+            <input type="radio" id="findus" name="findus" value="friend">Friend <br>
+            <input type="radio" id="findus" name="findus" value="naukri">Naukri <br>
+            <input type="radio" id="findus" name="findus" value="google">Google
+            <hr>
+        </form>
+    </body> 
+</html>
