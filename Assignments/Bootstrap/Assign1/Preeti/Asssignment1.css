@@ -1,0 +1,28 @@
+.jumbotron{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_pic/04/47/12/785857e15ddbe19.jpg");
+    background-size: cover;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+h1{
+    color: white;
+    font-weight: bold;
+}
+.announce:hover{
+ color: blue;
+}
+img{
+    height: 30px;
+    width: 30px;
+}
+.bg-color:hover{
+    background-color: lightsteelblue;
+}
+.due{
+    font-size: 10px;
+    color:gray;
+}
+.a1{
+    color: blue;
+    text-decoration: underline;
+}
