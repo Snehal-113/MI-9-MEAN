@@ -1,0 +1,14 @@
+.container-fluid{
+    background-image: url("s.jpeg");
+    
+    height: auto;
+}
+.col-5{
+    background-image: url("L.jpeg");
+    height: 500px;
+}
+.part1{
+    padding-top: 15%;
+    padding-left: 5%;
+    text-align: center;
+}
