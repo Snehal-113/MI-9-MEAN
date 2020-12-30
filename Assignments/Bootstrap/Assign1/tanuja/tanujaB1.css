@@ -1,0 +1,37 @@
+*{
+    box-sizing:border-box;
+  }
+ 
+  .jumbotron {   
+    margin-top:20px;         
+    width:61%;
+    background-image:url('lap.jpg');       
+    background-repeat:no-repeat;      
+    background-size:cover;
+    margin-left:350px;
+    overflow:hidden;  
+    background-size:100% 200px;           
+   }         
+   .frmt_col {     
+    border: 1px solid black;
+    height: 200px;        
+   } 
+   .frmt_col1{
+     border:1px solid black;
+     height:50px;                        
+   }
+   .frmt{
+    float:right ;
+    color:rgb(0, 183, 255);
+   }
+   p{
+     padding:5px;
+   }
+   h1{
+    text-shadow:2px 2px  2px rgb(0, 255, 234);
+     margin:0 px;
+     padding:0 px;
+     float:left;
+     clear:left;
+     color:white;
+   }

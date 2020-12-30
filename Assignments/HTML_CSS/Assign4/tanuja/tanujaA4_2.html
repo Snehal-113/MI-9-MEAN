@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>A Test table with merged cells</title>
+		<style>
+			table{
+                left:500px;
+				border:9px solid black;                
+                border-collapse:collapse;
+                position:relative;
+            }
+            th,td{
+				border-left:9px solid black;
+                border-style:solid;
+                border-collapse:collapse;
+            }
+		</style>	
+	</head>
+	<body>   
+        <br><br>     	
+		<table>    
+            <caption style="color:blue">Jan's Spring Term afternoon Schedule</caption>           
+			<tr style="text-align:center";>
+				<th></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+            <tr style="text-align:center";>
+                <th>1.00</th>
+                <td rowspan ="2">Office</td>
+                <td></td>
+                <td rowspan ="2">Office</td>
+                <td rowspan ="8">Office Hours by Appt</td>
+                <td rowspan ="2">Office</td>
+            </tr>
+            <tr style="text-align:center";>
+                <th>1.30</th>
+                <td rowspan ="2">Dept Meetings</td>
+            </tr>
+			<tr style="text-align:center";>
+                <th>2.00</th>
+                <td rowspan ="3">MAT 108</td>               
+                <td rowspan ="3">MAT 108</td>  
+                <td rowspan ="3">MAT 108</td>               
+            </tr>
+            <tr style="text-align:center";>
+                <th>2.30</th>
+                <td></td>      
+            </tr>
+            <tr style="text-align:center";>
+                <th>3.00</th>
+                <td rowspan ="3">EC Meetings</td>  
+            </tr>
+            <tr style="text-align:center";>
+                <th>3.30</th>
+                <td rowspan ="3">CSC 205</td>   
+                <td rowspan ="3">CSC 205</td> 
+                <td rowspan ="3">CSC 205</td>                            
+            </tr>
+            <tr style="text-align:center";>
+                <th>4.00</th>
+            </tr>
+            <tr style="text-align:center";>
+                <th>4.30</th>
+                <td></td>                
+        </table>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Naukri</title>
+        
+            <link rel="stylesheet" href="naukri.css">
+       
+    </head>
+    <body style="font-family: Arial, Helvetica, sans-serif;">
+        <a href="Naukri1stpage.html"input type="button" value="Sign up"></a>
+        <h3>Create Profile</h3>
+        <fieldset>
+            <legend>Personal Info</legend>
+            <lable for="ifname">First name:&nbsp;</lable>
+            <input type="text"id="ifname" name="ffname"placeholder="first Name"required><br><br>
+            <lable for="imname">Middel name:&nbsp;</lable>
+            <input type="text"id="imname" name="mfname"placeholder="Middel Name"><br><br>
+            <lable for="ilname">Last name:&nbsp;</lable>
+            <input type="text"id="ilname" name="lfname"placeholder="Last Name"required><br><br>
+            <lable for="email">Email:&nbsp;</lable>
+            <input type="email"id="iemail" name="email1"placeholder="abc@gmail.com"required><br><br>
+            <lable for="ilname">Mobile:&nbsp;</lable>
+            <input type="text"id="ilname" name="mob"placeholder="0123456789"required><br><br>
+            <lable for="idname">Date of Birth:&nbsp;</lable>
+            <input type="text"id="idname" name="mob"placeholder="dd-mm-yyyy"required><br><br>
+        </fieldset>
+        <h3>Educational Details</h3>
+        <fieldset>
+            <legend>Academic Details</legend>
+            <lable for="univ">University Name:&nbsp;</lable>
+            <input list="univ">
+            <datalist id="univ">
+            <option value="MUm">Mumbai</option>
+            <option value="pu">Pune</option>
+            <option value="awbd">Aurangabad</option>
+            <option value="Amri">Amravati</option>
+            <option value="Kol">Kolhapur</option>
+        </datalist>
+        <lable for="qual">Highest Qualification:&nbsp;</lable>
+        <select>
+        <option>B.E</option>
+        <option>B.tech</option>
+        <option>B.sc</option>
+        <option>other</option>
+        </select>
+        <lable for="qual">Specialization:&nbsp;</lable>
+        <select>
+        <option>Electronics and Telecommunication</option>
+        <option>Computer<option>
+        <option>IT</option>
+        <option>other</option>
+        </select>
+        <br>
+        <lable for="imarks">Marks(Aggreegate %):&nbsp;</lable>
+        <input type="number"id="imarks"name="marks"min="40"max="100">
+        <br>
+        <br>
+        <lable for="prj">Academic Projects:&nbsp;</lable>
+        <table>
+            <tr>
+                <th>Project Name</th>
+                <th>Project Discription</th>
+                <th>Domain</th>  
+            </tr>
+            <tr>
+
+            <td><input type="text" id="pro"name="projct name"></td>
+            <td><input type="text" id="proj"name="projct discription"></td>
+            <td><input type="text" id="dom"name="Domain"></td>
+            </tr>
+            <tr>
+            <td><input type="text" id="pro"name="projct name"></td>
+            <td><input type="text" id="proj"name="projct discription"></td>
+            <td><input type="text" id="dom"name="Domain"></td>
+            </tr>
+         </table>  
+         <fieldset>
+            <legend>Documents</legend>
+        <b>Documents:</b><br>
+        <label for="ifile">Upload aadhar:&nbsp;</label>
+        <input type="file"id="ifile"name="file"><br><br>
+        <label for="ifile1">Upload Degree  certificate:&nbsp;</label>
+        <input type="file"id="ifile1"name="file1"><br><br>
+        <label for="ifile2">Upload ssc marksheet:&nbsp;</label>
+        <input type="file"id="ifile2"name="file2"><br><br>
+        <label for="pri">Upload Resume:&nbsp; </label>
+        <input type="file" id="pri" name="pri">
+        </fieldset>
+        </fieldset>
+        <input type="button" style=text-center" value="Submit">
+
+    </body>
+</html>
