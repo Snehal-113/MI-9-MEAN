@@ -1,0 +1,45 @@
+#coloredBg{
+    background-color: aqua;
+    border: 2px solid chocolate;
+    overflow: auto;
+    width: 80%;
+}
+
+.img1{
+    float: left;
+    width: 50%;
+}
+.text1{
+    float: right;
+    width: 40%;
+    margin: 50px;
+}
+#para1{
+    margin: 50px;
+}
+
+.text2{
+    clear: both;
+    float: left;
+    width: 40%;
+    margin-left: 40px;
+}
+.img2{
+    margin-right: 60px;
+    float: right;
+}
+.img3{
+    clear: both;
+    float: left;
+    width: 50%;
+    
+}
+.text3{
+    
+    float: right;
+    width: 40%;
+    margin: 50px;
+}
+#para3{
+    margin: 50px;
+}
