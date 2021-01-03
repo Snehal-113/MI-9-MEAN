@@ -1,0 +1,135 @@
+body {
+  background : #ecf0f4;
+}
+.upper-header {
+  border-bottom: 1px solid #e3e8ed;
+  padding: 6px 0;
+  font-size: 18px;
+  font-weight: 500;
+  height: 31px;
+}
+.upper-header>ul>li:hover{
+  color: brown;
+}
+.search-button:hover{
+  background-color: rgb(173, 162, 162);
+}
+.upper-header > ul {
+  display:inline;
+}
+.upper-header > ul > li{
+    display:inline;
+    padding-right:10px ;
+}
+.contact-no{
+  display: inline;
+  float: right;
+}
+
+.header {
+  width: 1166px;
+    margin: auto;
+    position: relative;
+}
+
+.top-logo {
+  display: inline-block;
+  padding: 13px 0;
+}
+
+.header-buttons {
+  display: inline;
+    float: right;
+}
+.header-buttons > li{
+  display:inline;
+  padding-right:10px ;
+}
+
+
+.job-search {
+  height: 154px;
+  width: 100%;
+  background: #126db1;
+  position: relative;
+  background-size: cover;
+}
+
+.search-form {
+  width: 1166px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.search-form > form > .skill-input, .city-input, .search-button  {
+    /* border-right: solid 1px #c8c7c7; */
+    box-sizing: border-box;
+    float: left;
+    height: 40px;
+    margin:5px;
+}
+.search-form > form > .skill-input {
+  width: 40%;
+}
+
+.search-form > form > .city-input {
+  width: 20%;
+}
+.search-form > form > .search-button {
+  width: 10%;
+  height:40px;
+}
+
+.top-ind {
+  padding: 10px 40px;
+}
+.top-ind > ul {
+  clear: both;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.top-ind li {
+  float: left;
+  width: 271px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: white;
+}
+
+.top-ind li a {
+    color: #000;
+    font-weight: 600;
+}
+.top-ind .top-ind-icon {
+  height: 28px;
+    width: 28px;
+    float: left;
+    margin-right: 15px;
+}
+.top-ind .tab-sub-text {
+  display: block;
+  color: #f52f2f;
+}
+
+.jobs-section > div >div > a{
+  color: #000;
+    font-weight: 600;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: white;
+  width: 350px;
+  margin: 33px 20px 0;
+
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
