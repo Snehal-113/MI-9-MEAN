@@ -1,0 +1,36 @@
+<html>
+    <head><title>assignment1_1</title></head>
+    <body>
+        <h1 style="text-align: center;">swap two numbers</h1>
+        <form>
+            <label for="ival1"> A:</label>
+            <input type="text" id="ival1" name="val1" size="5">
+            <label for="ival2"> B:</label>
+            <input type="text" id="ival2" name="val2" size="5">
+            <button type="button" onclick="swap()">method1</button>
+            <button type="button" onclick="swap1()">method2</button>
+        </form>
+        <h3>method1:with temporary variable</h3>
+        <p id="meth1"></p>
+        <h3>method1:without temporary variable</h3>
+        <p id="meth2"></p>
+        <script language="JavaScript">
+            function swap(){
+            var a,b,temp;
+            a=parseInt(document.getElementById("ival1").value); //reading value1
+            b=parseInt(document.getElementById("ival2").value); //reading value2
+            temp=a;
+            a=b;
+            b=temp;
+            document.getElementById("meth1").innerHTML="After swapping(method1)-A:"+a+"B:"+b; 
+            }
+            function swap1(){
+            var a,b;
+            a=parseInt(document.getElementById("ival1").value); //reading value1
+            b=parseInt(document.getElementById("ival2").value); //reading value2
+            [a,b]=[b,a];    
+            document.getElementById("meth2").innerHTML="After swapping(method2)-A:"+a+"B:"+b; 
+            }
+        </script>
+    </body>
+</html>        
