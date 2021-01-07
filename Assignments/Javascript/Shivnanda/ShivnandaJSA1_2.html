@@ -1,0 +1,19 @@
+<html>
+    <head><title>assignment1_Q2</title></head>
+    <body>
+        <h1 style="text-align: center;">conversion of celsius to fahrenheit</h1>
+        <label for="ival">Temp:</label>
+        <input type="text" id="ival" name="val" size="5"><sup>o</sup>C
+        <button type="button" onclick="conv()">convert</button>
+        <h3>After conversion </h3>
+        <p id="con"></p>
+        <script language="JavaScript">
+            function conv(){
+                var ans,c;
+                c=parseInt(document.getElementById("ival").value);
+                ans=(c*9/5)+32;
+                document.getElementById("con").innerHTML= c +"<sup>o</sup>C is eqal to"+ ans +"<sup>o</sup>F"; 
+            }
+        </script>
+    </body>
+</html>   
