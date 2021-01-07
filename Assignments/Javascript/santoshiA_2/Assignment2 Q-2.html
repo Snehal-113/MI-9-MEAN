@@ -1,0 +1,50 @@
+<html>
+    <head><title>assignment2 Q2</title></head>
+    <body>
+        <form>
+            <input type="text" id="ival1" name="val1" size="5">
+            +
+            <input type="text" id="ival2" name="val2" size="5">
+            +
+            <input type="text" id="ival3" name="val3" size="5">
+            +
+            <input type="text" id="ival4" name="val4" size="5">
+            +
+            <input type="text" id="ival5" name="val5" size="5">
+            =
+            <button type="button" onclick="fun()">answer</button>
+            </form>
+            <p id="pi"></p>
+        <script language="JavaScript">
+            function func(){
+            var a,b,c,d,e,total,per,n;
+            a=parseInt(document.getElementById("ival1").value);
+            b=parseInt(document.getElementById("ival2").value);
+            c=parseInt(document.getElementById("ival3").value);
+            d=parseInt(document.getElementById("ival4").value);
+            e=parseInt(document.getElementById("ival5").value);
+            total=a+b+c+d+e;
+            per=(total/5)
+            n=per/10;
+            document.getElementById("ans").value=per;
+            window.alert(n);
+            switch(n){
+               case 10:
+               case 9:
+               case 8:document.getElementById("pi").innerHTML="Pass By grade A"
+               break:
+               case 7:
+               case 6:document.getElementById("pi").innerHTML="Pass By grade B"
+               break:
+               case 5:
+               case 4:document.getElementById("pi").innerHTML="Pass By grade c"
+               break:
+               case 3:document.getElementById("pi").innerHTML="Pass By grade D"
+               break:
+               default:document.getElementById("pi").innerHTML="F"
+               break:
+            }
+            </script>
+            </body>
+            </html>
+            
