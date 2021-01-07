@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>assignment3_5</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A Number:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="check()">check</button>
+        <h3>calulate factorial:</h3>
+        <p id="fact"></p>
+        <script lang="JavaScript">
+            function check() {
+                var a,fact=1;
+                a=parseInt(document.getElementById("ival1").value);
+                for (i = 1; i <=a; i++)
+                {			
+                fact = fact * i;
+                document.getElementById("fact").innerHTML=+a+"factorial is :"+fact;
+                }
+            }            
+        </script>
+    </body>
+</html>
