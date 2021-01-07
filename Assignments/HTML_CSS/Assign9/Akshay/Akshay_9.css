@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;  
+  }
+  body {
+   background: url(website.png);
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+  
+  }
+  header {
+      background-color: rgba(0,0,0,0.9);
+      width: 100%;
+      margin: auto;
+      height: 50px;
+      text-align: left;
+      position: fixed;
+      z-index: 3;
+  }
+  .nav-area {
+      list-style: none;
+      margin-right: 50px;
+      color: white;
+      position: absolute;
+      top: 15px;
+      right: 502px;
+  }
+  
+  .btn {
+   /* background:red; */
+   width: 200px;
+   padding: 10px; 
+   padding-left: 10px;
+   position:absolute;
+   top: 4px;
+   right: 0px;
+  
+  
+  }
+  button {
+      background: none;
+      border: none;
+      color: black;
+      font-size: 16px;
+      padding: 3px;
+      background-color: yellow;
+  }
+  
+  .nav-area li {
+  display: inline-block;
+  }
+  .nav-area a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 30px;
+  }
+  .div1 {
+      float: right;
+      clear: right;
+      height: 200px;
+      width: 200px;
+      padding: 20px; 
+  }
+  .div2 {
+      float: left;
+      clear: left;
+      height: 200px;
+      width :900px;
+      padding: 20px;
+      position: relative;
+      left: 15%; 
+      z-index: 1;
+  }
+  .col {
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 300;
+  }
+  label {
+      color: wheat;
+  }
+  .input1 {
+      display: inline-block;
+      background-color: rgba(0, 0,0, 0.3);
+      color: red;
+      padding: 10px;
+  }
+  .search {
+      position: absolute;
+      top: 178px;
+      left: 348px;
+  }
+  input[type=text]  {
+      width: auto;
+      height: auto;
+      background: none;
+      border: none;
+      border-bottom:2px solid yellow ;
+      outline: none;
+      color: white;
+  }
+  input[type=password]  {
+      width: auto;
+      height: auto;
+      background: none;
+      border: none;
+      border-bottom:2px solid yellow ;
+      outline: none;
+      color: white;
+  }
+  input[type=button]  {
+      background: none;
+      border: none;
+      color: black;
+      font-size: 16px;
+      padding: 3px;
+      background-color: yellow;
+  }
+  
+  li:hover{
+      color: black;
+      background-color: skyblue;
+  }
+  .active {
+      background-color: yellow;
+      color: black;
+  }
+  .main {
+      width: 100%;
+      height: 250px;
+      position: absolute;
+      top:270px;
+      display: flex;
+      
+  }
+  .c1 {
+      border: 2px solid red;
+      width: 20%;
+      height: 250px;
+      margin: 10px;
+  }
