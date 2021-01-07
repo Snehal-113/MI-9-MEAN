@@ -1,0 +1,24 @@
+<html>
+
+<head></head>
+
+<body>
+    <p id="pid"></p>
+    <input type="text" id="num1" name="num1">
+    <input type="text" id="num2" name="num2">
+    <button type="button" onclick="swap()">Swap</button>
+    <script>
+        function swap(){
+        let a,b,c;
+        a = parseInt(document.getElementById("num1").value);
+        b = parseInt(document.getElementById("num2").value);
+        c = a + b;
+        a = c - a;
+        b = c - b;
+        document.getElementById("num1").value = a;
+        document.getElementById("num2").value = b;
+        }
+    </script>
+</body>
+
+</html>

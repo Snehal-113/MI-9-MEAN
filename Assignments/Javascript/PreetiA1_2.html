@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <button type="button" onclick="convertToF()">Convert To F</button><br><br>
+        <button type="button" onclick="convertToC()">Convert To C</button><br><br>
+        <label for="celsius">Celsius</label>
+        <input type="text" id="cel" name="cel">
+        <label for="fahrenheit">Fahrenheit</label>
+        <input type="text" id="fah" name="fah">
+        <script>
+            function convertToF(){
+                let a, b, c;
+                a = parseInt(document.getElementById("cel").value);
+                if (!!a) {
+                    b = a * 1.8;
+                    c = b + 32;
+                    document.getElementById("fah").value = c;
+                }
+            }
+            function convertToC(){
+                let a, b, c;
+                b = parseInt(document.getElementById("fah").value);
+                if(!!b) {
+                    a = b - 32;
+                    c = a / 1.8;
+                    document.getElementById("cel").value = c;
+                }
+            }
+        </script>
+    </body>
+</html>

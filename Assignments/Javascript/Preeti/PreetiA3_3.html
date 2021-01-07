@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <label for="num">Enter a number:</label>
+        <input type="text" id="num" name="num">
+        <button type="button" onclick="check()">Check</button>
+        <script>
+            function check(){
+                const a = parseInt(document.getElementById("num").value);
+                if(a % 2 == 0){
+                    document.write("even");
+                }
+                else{
+                    document.write("odd");
+                }
+            }
+        </script>
+    </body>
+</html>
