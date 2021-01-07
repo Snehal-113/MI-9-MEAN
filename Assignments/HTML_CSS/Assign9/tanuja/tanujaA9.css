@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    border:2px solid black; 
+    
+}
+.frmt{           
+    text-align:center;
+    text-shadow:black;
+    color:rgb(228, 21, 21); 
+    font-size:50px;     
+  
+    padding:10px; 
+    margin-bottom:15px;                  
+}        
+.nav{
+    overflow:hidden;            
+    background-color:black;
+    height:50px;
+    margin-top:30px;
+    margin-left:25px;
+    margin-right:25px;
+    margin-bottom:25px;
+    
+}      
+li{
+    display:inline;
+    float:left; 
+}
+a{
+    text-decoration:none;
+    color:white;
+    background-color:black;
+    padding:10px;
+    margin:15px;
+    height:10px;
+    width:100%;
+}
+a:hover{
+    background-color:grey;
+    color:black;
+}
+a:active{
+    background-color:green;
+    color:white;
+}        
+.footer{
+    text-align:center;
+    color:grey;
+}
+.column{        
+    float:left;
+    width:32.17%;
+    padding:15px;
+    height:100px;
+    border:1px solid black;          
+    margin:10px ;  
+    color:black;  
+    background-color:white;                  
+}       
+.frmt_1{
+    height:200px;
+    margin:5px;
+    border:1px solid black;
+    background-image:url('large.jpg');
+    background-repeat:no-repeat;    
+    background-size:cover;       
+}  
+.frmt_2{
+    height:100px;
+    margin:30px;
+    border:1px solid black;
+    background-image:url('sky.jpg');
+    background-repeat:no-repeat;    
+    background-size:cover;  
+       
+}  
+ h3{
+     color:white;
+     text-align:left;
+     padding:5px;
+ }
+ h2{
+     margin-left:30px;
+ }
+.frmt_4{        
+    margin-top:30px;
+    text-align:center;            
+}
+button{
+    font-size:20px;
+    color:white;
+    background-color:green;
+}
