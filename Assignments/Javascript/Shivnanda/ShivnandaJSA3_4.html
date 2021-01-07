@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> Assignment3 Q4</title>
+    </head>
+    <body>
+        <label for="r"> Enter Rows : </label>
+        <input type="text" id="r" name="rows">
+        <label for="c">Enter Columns : </label>
+        <input type="text" id="c" name="cols">
+        <button type="button" onclick="Pattern()">Show</button>
+        <script>
+            function Pattern(){
+                var n,m,i,j;
+                n = parseInt(document.getElementById("r").value);
+                m = parseInt(document.getElementById("c").value);
+                for(i = 1; i <= n; i++){
+                    for(j = 1; j <= m; j++){
+                        document.write("*");
+                    }
+                        document.write("<br>");
+                }
+            }   
+        </script>
+    </body>
+</html> 
