@@ -10,10 +10,8 @@
     <input type="text" id="input4" name="val4" size="5">
     <input type="text" id="input5" name="val5" size="5">
     <button type="text" onclick="secondHighestNumber()">Show</button>
-    <h3>You have entered numbers as follows:</h3>
-    <p id="enterednum"></p>
-    <h3>The second highest number is:</h3>
-    <p id="highestnum"></p>
+    <h3></h3>
+    <p id="secondhighestnum"></p>
 
     <script language="JavaScript">
 
@@ -25,9 +23,16 @@
       var input3 =parseInt(document.getElementById("input2").value);
       var input4 =parseInt(document.getElementById("input4").value);
       var input5 =parseInt(document.getElementById("input5").value);
-      var largestNumber=Math.max(input1,input2,input3,input4,input5)
+      // var largestNumber=Math.max(input1,input2,input3,input4,input5)
+
+      var numbers = [input1,input2,input3,input4,input5];
+      var largestNumber = Math.max.apply(null, numbers);
+      console.log("largest Number ==>", largestNumber)
+      numbers.splice(numbers.indexOf(largestNumber), 1)
       console.log("largest number ", largestNumber)
-    
+      var secondLargestNumber = Math.max.apply(null, numbers);
+      console.log(" second largest number ", secondLargestNumber)
+        document.getElementById("secondhighestnum").innerHTML="The second highest number is: "+ secondLargestNumber;
     }
     </script>
   </body>
