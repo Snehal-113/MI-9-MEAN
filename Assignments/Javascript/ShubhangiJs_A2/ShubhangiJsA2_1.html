@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A2_Q1</title>
+  </head>
+  <body>
+    <input type="text" id="input1" name="val1" size="5">
+    <input type="text" id="input2" name="val2" size="5">
+    <input type="text" id="input3" name="val3" size="5">
+    <input type="text" id="input4" name="val4" size="5">
+    <input type="text" id="input5" name="val5" size="5">
+    <button type="text" onclick="secondHighestNumber()">Show</button>
+    <h3>You have entered numbers as follows:</h3>
+    <p id="enterednum"></p>
+    <h3>The second highest number is:</h3>
+    <p id="highestnum"></p>
+
+    <script language="JavaScript">
+
+      function secondHighestNumber(){
+
+      
+      var input1 =parseInt(document.getElementById("input1").value);
+      var input2 =parseInt(document.getElementById("input2").value);
+      var input3 =parseInt(document.getElementById("input2").value);
+      var input4 =parseInt(document.getElementById("input4").value);
+      var input5 =parseInt(document.getElementById("input5").value);
+      var largestNumber=Math.max(input1,input2,input3,input4,input5)
+      console.log("largest number ", largestNumber)
+    
+    }
+    </script>
+  </body>
+</html>
