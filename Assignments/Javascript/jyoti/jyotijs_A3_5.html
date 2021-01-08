@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Assignment_5</title>
+    </head>
+    <body>
+        <h2>factorial number</h2>
+        <label>Enter No:&nbsp;</label>
+        <input type="text" id="num" name="num">
+         <button onclick="show()">Factorial</button>
+        <input id="answer">
+        <script>
+            function show(){
+
+           var i, no, fact;
+           fact=1;
+           no=Number(document.getElementById("num").value);
+           for(i=1; i<=no; i++)  
+           {
+           fact= fact*i;
+           }  
+           document.getElementById("answer").value= fact;
+           }
+        </script>
+    </body>
+</html>
