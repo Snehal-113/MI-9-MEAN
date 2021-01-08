@@ -9,12 +9,12 @@
     <button type="button" onclick="swap()">Swap</button>
     <script>
         function swap(){
-        let a,b,c;
+        let a,b;
         a = parseInt(document.getElementById("num1").value);
         b = parseInt(document.getElementById("num2").value);
-        c = a + b;
-        a = c - a;
-        b = c - b;
+        a = a + b;
+        b = a - b;
+        a = a - b;
         document.getElementById("num1").value = a;
         document.getElementById("num2").value = b;
         }
