@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Decision control</title>
+    </head>
+    <body>
+        <form name="calc">
+            <input type="text" id="iVal1" name="val1" size="5">
+            <input type="text" id="iVal2" name="val2" size="5">
+            <input type="text" id="iVal3" name="val3" size="5">
+            <input type="text" id="iVal4" name="val4" size="5">
+            <input type="text" id="iVal5" name="val5" size="5">
+            <button type="button" onclick="greatest()">Show</button>
+            <p id="pid"></p>
+        </form>
+        <script langauge="JavaScript">
+            function greatest(){
+                var a,b,c,d,e,f,max;
+                a=parseInt(document.getElementById("iVal1").value);
+                b=parseInt(document.getElementById("iVal2").value);
+                c=parseInt(document.getElementById("iVal3").value);
+                d=parseInt(document.getElementById("iVal4").value);
+                e=parseInt(document.getElementById("iVal5").value);
+                max = Math.max(a,b,c,d,e);
+                if (a==max){
+                    a=0;
+                }
+                else if (b==max){
+                    b=0;
+                }
+                else if (c==max){
+                    c=0;
+                }
+                else if (d==max){
+                    d=0;
+                }
+                else if (e==max){
+                    e=0;
+                }
+                f=0;
+                if ((a<max) && (a>=b) && (a>=c) && (a>=d) && (a>=e)){
+                    f=a;
+                }
+                else if((b<max) && (b>=a) && (b>=c) && (b>=d) && (b>=e)){
+                    f=b;
+                }
+                else if((c<max) && (c>=a) && (c>=b) && (c>=d) &&( c>=e)){
+                    f=c;
+                }
+                else if((d<max) && (d>=a) && (d>=b) && (d>=c) && (b>=e)){
+                    f=d;
+                }
+                else if((e<max) && (e>=a) &&( a>=b) && (e>=c) && (b>=d)){
+                    f=e;
+                }
+                f=parseInt(document.getElementById("pid").innerHTML=+f);
+                window.alert("Second Largest number is "+f)
+            }
+        </script>
+    </body>
+</html>

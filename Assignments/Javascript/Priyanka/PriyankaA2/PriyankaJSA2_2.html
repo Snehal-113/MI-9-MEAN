@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Switch for Grade</title>
+    </head>
+    <body>
+        <form name="calc">
+            <input type="text" id="iVal1" name="val1">
+            <input type="text" id="iVal2" name="val2">
+            <input type="text" id="iVal3" name="val3">
+            <input type="text" id="iVal4" name="val4">
+            <input type="text" id="iVal5" name="val5">
+            <input type="text" id="ans" name="ans1">
+            <button type="button" onclick="Percentages()">show</button>
+            <p id="pid"></p>
+        </form>
+        <script language="JavaScript">
+            function Percentages(){
+                var a,b,c,d,e,total,p,n;
+                a=parseInt(document.getElementById("iVal1").value);
+                b=parseInt(document.getElementById("iVal2").value);
+                c=parseInt(document.getElementById("iVal3").value);
+                d=parseInt(document.getElementById("iVal4").value);
+                e=parseInt(document.getElementById("iVal5").value);
+                total=(a+b+c+d+e);
+                p=(total/5)
+                n=p/10
+                n=parseInt(n)
+                document.getElementById("ans").value=p;
+                switch(n){
+                    case 10:
+                    case 9:
+                    case 8:document.getElementById("pid").innerHTML="A";
+                    window.alert(" 100-80 =Grade A");
+                    break;
+                    case 7:
+                    case 6:document.getElementById("pid").innerHTML="B";
+                    window.alert(" 79-60=Grade B");
+                    break;
+                    case 5:
+                    case 4:document.getElementById("pid").innerHTML="C";
+                    window.alert("59-40=Grade C");
+                    break;
+                    case 3:document.getElementById("pid").innerHTML="D";
+                    window.alert(" 39-30=Grade D");
+                    case 2:
+                    case 1:
+                    case 0:document.getElementById("pid").innerHTML="F";
+                    window.alert("29-0=Fail");
+                    break;
+                    default:document.getElementById("pid").innerHTML="Invalid!!(Grade has to be between 0 and 100)";
+                    window.alert("Invalid!!");
+                    break;
+                }                    
+            }
+        </script>
+    </body>
+</html>
