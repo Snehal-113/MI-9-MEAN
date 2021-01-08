@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<h1>Conversion of Celsius to Farehneit</h1>
+	<input type="text" name="inp" id="inp">&nbsp;&nbsp;&nbsp;<sup>o</sup>C
+	<button id="btn" onclick="convert()">Convert</button>
+	<h2>After Conversion :</h2>
+	<p id="ot"></p>
+	<script type="text/javascript">
+		function convert() {
+			var c=parseInt(document.getElementById("inp").value)
+			var f=(c*(9/5))+32;
+			document.getElementById("ot").innerText=c+" degree in celsius is equals to "+f+" degree in farehneit";
+		}
+	</script>
+</body>
+</html>
