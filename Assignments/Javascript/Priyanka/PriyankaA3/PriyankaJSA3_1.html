@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Leap Year</title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button" onclick="Leap()">Show</button>
+        <p id="pid"></p>
+        <script>
+            function Leap(){
+            var a;
+            a=document.getElementById("pri").value;
+            if(( a % 4 == 0) && (a % 100 != 0) || (a % 400 == 0)){
+            document.getElementById("pid").innerHTML=a+" is leap year";
+            }
+            else
+            document.getElementById("pid").innerHTML= a+" is not leap year";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Even and odd number</title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button" onclick="Even()">Show</button>
+        <p id="pid"></p>
+        <script>
+            function Even(){
+            var a;
+            a=parseInt(document.getElementById("pri").value)
+            if(a % 2 == 0){
+            document.getElementById("pid").innerHTML=a+ " is even number";
+            }
+            else{
+            document.getElementById("pid").innerHTML=a+ " is odd number";
+            }
+            }
+        </script>
+    </body>
+</html>
