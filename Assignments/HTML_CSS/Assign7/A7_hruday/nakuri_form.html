@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create your Profile...</title>
+</head>
+<link rel="stylesheet" href="nakuri_stylesheet.css">
+
+<body>
+    <h2>Creat Your Profile..</h2>
+    <div class="dformat1">
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="ifname"> <b>First Name:</b></label> <br>
+                        <input type="text" id="ifname" name="fname" placeholder="First Name" class="iformat1"required>
+                        <br> <br>
+                    </td>
+                    <td>
+                        <label for="ifname"> <b>Last Name:</b></label> <br>
+                        <input type="text" id="ilname" name="lname" placeholder="Last Name" class="iformat1"required>
+                        <br><br>
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <label for="iheadline"> <b>Headlines:</b></label> <br>
+            <input type="text" id="iheadline" name="headline" placeholder="Web Developer" class="iformat1">
+            <br> <br>
+            <label for="male"> <b>Gender:</b> </label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br> <br>
+            <label for="iheadline"> <b>D.O.B:</b></label> <br>
+            <input type="date" name="DOB" class="iformat2">
+            <br> <br>
+
+
+            <fieldset>
+                <legend>Academic Qualification</legend>
+                <label for="heighqulification"> <b>Heighest Qulification :</b> </label>
+                <input list="heighqulification" name="heighestqulification" class="iformat2" required>
+                <datalist id="heighqulification">
+                    <option value="B-Tech">
+                    <option value="Diploma">
+                    <option value="B.E">
+                    <option value="ITI">
+                    <option value="Masters in Engg.">
+                </datalist>
+                <br><br>
+                <label for="heighqulification"> <b>University :</b> </label>
+                <input list="university" name="university" class="iformat2" required>
+                <datalist id="university">
+                    <option value="BPUT University">
+                    <option value="IIT Delhi">
+                    <option value="IIT Kanpur">
+                    <option value="IIT Bombay">
+                    <option value="IIT Kharagpur">
+                </datalist>
+            </fieldset>
+
+            <fieldset>
+                <legend>IT SKILLS</legend>
+                <label for="skillset"> <b>Skill Set:</b> </label>
+                <br> <br>
+                <input type="checkbox" id="skillset" name="HTML" value="HTML">
+                <label for="skillset"> HTML</label>
+                <br>
+                <input type="checkbox" id="skillset" name="javascript" value="javascript">
+                <label for="skillset">CSS </label>
+                <br>
+                <input type="checkbox" id="skillset" name="Java" value="Java">
+                <label for="skillset"> Java Script</label>
+                <br>
+                <input type="checkbox" id="skillset" name="Oracle" value="Oracle">
+                <label for="skillset"> MEAN</label>
+                <br>
+                <input type="checkbox" id="skillset" name="Oracle" value="Oracle">
+                <label for="skillset"> Python</label>
+                <br>
+                <input type="checkbox" id="skillset" name="Oracle" value="Oracle">
+                <label for="skillset"> Oracle</label>
+            </fieldset>
+          <label for="address"> <b>Address:</b> </label>  <br>
+            <textarea name="textfild" cols="80" rows="15"></textarea>
+
+            <br>
+            
+            <a href="#">
+                <input type="checkbox" id="T&C" >
+                <label for="skillset">  I agree with your T&C...</label>
+            </a>
+
+            <div style="text-align: center;">
+               <a href="#"> <input type="submit" name="submit" style=" background-color: blue; color: rgb(255, 251, 251);"></a> 
+               <a href=""> <input type="reset" name="reset" style="background-color: crimson; color: rgb(253, 244, 244);"></a> 
+                </div>
+        </form>
+    </div>
+</body>
+
+</html>

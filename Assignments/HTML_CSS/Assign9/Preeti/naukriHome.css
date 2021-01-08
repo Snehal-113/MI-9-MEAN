@@ -1,0 +1,215 @@
+.head{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#head1{
+    float: left;
+    width: 50%;
+}
+.blue{
+   color: blue;
+}
+.blackText{
+    color: red;
+    font-family: cursive;
+}
+.naukri{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 50px;
+}
+.covid{
+    border: 1px solid gainsboro;
+    background-color: burlywood;
+    font-size: 16px;
+    padding: 5px;
+    font-weight: bold;
+    height: 50%;
+}
+.yes{
+    color:white;
+    border: 1px solid red;
+    background-color: red; 
+    margin: 5px;
+    font-size: 12px;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.no{
+    color: black;
+    border: 1px solid black;
+    margin: 5px;
+    font-size: 12px;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.login{
+    color: red;
+    border: 1px solid red;
+    font-size: 14px;
+    font-weight: bold;
+    margin:5px;
+    padding: .5%;
+}
+.loginReg{
+    margin-left: 500px;
+    
+}
+#part1{
+    float: left;
+    width: 70%;
+    position: absolute;
+    top: 50px;
+    left: 20px; 
+   
+}
+#part2{
+    float: right;
+    width: 30%;
+    position: absolute;
+    top: 50px;
+   right: 50px;
+    background-color: white;
+    padding: 1%;
+    
+}
+#jobs{
+    background-image: url("http://i2.wp.com/files.123freevectors.com/wp-content/original/107765-royal-blue-abstract.jpg");
+    height: 20%;
+    position: relative;
+}
+.findJobs{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 9px;
+}
+.new{
+    font-size: 14px;
+    font-weight: bold;
+    color: aqua;
+}
+.browse{
+    padding-top:2%;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 5%;
+    float: left;
+    width: 10%;
+    margin-left: 5%;
+}
+#branches{
+    clear: both;
+}
+body{
+    background-color: gainsboro;
+}
+.branch{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 17%;
+    font-size: 12px;
+    font-weight: bold;
+    height: 12%;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    margin-right: 5%;  
+}
+#branchList{
+    margin-left: 8%;
+    margin-bottom: 1%;
+}
+.city{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.zone{
+    float: right;
+    width: 16%;
+    height: 35%;
+    border: 2px solid sienna;
+    background-color: tan;
+    margin-right: 6%;
+    padding-left: 1%;
+}
+.national{
+    
+    border: 2px solid purple;
+    padding: 1%;
+    background-color: purple;
+    color: white;
+} 
+.consultants{
+ 
+   height: 5%;
+}
+
+
+#hire{
+    clear: both;
+    background-color: white;
+    float: left;
+    width: 30%;
+    margin-left: 10%;
+    font-weight: bold;
+    font-size: 18px;
+    height: 29%;
+    width: 57%;
+    margin-bottom: 1%;   
+    text-align: center;
+}
+.army{
+    background-color: red;
+    text-align: center;
+    
+}
+.org{
+    font-size: 10px;
+    width: 15%;
+}
+.welfare{
+    font-size: 18px;
+    width: 15%
+}
+#consultants{
+    clear: both;
+    background-color: white;
+    float: left;
+    width: 57%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    
+}
+.companies{
+    height: 50px;
+    width: 100px;
+}
+table,tr,td{
+    border: 1px solid gainsboro;
+    border-collapse: collapse;
+}
+caption{
+    padding: 2%;
+    text-align: left;
+    font-weight: bold;
+}
+.armyWelfare{
+    width: 20%;
+}
+.buzz{
+    text-decoration: none;
+    color: gray;
+    padding: 20px;
+    font-size: 14px;
+}

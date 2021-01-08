@@ -1,0 +1,65 @@
+body{
+    background-color: blue;
+    color: cornsilk;
+}
+.heading{
+    margin: auto;
+    height: 50px;
+    width: 100%;
+    background: rgb(12, 221, 106);
+    border-radius: 30px 10px 30px 10px;
+    color: rgb(10, 10, 85);
+    text-align: center;
+    font-size: larger;
+    
+}
+ #heading2{
+    font-size: 15px;
+    color:  rgb(10, 10, 85);
+    padding: 5px;
+}
+marquee{
+    color: rgb(219, 5, 5);
+    
+}
+.button {
+    background: darkblue;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: auto;
+    cursor: pointer;
+  }
+.center{
+      text-align: center;
+  }
+  .color1{
+      color: rgb(255, 230, 0);
+      margin-left: 50px;
+  }
+
+  /* login page */
+.m-l{
+    /* margin-left: 10px; */
+    
+    color: rgb(0, 0, 0);
+}
+.u_p{
+    margin-left: 0px;
+    height: 30px;
+    width: 250px;
+    border-radius: 20px;
+}
+  .logindiv{
+      padding: 30px;
+      margin: auto;
+      height: 350px;
+      width: 300px;
+      background: deepskyblue;
+      border-radius: 20px;
+      /* text-align: center; */
+  }
