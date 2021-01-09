@@ -5,11 +5,11 @@
 <body>
 <h1>Coversion Of Celsius To Fahrenheit</h1>
   Temperature: <input type="text" id="temperature" name="val1" size="5">&nbsp;&nbsp;<sup>o</sup>C
-  <button type="text" onclick="conversion()">Convert</button>
+  <button type="text" onclick="convert()">Convert</button>
   <h2>After conversion</h2>
   <p id="convert"></p>
   <script language="JavaScript">
-    function conversion() 
+    function convert() 
     {
       var celsius = parseInt(document.getElementById("temperature").value);
       var fahr = celsius * 9 / 5 + 32;
