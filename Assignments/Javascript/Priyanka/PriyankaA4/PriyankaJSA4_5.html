@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Uppercase</title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button"onclick="uppercase()">Convert</button>
+        <p id="pid"></p>
+        <script language="javascript">
+            function uppercase(){
+            var str,str1;
+            str=document.getElementById("pri").value;
+            str1=str;
+            if(str == str1.toLowerCase()){
+            str1=str1.toLocaleUpperCase();
+            document.getElementById("pid").innerHTML=str1;
+            }
+            else if(str == str1.toUpperCase()){
+            str1=str1.toLocaleLowerCase();
+            document.getElementById("pid").innerHTML=str1;
+            }
+            else{
+                document.getElementById("pid").innerHTML="It is not lowercase or uppercase"; 
+            }
+        }
+        </script>
+    </body>
+</html>
