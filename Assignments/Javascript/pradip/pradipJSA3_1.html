@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>assignment3_1</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A Year:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="check()">check</button>
+        <h3>leap Year:</h3>
+        <p id="leap"></p>
+        <script lang="JavaScript">
+            function check() {
+                var year;
+                year=parseInt(document.getElementById("ival1").value);
+                if ((0 == year % 4)) 
+                {
+                    document.getElementById("leap").innerHTML="is a leap year "+year;
+                }
+                else
+                {
+                    document.getElementById("leap").innerHTML="is a not leap year "+year;
+                }
+                }
+        </script>
+    </body>
+</html>
