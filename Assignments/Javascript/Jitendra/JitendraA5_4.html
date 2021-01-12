@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>six digit Number</title>
+
+</head>
+
+<body>
+    <script>
+        var n = prompt("Enter Your favorite 6 digit Number");
+        if (n.length == 6) {
+            var six = n % 10;
+            var first = parseInt(n / 100000);
+            var temp = n % 100;
+            var fifth = parseInt(temp / 10);
+            var temp1 = n % 1000;
+            var fourth = parseInt(temp1 / 100);
+            var temp2 = n % 100000;
+            var sec = parseInt(temp2 / 10000);
+            var temp3 = temp2 % 10000;
+            var third = parseInt(temp3 / 1000);
+            var sum = parseInt(sec) + parseInt(fourth) + parseInt(six);
+            document.write("Sum: " + sum);
+            document.write("    ");
+            document.write("Product : " + (first * third * fifth));
+        } else
+            document.write("“Invalid Number!!Please enter a 6 digit no.”")
+    </script>
+</body>
+
+</html>
