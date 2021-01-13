@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>assignment4_1</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A number:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="armstr()">check</button>
+        <h3>Amstrong number or not :</h3>
+        <p id="arm"></p>
+        <script lang="JavaScript">
+         function armstr(){
+                num=parseInt(document.getElementById("ival1").value);
+                var num,sum=0,a,temp;
+                temp=num;
+                while(temp>0)
+                {
+                a=temp%10;
+                sum=sum+a*a*a;
+                temp=parseInt(temp/10); // convert float into Integer
+                }
+                if(sum==num)
+                {
+                 document.getElementById("arm").innerHTML="is Armstrong number "+num;
+                }
+                else
+                {
+                 document.getElementById("arm").innerHTML="is  not Armstrong number "+num;
+                }
+        }  
+        </script>
+    </body>
+</html>
+
+
