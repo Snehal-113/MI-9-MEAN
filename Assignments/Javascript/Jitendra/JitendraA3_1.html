@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="iyear" name="year">
+    <button type="button" onclick="lyear()">Check Your Year</button>
+    <p id="myyear"></p>
+    <script>
+        function lyear() {
+            var youryear;
+            youryear = parseInt(document.getElementById("iyear").value);
+            if (youryear % 400== 0) {
+                document.getElementById("myyear").innerHTML = "Leap Year";
+                
+            } else {
+                document.getElementById("myyear").innerHTML = "Not a Leap Year";
+            }
+        }
+    </script>
+</body>
+
+</html>
