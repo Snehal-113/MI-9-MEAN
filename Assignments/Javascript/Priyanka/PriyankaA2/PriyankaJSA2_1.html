@@ -37,23 +37,23 @@
                     e=0;
                 }
                 f=0;
-                if ((a<max) && (a>=b) && (a>=c) && (a>=d) && (a>=e)){
+                if((a>=b) && (a>=c) && (a>=d) && (a>=e)){
                     f=a;
                 }
-                else if((b<max) && (b>=a) && (b>=c) && (b>=d) && (b>=e)){
+                else if((b>=a) && (b>=c) && (b>=d) && (b>=e)){
                     f=b;
                 }
-                else if((c<max) && (c>=a) && (c>=b) && (c>=d) &&( c>=e)){
+                else if((c>=a) && (c>=b) && (c>=d) &&( c>=e)){
                     f=c;
                 }
-                else if((d<max) && (d>=a) && (d>=b) && (d>=c) && (b>=e)){
+                else if((d>=a) && (d>=b) && (d>=c) && (b>=e)){
                     f=d;
                 }
-                else if((e<max) && (e>=a) &&( a>=b) && (e>=c) && (b>=d)){
+                else{
                     f=e;
                 }
                 f=parseInt(document.getElementById("pid").innerHTML=+f);
-                window.alert("Second Largest number is "+f)
+                window.alert("Second Largest number is "+f);
             }
         </script>
     </body>
