@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<input type="number" name="val1" id="vl1">
+	<input type="number" name="val2" id="vl2">
+	<input type="number" name="val3" id="vl3">
+	<input type="number" name="val4" id="vl4">
+	<input type="number" name="val5" id="vl5">
+	<button id="btn" onclick="t()">Show</button>
+	<p id="ot"></p>
+	<script type="text/javascript">
+		function t() {
+			var a=parseInt(document.getElementById("vl1").value);
+			var b=parseInt(document.getElementById("vl2").value);
+			var c=parseInt(document.getElementById("vl3").value);
+			var d=parseInt(document.getElementById("vl4").value);
+			var e=parseInt(document.getElementById("vl5").value);
+			var fmax=Math.max(a,b,c,d,e);
+			if (fmax==a) {
+				a=0;
+				fmax=Math.max(a,b,c,d,e);
+			}
+			else if (fmax==b) {
+				b=0;
+				fmax=Math.max(a,b,c,d,e);
+			}
+			else if (fmax==c) {
+				c=0;
+				fmax=Math.max(a,b,c,d,e);
+			}
+			else if (fmax==d) {
+				d=0;
+				fmax=Math.max(a,b,c,d,e);
+			}
+			else if (fmax==e) {
+				e=0;
+				fmax=Math.max(a,b,c,d,e);
+			}
+			document.getElementById("ot").innerText="Second Max is "+fmax;
+		}
+	</script>
+</body>
+</html>
