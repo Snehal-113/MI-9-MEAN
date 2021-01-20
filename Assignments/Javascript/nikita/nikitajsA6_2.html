@@ -1,0 +1,23 @@
+<html>
+    <head><title>Assi6_2</title></head>
+    <body>
+        <script>
+            var names = [];
+            while(true){
+            var a = prompt("enter the names:");
+            if(a == null || a == "X"){
+                break;
+            }
+            names.push(a.toUpperCase());
+            }
+            for(var i = 0; i < names.length; i++){
+                document.write("<br>Names"+(i+1)+":"+names[i]);
+            }
+            document.write("<br>Names List:"+ names);
+            document.write("<br>"+names.join("~"));
+            document.write("<br>"+names.sort());
+            document.write("<br>"+names.reverse ());
+
+        </script>
+    </body>
+</html>
