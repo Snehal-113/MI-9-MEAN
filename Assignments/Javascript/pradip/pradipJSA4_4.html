@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>assignment4_4</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A character:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="vowel()">check</button>
+        <h3>Vowel or not :</h3>
+        <p id="vol"></p>
+        <script lang="JavaScript">
+         function vowel(){
+            var str;
+            str=(document.getElementById("ival1").value);
+            switch(str)
+            {
+                case 'a':
+                case 'A':
+                case 'e':
+                case 'E':
+                case 'i':
+                case 'I':
+                case 'o':
+                case 'O':
+                case 'u':
+                case 'U': 
+                document.getElementById("vol").innerHTML= str+"is a vowel ";
+                break;
+                default : 
+                document.getElementById("vol").innerHTML=str+"is not a vowel ";
+            }
+         }
+        </script>
+    </body>
+</html>
