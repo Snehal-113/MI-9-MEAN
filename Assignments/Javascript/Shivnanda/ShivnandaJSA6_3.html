@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Assignment6_3</title>
+    </head>
+    <body>
+        <script>
+            var num = [];
+            var sum = 0;
+            while(true){
+                var n = prompt("Enter the number:");
+                if(n == "X" || n == null){
+                    break;
+                }
+                num.push(parseInt(n));
+            }
+            for(i = 0; i < num.length; i++){
+               sum += num[i];
+            }
+               document.write("Sum of all the numbers:"+ sum);
+        </script>
+    </body>
+</html>
