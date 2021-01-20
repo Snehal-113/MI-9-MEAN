@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body class="page1">
+  <div class="navbar">
+    <a class="active" href="HomePage.html">Home</a> 
+    <a href="login.html">login</a> 
+    <a href="Personal.html">Personal</a> 
+    <a href="Professional.html">Professional</a>
+  </div>
+      <fieldset>
+            <legend>Professional details</legend>
+            <table>
+                <caption><b>Work Experience::</b></caption><br><br>
+                <tr>
+                    <th>Sr.No.</th>
+                    <th>Company Name</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Experience</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" id="Company" name="Company"></td>
+                    <td><input type="text" id="date" name="Start date"></td>
+                    <td><input type="text" id="End" name="End date"></td>
+                    <td><input type="text" id="Duration" name="Duration"></td>
+                </tr> 
+                <tr>
+                    <td></td>
+                    <td><input type="text" id="Company" name="Company"></td>
+                    <td><input type="text" id="date" name="Start date"></td>
+                    <td><input type="text" id="End" name="End date"></td>
+                    <td><input type="text" id="Duration" name="Duration"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br><br>
+        <label for="certificates">Certification:</label>
+        <select id="certification" name="certification" size=4 multiple>
+            <option value="CCNA">CCNA</option>
+            <option value="Linux">Linux</option>
+            <option value="Aws-101">Aws-101</option>
+            <option value="Hadoop">Hadoop</option>
+        </select><br><br>
+        <label for="uload">Upload file:</label>
+        <input type="file" id="file" name="file">
+</body>
+</html>
