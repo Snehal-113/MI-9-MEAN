@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sorting</title>
+    <script>
+        function getSmallestThenRemove(firstList, secondList) {
+    let smallestFirstList = firstList[0];
+    let smallestSecondList = secondList[0];
+
+    if (smallestFirstList < smallestSecondList) {
+        return firstList.shift()
+    } else {
+        return secondList.shift()
+    }
+}
+function mergeLists(firstList, secondList) {
+    let newList = [];
+    let iteratedNum;
+
+    while (firstList.length != 0 && secondList.length != 0) {
+        let iteratedNum = getSmallestThenRemove(firstList, secondList)
+        newList.push(iteratedNum)
+    }
+    return newList.concat(firstList).concat(secondList)
+}
+function merge(left, right) {
+    let arr = []
+    while (left.length && right.length) {
+        if (left[0] < right[0]) {
+            arr.push(left.shift())  
+        } else {
+            arr.push(right.shift()) 
+        }
+    }
+    
+   
+    return [ ...arr, ...left, ...right ]
+}
+function mergeSort(array) {
+  const half = array.length / 2
+  
+  if(array.length < 2){
+    return array 
+  }
+  
+  const left = array.splice(0, half)
+  return merge(mergeSort(left),mergeSort(array))
+}
+    </script>
+</head>
+
+<body>
+    <script>
+    var marks = [];
+        var size = 5,
+            i;
+        
+        for (i = 0; i < size; i++) {
+            marks[i] = prompt("Enter array1 element " );
+    }
+    var bmarks = [];
+        var bsize = 5,
+            j;
+        
+        for (j = 0; j < bsize; j++) {
+            bmarks[j] = prompt("Enter array2 element " );
+    }
+    var myarray=[];
+    myarray=mergeLists(marks,bmarks);
+    document.write(mergeSort(myarray));
+    </script>
+</body>
+
+</html>
