@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Sum of Even and Product of Odd Number</title>
+    </head>
+    <body>
+        <h2>Sum of Even and Product of Odd Number</h2>
+        <label for="ival1"> Enter A number:</label>
+        <input type="num" id="ival1" name="val1" size="7">
+        <button type="button" onclick="val()">check</button>
+        <h3>sum of even no :</h3>
+        <p id="sum"></p>
+        <h3>product of odd no :</h3>
+        <p id="por"></p>
+        <script lang="JavaScript">
+         function val(){
+             var n,r,sum = 0, product = 1;
+                n=document.getElementById("ival1").value;
+                if (n.length == '6'){
+                    n1 = n;
+                while(n > 0)
+                    {
+                    r = n%10;
+                    if(r%2 == 0)
+                    {
+                    sum = sum+r;
+                    }
+                    else
+                    {
+                    product =product*r;
+                    }
+                    n = parseInt(n/10);
+              }
+                document.getElementById ("sum").innerHTML= "Sum of even digits : "+sum;
+                document.getElementById ("por").innerHTML= "Product of odd digits : "+product;
+                }
+                else
+                {
+                    alert("Invalid Number!!Please enter a less than 6 digit no.")     
+                }
+
+         }
+        </script>
+    </body>
+</html>
