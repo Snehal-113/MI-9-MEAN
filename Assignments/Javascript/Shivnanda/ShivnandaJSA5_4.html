@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> Assignment5 Q4 </title>
+    </head>
+    <body>
+        <script language="javascript">
+            var n = prompt("Enter a number");
+            var l=n.length;
+            var temp = n;
+            if(l != 6)
+            {
+                document.write("plz enter 6 digit number");
+            }
+            else
+            {
+                var sum=0,pdt=1;
+                while(temp>0)
+                {
+                    var rem=temp%10;
+                    temp=parseInt(temp/10);
+                    if(rem%2==0)
+                    {
+                        sum+=rem;
+                    }
+                    else{
+                        pdt*=rem;
+                    }
+                }
+                document.write("sum: "+sum+" ");
+                document.write("Product: "+pdt);
+            }   
+            /*document.write("sum: "+sum+" ");
+            document.write("Product: "+pdt);*/
+        </script>
+    </body>
+</html>
