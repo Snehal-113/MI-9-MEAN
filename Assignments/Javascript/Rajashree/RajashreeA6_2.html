@@ -1,0 +1,27 @@
+<html>
+    <head><title>Ass 6 q2</title></head>
+    <body>
+        <script>
+            const names = [];
+            var i;
+            while(true)
+            {
+            var num = prompt("Please enter the names");
+            if(num == null || num == "X")
+            {
+                break;
+            }
+            names.push(num.toUpperCase());
+            }
+            for(i = 0; i < names.length; i++)
+            {
+                document.write("<br>Names"+(i+1)+":"+names[i]);
+            }
+            document.write("<br>Names List:"+ names);
+            document.write("<br>"+names.join("~"));
+            document.write("<br>"+names.sort());
+            document.write("<br>"+names.reverse ());
+
+        </script>
+    </body>
+</html>
