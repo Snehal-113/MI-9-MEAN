@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Krishnamurthy Number</title>
+
+</head>
+
+<body>
+    <script>
+        var n = prompt("Enter a positive Integer");
+        var temp = n,
+            sum = 0;
+
+        while (temp > 0) {
+            var fact = 1;
+            var rem = temp % 10;
+            for (var i = 1; i <= rem; i++) {
+                fact *= i;
+            }
+            sum += fact;
+            fact = 1;
+            temp = parseInt(temp / 10);
+        }
+        if (sum == n) {
+            document.write(`${n} is a Krishnamurthy number`);
+        } else {
+            document.write(`${n} is not a Krishnamurthy number.`);
+        }
+    </script>
+</body>
+
+</html>

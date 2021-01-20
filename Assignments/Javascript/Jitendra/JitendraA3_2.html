@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="iyear" name="year">
+    <button type="button" onclick="iprime()">Check Your Number</button>
+    <p id="myyear"></p>
+    <script>
+        function iprime() {
+            var num;
+            let flag = 1;
+            num = parseInt(document.getElementById("iyear").value);
+            for (i = 2; i < num; i++) {
+                if (num % i == 0)
+                    flag = 0;
+            }
+            if (flag == 0)
+                document.write("Not a prime");
+            else
+                document.write("A prime");
+        }
+    </script>
+</body>
+
+</html>

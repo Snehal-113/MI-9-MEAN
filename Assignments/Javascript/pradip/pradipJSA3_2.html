@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>assignment3_2</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A Prime Number:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="check()">check</button>
+        <h3>Prime number:</h3>
+        <p id="prime"></p>
+        <script lang="JavaScript">
+            function check() {
+                var a,b=0;
+                a=parseInt(document.getElementById("ival1").value);
+                for (i = 1; i <= a; i++)
+                 {                
+                  if (a % i == 0)
+                   {
+                     b = b + 1;
+                   }
+                 }
+                 if (b == 2)
+                   {
+                    document.getElementById("prime").innerHTML=a+" is a Prime number";
+                   }
+                 else
+                   {
+                    document.getElementById("prime").innerHTML=a+" is NOT a Prime number";
+                   }
+            } 
+        </script>
+    </body>
+</html>

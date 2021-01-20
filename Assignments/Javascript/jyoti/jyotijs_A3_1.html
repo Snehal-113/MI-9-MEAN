@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Assignment3_1</title>
+    </head>
+    <body>
+        <h3>leap year</h3>
+        <input type="text" id="year" name="year">
+        <button type="button" onclick="leapyear()"> Show</button>
+        <p id="pid"></p>
+    <script language="JavaScript">
+        function leapyear(){
+            var year;
+            year= document.getElementById("year").value;
+            if(year % 4 == 0)
+            {
+                document.getElementById("pid").innerHTML=year+" is a leap year";
+            }
+            else{
+                document.getElementById("pid").innerHTML=year+"is not leap year";
+            }
+        }
+    </script>
+    </body>
+</html>
