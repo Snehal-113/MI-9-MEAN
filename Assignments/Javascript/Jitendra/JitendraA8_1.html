@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ten subjects extramarks</title>
+</head>
+
+<body>
+    <script>
+        var marks = [];
+        var size = 10,
+            i;
+        var imarks = [];
+        var totalmarks = [];
+        for (i = 0; i < size; i++) {
+            marks[i] = prompt("Enter Your subject " + (i + 1) + " Marks");
+            if (marks[i] > 80)
+                prompt("Enter a valid marks as 80 is full marks");
+            imarks[i] = parseInt((20 * marks[i]) / 100);
+            totalmarks[i] = (parseInt(marks[i]) + parseInt(imarks[i]));
+
+        }
+        for (var j = 0; j < 10; j++) {
+            document.write("Student" + (j + 1) + " marks: " + totalmarks[j] + " <br>");
+        }
+    </script>
+</body>
+
+</html>
