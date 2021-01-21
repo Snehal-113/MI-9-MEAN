@@ -1,0 +1,39 @@
+<html>
+    <title>selection sort</title>
+    <body>
+        <script language="JavaScript">
+            var arr=[];
+            var n=arr.length;
+            var i,j,temp;
+            prompt("how many student you hv:");
+            while(true){
+                 n = prompt("enter a marks:");
+                if(n == null){
+                    break;
+                }
+                arr.push(parseInt(n));
+            }
+            document.write("********Before sorting*********"+ arr);
+            document.write("<br>");
+            for(i = 0; i < arr.length; i++){
+                document.write("<br>Marks"+ (i+1)+": "+ arr[i]);
+            }
+            document.write("<br>");
+            for(i=0;i<n;i++)
+            {
+                for(j=i+1;j<n;j++)
+                {
+                    if(arr[i]>arr[j])
+                    {
+                        temp=arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=temp;
+                    }
+                }
+            document.write("<br>");
+            for(i = 0; i < arr.length; i++){
+                document.write("<br>Marks"+ (i+1)+": "+ arr[i]);
+            }
+        </script>
+    </body>    
+</html>
