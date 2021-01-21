@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>assignment4_5</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A string:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="convert()">check</button>
+        <h3>convert string :</h3>
+        <p id="conv"></p>
+        <script lang="JavaScript">
+         function convert() {
+            var str ;
+            str=(document.getElementById("ival1").value);
+             if(str == str.toLowerCase()) {
+             document.getElementById("conv").innerHTML="Upper case is "+str.toUpperCase();
+             }
+              else {
+                document.getElementById("conv").innerHTML="<br>lower case is "+str.toLowerCase();
+            }
+        }
+        </script>
+    </body>
+</html>
+

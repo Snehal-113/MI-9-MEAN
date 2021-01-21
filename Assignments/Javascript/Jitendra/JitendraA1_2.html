@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>JavascriptA1_2</title>
+</head>
+
+<body>
+    <h1 style="text-align: center">From celsius to fahrenheit</h1>
+    <fieldset style="border: 3px solid red;">
+
+        Temperature In Degree Celsius:<input type="text" id="ival" name="val" size="5"><sup>o</sup>C
+        <button type="button" onclick="converison()">convert</button>
+        <h3>After conversion </h3>
+        <p id="conv"></p>
+    </fieldset>
+    <script language="JavaScript">
+        function converison() {
+
+            a = parseInt(document.getElementById("ival").value);
+            var b = a * 1.8 + 32;
+            document.getElementById("conv").innerHTML = a + "<sup>o</sup>  Celsius is equal to " + b + "<sup>o</sup> fahrenheit";
+        }
+    </script>
+</body>
+
+</html>

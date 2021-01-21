@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Swap Program</title>
+    </head>
+    <body>
+        <form name="calc">
+            <label>Enter Number a:</label>
+            <input type="text" id="id1" size=5><br>
+             <label>Enter Number b:</label>
+            <input type="text" id="id2" size=5><br>
+             <label>Enter Number a:</label>
+             <input type="text" id="id3" size=5><br>
+             <label>Enter Number b:</label>
+            <input type="text" id="id4" size=5><br>
+            <button type="button" onclick="my1()">button1</button>
+            <p id="ko"></p>
+             <button type="button" onclick="my2()">button2</button>
+            <p id="lo"></p>
+        </form>
+        <script lang="JavaScript">
+          function my1(){
+            var a,b,temp;
+            a=parseInt(document.getElementById("id1").value);
+            b=parseInt(document.getElementById("id2").value);
+            a=temp;
+            a=b;
+            b=temp;
+            document.getElementById("ko").innerHTML="Before wapping ="+a+ "::" +b;
+            document.getElementById("ko").innerHTML="After wapping ="+a+ "::" +b;
+          }
+        </script>
+        <script>
+          function my2(){
+            var m,n; 
+            m=parseInt(document.getElementById("id3").value);
+            n=parseInt(document.getElementById("id4").value);
+            [m,n]=[n,m]
+            document.getElementById("lo").innerHTML="After wapping we got="+m+"::"+n ;
+          }
+        </script>
+    </body>
+</html>

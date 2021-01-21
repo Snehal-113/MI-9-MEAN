@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Vowels</title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button"onclick="Vowels()">Show</button>
+        <p id="pid"></p>
+        <script language="javascript">
+            function Vowels(){
+                var c,a,b;
+                c=document.getElementById("pri").value;
+                a=(c =='a'||c =='e'||c =='i'||c =='o'||c =='u');
+                b=(c =='A'||c =='E'||c =='I'||c =='O'||c =='U');
+                if(a||b){
+                    document.getElementById("pid").innerHTML= c+" charactor is a vowel";
+                }
+                else{
+                    document.getElementById("pid").innerHTML= c+" character is not vowel";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Automorphic Number</title>
+    </head>
+    <body>
+        <h2>Automorphic Number</h2>
+        <p>Enter Number:</p>
+        <input type="text" id="number" name="number" size="3">
+        <button type="button" onclick="autom()">Check</button>
+        <p id="Result"></p>
+        <script>
+            function autom()
+        {
+            var n,m;
+            n=parseInt(document.getElementById("number").value);
+            m=n*n
+            if(n%10 != m%10)
+        {
+            document.getElementById("Result").innerHTML = n +" is not an Automorphic Number";
+        }
+            else
+        {
+            document.getElementById("Result").innerHTML = n +" is an Automorphic Number";
+        }
+        }
+        </script>
+    </body>
+</html>
