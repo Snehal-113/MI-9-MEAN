@@ -1,0 +1,32 @@
+<html>
+<body>
+    <script language="javascript">
+     
+          var rem,temp,final=0,number;
+          
+       number=prompt("Enter a number;");
+           temp=number;
+          
+          while(number>0)
+          {
+              rem=number%10;
+              number=parseInt(number/10);
+              final=final*10+rem;
+          }
+          
+          if(final==temp)
+          {
+              window.alert("the inputed number is pallindrome");
+          }
+          
+          else
+          {
+            window.alert("the inputed number is Not pallindrome");
+
+          }
+            
+             
+    </script>
+</body>
+
+</html>

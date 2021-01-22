@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>assi</title>
+    </head>
+    <body>
+        <script lang="JavaScript">
+       
+                var string = prompt("Enter a string");
+                document.write(string);
+                var spaceCount = (string.split(" ").length - 1);
+                document.write(spaceCount);
+                var count = 0;
+                var words = string.split(" ");
+                for (i = 0; i < words.length; i++)
+                {
+                    if (words[i] != "") 
+                    {
+                    count += 1;
+                    }
+                }
+                document.write("total words : "+count);
+                document.write("total spaces : "+spaceCount);
+            
+        </script>
+    </body>
+</html>
