@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Ans5</title>
+    </head>
+    <body>
+        <script>
+            //insertion
+        const arr = [];
+        let num = prompt("No. of students");
+        for(let i = 0; i < num; i++){
+            let x = prompt("Enter marks");
+            arr.push(parseInt(x));
+        }
+        document.write("Before sorting: "+ arr);
+        for(let  i = 0; i < num; i++){
+            document.write("<br>Marks "+(i+1)+": "+arr[i]);
+        }
+        let i, j, k;
+        let n = arr.length;
+        for(i = 1; i < n; i++){
+            for(j = i; j >= 0; j--){
+                if(arr[j-1]>arr[j]){
+                    k = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = k;
+                    document.write("<br>After " +i+ " iteration: "+ arr);
+                }
+                else{
+                    break;
+                }
+            }
+            document.write("<br>After " +i+ " iteration:"+ arr);
+        }
+        document.write("<br>After sorting: "+ arr);
+        for(i = 0; i < n; i++){
+            document.write("<br>Marks"+ (i+1)+":"+ arr[i]);
+        }
+        
+    </script>
+    </body>
+</html>

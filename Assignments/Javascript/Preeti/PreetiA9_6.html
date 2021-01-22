@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <input type="text" id="words" name="words">
+        <button type="button" onclick="countWords()">count words</button>
+       <p id="pid"></p>
+       <p id="pid1"></p>
+        <script>
+            function countWords(){
+            let count = 0;
+            let a = document.getElementById("words").value;
+            const words = a.split(' ');
+           let countOfWords = words.length;
+            document.getElementById("pid").innerHTML = countOfWords;
+            document.getElementById("pid1").innerHTML = countOfWords-1;
+        }
+        </script>
+    </body>
+</html>

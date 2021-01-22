@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Sum</title>
+</head>
+<body>
+    <label for="num">Enter a 3 digit number:</label>
+    <input type="text" id="num1" name="num1">
+    <button type="button" onclick="check()">check</button>
+    <script>
+        function check() {
+            const a = parseInt(document.getElementById("num1").value);
+            const b = [];
+            let temp = a;
+            while(temp > 0){
+            b.push(temp % 10);
+            temp = parseInt(temp / 10);
+            }
+            if (b.length != 3) {
+                console.log("Invalid Number!!Please enter a 3 digit no.");
+            }
+            else {
+                    if (b[0] + b[2] == b[1]) {
+                        console.log("Sum match");
+                    }
+                    else {
+                        console.log("Sum does not match");
+                    }
+                }
+            }
+        
+    </script>
+</body>
+</html>
