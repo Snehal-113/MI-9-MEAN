@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Ass8 q1</title>
+        <head>
+            <script language="javascript">
+                function split(name,lo,hi){
+                     var p,q,temp,pi;  
+                     p = lo +1;
+                     q= hi;
+                     pi= name[lo];
+     
+                     while(q>=p){
+                         while(name[p]<pi)
+                         p++;
+                         while(name[q]>pi)
+                         q--;
+                         
+                         if(q>p)
+                         {
+                             temp=name[p];
+                             name[p]=name[q];
+                             name[q]=temp;
+                         }
+     
+                     }
+                     temp = name[lo];
+                     name[lo] = name[q];
+                     name[q] = temp;
+                     document.write("<br>inside split "+ name);   
+                     return q;
+                }
+     
+                function quick_sort(name,lo,hi)
+                {
+                    var pi;
+                    
+                    document.write("<br>inside quick_sort "+ name);   
+                     if(hi>lo)
+                     {
+                         pi = split(name,lo,hi);
+                         quick_sort(name,lo,pi-1);
+                        
+                         quick_sort(name,pi+1,hi);
+                        
+                     }
+                }
+            </script>
+    </head>
+    <body>
+        <script>
+            const name = [];
+            var a = prompt("how many students he/she wants to enter the marks.");
+                for(var i=0;i<a;i++)
+                {
+                   var std = prompt("enter the student mark");
+                   
+                   if(std > "80")
+                   {
+                       alert("not allowe to enter marks more than 80.");
+                   }
+                   else
+                   {
+                   name.push(parseInt(std));
+                   }
+                }
+                
+            for(var i=0; i<a;i++)
+            {
+               document.write("<br>mark"+ (i+1)+": "+ name[i]);
+            }
+
+            document.write("<br>Before sorting student total scored marks:<br>");
+            for(var i=0; i<a;i++)
+            {
+               var p =name[i]/100 * 20;
+               var total=name[i] + p;
+               document.write("<br>the total marks scored student "+ (i+1)+": "+ total);
+
+            } 
+            var n =name.length-1;
+            document.write("<br>After sorting student total scored marks<br>");
+            quick_sort(name,0,n)
+        </script>
+    </body>
+</html>

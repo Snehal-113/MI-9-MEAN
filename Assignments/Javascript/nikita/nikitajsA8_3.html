@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Ass8 q3</title>
+       <script language="javascript">
+          
+          function Bubble_sort(total)
+             {
+                l = total.length;
+            for(var i = 0; i < l-1; i++)
+            {
+                for(var j = 0; j < l; j++)
+                {
+                    if(total[j] > total[j+1])
+                    {
+                         temp = total[j];
+                        total[j] = total[j+1];
+                        total[j+1] = temp;
+                    }
+                }
+            }
+            document.write("<br>After bubble sorting student marks:");
+            for(var i = 0; i < l; i++)
+            {
+            document.write("<br>the total marks scored student "+ (i+1)+":"+ total[i]);
+            }
+        }
+        function Insertion_sort(total)
+             {
+                l = total.length;
+            for(var i = 1; i < l; i++)
+            {
+                for(var j = i; j >= 0; j--)
+                {
+                    if(total[j-1] > total[j])
+                    {
+                         temp = total[j-1];
+                        total[j-1] = total[j];
+                        total[j] = temp;
+                    }
+                }
+            }
+            document.write("<br>After Insertion sorting student marks:");
+            for(var i = 0; i < l; i++)
+            {
+            document.write("<br>the total marks scored student "+ (i+1)+":"+ total[i]);
+            }
+        }
+        function selection_sort(total)
+             {
+                l = total.length;
+            for(var i = 0; i < l; i++)
+            {
+                for(var j = i+1; j < l; j++)
+                {
+                    if(total[i] > total[j])
+                    {
+                         temp = total[i];
+                        total[i] = total[j];
+                        total[j] = temp;
+                    }
+                }
+            }
+            document.write("<br>After selection sorting student marks:");
+            for(var i = 0; i < l; i++)
+            {
+            document.write("<br>the total marks scored student "+ (i+1)+":"+ total[i]);
+            }
+        }
+        function split(total,lo,hi)
+        {
+                     var p,q,temp,pi;  
+                     p = lo +1;
+                     q= hi;
+                     pi= total[lo];
+     
+                     while(q>=p){
+                         while(total[p]<pi)
+                         p++;
+                         while(total[q]>pi)
+                         q--;
+                         if(q>p)
+                         {
+                             temp=total[p];
+                             total[p]=total[q];
+                             total[q]=temp;
+                         }
+     
+                     }
+                     temp = total[lo];
+                     total[lo] = total[q];
+                     total[q] = temp;
+                     document.write("<br>inside split "+ total);   
+                     return q;
+                }
+                function quick_sort(total,lo,hi)
+                {
+                    var pi;
+                    l = total.length-1;
+                   document.write("<br>inside quick_sort "+ total);   
+                     if(hi>lo)
+                     {
+                         pi = split(total,lo,hi);
+                         quick_sort(total,lo,pi-1);
+                         quick_sort(total,pi+1,hi);
+                        document.write("<br>After selection sorting student marks:");
+            for(var i = 0; i < l; i++)
+            {
+            document.write("<br>the total marks scored student "+ (i+1)+":"+ total[i]);
+            }
+                     }
+                }
+</script>
+    </head>
+    <body>
+        <script>
+            var total =[];
+            var l,temp,ch,lo,hi;
+            var arr = [];
+            debugger;
+            var a = prompt("how many students he/she wants to enter the marks.");
+                for(var i=0;i<a;i++)
+                {
+                   var std = prompt("enter the student mark");  
+                if(std > 80)
+                   {
+                       alert("not allowe to enter marks more than 80.");
+                   }
+                   else
+                   {
+                    arr.push(parseInt(std));
+                    }   
+                } 
+            for(var i=0; i<a;i++)
+            {
+               document.write("<br>mark"+ (i+1)+": "+ arr[i]);
+            }
+            document.write("<br>Before sorting student total scored marks:<br>");
+            for(var i=0; i<a;i++)
+            {
+               var p =arr[i]/100 * 20;
+                 total[i]=arr[i] + p;
+               document.write("<br>the total marks scored student "+ (i+1)+": "+ total[i]);
+            }
+              ch = parseInt(prompt("enter choice"));
+              switch(ch)
+              {
+                  case 1:
+                         Bubble_sort(total);
+                  break;
+                  case 2: 
+                         Insertion_sort(total);
+                  break;
+                  case 3:
+                         selection_sort(total);
+                  break;
+                  case 4: quick_sort(total,0,l);
+                  break;
+                  case 5: if(num == null || num == "X")
+                          break;
+                  default:document.write("invalid choice");
+                  break;
+              }
+        </script>
+    </body>
+</html>
