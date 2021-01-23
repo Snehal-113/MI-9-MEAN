@@ -1,0 +1,19 @@
+<html>
+    <head><title>number</title></head>
+    <body>
+        <script language="JavaScript">
+
+            String urls=prompt("Enter url");
+            String url="((http|https)://)(www.)?"+"[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]"+"{2,6}\\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)";
+            if(url.test(urls))
+            {
+                document.write("valid url");
+
+            }
+            else{
+                document.write("not valid");
+
+            }
+        </script>
+    </body>
+</html>
