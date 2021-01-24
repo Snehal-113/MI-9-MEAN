@@ -1,0 +1,18 @@
+<html>
+    <head><title>JS assignment Q2</title></head>
+    <body>
+        <h1 style= "text-align:center">Conversion Of Celsius To Fahernheit</h1>
+    Temp:<input type="text" id="temprature" name="val1" size="5">&nbsp;&nbsp;<sup>o</sup>C 
+        <button type="button" onclick="conversion()">convert</button>
+        <h2>After Conversion</h2>
+        <p id="convert"></p>
+        <script language="JavaScript">
+            function conversion(){
+            var farh, cel;
+            cel=parseInt(document.getElementById("temprature").value);
+             var farh=cel*1.8+32;
+             document.getElementById("convert").innerHTML= cel +"<sup>o</sup>C is equal to" +farh+"<sup>o</sup>F"; 
+            }
+        </script>
+    </body>
+</html> 
