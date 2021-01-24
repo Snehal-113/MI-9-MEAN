@@ -1,0 +1,37 @@
+<html>
+    <head><title>assignment2_1</title></head>
+    <body>
+        <h1 style="text-align: center;">second larger numbers</h1>
+        <form>
+            <label for="ival1"> A:</label>
+            <input type="text" id="ival1" name="val1" size="5">
+            <label for="ival2"> B:</label>
+            <input type="text" id="ival2" name="val2" size="5">
+            <label for="ival3"> C:</label>
+            <input type="text" id="ival3" name="val3" size="5">
+            <label for="ival4"> D:</label>
+            <input type="text" id="ival4" name="val4" size="5">
+            <label for="ival5"> E:</label>
+            <input type="text" id="ival5" name="val5" size="5">
+            <button type="button" onclick="calc()">select</button>
+        </form>
+        <h3>second larger no.</h3>
+        <p id="high"></p>
+        <script language="JavaScript">
+            function calc(){
+            var a,b,c,d,e;
+            a=parseInt(document.getElementById("ival1").value);
+            b=parseInt(document.getElementById("ival2").value);
+            c=parseInt(document.getElementById("ival3").value);
+            d=parseInt(document.getElementById("ival4").value);
+            e=parseInt(document.getElementById("ival5").value);
+            var array=[a,b,c,d,e];
+            array.sort(function(a,b){return a-b});
+            console.log(array[3])
+    {
+        document.getElementById("high").innerHTML=" The second largest "+array[3];
+    }
+  }
+        </script>
+    </body>
+</html>            

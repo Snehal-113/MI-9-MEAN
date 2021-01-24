@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<h1>Swapping of two numbers</h1>
+	A:&nbsp;<input type="number" name="val1" id="val1">
+	B:&nbsp;<input type="number" name="val2" id="val2">
+	<button id="mt1" onclick="mt1()">Method1</button>
+	<button id="mt2" onclick="mt2()">Method2</button>
+	<br>
+	<h2>Swap using Method 1</h2>
+	<p id="met1"></p>
+	<h2>Swap using Method 2</h2>
+	<p id="met2"></p>
+	
+	<script type="text/javascript">
+		function mt1() {
+		document.getElementById("met1").innerText="";
+		document.getElementById("met2").innerText="";
+		var a=document.getElementById("val1").value;
+		var b=document.getElementById("val2").value;
+		var temp=a;
+		a=b;
+		b=temp;
+		document.getElementById("met1").innerText="A:"+a+"     B:"+b;
+		}
+		function mt2() {
+		document.getElementById("met1").innerText="";
+		document.getElementById("met2").innerText="";
+		var a=parseInt(document.getElementById("val1").value);
+		var b=parseInt(document.getElementById("val2").value);
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		document.getElementById("met2").innerText="A:"+a+"     B:"+b;
+		}
+	</script>
+</body>
+</html>

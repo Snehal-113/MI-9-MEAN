@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> Assignment3 Q5</title>
+    </head>
+    <body>
+        <label for="n">Enter a number:</label>
+        <input type="text" id="n" name="num">
+        <button type="button" onclick="fact()">Factorial</button>
+        <script language="JavaScript"> 
+            function fact(){
+                var a,b,f;
+                a= parseInt(document.getElementById("n").value); 
+                b=1;
+                f=1;
+                while(b<=a)
+                {
+                    f=f*b;
+                    b=b+1;
+                }
+                document.write("factorial of" + a +"is" +f);
+            }
+            </script>
+    </body>
+</html> 

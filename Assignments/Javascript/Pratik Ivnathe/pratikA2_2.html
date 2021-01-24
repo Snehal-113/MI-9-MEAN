@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>decision making</title>
+    </head>
+    <body>
+        <h1>hello</h1>
+        <form name="calc">
+            <input type="text" id="b1" size="5">+
+            <input type="text" id="b2" size="5">+
+            <input type="text" id="b3" size="5">+
+            <input type="text" id="b4" size="5">+
+            <input type="text" id="b5" size="5">=
+            <input type="text" id="ans" size="5">
+
+           <button type="button" onclick="fun()">show</button>
+            <p id="pi"></p>
+        </form>
+      <script>
+            function fun(){
+                var a,b,c,d,e,total,per,n;
+                a=parseInt(document.getElementById("b1").value);
+                b=parseInt(document.getElementById("b2").value);
+                c=parseInt(document.getElementById("b3").value);
+                d=parseInt(document.getElementById("b4").value);
+                e=parseInt(document.getElementById("b5").value);
+                total=a+b+c+d+e;
+                per=(total/5);
+                n=per/10;
+                n=parseInt(n);
+                document.getElementById("ans").value=per;
+                window.alert(n);
+                switch(n){
+                  case 10:
+                  case 9:
+                  case 8:document.getElementById("pi").innerHTML="Pass by grade A";
+                  break;
+                  case 7:
+                  case 6:document.getElementById("pi").innerHTML="Pass by grade B";
+                  break;
+                  case 5:
+                  case 4:document.getElementById("pi").innerHTML="Pass by grade C";
+                  break;
+                  case 3:document.getElementById("pi").innerHTML="Pass by grade D";
+                  break;
+                  default:document.getElementById("pi").innerHTML="Pass by grade F";
+                  break;                  
+                }
+                
+                
+            }
+       </script>
+    </body>
+</html>
