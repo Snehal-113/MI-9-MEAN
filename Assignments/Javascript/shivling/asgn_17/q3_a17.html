@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leap year</title>
+    </head>
+    <body>
+        <label for="amm">Enter Shopping ammount</label>
+        <input type="number" id="amm" name="amm" placeholder="enter shopping ammount" required>
+        <button type="button" onclick="cal()">Calculate</button>
+        <h3 id="dis1"> </h3>
+
+        <h3 id="dis"> </h3>
+        <script>
+            function cal(){
+                var num,temp;
+              var num=document.getElementById("amm").value;
+    
+             if(num>1000){
+
+                    temp=num*0.15;
+                     document.getElementById("dis1").innerHTML="user get 15% discount"
+                    document.getElementById("dis").innerHTML="user disccount ammount "+temp+ " rupees";
+
+             }
+
+            else{
+                     temp=num*0.05;
+                     document.getElementById("dis1").innerHTML="user get 5% discount"
+                     document.getElementById("dis").innerHTML="user disccount ammount "+temp+ " rupees";
+
+
+                 }
+
+            }
+	
+
+
+
+            
+        </script>
+       
+    </body>
+
+</html>
