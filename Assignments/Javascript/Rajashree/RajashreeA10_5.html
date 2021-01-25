@@ -1,0 +1,24 @@
+ <html>
+  <head>
+  <title>Ass10_q5</title>
+</head>
+  <body>
+      Enter the strig:<textarea id="InputText" size="5"></textarea>
+  <br>
+  <input type="button" name="Convert" value="No. of Words" onClick="countwords();">
+  <input id = "noofwords" type="text" value="" size="5"> 
+  <script lang="JavaScript">
+ function countwords()
+{
+str= document.getElementById("InputText").value;
+//exclude  start and end white-space
+str = str.replace(/(^\s*)|(\s*$)/gi,"");
+//convert 2 or more spaces to 1  
+str = str.replace(/[ ]{2,}/gi," ");
+// exclude newline with a start spacing  
+str = str.replace(/\n /,"\n");
+document.getElementById("noofwords").value = str.split(' ').length;
+}
+</script>
+  </body>
+  </html>
