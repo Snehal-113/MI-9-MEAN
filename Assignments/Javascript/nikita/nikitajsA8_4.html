@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Ass8 q4</title>
+    <script language="javascript">
+
+    function Bubble_sort(num)
+    {
+        var l,i,j;
+       l = num.length-1;;
+   for(var i = 0; i < l; i++)
+   {
+       for(var j = 0; j < l; j++)
+       {
+           if(num[j] > num[j+1])
+           {
+                temp = num[j];
+               num[j] = num[j+1];
+               num[j+1] = temp;
+           }
+       }
+   }
+}
+</script>
+</head>
+
+<body>
+    <script>
+        var arr1 = [];
+        var arr2 =[];
+        var arr3 =[];
+        var i,j,k;
+        debugger;
+      var a = prompt("how many students he/she wants to enter the marks for  section A");
+            for(i=0;i<a;i++)
+            {
+               var std1 = prompt("Enter marks of  students from section A");  
+                arr1.push(parseInt(std1));  
+            } 
+            for(i=0; i<a;i++)
+            {
+               document.write("<br>section A student marks"+ (i+1)+": "+ arr1[i]);
+            }
+            document.write("<br>********************************************************")
+           var b = prompt("how many students he/she wants to enter the marks for  section B");
+            for(i=0;i<b;i++)
+            {
+               var std2 = prompt("Enter marks of  students from section B");  
+                arr2.push(parseInt(std2));  
+            } 
+            for(i=0; i<b;i++)
+            {
+               document.write("<br>section B student marks"+ (i+1)+": "+ arr2[i]);
+            }
+            Bubble_sort(arr1);
+            document.write("<br>after sorting section A:<br>" +arr1);
+            Bubble_sort(arr2);
+            document.write("<br>after sorting section B:<br>" +arr2);
+            var len =(arr1.length+arr2.length)-1;
+            for(i=0,j=0,k=0;i<=len;)
+            {
+                if(arr1[j]<=arr2[k])
+                {
+                    arr3[i]=arr1[j]
+                    i++;
+                    j++;
+                }
+                else{
+                    arr3[i]=arr2[k];
+                    i++;
+                    k++;
+                }
+                if(j==arr1.length || k==arr2.length)
+                break;
+                }
+                document.write("<br>value of i:" +i);
+                document.write("<br>value of j:" +j);
+                document.write("<br>value of k:" +k);
+
+                for(;j<arr1.length;)
+                {
+                    arr3[i]=arr1[j];
+                    i++;
+                    j++;
+                }
+                for(;k<arr2.length;)
+                {
+                    arr3[i]=arr2[k];
+                    i++;
+                    k++;
+                }
+                document.write("<br>final sort:" +arr3);
+        </script>
+    </body>
+</html>
+
+            

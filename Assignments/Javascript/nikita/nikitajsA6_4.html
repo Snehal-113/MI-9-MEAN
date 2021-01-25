@@ -1,0 +1,28 @@
+ <html>
+    <head><title>Assi6_4</title></head>
+    <body>
+        <script>
+            function fact(a) {
+            var factorial = a;
+            for (var i = 1; i < a; i++) {
+                 factorial *= i;
+            }
+            return factorial;
+        }
+        var num = [];
+        var sum = 0;
+        while (true) {
+            var n = prompt("Enter the number:");
+            if (n == "X" || n == null) {
+                break;
+            }
+            num.push(parseInt(n));
+        }
+        for (var i = 0; i < num.length; i++) {
+            sum += fact(num[i]);
+        }
+        document.write(sum);
+
+        </script>
+    </body>
+</html>
