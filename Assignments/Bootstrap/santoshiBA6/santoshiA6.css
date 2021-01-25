@@ -1,0 +1,22 @@
+.jumbotron {
+    background-image: url("job.jpeg");
+    
+    height: 245px;
+    background-size: 100% 100%;
+    color: black;
+    margin-bottom: 0px;
+  }
+  .container{
+    background-image: url("job.jpeg");
+    
+  
+  }
+  .container-fluid{
+    color: black;
+  }
+  .text-decor{
+    color: dark black;
+  }
+  .form-control{
+    width: 400px;
+  }
