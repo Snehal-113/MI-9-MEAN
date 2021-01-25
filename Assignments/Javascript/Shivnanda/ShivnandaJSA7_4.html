@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Selecsion sort</title>
+        <script laqnguage="javascript">
+            function Selecsionsort(mark)
+            {
+                var i,j,temp;
+                for(i=0;i<n;i++)
+                {
+                    for(j=i+1;j<n;j++)
+                    {
+                        if(mark[i]>mark[j])
+                        {
+                            temp=mark[i];
+                            mark[i]=mark[j];
+                            mark[j]=temp;
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script language="JavaScript">
+            var n = prompt("how many marks you wants");
+            var mark = [];
+            for(i=0;i<n;i++)
+            {
+                var mrk = prompt("Enter marks");
+                //mark[i] = mrk;
+                mark.push(parseInt(mrk));
+            }
+            document.write("********Before sorting*********"+ mark);
+            document.write("<br>");
+            for(i = 0; i < mark.length; i++){
+                document.write("<br>Marks"+ (i+1)+":-- "+ mark[i]);
+            }
+            Selecsionsort(mark);
+            document.write("********After sorting*********"+ mark);
+            document.write("<br>");
+            for(i = 0; i < mark.length; i++){
+                document.write("<br>Marks"+ (i+1)+":-- "+ mark[i]);
+            }
+        </script>
+    </body>    
+</html>

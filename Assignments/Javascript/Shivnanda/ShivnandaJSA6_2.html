@@ -1,0 +1,22 @@
+<html>
+    <head><title>Assignment6_Q2</title></head>
+    <body>
+        <script>
+            var name = [];
+            while(true){
+            var n = prompt("enter the names:");
+            if(n == null || n == "X"){
+                break;
+            }
+            names.push(n.toUpperCase());
+            }
+            for(var i = 0; i < name.length; i++){
+                document.write("<br>Names"+(i+1)+":"+name[i]);
+            }
+            document.write("<br>Names List:"+ name);
+            document.write("<br>"+name.join("~"));
+            document.write("<br>"+name.sort());
+            document.write("<br>"+name.reverse ());
+        </script>
+    </body>
+</html>
