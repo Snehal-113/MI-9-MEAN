@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Assignment4_2</title>
+    </head>
+    <body>
+        <input type="text" id="a" name="first" placeholder="Enter a number">
+        <button onclick="Automorpic()">show</button>
+        <div id="num"></div>
+        <div id="num1"></div>
+            <script>
+            function Automorpic(){
+                var x,y;
+                x = parseInt(document.getElementById ("a").value);
+                y=x*x
+                document.getElementById ('num').innerHTML ="Square of a number is: "+y;
+                if(x%10 != y%10)
+              {
+               document.getElementById('num1').innerHTML = x +" is not an atomorphic number";
+                x = x/10;
+                y = y/10;
+              }
+              else
+              {
+               document.getElementById('num1').innerHTML = x +" is an automorphic number";
+              }
+              }
+             </script>
+    </body>
+</html>
