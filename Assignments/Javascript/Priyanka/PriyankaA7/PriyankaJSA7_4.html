@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Array</title>
+    </head>
+    <body>
+        <script langauge="javascript">
+            var i,j,k,n,temp,m;
+            k=prompt("How many students wants to enter");
+            n=[];
+            //before sorting
+            document.write("<br>(********Before  sorting******)");
+            for(i=0;i<k;i++)
+            {
+                var p=prompt("Enter the students");
+                n.push(parseInt(p));
+            }
+            for(i=0;i<k;i++)
+            {
+                document.write("<br> Marks "+(i+1)+" :"+n[i]);
+            }
+            //After sorting
+            document.write("<br>(********After  sorting******)");
+            for(i=0;i<n.length;i++)
+            {
+            for(j=i+1;j<n.length;j++)
+            {
+                if(n[i]>n[j])
+                {
+                    temp=n[i];
+                    n[i]=n[j];
+                    n[j]=temp;
+                }
+            }
+            }
+            for(i=0;i<k;i++)
+            {
+                document.write("<br> Marks "+(i+1)+" :"+n[i]);
+            }
+            
+        </script>
+    </body>
+</html>

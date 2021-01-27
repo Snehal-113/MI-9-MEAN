@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Palindrome Number</Title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button" onclick="Palindrome()">Show</button>
+        <p id="pid"></p>
+        <script language="JavaScript">
+            function Palindrome(){
+            var n,temp,prd,rem,a,m;
+            n=document.getElementById("pri").value;
+            temp=n;
+            prd=0;
+            m=0;
+            while(temp>0)
+            {
+                rem = temp % 10;
+                prd=(prd*10)+rem;
+                temp=parseInt(temp/10);
+            }
+            for(a=2; a<n; a++)
+            {
+                if(n % a == 0 )
+                {
+                    m=1;
+                    break;
+                }
+            }
+            if(m==0 && n == prd)
+            {
+            document.getElementById("pid").innerHTML=n+"is Prime Palindrome Number";
+            }
+            else
+            {
+            document.getElementById("pid").innerHTML= n+" is not Prime Palindrome Number";
+            }
+        }
+        </script>
+    </body>
+</html>

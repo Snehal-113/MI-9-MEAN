@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS/A3/Q1....</title>
+</head>
+
+<body>
+    <h1 style="color: chartreuse;">CHECK Leap Year || NOT..</h1>
+
+    <input type="text" id="year" name="year" size="8">
+    <button type="button" onclick="leapYear()" style="background: cyan; margin-left: 10px;">VIEW!</button>
+    <p id="leapYear"
+        style="color: darkmagenta; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder;"></p>
+
+    <!-- JS starts from hear... -->
+
+    <script>
+
+        function leapYear() {
+            var year = parseInt(document.getElementById("year").value);
+            var leapyear = year % 4;
+            if (leapyear == 0)
+                document.getElementById("leapYear").innerHTML = "WOOW  " + year + " is a leap year..."
+            else
+                document.getElementById("leapYear").innerHTML = "Ohhh...  " + year + " is not a leap year..."
+        }
+    </script>
+</body>
+
+</html>
