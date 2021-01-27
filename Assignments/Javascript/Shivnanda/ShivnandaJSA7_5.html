@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Inssersion sort</title>
+        <script laqnguage="javascript">
+            function insersionsort(mark)
+            {
+                var i,j,k;
+                for(i=1;i<n;i++)
+                {
+                    k = mark[i];
+                    j=i-1;
+                    while(j>=0 && mark[j] > k)
+                    {
+                        mark[j+1] = mark[j];
+                        j=j-1;
+                    }
+                    mark[j+1] = k;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script language="JavaScript">
+            var n = prompt("how many marks you wants");
+            var mark = [];
+            for(i=0;i<n;i++)
+            {
+                var mrk = prompt("Enter marks");
+                //mark[i] = mrk;
+                mark.push(parseInt(mrk));
+            }
+            document.write("********Before sorting*********"+ mark);
+            document.write("<br>");
+            for(i = 0; i < mark.length; i++){
+                document.write("<br>Marks"+ (i+1)+":-- "+ mark[i]);
+            }
+            insersionsort(mark);
+            document.write("********After sorting*********"+ mark);
+            document.write("<br>");
+            for(i = 0; i < mark.length; i++){
+                document.write("<br>Marks"+ (i+1)+":-- "+ mark[i]);
+            }
+        </script>
+    </body>    
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3 Digit Number</title>
+
+</head>
+
+<body>
+
+    <script>
+        var n = prompt("Enter a positive integer");
+        var length = n.length;
+        if (n.length == 3) {
+            var lemp = n % 100;
+            var middle = parseInt(lemp / 10);
+
+            var last = n % 10;
+            var first = parseInt(n / 100);
+            if (first + last == middle)
+                document.write("Sum is Matched");
+            else
+                document.write("Sum does not Matched");
+
+        } else {
+            document.write("Invalid Number!!Please enter a 3 digit no");
+        }
+    </script>
+</body>
+
+</html>
