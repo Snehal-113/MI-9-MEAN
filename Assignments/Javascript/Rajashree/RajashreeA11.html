@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Ass 11</title>
+        <script language="javascript">
+            function Bubble_sort(total,arr)
+            {
+               l = total.length;
+           for(i = 0; i < l-1; i++)
+           {
+            for(j = 0; j < l; j++)
+            {
+                if(total[j] < total[j+1])
+                {
+                    temp = total[j];
+                    total[j] = total[j+1];
+                    total[j+1] = temp;
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] =temp;
+                       
+                }
+           }
+       }
+    }
+    </script> 
+    </head>
+    <body>
+        <form>
+            Enter the Rollno for search: <input type="text" id="one"><br><br>
+            <button type="button" onclick="search()">Show</button>
+            <p id="pid"></p><br>
+        </form>
+    <script lang="JavaScript">
+            var i,rn,std,p,j,temp;
+            var arr = [];
+            var arr1 = [];
+            var total =[];
+                for(i=0;i<10;i++)
+                {  
+                    rn = prompt("Enter the student roll no");
+                    arr.push(parseInt(rn)); 
+                }
+                document.write("<br>Roll no: "+ arr); 
+                for(i=0;i<4;)
+                {  
+                 std = prompt("enter the student mark");
+                 if(std <0 || std > 50 || std == null )
+                   {
+                      alert("Error-Invalid marks!! ");
+                   }
+                   else
+                   {
+                   arr1.push(parseInt(std));
+                   i++;
+                }
+                document.write("<br>mark"+ (i+1)+": "+ arr1);
+            }
+            for(var i=0; i<10;i++)
+            {
+               p =arr1[i]/100 * 20;
+               total[i] =arr1[i] + p;
+               document.write("<br>the total marks scored student "+ (i+1)+": "+ total);
+             } 
+            Bubble_sort(total,arr);
+            document.write("<br>Roll No &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;Marks");
+            for(i=0;i<10;i++)
+            {
+            document.write("<br><br>"+arr[i]+ "&ensp; &ensp; &ensp;&ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;"+total[i])
+            }
+            function search()
+            {
+                var newrn = parseInt(document.getElementById("one").value);
+                for(i=0;i< 10;i++)
+                {
+                if(newrn==rn)
+                {
+                    document.getElementById("pid").innerHTML=arr[i]+ "has scored"+total[i];
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
