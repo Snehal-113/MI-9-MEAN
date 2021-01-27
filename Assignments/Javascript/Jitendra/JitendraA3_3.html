@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="iyear" name="year">
+    <button type="button" onclick="lyear()">Check Your Number</button>
+    <p id="myyear"></p>
+    <script>
+        function lyear() {
+            var youryear;
+            youryear = parseInt(document.getElementById("iyear").value);
+            if (youryear % 2== 0) {
+                document.getElementById("myyear").innerHTML = "Even Number";
+                
+            } else {
+                document.getElementById("myyear").innerHTML = "Odd Number";
+            }
+        }
+    </script>
+</body>
+
+</html>

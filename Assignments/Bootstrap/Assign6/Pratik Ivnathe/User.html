@@ -1,0 +1,73 @@
+<DOCTYPE! html>
+<html>
+<head>
+  <title>Bootstrap Ass6</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+   .A{
+     width: 500px;
+   }     
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand"> <img src="images.png" width="20px" height="20px" alt="any">Freejobalert</a>
+        <ul class="navbar-nav">
+            <li class="navbar-item"><a href="PratikBootA6.html" class="nav-link">Home</a></li>
+            <li class="navbar-item"><a href="Login.html" class="nav-link">Login</a></li>
+            <li class="navbar-item"><a href="User.html" class="nav-link">User</a></li>
+        </ul>
+    </nav>
+    <div class="conatiner">
+     <form>
+        <h1>User Details</h1>
+        <small>fill this form carefully</small><hr>
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="Uid" name="login id" value="first name" class="form-control A">
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input type="text" id="Pass" name="password" value="last name" class="form-control A">
+        </div>
+         <div>
+          <label for="email">Email Id</label>
+          <input type="text" id="Pass" name="password" value="Email id" class="form-control A">
+        </div>
+         <div>
+          <label for="Mno.">Mobile Number</label>
+          <input type="text" id="Pass" name="password" value="mobile number" class="form-control A">
+        </div><br>
+        <div>
+            <label for="gender">Gender</label>
+        <label class="radio-inline">
+            <input type="radio" name="opt" checked> Male
+        </label>
+        <label>
+            <input type="radio" name="opt" checked>Female
+        </label>
+        </div><br>
+        <div>
+          <label for="Education Qualification">Education/Qualification</label>
+           <div class="dropdown">
+             <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Education
+             <span class="caret"></span></button>
+             <ul class="dropdown-menu">
+               <li><a href="#">BE</a></li>
+               <li><a href="#">Commerece</a></li>
+               <li><a href="#">Science</a></li>
+               <li><a href="#">technology</a></li>
+             </ul>
+            </div> 
+        </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+     </form>
+   </div>
+</body>
+</html>

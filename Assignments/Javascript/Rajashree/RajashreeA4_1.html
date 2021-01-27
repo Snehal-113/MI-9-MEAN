@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>
+Armstrong Number 
+</title>
+</head>
+<body>
+    <h1>Armstrong number</h1>
+<!--Enter any Number: <input type = "number" name = "n"  id="no" size="5">-->
+<button onclick="armst()">Check</button></br></br>
+<script language="JavaScript">
+function armst()
+{
+var sum=0,rem,num;
+num = prompt("enter no");
+//Number(document.getElementById("no").value);
+temp=num;
+while(temp>0)
+{
+rem=temp%10;
+temp=parseInt(temp/10);
+sum=sum+rem*rem*rem;
+}
+if(sum==num)
+{
+alert("Given no is Armstrong number");
+}
+else
+{
+alert("given no is Not Armstrong number");
+}
+}
+</script>
+</body>
+</html>
+    
+    

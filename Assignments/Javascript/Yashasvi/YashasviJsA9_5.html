@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>String</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A string:</label>
+        <input type="text" id="ival1" name="val1" size="30">
+        <button type="button" onclick="count()">check</button>
+        <p id="words"></p>
+        <p id="space"></p>
+        <script lang="JavaScript">
+       function count()
+            {
+                var string = document.getElementById("ival1").value;
+                console.log(string)
+                var spaceCount = (string.split(" ").length - 1);
+                console.log(spaceCount)
+                var count = 0;
+                var words = string.split(" ");
+                for (i = 0; i < words.length; i++)
+                {
+                    if (words[i] != "") 
+                    {
+                    count += 1;
+                    }
+                }
+                document.getElementById ("words").innerHTML= "Total words : "+count;
+                document.getElementById ("space").innerHTML= "Total spaces : "+spaceCount;
+            }
+        </script>
+    </body>
+</html>

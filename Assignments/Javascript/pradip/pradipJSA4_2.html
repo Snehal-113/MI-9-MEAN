@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>assignment4_2</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A number:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="automar()">check</button>
+        <h3>Automarphic number or not :</h3>
+        <p id="auto"></p>
+        <script lang="JavaScript">
+         function automar(){
+             var num,sq,a,b;
+            num=parseInt(document.getElementById("ival1").value);
+            a=num%10;
+            sq=num*num;
+            b=sq%10;    
+            if(a == b)
+            {
+            document.getElementById("auto").innerHTML="is Automarphic number "+num;
+            }
+            else
+            {
+            document.getElementById("auto").innerHTML="is  not Automarphic number "+num;
+            }  
+         }  
+        </script>
+    </body>
+</html>
+

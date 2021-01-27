@@ -1,0 +1,54 @@
+<html>
+<body>
+<h1>Grade</h1>
+<form>
+    Enter first subject mark: <input type="text" id="one" name="n1" size="5"><br><br>
+    Enter Second subject mark: <input type="text" id="two" name="n2" size="5"><br><br>
+    Enter third subject mark: <input type="text" id="three" name="n3" size="5"><br><br>
+    Enter fourth subject mark: <input type="text" id="four" name="n4" size="5"><br><br>
+    Enter fifth subject mark: <input type="text" id="five"name="n5" size="5"><br><br>
+    <button type="button" onclick="result()">Grade</button>
+   <p id="pid"></p><br>
+</form>
+<script language="JavaScript">
+    function result()
+    {
+var s1 = parseInt(document.getElementById("one").value);
+var s2 = parseInt(document.getElementById("two").value);
+var s3 = parseInt(document.getElementById("three").value);
+var s4 = parseInt(document.getElementById("four").value);
+var s5 = parseInt(document.getElementById("five").value);
+var total = s1+s2+s3+s4+s5;
+var per =   total / 5;
+document.getElementById("pid").innerHTML="percentage is "+per;
+var gr  = per / 10;
+window.alert(gr);
+
+switch(parseInt(gr))
+{
+                    case 10: 
+                    case 9:  
+                    case 8: document.getElementById("pid").innerHTML="A Grade";
+                             //window.alert("A");
+                             break
+                    case 7: 
+                    case 6: document.getElementById("pid").innerHTML="B Grade";
+                             //window.alert("F");
+                             break 
+                    case 5:  
+                    case 4:document.getElementById("pid").innerHTML="C Grade";
+                             //window.alert("Dt");
+                             break;
+                    case 3:document.getElementById("pid").innerHTML="D Grade";
+                             //window.alert("Dt");
+                             break;
+                    default: document.getElementById("pid").innerHTML="Fail";
+                             //window.alert("A");
+                             break;
+                            
+                            }
+        
+}
+</script>
+</body>
+</html>

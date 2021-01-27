@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Array</title>
+        <script language="javascript">
+            function bubble(m)
+            {
+                var temp,i,j;
+                for(i=0;i<m.length;i++)
+                {
+                for(j=0;j<m.length;j++)
+                {
+                if(m[j]>m[j+1])
+                {
+                    temp=m[j];
+                    m[j]=m[j+1];
+                    m[j+1]=temp;
+                }
+            }
+            }
+            }
+
+        </script>
+    </head>
+    <body>
+        <script langauge="javascript">
+            var i,j,k,n,temp,m,x;
+             var k=prompt("How many students wants to enter");
+             var n=[];
+            //before sorting
+            document.write("<br>(********Before  sorting******)");
+            for(x=0;x<k;x++)
+            {
+                var p=prompt("Enter the students");
+                n.push(parseInt(p));
+            }
+            for(x=0;x<k;x++)
+            {
+                document.write("<br>Marks "+(x+1)+" :"+n[x]);
+            }
+            //After sorting
+            document.write("<br>(********After  sorting******)");
+            bubble(n);
+            for(x=0;x<k;x++)
+            {
+                document.write("<br> Marks "+(x+1)+" :"+n[x]);
+            }
+        </script>
+    </body>
+</html>

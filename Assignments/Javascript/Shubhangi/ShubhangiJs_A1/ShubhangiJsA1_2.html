@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A1_Q2</title>
+</head>
+
+<body>
+  <h1 style="text-align: center;">Coversion Of Celsius To Fahrenheit</h1>
+  Temp: <input type="text" id="temperature" name="val1" size="5">&nbsp;&nbsp;<sup>o</sup>C
+  <button type="text" onclick="conversion()">Convert</button>
+
+  <h2>After conversion</h2>
+  <p id="convert"></p>
+
+  <!-- JavaScript -->
+  <script language="JavaScript">
+    function conversion() {
+      var celsius = parseInt(document.getElementById("temperature").value);
+      var fahr = celsius * 9 / 5 + 32;
+      document.getElementById("convert").innerHTML = celsius + "<sup>o</sup>C is equal to " + fahr + "<sup>o</sup>F";
+    }
+  </script>
+</body>
+
+</html>

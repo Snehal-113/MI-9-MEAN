@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>assignment9_4</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A string:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="Palindrome()">check</button>
+        <script lang="JavaScript">
+       function Palindrome()
+            {
+                var string = document.getElementById("ival1").value;
+                const arrayValues = string.split('');
+                const reverseArrayValues = arrayValues.reverse();
+                const reverseString = reverseArrayValues.join('');
+                if(string == reverseString)
+                {
+                    window.alert("The string is Palindrome");
+                }
+                else
+                {
+                    window.alert("The string is not palindrome");
+                }
+            }
+        </script>
+    </body>
+</html>

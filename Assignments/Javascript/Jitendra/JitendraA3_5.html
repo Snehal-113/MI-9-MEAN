@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="iyear" name="year">
+    <button type="button" onclick="fact()">Factorial of a Number</button>
+    <p id="myyear"></p>
+    <script>
+        function fact() {
+            var factorial = 1,
+                n;
+            n = parseInt(document.getElementById("iyear").value);
+
+            if (n == 1 || n == 0) {
+                document.write(1);
+            } else {
+                for (i = 1; i <= n; i++) {
+                    factorial *= i;
+                }
+                document.write(factorial);
+            }
+        }
+    </script>
+</body>
+
+</html>

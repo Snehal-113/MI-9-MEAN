@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Krishnamurthy Number</title>
+    </head>
+    <body> 
+        <h1>Krishnamurthy Number</h1>
+        <script language="JavaScript">
+            function fact(n)
+            {
+                var fact=1;
+                for(var i=1;i<=n;i++)
+                {
+                    fact = fact*i;
+                }
+
+                return fact;
+            }
+            var num = prompt("Enter a number");
+            var sum=0;
+            var temp = num;
+            while(temp > 0)
+            {
+                var rem=temp % 10;
+                sum = sum+fact(rem);
+                temp=parseInt(temp/10);
+            }
+            if(sum == num)
+            {
+                document.write(+ num +" is a Krishnamurthy Number");
+            }
+            else{
+                document.write(+ num +" is not a Krishnamurthy Number");
+            }
+        </script>
+    </body>
+</html> 

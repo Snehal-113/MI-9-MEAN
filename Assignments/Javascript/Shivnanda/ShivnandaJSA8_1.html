@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Assignment8 Q1</title>
+    </head>
+    <body>
+        <script>
+            var arr = [];
+            var a = prompt("how many students he/she wants to enter the marks.");
+                for(var i=0;i<a;i++)
+                {
+                   var stud = prompt("enter the student mark");
+                   
+                   if(stud > 80)
+                   {
+                       alert("not allowe to enter marks more than 80.");
+                   }
+                   else
+                   {
+                   arr.push(parseInt(stud));
+                   }
+                }
+                
+            for(var i=0; i<a;i++)
+            {
+               document.write("<br>mark"+ (i+1)+": "+ arr[i]);
+            }
+            for(var i=0; i<a;i++)
+            {
+               var p =arr[i]/100 * 20;
+               var total=arr[i] + p;
+               document.write("<br>the total marks of student is"+ (i+1)+": "+ total);
+
+            }   
+        </script>
+    </body>
+</html>
