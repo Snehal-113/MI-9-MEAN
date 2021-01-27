@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>digit</title>
+    </head>
+    <body>
+        <input type="text" id="pri"name="pri1">
+        <button type="button"onclick="digit()">Show</button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <script language="javascript">
+        var n,a,temp,rem,s=0,b,i;
+        function digit(){
+        n=(document.getElementById("pri").value);
+        a=n.length;
+        temp=n;
+        debugger;
+        if(a == 3)
+        {
+            document.getElementById("pid").innerHTML=n+" Number is 3 digit";
+            for(i=1;i<=3;i++)
+            {
+                rem = temp % 10;
+                temp=parseInt(temp/10);
+                if(i==1||i==3)
+                    {
+                        s=s+rem;
+                    }
+                else
+                { 
+                    b = rem;
+                }
+            }
+                if(s == b)
+                {
+                    document.getElementById("pid1").innerHTML="Sum Match";
+                }
+                else
+                {   
+                 document.getElementById("pid1").innerHTML="Sum does not match";
+                }
+        }
+            else
+            {
+                document.getElementById("pid").innerHTML="Invalid Number!!Please enter a 3 digit no.";
+            }
+            
+        }
+        </script>
+    </body>
+</html> 

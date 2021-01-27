@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>
+   Ass 5 qu3
+</title>
+</head>
+<body>
+Enter Number first No: <input type = "number" name = "n"  id="no1" size="5"><br><br>
+Enter Number second No: <input type = "number" name = "n1"  id="no2" size="5"><br><br>
+<button onclick="prime()">Check</button></br></br>
+<script language="JavaScript">
+function prime()
+{   
+    var i,j,flag;
+    var num1=Number(document.getElementById("no1").value);
+    var num2=Number(document.getElementById("no2").value);
+    for (i=num1;i<=num2;i++)
+    {
+        flag =0;
+    for(j=2;j<i;j++)
+    {
+        if(i % j == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if(i>1 && flag==0)
+    {
+        document.write(i+ " ");
+    }
+    }
+}
+</script>
+</body>
+</html>

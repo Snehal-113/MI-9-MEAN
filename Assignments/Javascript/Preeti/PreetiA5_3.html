@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Prime</title>
+    </head>
+    <body>
+        <input type="text" id="num1" name="num1">
+        <input type="text" id="num2" name="num2">
+        <button type="button" onclick="find()">find</button>
+        <script>
+            function find(){
+            const a = parseInt(document.getElementById("num1").value);
+            const b = parseInt(document.getElementById("num2").value);
+            let isPrime=true;
+            for(let i = a; i <= b; i++){
+                isPrime=true;
+                for(let j = 2; j < i; j++){
+                    let rem = i % j;
+                    if(rem === 0){
+                        isPrime=false;
+                        break;
+                    }
+                }
+                if(isPrime) {
+                    console.log(i);
+                }
+            }
+        }
+        </script>
+    </body>
+</html>

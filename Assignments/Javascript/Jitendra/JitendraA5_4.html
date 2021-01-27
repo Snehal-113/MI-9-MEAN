@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>six digit Number</title>
+
+</head>
+
+<body>
+    <script>
+        var n = prompt("Enter Your favorite 6 digit Number");
+        var temp=n;
+        let sum=0,pdt=1;
+        while(temp>0)
+        {
+            var rem=temp%10;
+            temp=parseInt(temp/10);
+            if(rem%2==0)
+            {
+                sum+=rem;
+
+            }
+            else{
+                 pdt*=rem;
+            }
+        }
+        document.write("sum: "+sum+" ");
+        document.write("Product: "+pdt);
+    </script>
+</body>
+
+</html>

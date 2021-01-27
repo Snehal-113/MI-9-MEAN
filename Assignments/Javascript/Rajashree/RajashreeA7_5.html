@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Ass 7 q5</title>
+    </head>
+    <body>
+        <script>
+            var i, j, temp,std;
+        const name = [];
+        let num = prompt("how many students he/she wants to enter the marks");
+        for(i = 0; i < num; i++)
+        {
+            std = prompt("Enter marks");
+            name.push(parseInt(std));
+        }
+        document.write("Before sorting student marks"+ name);
+        for(i = 0; i < num; i++)
+        {
+            document.write("<br>Marks "+(i+1)+": "+name[i]);
+        }
+        var n = name.length;
+        for(i = 1; i < n; i++)
+        {
+            for(j = i; j >= 0; j--)
+            {
+                if(name[j-1]>name[j])
+                {
+                    temp = name[j-1];
+                    name[j-1] = name[j];
+                    name[j] = temp;
+                    document.write("<br>After " +i+ " iteration: "+ name);
+                }
+                else{
+                    break;
+                }
+            }
+            document.write("<br>After " +i+ " iteration:"+ name);
+        }
+        document.write("<br>After sorting student marks: "+ name);
+        for(i = 0; i < n; i++){
+            document.write("<br>Marks"+ (i+1)+":"+ name[i]);
+        }
+        
+    </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<body>
+<h1>Swap</h1>
+<h2>this is 1st method using temp variable</h2>
+<form>
+   Enter the 1st no: <input type="text" id="one"><br><br>
+   Enter the 2nd no: <input type="text" id="two"><br><br>
+   <button type="button" value="swap" onclick="swap()">method1</button>
+</form>
+<p id="pid1"></p><br>
+<p id="pid"></p><br>
+<script>
+    function swap(){
+var a = document.getElementById("one").value;
+var b = document.getElementById("two").value;
+var temp;
+temp = a;
+a = b;
+b = temp;
+document.getElementById("pid1").innerHTML = "After swaping 1st no is  "+a;
+document.getElementById("pid").innerHTML = "After swaping  2nd no is "+b;
+    }
+</script>
+<h1>Swap</h1>
+<h2>this is 2st method without using temp variable</h2>
+<form>
+   Enter the 1st no: <input type="text" id="1st"><br><br>
+   Enter the 2nd no: <input type="text" id="2nd"><br><br>
+   <button type="button" value="swap1" onclick="swap1()">method2</button>
+</form>
+<p id="pid2"></p><br>
+<p id="pid3"></p><br>
+<script>
+    function swap1(){
+var a1 = document.getElementById("1st").value;
+var b1 = document.getElementById("2nd").value;
+
+//[a1,b1]=[b1,a1];
+a1 = a1 + b1;
+b1 = a1 - b1;
+a1 = a1 - b1;
+document.getElementById("pid2").innerHTML = "After swaping 1st no is  "+a1;
+document.getElementById("pid3").innerHTML = "After swaping  2nd no is "+b1;
+    }
+</script>
+</body>
+</html>

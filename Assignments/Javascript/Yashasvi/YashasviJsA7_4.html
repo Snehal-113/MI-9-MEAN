@@ -1,0 +1,42 @@
+<html>
+    <head>
+    <title>Sort the Marks</title>
+    </head>
+    <body>
+        <h2>Sort the Marks</h2>
+        <script>
+            var i,j,k;
+            const array = [];
+            let num = prompt("Total number of students");
+            for(i = 0; i < num; i++)
+            {
+                let std = prompt("Enter Marks of Students");
+                array.push(parseInt(std));
+            }
+            document.write("Before sorting marks are : "+array);
+            for(i = 0; i < num; i++)
+            {
+            document.write("<br>Marks"+ (i+1)+" : "+ array[i]);
+            }
+            var n = array.length;
+            for(i = 0; i < n; i++)
+             {
+             for(j = i+1; j < n; j ++)
+                 {
+                    if(array[i] > array[j])
+                    {
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                    document.write("<br>Iterations are : "+array);
+               }
+             }
+            }
+            document.write("<br>After sorting  marks are : "+ array);
+            for(i = 0; i < n; i++)
+            {
+            document.write("<br>Marks"+ (i+1)+" : "+ array[i]);
+            }
+        </script>
+    </body>
+</html>

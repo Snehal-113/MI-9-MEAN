@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>List of Names</title>
+    </head>
+    <body>
+        <h2>List of Names</h2>
+        <script>
+            let names = [];
+            while(true){
+                var a = prompt("Enter names:");
+                if(a == ""){
+                    break;
+                }
+                names.push(a);
+            }
+            document.write("<br>Name list: " + names);
+            for(let i = 0; i < names.length; i++){
+                document.write("<br>Name"+ (i+1)+": "+ names[i]);
+            }
+
+        </script>
+    </body>
+</html>

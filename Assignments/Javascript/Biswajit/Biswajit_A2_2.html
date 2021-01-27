@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<input type="number" name="val1" id="vl1" max="100" min="0">
+	<input type="number" name="val2" id="vl2" max="100" min="0">
+	<input type="number" name="val3" id="vl3" max="100" min="0">
+	<input type="number" name="val4" id="vl4" max="100" min="0">
+	<input type="number" name="val5" id="vl5" max="100" min="0">
+	<button id="btn" onclick="t()">Show Grade</button>
+	<p id="ot"></p>
+	<script type="text/javascript">
+		function t() {
+			var a=parseInt(document.getElementById("vl1").value);
+			var b=parseInt(document.getElementById("vl2").value);
+			var c=parseInt(document.getElementById("vl3").value);
+			var d=parseInt(document.getElementById("vl4").value);
+			var e=parseInt(document.getElementById("vl5").value);
+			var total=a+b+c+d+e;
+			var per=total/5;
+			var cassey=parseInt(per/10);
+			switch(cassey) {
+				case 1:
+					document.getElementById("ot").innerText="Grade : F";
+					break;
+				case 2:
+					document.getElementById("ot").innerText="Grade : F";
+					break;
+				case 3:
+					document.getElementById("ot").innerText="Grade : D";
+					break;
+				case 4:
+					document.getElementById("ot").innerText="Grade : C";
+					break;
+				case 5:
+					document.getElementById("ot").innerText="Grade : C";
+					break;
+				case 6:
+					document.getElementById("ot").innerText="Grade : B";
+					break;
+				case 7:
+					document.getElementById("ot").innerText="Grade : B";
+					break;
+				case 8:
+					document.getElementById("ot").innerText="Grade : A";
+					break;
+				case 9:
+					document.getElementById("ot").innerText="Grade : A";
+				case 10:
+					document.getElementById("ot").innerText="Grade : A";
+					break;
+				default:
+					document.getElementById("ot").innerText="Something Went Wrong or Invalid Input!"
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Palindrome Number</Title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button" onclick="Palindrome()">Show</button>
+        <p id="pid"></p>
+        <script language="JavaScript">
+            function Palindrome(){
+            var n,temp,prd,rem;
+            n=document.getElementById("pri").value;
+            temp=n;
+            prd=0;
+            while(temp>0){
+                rem = temp % 10;
+                prd=(prd*10)+rem;
+                temp=parseInt(temp/10);
+            }
+            if(n == prd){
+            document.getElementById("pid").innerHTML=n+" is Palindrome Number";
+            }
+            else{
+            document.getElementById("pid").innerHTML= n+" is not Palindrome Number";
+            }
+        }
+        </script>
+    </body>
+</html>

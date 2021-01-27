@@ -1,0 +1,22 @@
+.jumbotron {
+  background-image: url("images.gif");
+  
+  height: 245px;
+  background-size: 100% 100%;
+  color: white;
+  margin-bottom: 0px;
+}
+.container{
+  background-image: url("images.jpg");
+  
+
+}
+.container-fluid{
+  color: aliceblue;
+}
+.text-decor{
+  color: dark gray;
+}
+.form-control{
+  width: 400px;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="rows" value="Number Of Rows">
+    <input type="text" id="coloumns" value="Number Of Coloumns">
+    <button type="button" onclick="pattern()">Your pattern</button>
+    <script>
+        function pattern() {
+            r = parseInt(document.getElementById("rows").value);
+            c = parseInt(document.getElementById("coloumns").value);
+            for (i = 0; i < r; i++) {
+                for (j = 0; j < c; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>
