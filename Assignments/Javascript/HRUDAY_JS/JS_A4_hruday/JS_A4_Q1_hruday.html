@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS/A4/Q1-Armstrong...</title>
+	</head>
+	<body>
+		<br>
+		<h1 style="color: blue;">CHECK a number is Armstrong or not</h1>
+		Enter The Number :<input type="text" name="input" id = "input"/>
+		<hr color="cyan">
+		<br>
+        <center><button onClick="Armstrong()">CHECK</button>
+
+            <p id="output"></p>
+            
+
+            <script>
+                function Armstrong()
+                {
+                    var flag,number,remainder,addition = 0;
+                    number = Number(document.getElementById("input").value);
+    
+                    flag = number;
+                    while(number > 0)
+                    {
+                        remainder = number%10;
+                        addition = addition + remainder*remainder*remainder;
+                        number = parseInt(number/10);
+                    }
+    
+                    if(addition == flag)
+                    {
+                       
+                        document.getElementById("output").innerHTML = "The inputed number is Armstrong ..";
+                    }
+                    else
+                    {
+                        
+                        document.getElementById("output").innerHTML = "The inputed number is not Armstrong..";
+                    }
+                }
+            </script>
+
+	</body>
+</html>

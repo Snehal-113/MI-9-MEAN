@@ -1,0 +1,27 @@
+
+<html>
+    <head>
+        <title>Pattern</title>
+    </head>
+    <body>
+        <h1>Pattern</h1>
+        <label for="r"> Enter Rows : </label>
+        <input type="text" id="r" name="rows"><br><br>
+        <label for="c">Enter Columns : </label>
+        <input type="text" id="c" name="cols"><br><br>
+        <button type="button" onclick="Pattern()">Display Pattern</button>
+        <script>
+            function Pattern(){
+                var n,m,i,j;
+                n = parseInt(document.getElementById("r").value);
+                m = parseInt(document.getElementById("c").value);
+                for(i = 1; i <= n; i++){
+                    for(j = 1; j <= m; j++){
+                        document.write("*");
+                    }
+                        document.write("<br>");
+                }
+            }   
+        </script>
+    </body>
+</html> 

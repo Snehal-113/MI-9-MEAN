@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS/A4/Q2/Automarphic...</title>
+</head>
+
+<body>
+    <h2 style="color: blue;">Check Your Number is an Automarphic number or not.</h2>
+    Enter a Number:<input type="text" id="input" name="input">
+    <button type="button" onclick="auto()">CHECK</button>
+    <hr color="red">
+    <p id="output"></p>
+    <script>
+        function square(a) {
+            return a * a;
+        }
+
+        function auto() {
+            const a = parseInt(document.getElementById("input").value);
+            if (square(a) % 10 == a) {
+                document.getElementById("output").innerHTML = "The Inputed Number is an automorphic Number.."
+
+            }
+            else {
+                document.getElementById("output").innerHTML = " The Inputed Number is not an automorphic Number.."
+            }
+        } 
+    </script>
+</body>
+
+</html>

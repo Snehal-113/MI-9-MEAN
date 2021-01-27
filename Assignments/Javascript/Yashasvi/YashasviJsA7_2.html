@@ -1,0 +1,21 @@
+<html>
+    <head>
+    <title>Marks of Students</title>
+    </head>
+    <body>
+        <h2>Marks of Students</h2>
+        <script>
+            const name = [];
+            var t = prompt("Total number of students");
+                for(var i=0;i<t;i++)
+                {
+                   var stdudent = prompt("Enter the student mark");
+                  name.push((stdudent));
+                }
+            for(var i=0; i<t;i++)
+            {
+               document.write("<br>Mark of Student "+ (i+1)+": "+ name[i]);
+            }   
+        </script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+    <title>assignment no.6</title>
+    <style>
+     .main{
+         background-color: blueviolet;
+         text-align: right;
+         border-radius: 0px 12px;
+     }
+     h3{
+         background-color: blueviolet;
+         padding-top: 10px;
+         text-align: right;
+         border-radius: 0px 12px;
+     }
+
+    </style>
+</html>
+<body>
+    <div class="main">
+        <h1>mi-9 intern html assesment</h1>
+    </div><br><hr>
+    <h3>personal detail</h3>
+    <form>
+        <label for="ifname">first name:&nbsp;</label>
+        <input type="text" id="ifname" name="fname"><br><br>
+        <label for="ilname">last name:&nbsp;</label>
+        <input type="text" id="ilname" name="lname"><br><br>
+        <label for="any">gender:</label>
+        <label for="male">male</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female">female</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="other">other</label>
+        <input type="radio" id="other" name="gender" value="other"><br>
+        <label for="age">age:</label>
+        <label for="less than 18">less than 18</label>
+        <input type="radio" id="less than 18" name="age">
+        <label for="18-25">18-25</label>
+        <input type="radio" id="18" name="age">
+        <label for="26-40">26-40</label>
+        <input type="radio" id="26" name="age">
+     </form>
+     <h3>Academic Detail</h3>
+     <fieldset>
+         <legend>Academic Details</legend>
+         <label for="Skill Set">Skill Set:</label>
+         <label for="HTML">HTML</label>
+         <input type="checkbox" id="any" name="HTML">
+         <label for="Java Script">Java Script</label>
+         <input type="checkbox" id="any" name="HTML">
+         <label for="Java">Java</label>
+         <input type="checkbox" id="any" name="HTML">
+         <label for="Oracle">Oracle</label>
+         <input type="checkbox" id="any" name="HTML">
+         <br>
+         <br>
+         <label for="Highest Qualification">Highest Qualification:</label>
+        <input list="Qualification">
+          <datalist id="Qualification">
+              <option value="Diploma">Diploma in Computer Science</option>
+              <option value="Science">Science Graduate</option>
+              <option value="Bachlor">Bachlor in Engg.</option>
+              <option value="Master">Master in Computer Science</option>
+              <option value="Master">Master in Engg.</option>
+              <option value="other">other</option>
+          </datalist>
+        <br>
+        <br>
+        <label for="University">University:</label>
+        <input list="University">
+        <datalist id="University">
+            <option value="Pune">Pune University</option>
+            <option value="Mumbai">Mumbai University</option>
+            <option value="Chennai">Channai University</option>
+            <option value="Nagpur">Nagpur University</option>
+            <option value="Badoda">Badoda University</option>
+        </datalist>
+        <br>
+        <br>
+        <label for="Area Experities">Area of Expertise:</label>
+        <select id="field" name="field" size=3 multiple>
+            <option value="soft">Software</option>
+            <option value="Train">Training</option>
+            <option value="Network">Networking</option>
+            <option value="Manag">Management</option>
+            <option value="Mareket">Marketing</option>
+        </select>
+       <label for="any">you can select multiple field</label>
+        <br><br>
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="Upload">Upload Resume:</label>
+            <input type="button" id="Browser" name="Browser" placeholder="Browser">
+            <br><br>
+        <label for="Comment">Comment:</label>
+        <textarea rows="4" cols="50" name="comment" form="form">
+        </textarea>
+        </fieldset>
+        <input type="submit">
+        
+
+
+
+    </body>
+    

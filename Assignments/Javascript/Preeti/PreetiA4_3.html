@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Krishnamurthy</title>
+</head>
+
+<body>
+    <input type="text" id="num" name="num">
+    <button type="button" onclick="check()">check</button>
+    <p id="pid"></p>
+    <script>
+        function factorial(b) {
+            let fact = 1;
+            for (let i = 1; i <= b; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+        function check() {
+            let res = 0;
+            const a = parseInt(document.getElementById("num").value);
+            let temp = a;
+            let b = [];
+            while (temp > 0) {
+                b.push(temp % 10);
+                temp = parseInt(temp / 10);
+            }
+            for (let i = 0; i < b.length; i++) {
+                res += factorial(b[i]);
+            }
+
+            if (res == a) {
+                document.getElementById("pid").innerHTML = "Krishnamurthy number";
+            }
+            else {
+                document.getElementById("pid").innerHTML = "Not a Krishnamurthy number";
+            }
+        }
+    </script>
+</body>
+
+</html>

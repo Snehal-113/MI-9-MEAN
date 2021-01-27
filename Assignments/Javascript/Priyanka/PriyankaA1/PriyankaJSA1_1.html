@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Swaping of two number</title>
+    </head>
+    <body>
+        <lable for="pri">A:</lable>
+        <input type="text" id="pri" name="val11">
+        <lable for="pri1">B:</lable>
+        <input type="text" id="pri1" name="val12">
+        <input type="button" value="Method1" onclick="calculate()">
+        <input type="button" value="Method2" onclick="calculate1()">
+        <h1>Method 1 :With temporary variable</h1>
+        <p id="iVal1"></p>
+        <p id="iVal2"></p>
+        <p id="iVal3"></p>
+        <h1>Method 2 :Without temporary variable</h1>
+        <p id="iVal4"></p>
+        <p id="iVal5"></p>
+        <p id="iVal6"></p>
+        <script language="Javascript">
+            function calculate(){
+            var a,b,c;
+            a=document.getElementById("pri").value;
+            b=document.getElementById("pri1").value;
+            c=document.getElementById("iVal1").innerHTML= +a;
+            a=document.getElementById("iVal2").innerHTML= "The value of a is "+b;
+            b=document.getElementById("iVal3").innerHTML= "the value of b is "+c;
+        }
+        function calculate1(){
+        var a,b,c;
+        a=parseInt(document.getElementById("pri").value);
+        b=parseInt(document.getElementById("pri1").value);
+        a=a+b;
+        a=document.getElementById("iVal4").innerHTML=a;
+        b=a-b;
+        document.getElementById("iVal5").innerHTML= "The value of b is "+b;
+        a=a-b;
+        document.getElementById("iVal6").innerHTML= "The value of a is "+a;
+        }
+    </script>
+    </body>
+</html>

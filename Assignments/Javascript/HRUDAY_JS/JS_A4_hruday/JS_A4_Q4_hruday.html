@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS/A4/Q4....</title>
+
+</head>
+
+<body>
+    <h1 style="color: blue;">UpperCase if it is in LowerCase and to LowerCase if it is in UpperCase.</h1>
+    Enter a Latter:<input type="text" id="input" name="input">
+    <button type="button" onclick="upperlowercase()">CONVERT</button>
+    <hr color="blue">
+<p id="output"></p>
+    <script>
+        function upperlowercase() {
+            var str = document.getElementById("input").value;
+            var upperstr = str.toUpperCase();
+            var lowerstr = str.toLowerCase();
+            if (str == lowerstr)
+            document.getElementById("output").innerHTML = "Charecter Replace to Uppercase :" + upperstr;
+            if (str == upperstr)
+            document.getElementById("output").innerHTML = "Charecter Replace to Lowercase:" + lowerstr;
+               
+        }
+    </script>
+</body>
+
+</html>

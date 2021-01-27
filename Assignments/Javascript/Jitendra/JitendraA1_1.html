@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>JavaScriptA1</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">swapping Of two  numbers</h1>
+    <form>
+        
+        A: <input type="text" id="ival1" name="val1" size="5">
+        B: <input type="text" id="ival2" name="val2" size="5">
+        <button type="button" style="background-color: rgb(192, 130, 130);" onclick="swap()">Using Temp</button>
+        <button type="button" style="background-color: rgb(190, 132, 118);" onclick="swap1()">Without Temp</button>
+    </form>
+    <h3>Using temporary variable</h3>
+    <p id="meth1"></p>
+    <h3>Without temporary variable</h3>
+    <p id="meth2"></p>
+    <script language="JavaScript">
+        function swap() {
+            var a, b, temp;
+            a = parseInt(document.getElementById("ival1").value); 
+            b = parseInt(document.getElementById("ival2").value); 
+            temp = a;
+            a = b;
+            b = temp;
+            document.getElementById("meth1").innerHTML = "After swapping(Using Temp variable)  A:   " + a + "   B:  " + b;
+        }
+
+        function swap1() {
+            var a, b;
+            a = parseInt(document.getElementById("ival1").value);
+            b = parseInt(document.getElementById("ival2").value); 
+            [a, b] = [b, a];
+            document.getElementById("meth2").innerHTML = "After swapping(without temp variable)  A:  " + a + "   B:  " + b;
+        }
+    </script>
+</body>
+
+</html>

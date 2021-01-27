@@ -1,0 +1,27 @@
+ <html>
+    <head><title>Assignment6_Q4</title></head>
+    <body>
+        <script>
+            function fact(a) {
+            var f = a;
+            for (var i = 1; i < a; i++) {
+                 f *= i;
+            }
+            return f;
+        }
+        var num = [];
+        var sum = 0;
+        while (true) {
+            var n = prompt("Enter the number:");
+            if (n == "X" || n == null) {
+                break;
+            }
+            num.push(parseInt(n));
+        }
+        for (var i = 0; i < num.length; i++) {
+            sum += fact(num[i]);
+        }
+        document.write(sum);
+        </script>
+    </body>
+</html>

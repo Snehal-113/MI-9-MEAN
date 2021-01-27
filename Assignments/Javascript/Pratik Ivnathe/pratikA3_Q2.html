@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime No.</title>
+    </head>
+    <body>
+        <form name="calc">
+            <label for="prime">Enter Number Here:</label><br>
+            <input type="text" id="prime" size="5">
+            <button type="button" onclick="fun()">click</button>
+            <p style="color: green;" id="no"></p>
+        </form>
+        <script lang="JavaScript">
+            function fun(){
+                var i,flag=0,no;
+                no=parseInt(document.getElementById("prime").value);
+                {
+                    for(i=2;i<=no/2;i++)
+                   { 
+                        if(no%i==0)
+                      {
+                        flag =1;
+                        break;
+                      }
+                   }
+                   if(flag==0)
+                   {
+                       document.getElementById("no").innerHTML="this is prime no";
+                       window.alert(+no+"is prime")
+                   }
+                   else
+                   {
+                       document.getElementById("no").innerHTML="this not prime no";
+                       window.alert(+a+"is not prime")
+                   }
+                }
+            }
+        </script>
+    </body>
+</html>

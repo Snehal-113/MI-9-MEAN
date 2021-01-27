@@ -1,0 +1,64 @@
+<html>
+    <head><title>assignment2_2</title></head>
+    <body>
+        <h1 style="text-align: center;">find marks</h1>
+        <form>
+            <label for="ival1"> A:</label>
+            <input type="text" id="ival1" name="val1" size="5">
+            <label for="ival2"> B:</label>
+            <input type="text" id="ival2" name="val2" size="5">
+            <label for="ival3"> C:</label>
+            <input type="text" id="ival3" name="val3" size="5">
+            <label for="ival4"> D:</label>
+            <input type="text" id="ival4" name="val4" size="5">
+            <label for="ival5"> E:</label>
+            <input type="text" id="ival5" name="val5" size="5">
+            <button type="button" onclick="calc()">add</button>
+        </form>
+        <h3>total marks</h3>
+        <p id="total"></p>
+        <h3>percentage of marks</h3>
+        <p id="per"></p>
+        <h3>grade</h3>
+        <p id="grade"></p>
+        <script language="JavaScript">
+            function calc(){
+            var a,b,c,d,e,z,x;
+            a=parseInt(document.getElementById("ival1").value);
+            b=parseInt(document.getElementById("ival2").value);
+            c=parseInt(document.getElementById("ival3").value);
+            d=parseInt(document.getElementById("ival4").value);
+            e=parseInt(document.getElementById("ival5").value);
+            z=a+b+c+d+e;
+            document.getElementById("total").innerHTML="addition of subject: "+z;
+            x=z/5;
+            document.getElementById("per").innerHTML="percentage of marks: "+x;
+            p=x/10; 
+            switch(p=parseInt(p)){
+                case 10: 
+                case 9:
+                case 8:  
+                document.getElementById("grade").innerHTML="grade: A";
+                break;
+                case 7:
+                case 6: 
+                document.getElementById("grade").innerHTML="grade: B";
+                break;
+                case 5:
+                case 4:    
+                document.getElementById("grade").innerHTML="grade: C";
+                break;
+                case 3:
+                case 2:    
+                document.getElementById("grade").innerHTML="grade: D";
+                break;
+                case 1:    
+                document.getElementById("grade").innerHTML="grade: E";
+                break;
+                default:document.getElementById("grade").innerHTML="grade: F";
+                break;
+                }
+        }
+        </script>
+    </body>
+</html>

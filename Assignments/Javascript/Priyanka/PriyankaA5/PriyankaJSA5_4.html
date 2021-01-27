@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>digit</title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button"onclick="digit()">Show</button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <p id="pid2"></p>
+        <script language="javascript">
+            function digit(){
+            var n,a,temp,sum,prd,rem;
+            n=document.getElementById("pri").value;
+            a=n.length;
+            temp=n;
+            sum=0;
+            prd=1;
+            if(a == 6){
+                document.getElementById("pid").innerHTML=n+" Number is 6 digit";
+                while(temp>0)
+                {
+                rem=temp%10;
+                temp=parseInt(temp/10);
+                if(rem % 2 == 0)
+                {
+                    sum=(sum+rem);
+                }
+                else{
+                    prd=(prd*rem);
+                }
+                document.getElementById("pid2").innerHTML="Product of odd= "+prd; 
+                document.getElementById("pid1").innerHTML="Sum of even= "+sum;  
+                }
+            }
+            else{
+            document.getElementById("pid").innerHTML="Invalid Number !! Please enter a 6 digit Number";
+            }
+        }
+        </script>
+    </body>
+</html>

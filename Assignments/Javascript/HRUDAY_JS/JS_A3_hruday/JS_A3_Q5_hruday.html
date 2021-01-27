@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS/A3/Q5...</title>
+</head>
+
+<body>
+    <h2 style="color: chartreuse;">Enter a number to get factorial of your Number :</h2>
+    <input type="input" id="uinput" name="uinput" size="8">
+    <button type="text" onclick="factorial()" style="background: cyan; margin-left: 10px;">CLICK!</button>
+    <p id="answer"
+        style="color: darkmagenta; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder;"></p>
+
+    <script>
+
+        function factorial() {
+            var i = parseInt(document.getElementById("uinput").value);
+            var fact = 1;
+            for (i; i > 1; i--) {
+                fact = fact * i
+            }
+            document.getElementById("answer").innerHTML = "The Factorial of your number is : " + fact;
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Conversion from celcius to fahrenheit</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Conversion of Celcius to Fahrenheit</h1>
+        <lable for="iVal1">Temp:</lable>
+        <input type="text" id="iVal1" name="val1"><sup>0</sup>C
+        <input type="button" value="Convert" onclick="calculate()">
+        <h3>After Conversion</h3>
+        <p id="pid"></p>
+        <script langauge="JavaScript">
+            function calculate(){
+            var a,b,c,d;
+            a=document.getElementById("iVal1").value;
+            b=(a*9/5)+32;
+            document.getElementById("pid").innerHTML=+a+ "<sup>0</sup>C is equal to "+b+   "<sup>0</sup>F";
+            }
+        </script>
+    </body>
+</html>
