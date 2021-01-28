@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Assignment_4 Q1</title>
+    </head>
+    <body>
+        <h1> Armstrong Numbers</h1>
+        <script language="JavaScript">
+            var n = prompt("Enter a number");
+            var temp = n;
+            var len = temp.length;
+            var sum = 0,rem;
+            while( len > 0 )
+            {
+                rem=len%10;
+                len=parseInt(len/10);
+                sum=sum+Math.pow(rem);
+            }
+            if(sum == n)
+            {
+                document.write("Armstrong number");
+            }
+            else{
+                document.write("not an Armstrong number");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Armstong Number</Title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button" onclick="Krishnamurthy()">Show</button>
+        <p id="pid"></p>
+        <script language="JavaScript">
+            function Krishnamurthy(){
+            var n,temp,prd,sum,rem,a,b;
+            n=document.getElementById("pri").value;
+            temp=n;
+            prd=1;
+            sum=0;
+            while(temp>0){
+                a=1;
+                rem = temp % 10;
+                for(b=1; b<=rem; b++){
+                a=a*b;
+                }
+                sum=sum+a;
+                temp=parseInt(temp/10);
+            }
+            if(n == sum){
+            document.getElementById("pid").innerHTML=n+" is Krishnamurthy number";
+            }
+            else{
+            document.getElementById("pid").innerHTML= n+" is not Krishnamurthy number";
+            }
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS/A3/Q3...</title>
+</head>
+
+<body>
+    <h1 style="color: chartreuse;">Enter Your Number To know it's Even number or odd...</h1>
+    <input type="text" id="input" name="userinput" size="8">
+    <button type="button" onclick="checkNum()" style="background: cyan; margin-left: 10px;">CLICK!</button>
+    <p id="output"
+        style="color: darkmagenta; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder;"></p>
+    <script>
+
+        function checkNum() {
+            var n = parseInt(document.getElementById("input").value);
+            if (n % 2 == 0) {
+                document.getElementById("output").innerHTML = " Hey! " + n + " is an even number...";
+            }
+            else {
+                document.getElementById("output").innerHTML = " Hey! " + n + " is an odd number...";
+            }
+        }
+    </script>
+</body>
+
+</html>

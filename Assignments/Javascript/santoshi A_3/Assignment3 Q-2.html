@@ -1,0 +1,36 @@
+<html>
+<body>
+<h1>Prime No</h1>
+<form>
+    Enter the numbers:<input type="text" id="no" name="n" size="5"><br><br>
+    <button type="button" onclick="prime()">Check</button>
+    <p id="pid"></p><br>
+</form>
+<script language="JavaScript">
+    function prime()
+    {
+var num = parseInt(document.getElementById("no").value);
+var i, flag = 0;
+for (i = 2; i <= num / 2; i++) 
+{
+// condition for non-prime
+if (num % i == 0) {
+    flag = 1;
+    break;
+}
+}
+if (num == 1) 
+{    
+document.write("1 is neither prime nor composite.");
+}
+else 
+{
+if (flag == 0)
+document.getElementById("pid").innerHTML=num+"given no is a prime number.";
+else
+document.getElementById("pid").innerHTML=num+"given no is a  not prime number.";
+}
+}
+</script>
+</body>
+</html> 

@@ -1,0 +1,26 @@
+<html>
+    <head><title>assiJs_4</title>
+     </head>
+     <body>
+         <h1>Amstrong number</h1>
+          <script language="JavaScript">
+            var n= prompt("enter a number");
+             var r,sum=0,temp;
+             temp=n;
+             while(temp>0)
+             {
+                 r=temp%10;
+                 sum=sum+(r*r*r);
+                 temp=parseInt(temp/10);
+             }
+             if(temp==sum)
+             {
+             document.write("Armstrong number");
+             }
+             else
+             {
+             document.write("not Armstrong number");
+             }
+        </script>
+     </body>
+</html>

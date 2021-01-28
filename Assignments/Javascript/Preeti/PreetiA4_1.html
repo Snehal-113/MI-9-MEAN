@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Armstrong</title>
+        <body>
+            <input type="text" id="num" name="num">
+            <button type="button" onclick="check()">check</button>
+            <p id="pid"></p>
+            <script>
+                function power(b, pow){
+                    let res = 1;
+                    for(let i = 1; i <= pow; i++){
+                        res *= b; 
+                    }
+                    return res;
+                }
+                function check(){
+                    let n = 0;
+               const a = parseInt(document.getElementById("num").value);
+               let temp = a;
+               let b = [];
+               while(temp > 0){
+                 b.push(parseInt(temp) % 10);
+                  temp = parseInt((parseInt(temp)) / 10);
+               }
+               for (let i = 0; i<b.length;i++){
+                let ans = power(b[i],b.length);
+               n += ans;
+               }
+               if(n === a){
+                   document.getElementById("pid").innerHTML = "armstrong";
+               }
+               else{
+                   document.getElementById("pid").innerHTML = "not armstrong";
+               }
+            }
+            </script>
+        </body>
+    </head>
+</html>

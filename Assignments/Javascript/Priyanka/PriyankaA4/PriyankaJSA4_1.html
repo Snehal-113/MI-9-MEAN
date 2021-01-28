@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <Title>Armstong Number</Title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button" onclick="Armstrong()">Show</button>
+        <p id="pid"></p>
+        <script language="javascript">
+            function Armstrong(){
+            var n,temp,prd,sum,rem;
+            n=document.getElementById("pri").value;
+            temp=n;
+            prd=1;
+            sum=0;
+            while(temp>0){
+                rem = temp % 10;
+                prd=rem*rem*rem;
+                sum=sum+prd;
+                temp=parseInt(temp/10);
+                }
+            if(sum == n){
+            document.getElementById("pid").innerHTML=n+" is Armstrong number";
+            }
+            else{
+            document.getElementById("pid").innerHTML= n+" is not Armstrong number";
+            }
+        }
+        </script>
+    </body>
+</html>

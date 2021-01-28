@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Assi7_2</title>
+    </head>
+    <body>
+        <script>
+            var num = [];
+            prompt("how many student you hv:");
+            while(true){
+                let n = prompt("enter a marks:");
+                if(n == "X" || n == null){
+                    break;
+                }
+                num.push(parseInt(n));
+            }
+            document.write("<br>marks list: " + num);
+            for(i = 0; i < num.length; i++){
+                document.write("<br>Marks"+ (i+1)+": "+ num[i]);
+        
+
+            }
+        </script>
+    </body>
+</html>

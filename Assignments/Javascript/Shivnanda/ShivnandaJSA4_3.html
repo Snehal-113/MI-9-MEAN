@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Assignment4 Q3</title>
+    </head>
+    <body> 
+        <script language="JavaScript">
+            function fact(n)
+            {
+                var fact=1;
+                for(var i=1;i<=n;i++)
+                {
+                    fact = fact*i;
+                }
+                document.write("factorial is = "+fact);
+                return fact;
+            }
+            var num = prompt("Enter a number");
+            var sum=0;
+            var temp = num;
+            while(temp > 0)
+            {
+                var rem=temp % 10;
+                sum = sum+fact(rem);
+                temp=parseInt(temp/10);
+            }
+            if(sum == num)
+            {
+                document.write("It is a Krishnamurthy number");
+            }
+            else{
+                document.write("It is not a krishnamurthy number");
+            }
+        </script>
+    </body>
+</html>

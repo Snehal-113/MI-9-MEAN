@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Prime Number</title>
+    </head>
+    <body>
+        <input type="text" id="pri1" name="pri2">
+        <button type="button" onclick="prime()">Show</button>
+        <p id="pid"></p>
+        <script language="JavaScript">
+        function prime(){
+            var a,n,m; 
+                m=0;
+                n=parseInt(document.getElementById("pri1").value);
+                if(n == 1){
+                document.getElementById("pid").innerHTML=n+"  Is not a prime or not composite";
+                }
+                for(a=2; a<n; a++)
+                {
+                    if(n % a == 0 ){
+                    m=1;
+                    break;
+                    }
+                }
+                if(m==0){ 
+                document.getElementById("pid").innerHTML=n+ " is a Prime number";
+                }
+                else{
+                document.getElementById("pid").innerHTML=n+ " is not Prime number"; 
+                }
+                }
+        
+        </script>
+    </body>
+</html>

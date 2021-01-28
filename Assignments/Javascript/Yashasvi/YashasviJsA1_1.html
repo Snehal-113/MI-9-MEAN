@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Swaping of Numbers</title>
+    </head>
+    <body>
+        <h1>Swaping of two Numbers</h1>
+        <form>
+            <label for="ival1"> A=</label>
+            <input type="text" id="ival1" name="val1" size="5">
+            <label for="ival2"> B=</label>
+            <input type="text" id="ival2" name="val2" size="5">
+            <button type="button" onclick="swap()">Method 1</button>
+            <button type="button" onclick="swap1()">Method 2</button>
+        </form>
+        <h3>Method 1:With Temporary Variable</h3>
+        <p id="meth1"></p>
+        <h3>Method 2:Without Temporary Variable</h3>
+        <p id="meth2"></p>
+        <script language="JavaScript">
+            function swap()
+            {
+            var a,b,c;
+            a=parseInt(document.getElementById("ival1").value); 
+            b=parseInt(document.getElementById("ival2").value); 
+            c=a;
+            a=b;
+            b=c;
+            document.getElementById("meth1").innerHTML="After swapping A="+a+ " B="+b; 
+            }
+            function swap1()
+            {
+            var a,b;
+            a=parseInt(document.getElementById("ival1").value); 
+            b=parseInt(document.getElementById("ival2").value); 
+            [a,b]=[b,a];    
+            document.getElementById("meth2").innerHTML="After swapping A="+a+" B="+b; 
+            }
+        </script>
+    </body>
+</html> 

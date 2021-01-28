@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sum of fact</title>
+    </head>
+    <body>
+        <script>
+            var fact=1,number=[],k=[],j=[],fact1=0;
+            for(j=0;j<=3;j++)
+            {
+             var n=prompt("enter number");
+             number.push(n);
+            }
+                debugger;
+            for ( var i = 1; i <= n; ++i) {
+              fact= fact*i;
+              k.push(fact);
+              fact1=fact1+fact;
+           }
+          
+          document.write("output of array of number<br>"+number);
+          document.write("<br>************************************<br>")
+          document.write("output of factorial store in array<br>"+k);
+          document.write("<br>************************************<br>");
+          document.write("output of factorial in dessending order<br>"+fact1);
+      </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+  <html>
+<body>
+<h1>Year</h1>
+<form>
+    Enter the year <input type="text" id="yr" name="y" size="5"><br><br>
+    <button type="button" onclick="lep()">Check</button>
+</form>
+<script language="JavaScript">
+    function lep()
+    {
+var year = parseInt(document.getElementById("yr").value);
+
+if(year % 4 == 0)
+{
+    document.write("This is leap year")  
+}
+else
+{
+    document.write("this not leap year")  
+}
+    }
+    </script>
+    </body>
+    </html>

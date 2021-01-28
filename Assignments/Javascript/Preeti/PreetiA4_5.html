@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>check string</title>
+</head>
+
+<body>
+    <input type="text" id="string1" name="string1">
+    <button type="button" onclick="convert()">Convert (all)</button>
+    <button type="button" onclick="convert1()">Convert (mixed)</button>
+    <input type="text" id="string2" name="string2">
+    <script>
+        //all
+        function convert() {
+            let input = document.getElementById("string1").value;
+            let result1 = input.toLowerCase();
+            let result2 = input.toUpperCase();
+            if (input == result1) {
+                document.getElementById("string2").value = result2;
+            }
+            else {
+                document.getElementById("string2").value = result1;
+            }
+        }
+        //mixed
+        function convert1() {
+            let input = document.getElementById("string1").value;
+            let output = "";
+            for(let i = 0; i < input.length; i++) {
+                if(input.charAt(i) >= 'A' && input.charAt(i) <= 'Z') {
+                    output += input.charAt(i).toLowerCase();
+                } else {
+                    output += input.charAt(i).toUpperCase();
+                }
+            }
+            document.getElementById("string2").value = output;
+        }
+        
+    </script>
+</body>
+
+</html>
