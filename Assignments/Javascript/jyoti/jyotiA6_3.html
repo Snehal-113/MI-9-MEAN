@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Assignment6_3</title>
+    </head>
+    <body>
+        <script>
+            var n = Number(prompt("Enter the number  in an Array")); 
+            var arr = {}; 
+            var sum = 0, i; 
+            for(i = 0; i < n; i++)  
+            { 
+          arr[i] = Number(prompt("Enter number " + (Number(i) + 1))); 
+           } 
+           for(i = 0; i < n; i++)  
+          { 
+            sum += arr[i]; 
+           } 
+           document.write('Sum of the n Number: '+sum); 
+        </script>
+    </body>
+</html>
