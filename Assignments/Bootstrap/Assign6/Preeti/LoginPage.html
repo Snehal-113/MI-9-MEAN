@@ -1,0 +1,197 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Employee.html">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand bg-dark justify-content-center">
+            <ul class="navbar-nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Personal</a>
+                </li>
+                <li class="nav-item text-light">
+                    <a class="nav-link text-light disabled" href="#">Employment</a>
+                </li>
+                <li class="nav-item text-light">
+                    <a class="nav-link text-light disabled" href="#">Education</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container p-4 ">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <form class="form-group">
+                    <div class="row">
+                        <div class="col-4 text-right">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="name" class="form-control" id="name" name="name"
+                                placeholder="Enter your full name">
+                        </div>
+                    </div>
+                </form>
+                <form class="form-group">
+                    <div class="row">
+                        <div class="col-4 text-right">
+                            <label for="email">Email ID</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your active email id to receive relevant jobs" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please specify your email ID.</div>
+                        </div>
+                    </div>
+                </form>
+                <form class="form-group">
+                    <div class="row">
+                        <div class="col-4 text-right">
+                            <label for="pwd">Password</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="password" class="form-control" id="pwd" name="pwd"
+                                placeholder="Minimum 6 characters">
+                        </div>
+                    </div>
+                </form>
+                <form class="form-group">
+                    <div class="row">
+                        <div class="col-4 text-right">
+                            <label for="mobile">Mobile number</label>
+                        </div>
+                        <div class="col-8">
+                            <input type=" tel" class="form-control" id="name"
+                                placeholder="Where recruiter can contact you">
+                            <div class="valid-feedback">Valid</div>
+                            <div class="invalid-feedback">Please specify a valid mobile number</div>
+                        </div>
+                    </div>
+                </form>
+                <form class="form-group">
+                    <div class="row">
+                        <div class="col-4 text-right">
+                            <label for="city">Current City</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="crntcity" class="form-control" id="city" name="city"
+                                placeholder="Tell us about your current city">
+                                <datalist id="crntcity">
+                                    <option value="Popular Locations"></option>
+                                    <option value="Delhi"></option>
+                                    <option value="Mumbai"></option>
+                                    <option value="Bangalore"></option>
+                                    <option value="Chennai"></option>
+                                    <option value="Kolkata"></option>
+                                    <option value="Hyderabad/Secunderabad"></option>
+                                    <option value="Gurgaon"></option>
+                                    <option value="Noida"></option>
+                                    <option value="Ahmedabad"></option>
+                                    <option value="Pune"></option>
+                                </datalist>
+                        </div>
+                    </div>
+                </form>
+                <form class="form-group">
+                    <div class="row">
+                        <div class="col-4  text-right">
+                            <label for="Experience">Total Work Experience</label>
+                        </div>
+                        <div class="col-2">
+                            <input list="exp" class="form-control" id="Experience" name="Experience"
+                                placeholder="Select">
+                            <datalist id="exp">
+                                <option value="0"></option>
+                                <option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                                <option value="4"></option>
+                            </datalist>
+                        </div>
+                        <div class="col-1 mt-2 pl-0">
+                            <span> &nbsp;Year(s)</span>
+                        </div>
+                        <div class="col-2">
+                            <input list="mnth" class="form-control" id="Month" name="Month" placeholder="Select">
+                            <datalist id="mnth">
+                                <option value="0"></option>
+                                <option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                                <option value="4"></option>
+                                <option value="5"></option>
+                                <option value="6"></option>
+                                <option value="7"></option>
+                                <option value="8"></option>
+                                <option value="9"></option>
+                                <option value="10"></option>
+                                <option value="11"></option>
+                            </datalist>
+                        </div>
+                        <div class="col-3 mt-2 pl-0">
+                            <label for="Month">Month(s)</label>
+                        </div>
+                    </div>
+                </form>
+                <form class="form-group">
+                    <div class="row">
+                        <div class="col-4 text-right">
+                            <label for="resume">Upload Resume</label>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-success px-4"> Upload Resume </button>
+                        </div>
+                        <div class="col-1 text-left">
+                            <span>- or - </span>
+                        </div>
+                        <div class="col-4">
+                            <a href="#"> copy-paste your resume here</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-group form-check">
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-8">
+
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember" required>I agreed to the
+                                Terms
+                                and
+                                Conditions and Privacy Policy governing the use of Naukri.com.
+
+                                <div class="invalid-feedback">Check this checkbox to continue.</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-8 text-center">
+                            <button type="submit" class="btn btn-primary py-3" style="width: 400px">
+                                <a class="text-light" href="Employee.html" style="text-decoration: none;">Register Now</a></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-1"></div>
+</body>
+
+</html>
