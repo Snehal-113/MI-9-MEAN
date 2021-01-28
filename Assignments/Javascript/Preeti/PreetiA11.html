@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Assignment 11 </title>
+</head>
+
+<body>
+    <input type="text" id="val" name="val">
+    <button type="button" onclick="show()">Show</button>
+    <p id="pid"></p>
+    <script>
+        const rollno = [];
+        const marks = [];
+        let n = prompt("Enter the count of rollno:");
+        for (let i = 0; i < n; i++) {
+            let z = parseInt(prompt("Enter the rollno of student"));
+            rollno.push(z);
+        }
+        for (let i = 0; i < n;) {
+            let x = parseInt(prompt("Enter marks:"));
+            if (x > 0 && x <= 50) {
+                marks.push(x);
+                i++;
+            }
+            else {
+                alert("Error-Invalid Marks!!");
+            }
+        }
+        let totalMarks = [];
+        for (let i = 0; i < marks.length; i++) {
+            totalMarks.push(marks[i] + marks[i] * 0.2);
+        }
+
+        let sortedMarks = [...totalMarks];
+        bubble(sortedMarks, rollno);
+
+        document.write("Roll No &ensp; Marks")
+        for (let i = 0; i < n; i++) {
+            document.write("<br>" + rollno[i] + "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;" + sortedMarks[i]);
+        }
+
+        function show() {
+            const roll = parseInt(document.getElementById("val").value);
+            const marksPosition = find(roll);
+            if (marksPosition > -1) {
+                document.getElementById("pid").innerHTML = ("Rollno. " + roll + " has scored " + sortedMarks[marksPosition] + "<br>");
+            }
+            else {
+                document.getElementById("pid").innerHTML = "Not found";
+            }
+        }
+
+        function find(roll) {
+            for (let i = 0; i < n; i++) {
+                if (roll === rollno[i]) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        function bubble(totalMarks, rollno) {
+            for (let i = 0; i < n - i; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    if (totalMarks[j] < totalMarks[j + 1]) {
+                        swap(totalMarks, j, j + 1);
+                        swap(rollno, j, j + 1);
+                    }
+                }
+            }
+        }
+        function swap(arr, a, b) {
+            let temp = arr[a];
+            arr[a] = arr[b];
+            arr[b] = temp;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
