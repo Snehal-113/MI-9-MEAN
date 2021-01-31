@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>String Pallindrome</title>
+    <script>
+         function palindrome(str) {
+            let i = 0;
+            let j = str.length - 1;
+            while(i < j) {
+                if(str[i] == str[j]) {
+                    i++; 
+                    j--;
+                }
+                else {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+       var string=prompt("Enter Your String");
+       if(palindrome(string))
+        document.write("Pallindromic String");
+       else
+        document.write("Not a Pallindromic String");
+    </script>
+</body>
+
+</html>
