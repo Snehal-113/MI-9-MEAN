@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>merge</title>
+    <script lang="Javascript">
+            function sort(arr){
+             var i,j,temp,n;
+             n=arr.length;
+             for(i=1;i<=n;i++)
+             {
+                 for(j=1;j<=n;j++)
+                 {
+                     if(arr[j]>arr[j+1])
+                     {
+                         temp=arr[j];
+                         arr[j]=arr[j+1];
+                         arr[j+1]=temp;
+                     }
+                 }
+             }
+            }
+        </script>
+    </head>
+        <body>
+            <script lang="Javascript">
+                var a=[],x,y;
+                var b=[];
+                for(i=1;i<5;i++){
+                x=prompt("Enter first 5 students");
+                a.push(x);
+                }
+                for(i=1;i<5;i++){
+                y=prompt("Enter Second 5 students");
+                b.push(y);
+                }    
+                var c=[];
+                var k;
+                document.write("before sorting:"+a+"<br>");
+                sort(a);
+                document.write("after sorting:"+a+"<br>");
+                document.write("before sorting:"+b+"<br>");
+                sort(b);
+                document.write("after sorting:"+b+"<br>");
+                for(i=0,j=0,k=0;i<=9;){
+                     if(parseInt(a[j])<=parseInt(b[k]))
+                     {
+                         i++;
+                         j++;
+                     }
+                     else{
+                         parseInt(c[i])=parseInt(b[k]);
+                         i++;
+                         k++;
+                     }
+                     if(j==5||k==5)
+                     break;
+                     }
+                     document.write("<br>vlaue of i"+i);
+                     document.write("<br>value of j:"+j);
+                     document.write("<br> value of k:"+k);
+                     for(;j<=4;){
+                         parseInt(c[i])=parseInt(a[j]);
+                         i++;
+                         j++;
+                     }
+                     for(;k<=4;){
+                         parseInt(c[i])=parseInt(b[k]);
+                         i++;
+                         k++;
+                     }
+                     document.write("<br>after sorting"+c);
+          </script>
+        </body>
+</html>

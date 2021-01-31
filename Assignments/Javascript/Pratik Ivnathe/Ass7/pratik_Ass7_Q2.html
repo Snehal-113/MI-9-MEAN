@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>student mark</title>
+    </head>
+    <body>
+        <script>
+            var i,z,student=[];
+            j=prompt("Enter number of student:")
+            document.write("Number of student::"+j);
+                for(var i=1;i<=j;i++)
+                {
+                    var z=prompt("Enter name of student");
+                    student.push(z);
+                   
+                }
+                document.write("<br>.........................<br>");
+                document.write(""+student);
+                document.write("<br>..........................<br>");
+                for(var k=0;k<=j-1;k++){
+                document.write("Mark "+k+":" +student[k]+"<br>");
+                }
+        </script>
+    </body>
+</html>
