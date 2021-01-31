@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>First letter upper case</title>
+</head>
+
+<body>
+    <script>
+        var str = prompt("Enter Your valid card number");
+        var regexp=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (regexp.test(str)) {
+            document.write("A valid email address");
+        } else {
+            document.write("Is not a email address");
+
+        }
+    </script>
+</body>
+
+</html>
