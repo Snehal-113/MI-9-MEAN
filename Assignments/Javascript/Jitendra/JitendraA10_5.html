@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>count words and whitespaces</title>
+</head>
+
+<body>
+        <script>
+            var white=0;
+            var str=prompt("Enter Your Sentence");
+            str = str.replace(/(^\s*)|(\s*$)/gi,"");
+            str = str.replace(/[ ]{2,}/gi," ");
+            str = str.replace(/\n /,"\n");
+            
+
+            for(var i=0;i<str.length;i++)
+            {
+                var ch=str[i];
+                if(ch==' ')
+                    white++;
+            }
+            document.write("Number of words: "+str.split(' ').length);
+            document.write("<br>Number of whitespaces:  "+white);
+    </script>
+</body>
+
+</html>
