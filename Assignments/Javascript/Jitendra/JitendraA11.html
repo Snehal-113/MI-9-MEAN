@@ -34,11 +34,11 @@
         var marks = [];
         var total = [];
         var i;
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < 10; i++) {
             arr[i] = prompt("Enter your roll-Number");
         }
 
-        for (i = 0; i < 3;) {
+        for (i = 0; i < 10;) {
             marks[i] = prompt("Enter your marks");
             if (marks[i] > 50 || marks[i] < 0 || marks[i] == null) {
                 window.alert("Invalid marks");
@@ -48,15 +48,16 @@
 
             }
         }
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < 10; i++) {
             total[i] = (parseInt(marks[i]) + parseInt(marks[i] * 20) / 100);
 
         }
         document.write("Roll-Number: " + arr);
         document.write("<br>" + "Marks: " + marks);
+        document.write("<br>" + "Marks: " + total);
         bubble(total, arr);
         document.write("<br><b>Roll Number  &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;<b>Marks");
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < 10; i++) {
             document.write("<br><br>" + arr[i] + "&ensp;   &ensp;&ensp;&ensp;&ensp;&ensp;" + total[i])
         }
 
