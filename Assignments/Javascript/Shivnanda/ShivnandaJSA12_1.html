@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> Assignment12 Q1</title>
+    </head>
+    <body>
+        <script language="javascript">
+            class Employee {
+                constructor(Eno,name,add,city,salary){
+                    this.Eno=101;
+                    this.name="Ashok Kumar";
+                    this.add="43 Ramnagar";
+                    this.city="Pune, Maharastra";
+                    this.salary=80000;
+                }
+                Show_init(Eno,name,add,city,salary){
+                    document.write("<br> Employee Number"+this.Eno);
+                    document.write("<br> Employee name"+this.name);
+                    document.write("<br> Employee add"+this.add);
+                    document.write("<br> Employee city"+this.city);
+                    document.write("<br> Employee salary"+this.salary);
+                }
+                Calculate(da,hra,pf,net,gross)
+                {
+                    var basic = this.salary*12;
+                    this.da = ((this.salary/100)*30);
+                    this.hra =((this.salary/100)*15);
+                    this.pf =((this.salary/100)*12.5);
+                    this.gross = basic + this.da+this. hra;
+                    this.net = this.gross - this.pf;
+                    if(gross > 180000)
+                    {
+                        alert("Incame tax payer");
+                    } 
+                    else{
+                        alert("Not an income tax payer");
+                    }
+                }
+                display()
+                {
+                    document.write("<br>-----------------------------------------------------------------------------------------");
+                    document.write( "<br> Employee Id :"+this.Eno);
+                    document.write( "<br> Employee name :"+this.name);
+                    document.write( "<br> Employee gross :"+this.gross);
+                    document.write( "<br> Employee net salary :"+this.net);
+
+                }
+            }
+            e1 = new Employee();
+            e1.Show_init();
+            e1.Calculate();
+            e1.display();
+        </script>
+    </body>
+</html>
