@@ -1,0 +1,52 @@
+<html>
+    <head> Ass 12 q1</head>
+    <body>
+        <script lang="javascript">
+            class emp{
+                constructor(empno,empname,empaddress,empcity,empsalary){
+                    this.empno=empno;
+                    this.empname=empname;
+                    this.empaddress=empaddress;
+                    this.empcity=empcity;
+                    this.empsalary=empsalary;
+                }
+                display(){
+                    document.write("<br>Employee No:"+this.empno);
+                    document.write("<br> Employee Name:"+this.empname);
+                    document.write("<br>Employee Address:"+this.empaddress);
+                    document.write("<br>Employee City:"+ this.empcity);
+                    document.write("<br>Employee Salary:"+this.empsalary);
+                }
+                show_init(empno,empname,empaddress,empcity,empsalary){
+                    this.empno=empno;
+                    this.empname=empname;
+                    this.empaddress=empaddress;
+                    this.empcity=empcity;
+                    this.empsalary=empsalary;
+                }
+                calculate(empbasicsal){
+                    this.empbasicsal=empbasicsal;
+                    var da=(30*this.empsalary)/100;
+                    var hra=(15*this.empsalary)/100;
+                    var pf=(12.5*this.empsalary)/100;
+                    var gross = this.empbasicsal + da + hra;
+                    var gross=gross*12;
+                    var net = gross - pf;
+                    document.write("<br>gross amount:"+gross);
+                    document.write("<br>net amount:"+net);
+                    if(gross > 180000)
+                    {
+                        document.write("<br>Income Tax Payer");
+                    }
+                    else{
+                        document.write("<br>Not an income tax payer.");
+                    }
+                }
+                }
+            e1=new emp();
+            e1.show_init(101,"Megha","pimple gurav","pune",50000);
+            e1.display();
+            e1.calculate(15000);
+        </script>
+    </body>
+    </html>

@@ -35,7 +35,7 @@
             var arr = [];
             var arr1 = [];
             var total =[];
-                for(i=0;i<10;i++)
+                for(i=0;i<4;i++)
                 {  
                     rn = prompt("Enter the student roll no");
                     arr.push(parseInt(rn)); 
@@ -55,7 +55,7 @@
                 }
                 document.write("<br>mark"+ (i+1)+": "+ arr1);
             }
-            for(var i=0; i<10;i++)
+            for(var i=0; i<4;i++)
             {
                p =arr1[i]/100 * 20;
                total[i] =arr1[i] + p;
@@ -63,14 +63,14 @@
              } 
             Bubble_sort(total,arr);
             document.write("<br>Roll No &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;Marks");
-            for(i=0;i<10;i++)
+            for(i=0;i<4;i++)
             {
             document.write("<br><br>"+arr[i]+ "&ensp; &ensp; &ensp;&ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;"+total[i])
             }
             function search()
             {
                 var newrn = parseInt(document.getElementById("one").value);
-                for(i=0;i< 10;i++)
+                for(i=0;i< 4;i++)
                 {
                 if(newrn==rn)
                 {
