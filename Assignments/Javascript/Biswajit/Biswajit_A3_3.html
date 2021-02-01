@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime Number</title>
+</head>
+<body>
+	<h2>Check Even or Odd Number</h2>
+	Enter a number :<input type="number" name="eo" id="eo">
+	<button onclick="evenorodd()">Check</button>
+	<p id="ot"></p>
+	<script type="text/javascript">
+		function evenorodd() {
+			var cnum=document.getElementById("eo").value;
+			if (cnum%2==0) {
+				document.getElementById("ot").innerText=cnum+" is even.";
+			}
+			else {
+				document.getElementById("ot").innerText=cnum+" is odd.";
+			}
+		}
+	</script>
+</body>
+</html>
