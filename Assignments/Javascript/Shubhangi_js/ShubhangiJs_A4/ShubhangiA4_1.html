@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A4-Q1</title>
+</head>
+
+<body>
+  <br>
+  <h2 style="text-align: center;">Know the Number is Armstrong or not</h1>
+    Enter The Number :<input type="text" name="num" id="num" />
+
+    <button type="button" onClick="armstrongNumber()">CHECK</button>
+    <p id="arm"></p>
+    <script language="JavaScript">
+
+      function armstrongNumber() {
+        var flag, number, remainder, sum = 0;
+        number = parseInt(document.getElementById("num").value);
+
+        flag = number;
+        while (number > 0) {
+          remainder = number % 10;
+          sum = sum + remainder * remainder * remainder;
+          number = parseInt(number / 10);
+        }
+
+        if (sum == flag) {
+          document.getElementById("arm").innerHTML = " Armstrong Number";
+          window.alert("Armstrong Number");
+        }
+        else {
+          document.getElementById("arm").innerHTML = " Not a Armstrong Number";
+          window.alert("Not a Armstrong Number");
+        }
+      }
+    </script>
+</body>
+
+</html>
