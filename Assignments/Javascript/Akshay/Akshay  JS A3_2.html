@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment A3_2</title>
+    </head>
+    <body>
+        <h2 style="text-align: center;">Know Prime No</h2>
+        <h4>Please Enter the year you want to know if its prime or not.</h4>
+        <input type="text" id="prime" name="prime" size="4">
+        <button type="button" onclick="primeNum()">Show</button>
+        <p id="Result"></p>
+
+        <script language="JavaScript">
+
+            function PrimeNo()
+            {
+                var num = parseInt(document.getElementById("prime").value);
+                var flag = true;
+                for(var i=2;i<=num-1;i++)
+                {
+                    if (num % i == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+
+                    if(flag == true)
+                    {
+                        document.getElementById("Result").innerHTML = num + "is prime number"
+                    }
+
+                    else
+                    {
+                       document.getElementById("Result").innerHTML = num + "is not prime number"
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment A3_5</title>
+    </head>
+    <body>
+        <h4>Enter the number whose factorial you want :</h4>
+        <input type="input" id="fact" name="fact" size="5">
+        <button type="text" onclick="Factorial()">Show</button>
+        <p id="factorial"></p>
+
+        <script>
+            function factorial()
+            {
+                debugger
+                var num = parseInt(document.getElementById("fact").value);
+                var factorial = 1;
+                for (num; num > 1;num--)
+                {
+                    factorial = factrial * num
+                }
+
+                document.getElementById("factorial").innerHTML = "The factoial of is :" +factorial;
+                console.log(factorial)
+            }
+        </script>
+    </body>
+</html>

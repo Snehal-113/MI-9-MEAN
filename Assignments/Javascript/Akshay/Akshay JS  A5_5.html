@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Floyd’s triangle</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A number of rows:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="floyd()">check</button>
+        <script lang="JavaScript">
+         function floyd(){
+             var num,i,j,number=1;
+            num=parseInt(document.getElementById("ival1").value);
+            document.write("floyd's trangle is:<br>")
+            for(i = 1; i <= num; i++ )
+              {
+                for(j = 1; j <= i; j++)
+                {
+                document.writeln(number+" ");
+                number++;
+                }
+                document.write("</br>");
+              }
+         } 
+        </script>
+    </body>
+</html>

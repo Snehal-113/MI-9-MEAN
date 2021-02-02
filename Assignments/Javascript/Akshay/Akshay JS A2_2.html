@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Assignment A2_2</title>
+    </head>
+    <body>
+           <h4>Enter your mrks below</h4>
+           <fieldset>
+                <legend>MARKSHEET</legend>
+
+                Science : <input type="text" id="science" name="Science">
+                Maths   : <input type="text" id="maths"   name="Maths">
+                History : <input type="text" id="history" name="History">
+                Geography : <input type="text" id="geography" name="Geography">
+                Hindi     : <input type="text" id="hindi" name="Hindi">
+                <button type="button" onclick="calculateGrade()">Result</button>
+           </fieldset>
+           <p id="marks"></p>
+           <p id="grade"></p>
+
+           <script language="JavaScript">
+               
+               function calculateGrade()
+               {
+                   var Science = parseInt(document.getElementById("science").value);
+                   var Maths   = parseInt(document.getElementById("maths").value);
+                   var History = parseInt(document.getElementById("history").value);
+                   var Geography = parseInt(document.getElementById("geography").value);
+                   var Hindi = parseInt(document.getElementById("hindi").value);
+
+
+                var totalmarks= science + maths + history + geography + hindi;
+                console.log("total marks ", totalmarks);
+                var percentage = totalmarks / 5;
+                console.log("Percentage ",percentage);
+
+                switch (true)
+                {
+                    case percentage >=75 && percentage <=100 :
+                        document.getElementById("grade").innerHTML = "Grade A";
+
+                    break;
+
+                    case percentage >= 60 && percentage <= 74 :
+                        document.getElementById("grade").innerHTML = "Grade B";
+                    
+                    break;
+
+                    case percentage >=40 && percentage <=59:
+                        document.getElementById("grade").innerHTML = "Grade C";
+                    
+                    break;
+
+                    case percentage >=30 && percentage <=39:
+                        document.getElementById("grade").innerHTML = "Grade D";
+                    
+                    break;
+
+                    default : document.getElementById("grade").innerHTML = "Grade E";
+                }
+               }
+           </script>
+    </body>
+</html>

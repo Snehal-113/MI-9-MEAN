@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Prime Numbers</title>
+    </head>
+    <label for="ival1"> Enter A number:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <input type="text" id="ival2" name="val2" size="5">
+        <button type="button" onclick="prime()">check</button>
+        <script lang="JavaScript">
+         function prime(){
+             var num,num1,i,j;
+            num=parseInt(document.getElementById("ival1").value);
+            num1=parseInt(document.getElementById("ival2").value);
+            document.write("The prime numbers between " +num+ " and " +num1+ " are:<br>");
+            for (let i = num; i <= num1; i++) 
+            {
+                var flag=0;
+                for (let j = 2; j < i; j++)
+                 {
+                    if (i % j == 0)
+                     {
+                        flag = 1;
+                        break;
+                    }
+                 }
+                if (i > 1 && flag == 0)
+                 {
+                    document.write(i);
+                    document.write("</br>");
+                 }
+            }
+        }
+        </script>
+
+</html>

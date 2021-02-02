@@ -1,0 +1,23 @@
+<html>
+    <head>
+            <title>JS AS1_2</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Conversion of Celcius to Farenheit</h1>
+        Temp:<input type="text" id="temprature" name="val1" size="5">&nbsp; &nbsp; &nbsp;<sup>0</sup>C
+        <button type="text" onclick="conversion()">Convert</button> 
+
+        <h2>After conversion</h2>
+        <p id="convert"></p>
+
+        <!--JavaScript-->
+        <script language="JavaScript">
+            function conversion()
+            {
+                var Celcius=parseInt(document.getElementById("temprature").value);
+                var fahr="celcius *9 / 5 + 32";
+                document.getElementById("convert").innerHTML= Celcius + "<sup>0</sup>C is equal to " + fahr + "<sup>0</sup>F"; 
+            }
+        </script>
+    </body>
+</html>

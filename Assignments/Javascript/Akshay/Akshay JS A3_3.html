@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignemnt A3_3</title>
+    </head>
+    <body>
+        <h2 style="text-align: center;">Know Even or Odd Number</h2>
+        <h4>Please Enter number you want to check its Even or Odd</h4>
+        <input type="text" id="Even" name="Even" size="4">
+        <button type="button" onclick="evenNo()">Show</button>
+        <p id="even"></p>
+        
+        <script language="JavaScript">
+
+            function evenNo()
+            {
+                var num=parseInt(document.getElementById("Even").value);
+                if(num%2==0)
+                {
+                    document.getElementById("even").innerHTML = num + "is even number"
+                }
+                else
+                {
+                    document.getElementById("even").innerHTML = num + "is odd number"
+
+                }
+            }
+        </script>
+    </body>
+</html>

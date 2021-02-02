@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ass8</title>
+        <script>
+            function func1(){
+            var n1=total.length;
+            for(i=0;i<n1;i++){
+                for(j=0;j<n1;j++){
+                    if(total[j]>total[j+1])
+                    {
+                        parseInt(temp=total[j]);
+                        parseInt(total[j]=total[j+1]);
+                        parseInt(total[j+1]=temp);
+                    }
+                }
+            }  
+        }
+            document.write("*********************************<br>");
+            document.write("Before Sorting::"+total+"<br>");
+            function func2(){
+            var p=total.length;
+            var a,b;
+             for(a=1;a<=p;a++){
+                 temp=total[a];
+                 b=a-1;
+                 while(b>=0 && total[b]>temp)
+                 {
+                     total[b+1]=total[b];
+                     b=b-1;
+                  }
+                  total[b+1]=temp;
+             }
+               
+        }
+        function func3(){
+        var n1=total.length;
+             var a,b,min;
+             for(a=0;a<n-1;a++)
+             {
+                 min=a;
+                 for(b=a+1;b<n;b++)
+                 {
+                     if(total[b]<total[min])
+                     {
+                         min=b;
+                     }
+                 }
+                 temp=std[a];
+                 total[a]=total[min];
+                 total[min]=temp;
+             }
+            } 
+            function swap(total, LI, RI){
+            var temp = total[LI];
+            total[LI] = total[RI];
+            total[RI] = temp;
+            }
+            function partition(total, left, right) {
+            var pivot   = total[Math.floor((right + left) / 2)]
+            i = left, 
+            j = right;
+        while (i <= j) 
+        {
+        while (total[i] < pivot)
+        {
+            i++;
+        }
+        while (total[j] > pivot) 
+        {
+            j--;
+        }
+        if (i <= j) 
+        {
+            swap(total, i, j); 
+            i++;
+            j--;
+        }
+    }
+    return i;
+   }
+        function quickSort(total, left, right) {
+        var index;
+        if (total.length > 1) 
+        {
+        index = partition(total, left, right);
+        if (left < index - 1) 
+        { 
+            quickSort(total, left, index - 1);
+        }
+        if (index < right) 
+        { 
+            quickSort(total, index, right);
+        }
+      }
+      return total;
+   }
+</script>
+    </head>
+    <body>
+        <form>
+        <label>Bubble Sort</label>
+        <button type="button" onclick="func1()">Press-1</button><br><br>
+        <label>Insertion Sort</label>
+        <button type="button" onclick="func2()">Press-2</button><br><br>
+        <label>Selection Sort</label>
+        <button type="button" onclick="func3()">Press-3</button><br><br>
+        <label>Quick Sort</label>
+        <button type="button" onclick="swap()">Press-4</button><br><br>
+        </form>
+        <script>
+            var n,i,j,m,total,a;
+              var m,o,p;      
+            n=[];
+            x=[];
+            total=[];
+            for(i=0;i<10;i++)
+            {
+                m=prompt("Enter student marks");
+                if(m>80)
+                {
+                    window.alert("user is not allow to enter marks more than 80");
+                 }
+                else
+                {
+                n.push(m);
+                }
+            }
+            function func1(){
+            document.write("Marks of student>>"+n+"<br>");
+            a=n.length;
+            for(j=0;j<a;j++)
+            {
+                x[j]=parseInt((20*n[j])/100);
+                total[j]=(parseInt(n[j])+parseInt(x[j]));
+            }
+            document.write("total of marks>>"+total+"<br>");
+            document.write("after sorting::"+total+"<br>");
+            for(i=0;i<a;i++)
+            {
+              document.write("Mark:"+(i+1)+":"+total[i]+"<br>");
+            }
+        }
+        function func2(){
+            document.write("Marks of student>>"+n+"<br>");
+            a=n.length;
+            for(j=0;j<a;j++)
+            {
+                x[j]=parseInt((20*n[j])/100);
+                total[j]=(parseInt(n[j])+parseInt(x[j]));
+            }
+            document.write("total of marks>>"+total+"<br>");
+            for(var k=0;k<a;k++)
+             {
+                 document.write("Mark "+(k+1) +":"+total[k]+"<br>");
+             }     
+        }
+        function func3(){
+            document.write("Marks of student>>"+n+"<br>");
+            a=n.length;
+            for(j=0;j<a;j++)
+            {
+                x[j]=parseInt((20*n[j])/100);
+                total[j]=(parseInt(n[j])+parseInt(x[j]));
+            }
+            document.write("total of marks>>"+total+"<br>");
+            for(var k=0;k<a;k++)
+             {
+                 document.write("Mark "+(k+1) +":"+total[k]+"<br>");
+             }     
+        }
+        function swap(){
+            document.write("Marks of student>>"+n+"<br>");
+            a=n.length;
+            for(j=0;j<a;j++)
+            {
+                x[j]=parseInt((20*n[j])/100);
+                total[j]=(parseInt(n[j])+parseInt(x[j]));
+            }
+            document.write("total of marks>>"+total+"<br>");
+            var Sarray = quickSort(total, 0, total.length - 1);
+            document.write("Sorted student Marks :"+Sarray);
+        }
+        </script>
+    </body>
+</html>
