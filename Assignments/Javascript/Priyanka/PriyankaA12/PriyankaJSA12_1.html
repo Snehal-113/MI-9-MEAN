@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Employee</title>
+    </head>
+    <body>
+        <script language="javascript">
+            class employee
+            {
+                constructor()
+                {
+                    this.empno=101;
+                    this.name="Ashok Kumar";
+                    this.address="43,Ramnagar";
+                    this.city="Pune ,Maharashtra";
+                    this.salary=80000;
+                }
+                show_init(empno,name,address,city,salary)
+                {
+                    document.write("Employee No.: "+this.empno);
+                    document.write("<br>Name of Employee : "+this.name);
+                    document.write("<br>Address of Employee : "+this.address);
+                    document.write("<br>City of Employee : "+this.city);
+                    document.write("<br>Salary of Employee : "+this.salary);
+                }
+                calculate(da,hra,pf,gross,net)
+                {
+                    this.da=(30/100)*this.salary;
+                    this.hra=(15/100)*this.salary;
+                    this.pf=(12.5/100)*this.salary;
+                    this.gross=this.salary+this.da+this.hra;
+                    this.grosstotal=12*this.gross;
+                    if(this.grosstotal>180000){
+                        window.alert("Income tax Payer");
+                    }
+                    else{
+                        window.alert("Not an income tax payer");
+                    }
+                    this.net=this.gross-this.pf;
+                }
+                display()
+                {
+                    document.write("<br>***After calculation***")
+                    document.write("<br>Salary of Employee : "+this.salary);
+                    document.write("<br>da of Employee : "+this.da);
+                    document.write("<br>hra of Employee : "+this.hra);
+                    document.write("<br>pf of Employee : "+this.pf);
+                    document.write("<br>Gross salary of Employee : "+this.gross);
+                    document.write("<br> Total  annual Gross salary of Employee : "+this.grosstotal);
+                    document.write("<br>Net salary of Employee : "+this.net);
+                }
+            }
+            e1 = new employee();
+            e1.show_init();
+            e1.calculate();
+            e1.display();
+        </script>
+    </body>
+</html>
