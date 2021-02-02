@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Construction</title>
+    </head>
+    <body>
+        <script lang="Javascript">
+            class Employee{
+             constructor()
+             {
+               this.empno=101;
+               this.name="Ashok kumar";
+               this.address="43,Ramnagar";
+               this.city="Pune,Maharastra";
+               this.salary=80000;
+             }
+             show_init()
+             {
+                 document.write("<br>Employee no"+this.empno);
+                 document.write("<br>Employee Name"+this.name);
+                 document.write("<br>Employee Address"+this.address);
+                 document.write("<br>Employee City"+this.city);
+                 document.write("<br>Employee Salary"+this.salary);
+             
+             }
+             display(){
+                 document.write("<br>****************************************************")
+                 document.write("<br>Employee Da"+this.da);
+                 document.write("<br>Employee Hra"+this.hra);
+                 document.write("<br>Employee Pf"+this.pf);
+                 document.write("<br>Employee Gross"+this.gross);
+                 document.write("<br>Employee Net"+this.net);
+                 document.write("<br>Gross Total:"+this.total);
+             }
+             calculate()
+             {
+                 this.da =(30/100)*this.salary;
+                 this.hra= (15/100)*this.salary;
+                 this.pf = (12.5/100)*this.salary;
+                 this.gross= this.salary+ this.da +this.hra;
+                 this.total=12*this.gross;
+                 if(this.total>180000)
+                 {
+                     window.alert("Income Tax Payer");
+                 }
+                 else
+                 {
+                     window.alert("Not an income tax payer.")
+                 }
+                 this.net = this.gross-this.pf;
+             }
+         }
+         s1=new Employee();
+         s1.show_init();
+         s1.calculate();
+         s1.display();
+        </script>
+    </body>
+</html>
