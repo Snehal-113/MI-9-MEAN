@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Assignment8</title>
+    </head>
+    <body>
+        <script>
+            var arr=[];
+            var b=prompt("Enter the mark of student")
+            for(var i=0;i<b;i++){
+                var std=prompt("Enter marks")
+                if (std>80){
+                    alert("Error-Invalid marks!! ");
+                }
+                else{
+                    arr.push(parseInt(std))
+                }
+            }
+            for(var i=0;i<b;i++){
+                document.write("<br>mark"+(i+1)+":"+arr[i])
+            }
+            for (var i=0;i<b;i++){
+                var X =arr[i]/100 * 20;
+               var total=arr[i] + X;
+               document.write("<br>the total marks of student "+ (i+1)+": "+ total);
+
+            }
+        </script>
+    </body>
+</html>
