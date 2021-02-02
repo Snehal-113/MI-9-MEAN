@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title> Assignment13 Q2</title>
+    </head>
+    <body>
+        <script language="javascript">
+            function getWeekday(date)
+            {
+                var ds = ['su','mo','tu','we','th','fr','sa'];
+                return ds[date.getDay()];
+            }
+            var date = new Date(2021,0,31);
+            alert( getWeekday(date));
+        </script>
+    </body>
+</html>
