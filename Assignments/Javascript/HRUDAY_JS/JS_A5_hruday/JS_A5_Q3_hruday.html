@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS/A5/Q3...</title>
+</head>
+
+<body>
+    <h1 style="color: chartreuse;">Enter your Number to find out Sum of Even and Product of Odd digits..</h1>
+    Enter Your Number:
+    <input type="text" id="num1" name="num1">
+    <button type="button" onclick="check()" style="background: cyan; margin-left: 10px;">CHECK!</button>
+    <hr>
+    <p id="output1"
+        style="color: darkmagenta; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder;"></p>
+    <p id="output2"
+        style="color: darkmagenta; font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder;"></p>
+    <script>
+        function check() {
+            let evensum = 0;
+            let oddprd = 1;
+            const a = parseInt(document.getElementById("num1").value);
+            const b = [];
+            let temp = a;
+            while (temp > 0) {
+                b.push(temp % 10);
+                temp = parseInt(temp / 10);
+            }
+            for (let i = 0; i < b.length; i++) {
+                if (b[i] % 2 == 0) {
+                    evensum += b[i];
+                }
+                if (b[i] % 2 !== 0) {
+                    oddprd *= b[i];
+                }
+            }
+            document.getElementById("output1").innerHTML = "Sum Of Even Digits:" + evensum;
+            document.getElementById("output2").innerHTML = "Product of Odd Digits:" + oddprd;
+        }
+    </script>
+</body>
+
+</html>
