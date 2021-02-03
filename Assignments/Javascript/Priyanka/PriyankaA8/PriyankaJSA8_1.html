@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Priyanka</title>
+    </head>
+    <body>
+        <script>
+            var n,i,j,m,total,a;
+            n=[];
+            x=[];
+            total=[];
+
+            for(i=0;i<10;i++)
+            {
+                m=prompt("Enter a marks of student of subject"+(i+1));
+            if(m>80){
+                window.alert("user is not allow to enter marks more than 80");
+            }
+            else{
+                n.push(m);
+            }
+            }
+            document.write("Marks of Student:"+n);
+            a=n.length;
+            for(j=0;j<a;j++)
+            {
+                x[j]=parseInt((20*n[j])/100);
+                total[j]=(parseInt(n[j])+parseInt(x[j]));
+            }
+            document.write("<br>******After adding 20% marks:*****");
+            document.write("<br>Total marks of student:"+total);
+            
+
+        </script>
+    </body>
+</html>
