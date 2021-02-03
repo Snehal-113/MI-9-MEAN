@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AGO DAYS CALCULATOR</title>
+    </head>
+    <body>
+        <h2>AGO DAYS CALCULATOR</h2>
+        <label for="date">PUT YOUR Date:</label>
+        <input type="date" name="date" id="date"><br>
+        <input type="daysago" name="daysago" id="daysago">
+        <label for="daysago">Days Ago </label>
+        <button onclick="getDateAgo()">SHOW AGO DATE</button>
+        <script language="javascript">
+            function getDateAgo()
+            {
+                var date=document.getElementById("date").value;
+                var daysago=document.getElementById("daysago").value;
+                d=new Date(date);
+                n=new Date(d-daysago*(24*3600*1000));
+                alert(n);
+            }
+        </script>
+    </body>
+</html>
