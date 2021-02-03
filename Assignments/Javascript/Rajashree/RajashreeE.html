@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>RajashreeE test</title>
+        <script language="javascript">
+        function Bubble_sort(total)
+        {
+           l = total.length;
+       for(var i = 0; i < l-1; i++)
+       {
+           for(var j = 0; j < l; j++)
+           {
+               if(total[j] < total[j+1])
+               {
+                    temp = total[j];
+                   total[j] = total[j+1];
+                   total[j+1] = temp;
+               }
+           }
+       }
+       document.write("<br>After bubble sorting student marks:");
+       for(var i = 0; i < l; i++)
+       {
+       document.write("<br>the total marks scored student "+ (i+1)+":"+ total[i]);
+       }
+   }
+   </script>
+    </head>
+    <body>
+        Enter the Roll no:<textarea id="num" size="5"></textarea>
+        <input type="button" name="det" value="check " onClick="show()">
+        <script lang="JavaScript">
+            var arr = [];
+            var arr1 = [];
+            var total =[];
+            var a = prompt("how many students he/she wants to enter the marks.");
+                for(var i=0;i<a;i++)
+                {  
+                    var rn = prompt("enter the student roll no");
+                   var std = prompt("enter the student mark");
+                   if(std != 0 && std > 50 )
+                   {
+                      alert("Error-Invalid marks!! ");
+                   }
+                   else
+                   {
+                    arr.push(parseInt(rn));
+                   arr1.push(parseInt(std));
+                  
+                  }
+                }
+                
+            for(var i=0; i<a;i++)
+            {
+               document.write("<br>Roll no: "+ arr[i]);
+              
+               
+            }
+            for(var i=0; i<a;i++)
+            {
+            document.write("<br>mark"+ (i+1)+": "+ arr1[i]);
+            }
+        
+            for(var i=0; i<a;i++)
+            {
+               var p =arr1[i]/100 * 20;
+               total[i] =arr1[i] + p;
+               document.write("<br>the total marks scored student "+ (i+1)+": "+ total);
+
+            }   
+            Bubble_sort(total);
+            function show()
+            {
+                var detail= document.getElementById("num").value;
+                  if(detail == rn)
+                  {
+                      document.write(+rn);
+                      document.write(+std);
+                      document.write(+total);
+                  }
+            }
+        </script>
+    </body>
+</html>

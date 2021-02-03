@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>ass9_q4</title>
+    </head>
+    <body>
+        Enter A number:<input type="text" id="no" name="n1" size="5">
+        <button type="button" onclick="Palipri()">check</button>
+        <script lang="JavaScript">
+       function Palipri()
+            {
+                var string = document.getElementById("no").value;
+                const arrayValues = string.split('');
+                const reverseArrayValues = arrayValues.reverse();
+                const reverseString = reverseArrayValues.join('');
+                if(string == reverseString)
+                {
+                    alert("The given string is Palindrome");
+                }
+                else
+                {
+                    alert("The given string is not palindrome");
+                }
+            }
+        </script>
+    </body>
+</html>
