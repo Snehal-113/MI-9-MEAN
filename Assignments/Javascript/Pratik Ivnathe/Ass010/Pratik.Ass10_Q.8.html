@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Q.8</title>
+  </head>
+<body>
+     <label>Enter string</label>
+     <input type="text" id="id" size="5">
+     <button type="button" onclick="fun()">click</button>
+     <p id="pid"></p>
+    <script>
+        function fun(str){
+      var  str=document.getElementById("id").value;
+        {
+          regexp = /^[a-z0-9-_\-]+$/i;
+
+        if (regexp.test(str))
+          {
+            document.getElementById("pid").innerHTML="Alpha";
+
+          }
+        else
+          {
+            document.getElementById("pid").innerHTML="Dash";
+
+          }
+        }
+      }
+
+    </script>
+
+</body>
+</html>

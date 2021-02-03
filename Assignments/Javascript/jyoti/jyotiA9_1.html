@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Assignment9_1</title>
+    </head>
+    <body>
+        <br>
+		<h3>Assignment9_1</h3>
+		Enter The Number : <input type="text" name="n" id = "N"/>
+		
+		
+	    <button onClick="Palindrome()">Result</button>
+        <script>
+            function Palindrome()
+			{
+				var rem, temp, final = 0;
+				var number = Number(document.getElementById("N").value);
+
+				temp = number;
+				while(number>0)
+				{
+					rem = number%10;
+					number = parseInt(number/10);
+					final = final*10+rem;
+				}
+				if(final==temp)
+				{
+					window.alert("The inputed number is Palindrome");
+				}
+				else
+				{
+					window.alert("The inputed number is not palindrome");
+				}
+			}
+        </script>
+    </body>
+</html>

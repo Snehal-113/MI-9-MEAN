@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Assignment6_5</title>
+</head>
+<body>
+    <script>
+        function fact(a) {
+            let f = a;
+            for (let i = 1; i < a; i++) {
+                 f *= i;
+            }
+            return f;
+        }
+        const num = [];
+        const newA = [];
+        let sum = 0;
+        while (true) {
+            let n = prompt("Enter the number:");
+            if (n == "X" || n == null) {
+                break;
+            }
+            num.push(parseInt(n));
+        }
+        for (let i = 0; i < num.length; i++) {
+            let m = fact(num[i]);
+            sum += m;
+            newArr.push(m);
+        }
+        document.write("Sum of factorials:"+ sum);
+
+        document.write("<br> List of factorials:" + newA);
+        newArr.sort(function(a,b){return(a-b)});
+        document.write("<br> Sorted array:"+ newA);
+    </script>
+</body>
+</html>
