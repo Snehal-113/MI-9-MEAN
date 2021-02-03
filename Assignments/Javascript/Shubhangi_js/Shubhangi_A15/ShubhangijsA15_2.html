@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <title>A15_Q2</title>
+</head>
+
+<body>
+  <input type="text" id="name" name="name"></input>
+  <input type="number" id="sales" name="num"></input>
+  <button type="button" onclick="calculatCommission()">Calculate</button>
+
+
+  <p id="commission"></p>
+  <script language="javascript">
+    class employee {
+      constructor(emp_name, emp_id) {
+        this.emp_name = emp_name;
+        this.emp_id = emp_id;
+      }
+    }
+    class TotalSales extends employee {
+      constructor(emp_name, emp_id, total_sales) {
+        super(emp_name, emp_id);
+        this.total_sales = total_sales
+      }
+      calculate() {
+        var commission = 0;
+        switch (true) {
+          case this.total_sales > 0 && this.total_sales <= 5000:
+            commission = 2;
+            break;
+          case this.total_sales >= 5001 && this.total_sales <= 12000:
+            commission = 5;
+            break;
+          case this.total_sales >= 12001 && this.total_sales <= 50000:
+            commission = 10;
+            break;
+          case this.total_sales > 50000:
+            commission = 15;
+            break;
+          default: alert("Sorry! you are not eligible for any commission ");
+        }
+        console.log("commission", commission);
+        document.getElementById("commission").innerHTML = "Hello" + this.emp_name + "<br>Your Sale is :" + this.total_sales + " <br> Your Earned Commission is :" + (commission / 100) * this.total_sales;
+
+      }
+
+    }
+    function calculatCommission() {
+      var person = document.getElementById("name").value;
+      var sale = document.getElementById("sales").value;
+      console.log(person, sale);
+
+ try{
+      if (person != null && sale != null && sale > 0) {
+        m2 = new TotalSales(person, 8, sale);
+        m2.calculate()
+        console.log(m2)
+      }
+      else {
+        throw("Please Enter Valid inputs.")
+      }
+    }
+    catch(e){
+      document.write(e);
+    }
+  }
+  </script>
+</body>
+
+</html>
