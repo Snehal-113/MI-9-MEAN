@@ -22,20 +22,27 @@
         }
          withdraw(amount)
         {
-        this.amount=prompt("enter amount to withdraw");        
+        this.amount=prompt("enter amount to withdraw"); 
+        try{       
          if(this.amount>this.bal)
         {
-            alert("Insufficient funds!!");
+            throw "Insufficient funds!!"
         }
         else{
             this.bal = this.bal-this.amount;
             document.write("<br> Amount Withdrawn!! Available Balance: "+this.bal);
             if(this.bal<=1000)
             {
-                alert("Warning-Balance below 1000!!");           
+                throw "Warning-Balance below 1000!!"          
                  }
            }
-        }        display(srno)
+        } 
+         catch(e)
+         {
+             document.write(e);
+         }  
+        }    
+         display(srno)
         {             
             document.write("<br><b>SrNo&nbsp &nbsp Acc_no &nbsp Name &nbsp Balance &nbsp");
              document.write("<br>"+srno+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"+this.acc_no +"&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp" +  this.acc_name + " &nbsp &nbsp&nbsp &nbsp" +  this.bal);
