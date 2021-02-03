@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>automorphic number</title>
+    </head>
+    <body>
+        <label for="name">Enter Any number</label>
+        <input type="text" name="value" id="value">
+        <button type="button" onclick="fun()">click</button>
+        <p id="No"></p>
+        <script lang="JavaScript">
+
+            function fun(){
+                var num ,temp,sq,a,b;
+            
+                num=parseInt(document.getElementById("value").value);
+                sq=num*num;
+                temp=num; 
+                while(temp>0){
+                a=sq%10;
+                sq=parseInt(sq/10);
+                b=temp%10;
+                temp=parseInt(temp/10);
+                }
+                    if(a==b){
+                        document.getElementById("No").innerHTML="Number is Automorphic";
+                    }
+                    else{
+                        document.getElementById("No").innerHTML="Number is not Automorphic";
+                    }
+                }
+        </script>
+    </body>
+</html>

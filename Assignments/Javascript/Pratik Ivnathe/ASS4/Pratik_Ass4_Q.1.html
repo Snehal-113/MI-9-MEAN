@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Armstrong no</title>
+    </head>
+    <body>
+        <script>
+
+            var n,temp,sum=0,r,cube;
+            n=prompt("Enter number");
+            temp=n;
+            while(temp>0){
+                r=temp%10;
+                cube=r*r*r;
+                sum=sum+cube;
+                temp=parseInt(temp/10);
+            }
+            if(sum==n)
+            {
+                document.write("Number is Armsstrong number");
+            }
+            else{
+                document.write("Number is not Armstrong number");
+            }
+        </script>
+    </body>
+</html>

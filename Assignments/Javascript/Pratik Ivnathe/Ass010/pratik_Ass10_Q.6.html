@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Q.6</title>
+  </head>
+<body>
+     <label>Enter Email Id</label>
+     <input type="text" id="id" size="5">
+     <button type="button" onclick="fun()">click</button>
+     <p id="pid"></p>
+    <script>
+        function fun(str)
+       {
+         regexp=/\w[^a-zA-z0-9_]*{@gmail}[.]com/ig;
+           if (regexp.test(str))
+          {
+            document.getElementById("pid").innerHTML="Valid Email Id";
+          }
+           else
+         {
+           document.getElementById("pid").innerHTML="Invalid Email Id";
+         }
+       }
+    </script>
+</body>
+</html>
