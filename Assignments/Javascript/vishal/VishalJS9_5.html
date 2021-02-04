@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <input type="text" id="val" name="val">
+    <button type="button" onclick="check()">Check</button>
+    <p id="pid"></p>
+    <script>
+        function check() {
+            let count = 0;
+            let arr = [];
+            let a = document.getElementById("val").value;
+            for (let j = 0; j < a.length - 1; j++) {
+                if (a[j] == a[j + 1]) {
+                    count++;
+                    arr.push(a[j]);
+                }
+            }
+        document.getElementById("pid").innerHTML = ("double letter:" + arr);
+        }
+
+    </script>
+</body>
+
+</html>

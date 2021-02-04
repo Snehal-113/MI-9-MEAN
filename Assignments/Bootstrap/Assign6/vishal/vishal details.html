@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Website Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Numans');
+
+        html,
+        body {
+            background-image: url(bootstrap.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            font-family: 'Numans', sans-serif;
+        }
+
+        .text-decor {
+            color: white;
+        }
+
+
+        .head {
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="head">
+                <h2>Naukari</h2>
+            </div>
+        <div class="container">
+            <div class="form-group">
+                <h3>Personal Details</h3>
+                <label for="fname">First Name :&nbsp;</label>
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" required><br>
+                <label for="mname">Middle Name :&nbsp;</label>
+                <input type="text" class="form-control" id="mname" name="mname" placeholder="Middle Name" required><br>
+                <label for="lname">Last Name :&nbsp;</label>
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" required><br>
+                <label for="email">Email Id :&nbsp;</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="abc@gmail.com"><br>
+                <label for="no">Mobile Number:&nbsp;</label>
+                <input type="tel" class="form-control" id="no" name="no" placeholder="Mobile Number"><br>
+
+            </div>
+            <div class="form-group">
+                <h3>Academic Details</h3>
+                <label for="uni">University:&nbsp;</label>
+                <input list="uni">
+                <datalist id="uni">
+                    <option value="mum">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="amr">Amravati</option>
+                    <option value="baroda">Baroda</option>
+                    <option value="nag">Nagpur</option>
+                    <option value="nag">Nagpur</option>
+                </datalist><br><br>
+
+                <label for="qual">Qualification:&nbsp;</label>
+                <select id="qual" name="qual">
+                    <option>B.E</option>
+                    <option>B.Sc</option>
+                    <option>B.A</option>
+                    <option>B.C.A</option>
+                    <option>B.Tech</option>
+                    <option>M.Tech</option>
+                </select><br><br>
+
+                <label for="pyear">Passing Out Year</label>
+                <select id="pyear" name="pyear" required>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                </select><br><br>
+
+                <label for="marks">Marks (Aggregate):&nbsp;</label>
+                <input type="number" id="marks" name="marks" min="40" max="100" required>
+                <br><br>
+
+                <label for="prj">Academic Project&nbsp;</label><br>
+                <label for="prjn">Project Name:&nbsp;</label>
+                <input type="text" class="form-control" id="prjn" name="prjn" required> <br><br>
+
+                <label for="prjd">Project Description:&nbsp;</label>
+                <textarea id="prjd" name="prjd" required></textarea><br><br>
+                <label for="ifile">Upload Resume:&nbsp;</label>
+                <input type="file" class="form-control" id="ifile" name="ifile"><br><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
+
+</html>
