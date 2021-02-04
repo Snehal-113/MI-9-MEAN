@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title> Assignment16 Q2</title>
+    </head>
+    <body>
+        <p id="pid"> 
+            JavaScript can change all the HTML elements in the page<br>
+            JavaScript can change all the HTML attributes in the page<br>
+            JavaScript can change all the CSS styles in the page<br>
+            JavaScript can remove existing HTML elements and attributes<br>
+            JavaScript can add new HTML elements and attributes<br>
+            JavaScript can react to all existing HTML events in the page<br>
+            JavaScript can create new HTML events in the page<br>
+        </p>
+        <fieldset>
+            <legend> Colors</legend>
+            <button type="button" onclick="document.getElementById('pid').style.color='red';">Red</button>
+            <button type="button" onclick="document.getElementById('pid').style.color='orange';">Orange</button>
+            <button type="button" onclick="document.getElementById('pid').style.color='green';">Green</button>
+            <fieldset>
+                <legend> Size </legend>
+                <button type="button" style="width: 50px;height: 40px;" onclick="document.getElementById('pid').style.fontSize='70%';">Small</button>
+                <button type="button" style="width: 80px;height: 80px;" onclick="document.getElementById('pid').style.fontSize='100%';">Large</button>
+                <button type="button" style="width:70px;height: 60px;" onclick="document.getElementById('pid').style.fontSize='90%';">Medium</button>
+            </fieldset>
+            <fieldset>
+                <legend> Font</legend>
+                <button type="button" style="font-family: cursive;" onclick="document.getElementById('pid').style.fontFamily='cursive';">Cursive</button>
+                <button type="button" style="font-family: serif;" onclick="document.getElementById('pid').style.fontFamily='serif';">Serif</button>
+                <button type="button" style="font-family: monospace;" onclick="document.getElementById('pid').style.fontFamily='monospace';">Monospace</button>
+            </fieldset>
+        </fieldset>
+        <script language="JavaScript">
+            document.getElementById("pid").style.textAlign="center";
+        </script>
+    </body>
+</html>
