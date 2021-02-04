@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title> Email</title>
+    </head>
+    <body>
+        <script language="javascript">
+            var str = prompt("Enter an email address");
+            var regexp =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(regexp.test(str)){
+                document.write("Valid email address");
+            }
+            else
+            {
+                document.write("This is not valid email address");
+            }
+        </script>
+    </body>
+</html>
