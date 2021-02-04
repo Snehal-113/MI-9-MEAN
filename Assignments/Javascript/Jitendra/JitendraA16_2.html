@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Color-font and size changer</title>
+</head>
+
+<body>
+
+    <div id="pid">It's hardly been a couple of weeks since the Indian players were welcomed home from Australia with chariots and rose petals. Ravichandran Ashwin's YouTube tales from the inner-sanctum of the dressing room, recapping arguably the current lot's greatest
+        achievement away from home is still very fresh. As more poignant narratives from that tour come to light </div><br>
+
+    <button type="button" onclick=leftall()>Center Allignment</button><br><br>
+    <fieldset style="background-color: aqua;">
+        <legend style="font-size: 20px;">Color</legend>
+        <button type="button" onclick=Red()>Red</button>
+        <button type="button" onclick=Blue()>Blue</button>
+        <button type="button" onclick=Green()>Green</button>
+
+
+    </fieldset>
+    <fieldset style="background-color: coral;">
+        <legend style="font-size: 20px;">Size</legend>
+        <button type="button" onclick=small()>small</button>
+        <button type="button" onclick=medium()>medium</button>
+        <button type="button" onclick=larger()>larger</button>
+
+
+    </fieldset>
+    <fieldset style="background-color: darkorange;">
+        <legend style="font-size: 20px;">Font-Family</legend>
+        <button type="button" onclick=cursive()>Cursive</button>
+        <button type="button" onclick=Times_New_Roman()>Times New Roman</button>
+        <button type="button" onclick=Monospace()>Monospace</button>
+
+
+    </fieldset>
+    <script>
+        function leftall() {
+            document.getElementById("pid").setAttribute("align", "center");
+        }
+
+        function Red() {
+            document.getElementById("pid").style.backgroundColor = "red";
+        }
+
+        function Blue() {
+            document.getElementById("pid").style.backgroundColor = "blue";
+        }
+
+        function Green() {
+            document.getElementById("pid").style.backgroundColor = "green";
+        }
+
+        function small() {
+            document.getElementById("pid").style.fontSize = "10px";
+        }
+
+        function medium() {
+            document.getElementById("pid").style.fontSize = "20px";
+        }
+
+        function larger() {
+            document.getElementById("pid").style.fontSize = "25px";
+        }
+
+        function cursive() {
+            document.getElementById("pid").style.fontFamily = "cursive";
+        }
+
+        function Times_New_Roman() {
+            document.getElementById("pid").style.fontFamily = "Times New Roman";
+        }
+
+        function Monospace() {
+            document.getElementById("pid").style.fontFamily = "Monospace";
+        }
+    </script>
+</body>
+
+</html>
