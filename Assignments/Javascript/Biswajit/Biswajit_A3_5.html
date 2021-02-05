@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factorial</title>
+</head>
+<body>
+	<h2>Factorial Of a number</h2>
+	Enter a Non-Negative Number :<input type="number" name="nm" id="nm" min="0">
+	<button onclick="fact()">Show</button>
+	<p id="ot"></p>
+	<script type="text/javascript">
+		function fact() {
+			var numb;
+			numb=document.getElementById("nm").value;
+			var factor=1;
+			for(var i=1;i<=numb;i++) {
+				factor=factor*i;
+			}
+			if (numb>=1) {
+			document.getElementById("ot").innerText="Factorial of "+numb+" is "+factor;
+			}
+			else if(numb==0) {
+				document.getElementById("ot").innerText="Factorial of "+numb+" is "+numb;
+			}
+			else {
+				document.getElementById("ot").innerText="Enter a non Negative Number";
+			}
+		}
+	</script>
+</body>
+</html>

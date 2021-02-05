@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Employee {
+			constructor() {
+				this.empno=101;
+				this.name = "Ashok Kumar";
+				this.address = "43, Ramnagar";
+				this.city ="Pune , Maharashtra";
+				this.salary = 80000;
+			}
+			show_init() {
+				document.write("<br>empno "+this.empno);
+				document.write("<br>Name "+this.name);
+				document.write("<br>address "+this.address);
+				document.write("<br>city "+this.city);
+				document.write("<br>salary "+this.salary);
+			}
+			calculate() {
+				var da=this.salary*30/100;
+				var hra=this.salary*15/100;
+				var pf=this.salary*125/1000;
+				var gross=this.salary+da+hra;
+				var net=gross-pf;
+				if (gross>180000) {
+					alert("Income Tax Payer");
+				}
+				else {
+					alert("Not an Income Tax Payer");
+				}
+				this.gross=gross;
+				this.net=net;
+			}
+			display() {
+				document.write("<br>Name of Employee : "+this.name);
+				document.write("<br>Employee No : "+this.empno);
+				document.write("<br>Gross salary : "+this.gross);
+				document.write("<br>Net salary : "+this.net);
+			}
+		}
+		e = new Employee();
+		e.show_init();
+		e.calculate();
+		e.display();
+
+	</script>
+</body>
+</html>
