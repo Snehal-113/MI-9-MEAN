@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>A16_Q1</title>
+  </head>
+  <body>
+    <h1 id="hid" style="text-align: center;">Document Object Model (DOM)</h1>
+    <button type="button" onclick="left()">Left</button>
+    <button type="button" onclick="Right()">Right</button>
+    <button type="button" onclick="center()">Center</button>
+    <script language="javascript">
+      function left(){
+       document.getElementById("hid").style.textAlign="left";
+      }
+      function Right(){
+        document.getElementById("hid").style.textAlign="Right";
+      }
+      function center(){
+        document.getElementById("hid").style.textAlign="center";
+      }
+    </script>
+  </body>
+</html>
