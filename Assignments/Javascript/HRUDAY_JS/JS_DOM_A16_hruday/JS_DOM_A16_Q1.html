@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM/A16/Q1...</title>
+</head>
+
+<body>
+    <h1 id="heading">Lorem ipsum dolor sit amet.</h1>
+
+    <hr>
+
+    <button type="button" onclick="left()">LEFT</button>
+    <button type="button" onclick="center()">CENTER</button>
+    <button type="button" onclick="right()">RIGHT</button>
+    <button type="button" onclick="color()">COLOR</button>
+   
+
+<!-- script starts from here -->
+    <script>
+        function left() {
+    document.getElementById("heading").style.textAlign="left";
+}
+function center() {
+    document.getElementById("heading").style.textAlign="center";
+}
+function right() {
+    document.getElementById("heading").style.textAlign="right";
+}
+
+function color() {
+    document.getElementById("heading").style.color="blue";
+}
+    </script>
+
+</body>
+</html>
