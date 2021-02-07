@@ -1,0 +1,55 @@
+<html>
+<head><title>Assignment15_2</title></head>
+<body>
+    <script lang="javascript">
+        class sales
+        {
+            constructor(name,id)
+            {
+                this.name= name;
+                this.id=id;
+            }
+            display(){
+                document.write("<br>Salesmen Id :"+this.id);
+                document.write("<br>Salesmen Name :"+this.name);
+            }
+        }
+        class sales1 extends sales 
+        {
+            constructor(name,id,amt)
+            {
+                super(name,id);
+                this.amt=amt;
+            }
+            displaytotal() 
+            {
+                document.write("<br> total calculation :"+this.amt);
+            }
+            commition()
+            {
+                if (this.amt>0 && this.amt<=5000){
+                this.com=(this.amt/100)*2;
+                document.write("<br> total commition :"+this.com);
+                }
+                else if(this.amt>=50001  && this.amt<=12000){
+                this.com=(this.amt/100)*5; 
+                document.write("<br> total commition :"+this.com);
+                }
+                else if (this.amt>=12001 && this.amt<=50000){
+                this.com=(this.amt/100)*10;
+                document.write("<br> total commition :"+this.com);
+                }
+                else
+                {
+                this.com=(this.amt/100)*15;
+                document.write("<br> total commition :"+this.com);
+                }                
+            }
+        } 
+        sales =new sales1("asas",123,1000);
+        sales.display();
+        sales.displaytotal();
+        sales.commition();
+    </script>
+</body>
+</html>
