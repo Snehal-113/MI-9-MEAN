@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Priyanka</title>
+    </head>
+    <body>
+        <p id="pid" style="text-align: center;">Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+        <table>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Colors</legend>
+                        <button type="button" onclick="red()">Red</button>
+                        <button type="button" onclick="Blue()">Blue</button>
+                        <button type="button"onclick="green()">Green</button>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Size</legend>
+                        <button type="button" onclick="larger()">Larger</button>
+                        <button type="button" onclick="medium()">Medium</button>
+                        <button type="button"onclick="small()">Small</button>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Font</legend>
+                        <button type="button" onclick="cursive()">cursive</button>
+                        <button type="button" onclick="times()">Times new roman</button>
+                        <button type="button"onclick="Arial()">Arial</button>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+        <script language="JavaScript">
+            function red()
+            {
+                document.getElementById("pid").style.color="red";
+            }
+            function Blue()
+            {
+                document.getElementById("pid").style.color="blue";
+            }
+            function green()
+            {
+                document.getElementById("pid").style.color="green";
+            }
+            function larger()
+            {
+                document.getElementById("pid").style.fontSize="larger";
+            }
+            function medium()
+            {
+                document.getElementById("pid").style.fontSize="large";
+            }
+            function small()
+            {
+                document.getElementById("pid").style.fontSize="small";
+            }
+            function cursive()
+            {
+                document.getElementById("pid").style.fontFamily="cursive";
+            }
+            function times()
+            {
+                document.getElementById("pid").style.fontFamily="times";
+            }
+            function Arial()
+            {
+                document.getElementById("pid").style.fontFamily="arial";
+            }
+
+        </script>
+    </body>
+</html>
