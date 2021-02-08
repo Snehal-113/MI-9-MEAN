@@ -1,18 +1,25 @@
 <html>
     <head>
-        <title>Assignment part1</title>
+        <title>Assignment part2</title>
     </head>
     <body>
         <script language="javascript">
         class Employee{
-            constructor(name1,empno,address,city,salary);
+            constructor(name1,empno,address,city,salary)
             {
-                this.empno=101;
-                this.name1="Ashok Kumar";
-                this.address="43,Ramnagar";
-                this.city="Pune, Maharastra";
-                this.salary=80000;
+                this.empno=empno;
+                this.name1=name1;
+                this.address=address;
+                this.city=city;
+                this.salary=salary;
             }
+            get_data(){
+                    this.empno=prompt("Enter Employee No : "+this.empno);
+                    this.name=prompt("Enter Employee Name: "+this.name);
+                    this.address=prompt("Enter Employee Address : "+this.address);
+                    this.city=prompt("Enter Employee City : "+this.city);
+                    this.salary=prompt("Enter Employee salary : "+this.salary);
+                }
 
             show_init(){
                 document.write("<br>employee No:"+this.empno);
@@ -42,15 +49,23 @@
                     document.write("<br>employee No:"+this.empno);
                     document.write("<br>employee name1:"+this.name1);
                     document.write("<br>employee gross:"+this.gross);
-                    document.write("<br>employee  net salary:"+this. net salary);
+                    document.write("<br>employee  net salary:"+this. net);
                 }
             }
-            }
+            
 
               e1=new Employee();
+              e1.get_data();
               e1.show_init();
               e1.calcuate();
               e1.display();
+
+              e2=new Employee();
+              e2.get_data();
+              e2.show_init();
+              e2.calcuate();
+              e2.display();
+
 
         </script>
     </body>

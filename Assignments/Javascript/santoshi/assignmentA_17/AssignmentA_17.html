@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Assignment17</title>
+    </head>
+    <body>
+        <label for="rollno">Roll No :</label>
+        <input type="text" name="rollno" id="rollno"><br><br>
+        <label for="name">Name :</label>
+        <input type="text" onchange="change()" name="n" id="name"><br><br>
+        <label for="math">Math marks :</label>
+        <input type="text"  onchange="LTU()"name="math" id="math"><br><br>
+        <label for="sci">Science marks :</label>
+        <input type="text"  onchange="LTU1()"name="sci" id="sci"><br><br>
+        <label for="phy">chemistry marks :</label>
+        <input type="text"onchange="LTU2()" name="che" id="che"><br><br>
+        <button onclick="report()">Show report card</button>
+        <h1 id="heading"></h1>
+        <p id="rollno1"></p>
+        <p id="name1"></p>
+        <p id="math1"></p>
+        <p id="sci1"></p>
+        <p id="che1"></p>
+        <p id="total"></p>
+        <p id="per"></p>
+        <p id="grade"></p>
+        <script lang="JavaScript">
+            class Report{
+                constructor(Rollno,Name,Math,Sci,che){
+                    this.Rollno=Rollno;
+                    this.Name=Name;
+                    this.Math=Math;
+                    this.Sci=Sci;
+                    this.Che=che;
+                }
+                show(){
+                    debugger;
+                    document.getElementById("heading").innerHTML="***Report Card***";
+                    document.getElementById("rollno1").innerHTML="Roll No :"+this.Rollno;
+                    document.getElementById("name1").innerHTML="Name :"+this.Name;
+                    document.getElementById("math1").innerHTML="Math marks :"+this.Math;
+                    document.getElementById("sci1").innerHTML="Science marks :"+this.Sci;
+                    document.getElementById("che1").innerHTML="Chemistry marks :"+this.Che;
+                }
+                findtotal(){
+                    this.total=this.Math+this.Sci+this.Che;
+                    document.getElementById("total").innerHTML="Total Marks :"+this.total;
+                }
+                findper(){
+                    this.per=this.total/3;
+                    document.getElementById("per").innerHTML="Percentage :"+this.per;
+                }
+                findgrade(){
+                    var per=this.per;
+                var grade;
+                    if(per>=80){
+                        this.grade= "A+";
+                        document.getElementById("grade").innerHTML=" Grade :"+grade;
+                        document.getElementById("grade").style.color="green";
+                    }
+                    else if(per<80 && per>=60){
+                        grade= "A";
+                        document.getElementById("grade").innerHTML=" Grade :"+grade;
+                        document.getElementById("grade").style.color="green";
+                    }
+                    else if(per<60 && per>=55){
+                        grade= "B+";
+                        document.getElementById("grade").innerHTML=" Grade :"+grade;
+                        document.getElementById("grade").style.color="orange";
+                    }
+                    else if(per<55 && per>=40){
+                        grade= "B";
+                        document.getElementById("grade").innerHTML=" Grade :"+grade;
+                        document.getElementById("grade").style.color="orange";
+                    }
+                    else{
+                        grade= "No Grade";
+                        document.getElementById("grade").innerHTML=" Grade :"+grade;
+                        document.getElementById("grade").style.color="red";
+                    }
+                }
+            }
+            function change() {
+            var name= document.getElementById("name").value;
+            document.getElementById("name").value=name.toUpperCase();
+        }
+        function LTU(){
+            var a = document.getElementById("math").value;
+            if(a.match(/^[a-z_\-]/))
+            {
+                alert("Error : plz Enter only numeric value");
+            }
+        }
+        function LTU1(){
+            var c = document.getElementById("sci").value;
+            if(c.match(/^[a-z_\-]/))
+            {
+                alert("Error : plz Enter only numeric value");
+            }
+        }
+        function LTU2(){
+            var c = document.getElementById("che").value;
+            if(c.match(/^[a-z_\-]/))
+            {
+                alert("Error : plz Enter only numeric value");
+            }
+        }
+            function report() {            var Rollno =document.getElementById("rollno").value;            var Name =document.getElementById("name").value;
+            var Math =parseInt(document.getElementById("math").value);
+            var Sci =parseInt(document.getElementById("sci").value);
+            var che =parseInt(document.getElementById("che").value);
+            std = new Report(Rollno,Name,Math,Sci,che);
+            debugger;
+            std.show();
+            std.findtotal();
+            std.findper();
+            std.findgrade();
+            }
+        </script>
+    </body>
+</html>
