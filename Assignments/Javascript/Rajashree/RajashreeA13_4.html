@@ -1,0 +1,21 @@
+<html>
+    <head> Ass13 q4</head>
+    <body>
+        <script lang="javascript">
+            var bdate = prompt("Enter your Birth Date");
+            var date =new Date(bdate);
+            if(bdate==null)
+            {
+                document.write("Enter Valid Date");
+            }
+            else
+            {
+                var month_diff=Date.now()-date.getTime();
+                var age_date=new Date(month_diff);
+                var year=age_date.getUTCFullYear();
+                var age=Math.abs(year-1970);
+                document.write("<br> Your age is "+age);
+            }
+        </script>
+    </body>
+    </html>

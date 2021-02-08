@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Ass10_q2</title>
+    </head>
+<body>
+<script lang="JavaScript">
+ var num=prompt("Enter a number for credit card number.");
+            var visacard=/^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+            var mastercard=/^(?:5[1-5][0-9]{14})$/;
+            if(visacard.test(num)===false)
+                    {
+                        document.write("Sorry : Please enter credit card number.");
+
+                    }
+                    else{
+                    alert("valid credit card number");
+                    }
+                    if(mastercard.test(num)===false)
+                    {
+                        document.write("Sorry : Please enter credit card number.");
+
+                    }
+                    else{
+                   alert("valid credit card number");
+                    }
+
+        </script>
+    </body>
+</html>

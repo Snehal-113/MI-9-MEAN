@@ -1,0 +1,81 @@
+<html>
+    <head><title> Assignment 11</title>
+        <script language="javascript">
+            function buble(total,RollNo){
+                var i,j,temp;
+                var n=total.length;
+                for(i=0;i<n;i++)
+                {
+                    for(j=0;j<n;j++)
+                    {
+                        if(total[j] < total[j+1])
+                        {
+                            
+                            temp = total[j];
+                            total[j] = total[j+1];
+                            total[j+1] = temp;
+                            temp = RollNo[j];
+                            RollNo[j] = RollNo[j+1];
+                            RollNo[j+1] =temp;
+                        }
+                    }
+                }
+                return total;
+            }
+            function search()
+            {
+                for(i=0;i< RollNo.length;i++)
+                {
+                    if(newa==RollNo[i])
+                    {
+                        document.getElementById("pid").innerHTML=RollNo[i]+ "has scored"+total[i];
+                        break;
+                    }
+                }
+            }   
+        </script>
+    </head>
+    <body>
+        <form>
+            Enter the Rollno for search: <input type="text" id="rno"><br><br>
+            <button type="button" onclick="search()">Search</button>
+            <p id="pid"></p><br>
+        </form>
+        <script language="javascript">
+            var RollNo=[],mark=[],i,n,total=[],j,temp,Rno;
+            for(i=0;i<5;i++)
+            {
+                Rno = prompt("Enter Roll Num");
+                RollNo.push(parseInt(Rno));
+            }
+            document.write("Roll number"+RollNo)
+            for(i=0;i<5;)
+            {
+                var m = prompt("Enter marks:");
+                if (m < 0 || m > 50 || m==null) {
+                    window.alert("Error-invalid Marks!!");
+                }
+                else{
+                    mark.push(parseInt(m));
+                    i++;
+                }
+            }
+            document.write("<br> marks is "+mark);
+            n = mark.length;
+            for(j=0;j<n;j++)
+            {
+                total [j] = mark[j]+(mark[j])*0.2;
+            }
+            document.write("<br>Total marks = "+total);
+            var total1=[];
+            buble(total,RollNo);
+            document.write("<br>After sorting Total marks = "+total);
+            document.write("<br><b>RollNo &ensp;&ensp;&ensp <b>MARKS");
+            for(i=0;i<5;i++)
+            {
+                document.write("<br>"+RollNo[i]+ " &ensp;&ensp;&ensp " +total[i]);
+            }
+            var newa = parseInt(document.getElementById("rno").value);
+        </script>
+    </body>
+</html>

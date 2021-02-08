@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Employee Information</title>
+    </head>
+    <body>
+        <script language="javascript">
+           class employee
+           {
+            constructor(empno,name,address,city,salary)
+            {
+                this.empno=0;
+                this.name="";
+                this.address="";
+                this.city="";
+                this.salary=0;
+            }
+            show_init()
+            {
+                document.write("<br>Employee Number: "+this.empno);
+                document.write("<br>Employee Name: "+this.name);
+                document.write("<br>Employee Address: "+this.address);
+                document.write("<br>Employee City: "+this.city);
+                document.write("<br>Employee Salary: "+this.salary);
+                document.write("<br> After Calculation");
+            }
+            get_data(empno,name,address,city,salary)
+            {
+                this.empno=window.prompt("Employee Number: "+this.empno);
+                this.name=window.prompt("Employee Name: "+this.name);
+                this.address=window.prompt("Employee Address: "+this.address);
+                this.city=window.prompt("Employee City: "+this.city);
+                this.salary=window.prompt("Employee Salary: "+this.salary);
+            }
+            calculate()
+            {
+                var da=parseInt(this.salary)*30/100;
+                var hra=parseInt(this.salary)*15/100;
+                var pf=parseInt(this.salary)*12.5/100;
+                var gross=parseInt(this.salary)+da+hra;
+                var net=gross-pf;
+                if(this.gross>180000)
+                {
+                    window.alert("Employee is an Income Tax Payer");
+                }
+                else
+                {
+                    window.alert("Employee is not an Income Tax Payer");
+                }
+                this.gross=gross;
+                this.net=net;
+            }
+            show_init1()
+            {
+
+                document.write("<br>Gross Salary Employee: "+this.gross);
+                document.write("<br>Net Salary Employee: "+this.net);
+            }
+        
+           }
+           s1=new employee();
+           s1.get_data();
+           s1.show_init();
+           s1.calculate();
+           s1.show_init1();
+           document.write("<hr>")
+           s2=new employee();
+           s2.get_data();
+           s2.show_init();
+           s2.calculate();
+           s2.show_init1();
+        </script>
+    </body>
+</html>

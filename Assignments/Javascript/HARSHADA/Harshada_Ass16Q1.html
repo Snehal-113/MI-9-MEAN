@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM AssQ1</title>
+    </head >
+    <body>
+        <h1 id="pid">This is javascript</h1>
+        <caption>Left</caption><br>
+        <button type="button" onclick="left()">click</button><br><br>
+        <caption>Right</caption><br>
+        <button type="button" onclick="right()">click</button><br><br>
+        <caption>Center</caption><br>
+        <button type="button" onclick="center()">click</button><br>
+
+       <script lang="Javascript">
+           document.getElementById("pid").style.textAlign="center";
+           function left()
+           {
+               document.getElementById("pid").style.textAlign="left";
+           }
+           function right()
+           {
+               document.getElementById("pid").style.textAlign="right";
+           }
+           function center()
+           {
+               document.getElementById("pid").style.textAlign="center";
+           }
+       </script>
+    </body>
+</html> 

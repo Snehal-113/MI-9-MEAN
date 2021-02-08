@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<input type="date" name="date" id="dt">
+	<input type="number" name="num" id="nm" placeholder="Number">
+	<button onclick="getDateAgo()">Show</button>
+	<script type="text/javascript">
+		function getDateAgo() {
+			var val=document.getElementById("dt").value;
+			var num=document.getElementById("nm").value;
+			d=new Date(val);
+			d1=new Date(d-num*86400000);
+			alert(d1);	
+		}
+	</script>
+</body>
+</html>

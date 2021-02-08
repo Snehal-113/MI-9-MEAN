@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime Number</title>
+</head>
+<body>
+	<h2>Check Prime Number</h2>
+	Enter a number :<input type="number" name="prm" id="prm">
+	<button onclick="primeornot()">Check</button>
+	<p id="ot"></p>
+	<script type="text/javascript">
+		function primeornot() {
+			var prmnum=document.getElementById("prm").value;
+			var cnt=0;
+			for(var i=2;i<prmnum;i++){
+				if (prmnum%i==0) {
+					cnt++;
+				}
+			}
+			if (cnt>0 || prmnum<=1) {
+				document.getElementById("ot").innerText=prmnum+" is not prime.";
+			}
+			else {
+				document.getElementById("ot").innerText=prmnum+" is prime.";
+			}
+		}
+	</script>
+</body>
+</html>

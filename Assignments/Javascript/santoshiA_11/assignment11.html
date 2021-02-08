@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>santoshi</title>
+        <script language="javascript">
+            function marks()
+            {
+                m=parseInt(document.getElementById("iVal1").value);
+                find(m,a,total);
+            }
+            function find(m,a,total)
+            {
+                for(i=0;i<a.length;i++)
+                {
+                    if(m==a[i])
+                    {
+                        document.getElementById("pid").innerHTML="Roll number " +m+ " has got "+total[i]+" marks";
+                    }
+                }
+            }
+            function bubble(total,p)
+            {
+                k=total.length;
+                var temp,i,j;
+                for(i=0;i<k-1;i++)
+                {
+                for(j=0;j<k-1;j++)
+                {
+                    if(total[j]<total[j+1])
+                    {
+                        temp=total[j];
+                        total[j]=total[j+1];
+                        total[j+1]=temp;
+                        temp=p[j];
+                        p[j]=p[j+1];
+                        p[j+1]=temp;
+                    }
+                }
+                }
+            document.write("<br> Marks in Decending order  :"+total);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="pri">
+            <input type="text" id="iVal1" name="val1" size="5">
+            <button type="button" onclick="marks()">Show</button>
+            <p id="pid"></p>
+        </form>
+        <script  language="javascript">
+            var a,b,c,d,p;
+            a=[];
+            b=[];
+            x=[];
+            total=[];
+            for( var i=0;i<10;i++)
+            {
+                c=prompt("Enter a roll number of students"+(i+1));
+                a.push(c);
+            }
+            document.write("Roll number of student: "+a);
+            for(var i=0;i<10;)
+            {
+                d= parseInt(prompt("Enter a marks of Subject"+(i+1)));
+                if(d>50 || d<0 || d==null){
+                window.alert("Invalid marks");
+            }
+            else
+            {
+                b.push(d);
+                i++;
+            }
+            }
+            document.write("<br>Marks of student:"+b);
+            for(j=0;j<10;j++)
+            {
+                x[j]=parseInt((20*b[j])/100);
+                total[j]=(parseInt(b[j])+parseInt(x[j]));
+            }
+            document.write("<br>******After adding 20% marks:*****");
+            document.write("<br>Total marks of student:"+total);
+            bubble(total,a);
+            document.write("<br>******After sorting marks:*****");
+            document.write("<br>Total marks of student:"+total);
+            document.write("<br>Roll Number  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Marks");
+            for(i=0;i<10;i++)
+            {
+                document.write("<br>"+a[i]+"&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;"+total[i]);
+            }
+        </script>
+
+    </body>
+
+</html>
+

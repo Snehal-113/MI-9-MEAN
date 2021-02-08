@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>ass9_q1</title>
+    </head>
+    <body>
+        Enter A number:<input type="text" id="no" name="n1" size="5">
+        <button type="button" onclick="Pali()">check</button>
+        <script lang="JavaScript">
+       function Pali()
+            {
+                var rem, temp, f = 0;
+                var num = parseInt(document.getElementById("no").value);
+                temp = num;
+                while(num>0)
+                {
+                    rem = num%10;
+                    num = parseInt(num/10);
+                    f = f *10+rem;
+                }
+                if(f==temp)
+                {
+                    alert("The entered number is Palindrome");
+                }
+                else
+                {
+                    alert("The entered number is not palindrome");
+                }
+            }
+        </script>
+    </body>
+</html> 

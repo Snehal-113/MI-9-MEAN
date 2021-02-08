@@ -1,0 +1,59 @@
+<html>
+    <head> Ass12 q2</head>
+    <body>
+        <script lang="javascript">
+            class emp{
+                constructor(){
+                    this.empno=0;
+                    this.empname="";
+                    this.empaddress="";
+                    this.empcity="";
+                    this.empsalary=0;
+                }
+                display(){
+                    document.write("<br>Employee No:"+this.empno);
+                    document.write("<br> Employee Name:"+this.empname);
+                    document.write("<br>Employee Address:"+this.empaddress);
+                    document.write("<br>Employee City:"+ this.empcity);
+                    document.write("<br>Employee Salary:"+this.empsalary);
+                }
+                show_init(){
+                    document.write("<br>Employee No:"+this.empno);
+                    document.write("<br> Employee Name:"+this.empname);
+                    document.write("<br>Employee Address:"+this.empaddress);
+                    document.write("<br>Employee City:"+ this.empcity);
+                    document.write("<br>Employee Salary:"+this.empsalary);
+                }
+                get_data(){
+                    this.empno=prompt("Employee No"+this.empno);
+                    this.empname=prompt("Employee Name"+this.empname);
+                    this.empaddress=prompt("Employee Address"+this.empaddress);
+                    this.empcity=prompt("Employee City"+ this.empcity);
+                    this.empsalary=prompt("Employee Salary"+this.empsalary);
+                }
+                calculate(){
+                    var da=(30*this.empsalary)/100;
+                    var hra=(15*this.empsalary)/100;
+                    var pf=(12.5*this.empsalary)/100;
+                    var gross = this.empsalary + da + hra;
+                    var net = gross - pf;
+                    //document.write("<br>gross amount:"+gross);
+                    //document.write("<br>net amount:"+net);
+                    if(gross > 180000)
+                    {
+                        document.write("<br>Income Tax Payer");
+                    }
+                    else{
+                        document.write("<br>Not an income tax payer.");
+                    }
+                }
+                }
+            e1=new emp();
+            e1.get_data();
+            e1.show_init();
+            e1.calculate();
+            document.write("<br>*********************************************")
+            e1.display();
+        </script>
+    </body>
+    </html>

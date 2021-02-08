@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <title>A14_Q2</title>
+</head>
+
+<body>
+  <script language="javascript">
+    class BankDet {
+      constructor(accNo, name, bal1) {
+        this.acc_no = accNo;
+        this.acc_name = name;
+        this.bal = bal1;
+      }
+      getData() {
+        console.log("getData")
+        document.write("Account Information ")
+
+        document.write("<br>Account Number:" + this.acc_no);
+        document.write("<br>Account Name:" + this.acc_name);
+        document.write("<br>Account Balance:" + this.bal);
+        document.write("<br>----------------------------------------------<br>")
+      }
+      deposit(dep_amt) {
+        this.bal = parseInt(this.bal) + parseInt(dep_amt);
+        document.write("Amount Deposited:" + dep_amt+ "<br>");
+        document.write("Total Balance:" + this.bal+ "<br>");
+        document.write("<br>----------------------------------------------<br>")
+
+      }
+      withdraw(with_amt) {
+        if (with_amt > this.bal) {
+          document.write("Error:Insufficient Funds")
+        }
+        else {
+         
+          this.bal = parseInt(this.bal) - parseInt(with_amt);
+        document.write("<br>Amount withdrawl:" + with_amt);
+        document.write("<br>Total Balance:" + this.bal);
+        if(this.bal<1000){
+            document.write("<br>Warning – Balance below 1000");
+          }
+        }
+        // document.write("<br>----------------------------------------------<br>")
+
+       
+      }
+      display() {
+        console.log("display--- ", this.acc_no)
+        document.write(" <br>Sr.No.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Acc_No :" + this.acc_no + " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Name :" + this.acc_name + " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Balance :" + this.bal+"<hr>");
+     
+      }
+    }
+    s1 = new BankDet(0, 'Shubhangi', 0);
+    s1.getData();
+    s1.deposit(2000);
+    s1.withdraw(1200);
+    s1.display();
+    s2 = new BankDet(1, 'Sejal', 2);
+    s2.getData();
+    s2.deposit(4000);
+    s2.withdraw(200);
+    s2.display();
+
+    
+  </script>
+</body>
+
+</html>
+
+</script>
+</body>
+
+</html>

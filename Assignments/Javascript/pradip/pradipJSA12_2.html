@@ -1,0 +1,71 @@
+<html>
+    <head><title>Assignment 12_2</title></head>
+    <body>
+        <script lang="javascript">
+            class employee{
+                constructor(empno,name,address,city,salary){
+                    this.empno=empno;
+                    this.name= name;
+                    this.address=address;
+                    this.city= city;
+                    this.salary=salary;
+                }
+                 da;
+                 hra;
+                 pf;
+                 gross;
+                 net;
+                show_init(){
+                    document.write("<br> Emp No :"+this.empno);
+                    document.write("<br> Emp Name :"+this.name);
+                    document.write("<br> Address :"+this.address);
+                    document.write("<br> City :"+this.city);
+                    document.write("<br> Salary :"+this.salary);
+                }
+                cal() {
+                     this.da= this.salary*30.0/100;
+                    this.hra =this.salary*15/100;
+                    this.pf =this.salary*12.5/100;
+                    this.gross =this.salary +this.da +this.hra;
+                    this.net =this.gross-this.pf;
+                                        
+                }
+                display()
+                {
+                    // document.write("<br> DA :"+this.da);
+                    // document.write("<br> HRA :"+this.hra);
+                    // document.write("<br> PF :"+this.pf);
+                    document.write("<br>  Emp Name :"+this.name);
+                    document.write("<br> Emp No :"+this.empno);
+                    document.write("<br> GROSS :"+this.gross);
+                    document.write("<br> NET :"+this.net);
+                    if(this.gross>=180000){
+                        document.write("<br> Income Tax Payer");
+                    }
+                    else{
+                        document.write("<br> Not an income tax payer");
+                    }
+                }
+                get_data(empno,name,address,city,salary){
+                    this.empno=empno;
+                    this.name= name;
+                    this.address=address;
+                    this.city= city;
+                    this.salary=salary;  
+                }
+            }
+            emp = new employee(0,"","","",0);
+            emp.show_init();
+            emp.cal();
+            emp.display();
+            emp1 = new employee();
+            emp2 = new employee();
+            emp1.get_data(101,"pavan","jm road","mumbai",300000);
+            emp2.get_data(201,"vishal"," baner","pune",500000);
+            emp1.cal();
+            emp2.cal();
+            emp1.display();
+            emp2.display();
+        </script>
+    </body>
+</html>

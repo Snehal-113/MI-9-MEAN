@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <title>A13_Q4</title>
+</head>
+
+<body>
+
+  Know Your Age Here<br><input type="date" id="date" name="date">
+  <button type="button" onclick="year()">Age</button>
+  <script lang="javascript">
+    function year() {
+      d = new Date(document.getElementById("date").value);
+      d2 = new Date();
+      agediff = Math.abs(d2 - d);
+      diffDays = Math.floor(agediff / (1000 * 60 * 60 * 24));
+      years = Math.floor(diffDays / 365);
+      monthDays = diffDays - 365 * years;
+      months = Math.floor(monthDays / 30);
+      days = monthDays - months * 30;
+      document.write("Age is " + years + " years " + months + " months " + days + " days");
+    }
+  </script>
+</body>
+
+</html>

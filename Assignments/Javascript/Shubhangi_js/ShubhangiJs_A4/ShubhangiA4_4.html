@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A4_Q4</title>
+</head>
+
+<body>
+  <h2 style="text-align: center;">Know the character is vowel or not</h2>
+  Enter The Character :<input type="text" name="vowel" id="vowel" />
+  <button type="button" onClick="vowels()">CHECK</button>
+  <p id="vow"></p>
+  <script laguage="javascript">
+    function vowels() {
+      var c = document.getElementById("vowel").value;
+      var lowercase_vowels = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+
+      var uppercase_vowels = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+      // .....USing if else......
+      // if (lowercase_vowels || uppercase_vowels) {
+      //   document.getElementById("vow").innerHTML = "The Character " + c + " is a vowel";
+      //   window.alert("The Character is a vowel")
+      // }
+      // else {
+      //   document.getElementById("vow").innerHTML = "The Character " + c + " is not a vowel";
+      //   window.alert("The Character is not a vowel")
+      // }
+
+      // using switch case....
+
+      switch (true) {
+        case lowercase_vowels: document.getElementById("vow").innerHTML =  " The above Character is a vowel.";
+          break;
+        case uppercase_vowels: document.getElementById("vow").innerHTML =  " The above Character is a vowel.";
+          break;
+        default: document.getElementById("vow").innerHTML =  " The above Character is a consonant.";
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>

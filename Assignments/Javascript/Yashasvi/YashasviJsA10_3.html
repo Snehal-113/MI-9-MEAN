@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Email Id</title>
+    </head>
+    <body>
+    <script language="javascript">
+                   var email=prompt("Enter a Email Id");
+                   var emailId=/^[a-zA-Z0-9.!#$%&'*+/=?^_'{\}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                   if(emailId.test(email))
+                   {
+                       document.write("Valid Email Id");
+                   }
+                   else
+                   {
+                    document.write("Not Valid Email Id");
+                   }
+    </script>
+    </body>
+</html>
