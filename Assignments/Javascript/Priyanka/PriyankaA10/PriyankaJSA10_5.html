@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Words</title>
+    </head>
+    <body>
+        <script langauge="javascript">
+            var w = 0;
+            var str = prompt("Enter a sentense");
+            str = str.replace(/(^\s*)|(\s*$)/gi,"");
+            str = str.replace(/[ ]{2,}/gi," ");
+            str = str.replace(/\n /,"\n");
+            for( var i=0;i<str.length;i++)
+            {
+                var char1=str[i];
+                if(char1==' ')
+                w++;
+            }
+            document.write("number of words : "+str.split(' ').length);
+            document.write("<br>Number of whitespaces: "+w);
+
+
+        </script>
+    </body>
+</html>
