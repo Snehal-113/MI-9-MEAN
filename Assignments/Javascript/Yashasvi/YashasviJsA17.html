@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>Student Results</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Student Details</legend>
+            Roll Number: <input type="number" id="rollid"><br>
+            Name: <input type="text" id="nameid"  onchange="uppercase()"><br>
+            <legend name="sub">Subjects Details</legend>
+            Maths: <input type="number" id="mathsid" onchange="Maths()"><br>
+            Science: <input type="number" id="sciid" onchange="Science()"><br>
+            History: <input type="number" id="hisid" onchange="History()"><br>
+            <input type="button" value="Submit" onclick="getReport()">
+        </fieldset>
+        <h2 id="heading"></h2>
+        <p id="rollId"></p>
+        <p id="nameId"></p>
+        <p id="mathsId"></p>
+        <p id="sciId"></p>
+        <p id="hisId"></p>
+        <p id="totalId"></p>
+        <p id="perId"></p>
+        <p id="gradeId"></p>
+        <script language="javascript">
+            class Student
+            {
+                constructor(rollno,name,maths,sci,his)
+                {
+                this.rollno=rollno;
+                this.name=name;
+                this.maths=maths;
+                this.sci=sci;
+                this.his=his;
+                }
+                getDetails()
+                {
+                    document.getElementById("heading").innerHTML="*****Report Card*****";
+                    document.getElementById("rollId").innerHTML="Roll Number :"+this.rollno;
+                    document.getElementById("nameId").innerHTML="Name :"+this.name;
+                    document.getElementById("mathsId").innerHTML="Maths :"+this.maths;
+                    document.getElementById("sciId").innerHTML="Science :"+this.sci;
+                    document.getElementById("hisId").innerHTML="History :"+this.his;
+                }
+                getTotal()
+                {
+                    this.total=this.maths+this.sci+this.his;
+                    document.getElementById("totalId").innerHTML="Total :"+this.his;
+                }
+                getPer()
+                {
+                    this.per=this.total/3;
+                    document.getElementById("perId").innerHTML="Percentage :"+this.his;
+                }
+                getGrade()
+                {
+                    var per=this.per;
+                    var grade;
+                    if (per>=80)
+                    {
+					   grade="A+";
+					   document.getElementById("gradeId").innerText="Grade :"+grade;
+					   document.getElementById("gradeId").style.color="green";
+                    }
+                    else if (per<80 && per>=60)
+                    {
+					   grade="A";
+					   document.getElementById("gradeId").innerText="Grade :"+grade;
+					   document.getElementById("gradeId").style.color="green";
+                    }
+                    else if (per<60 && per>=55)
+                    {
+					   grade="B+";
+					   document.getElementById("gradeId").innerText="Grade :"+grade;
+					   document.getElementById("gradeId").style.color="orange";
+                    }
+                    else if (per<55 && per>=40)
+                    {
+					   grade="B";
+					   document.getElementById("gradeId").innerText="Grade :"+grade;
+					   document.getElementById("gradeId").style.color="orange";
+                    }
+                    else 
+                    {
+					   grade="NO GRADE";
+					   document.getElementById("gradeId").innerText="Grade :"+grade;
+					   document.getElementById("gradeId").style.color="red";
+                    }
+                }
+            } 
+            function uppercase()
+            {
+                var name= document.getElementById("nameid").value;
+			    document.getElementById("nameid").value=name.toUpperCase();
+            }
+            function Maths()
+            {
+                var alphanumeric = document.getElementById("mathsid").value;
+                if(alphanumeric.match(/^[a-z_\-]/))
+                {
+                    alert("Error:Enter only Numbers");
+                }
+            }
+            function Science()
+            {
+                var alphanumeric = document.getElementById("sciid").value;
+                if(alphanumeric.match(/^[a-z_\-]/))
+                {
+                    alert("Error:Enter only Numbers");
+                }
+            }
+            function History()
+            {
+                var alphanumeric = document.getElementById("hisid").value;
+                if(alphanumeric.match(/^[a-z_\-]/))
+                {
+                    alert("Error:Enter only Numbers");
+                }
+            }
+            function getReport()
+            {
+                var rollno= document.getElementById("rollid").value;
+			    var name= document.getElementById("nameid").value;
+			    var maths= parseInt(document.getElementById("mathsid").value);
+			    var sci= parseInt(document.getElementById("sciid").value);
+			    var his = parseInt(document.getElementById("hisid").value);
+			    s=new Student(rollno,name,maths,sci,his);
+			    s.getDetails();
+			    s.getTotal();
+			    s.getPer();
+			    s.getGrade();
+            }
+
+        </script>
+    </body>
+</html>
