@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title>A18_Q4</title>
+</head>
+
+<body>
+  <label for="country">Country:</label>
+  <select name="country" id="country" onchange="getCapital(this.value)">
+    <option value="france">France</option>
+    <option value="India">India</option>
+    <option value="Russia">Russia</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="South Africa">South Africa</option>
+    <option value="Spain">Spain</option>
+  </select>
+  <label for="capital">Capital:</label>
+  <select name="capital" id="capital">
+    <option value="">paris</option>
+    <option value="Delhi">Delhi</option>
+    <option value="Moscow">Moscow</option>
+    <option value="Islamabad">Islamabad</option>
+    <option value="Pretoria">Pretoria</option>
+    <option value="Madrid">Madrid</option>
+  </select>
+  <script>
+    const countryCapitalMap = {
+      'France': 'paris',
+      'India': 'New Delhi',
+      'Russia': 'Moscow',
+      'Pakistan': 'Islamabad',
+      'South Africa': 'Pretoria',
+      'Spain': 'Madrid'
+    }
+    function getCapital(country) {
+      document.getElementById("capital").value = countryCapitalMap[country];
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <title>A18_Q2</title>
+</head>
+
+<body>
+  <fieldset>
+    Enter Your Name : <input type="text" id="nid" name="name"><br>
+    Enter Your Age : <input type="number" id="aid" name="num"><br>
+    <button type="button" onclick="myFun()">Check</button>
+  </fieldset>
+  <p id="pid"></p>
+  <script language="javascript">
+    function myFun() {
+      var name=document.getElementById("nid").value;
+    var age =parseInt(document.getElementById("aid").value);
+    if(age>=18){
+      document.getElementById("pid").innerHTML=name+ " is eligible to vote"
+    }
+    else{
+      document.getElementById("pid").innerHTML=name+ " is not eligible to vote"
+    }
+    }
+    
+  </script>
+  </body>
+</html>
