@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inheritence Bank-Details</title>
+    <script>
+    </script>
+</head>
+
+<body>
+    <script language="javascript">
+        var pct;
+        class student {
+
+            constructor() {
+                this.roll = 0;
+                this.name = "";
+                this.sub1 = 0;
+                this.sub2 = 0;
+                this.sub3 = 0;
+                this.total = 0;
+
+
+            }
+            getData() {
+                this.roll = prompt("Enter Roll Number : " + this.roll);
+                this.name = prompt("Enter Name : " + this.name);
+                this.sub1 = prompt("Enter Subject1 Marks : " + this.sub1);
+                this.sub2 = prompt("Enter Subject2 Marks : " + this.sub2);
+                this.sub3 = prompt("Enter Subject3 Marks : " + this.sub3);
+                this.total = parseInt(this.sub1) + parseInt(this.sub2) + parseInt(this.sub3);
+
+            }
+            display() {
+                document.write("*****Report Card******<br>");
+                document.write("Roll Number:" + this.roll + "<br>");
+                document.write("Name  :" + this.name + "<br>");
+                document.write("Subject 1: " + this.sub1 + "<br>");
+                document.write("Subject 2: " + this.sub2 + "<br>");
+                document.write("Subject 3: " + this.sub3 + "<br>");
+                document.write("Total  :" + this.total + "<br>");
+            }
+            getpct() {
+                pct = this.total / 3;
+                document.write("Percentage  :" + pct + "<br>");
+            }
+            getgrade() {
+                if (pct >= 80) {
+                    document.write("Grade :  A+");
+                } else if (pct >= 60 && pct < 80) {
+                    document.write("Grade :  A");
+
+                } else if (pct >= 55 && pct < 60) {
+                    document.write("Grade :  B+");
+
+                } else if (pct >= 40 && pct < 55) {
+                    document.write("Grade :  B");
+
+                } else {
+                    document.write("Grade : No Grade_Assigned");
+
+
+                }
+
+            }
+        }
+        s = new student();
+        s.getData();
+        s.display();
+        s.getpct();
+        s.getgrade();
+    </script>
+
+</body>
+
+</html>
