@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <title>Assginment 17</title>
+</head>
+
+<body>
+    <label for="rollno">Rollno</label>
+    <input type="text" id="rollno" name="rollno"><br><br>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" onchange="capsLetter(this.value)"><br><br>
+    <label for="maths">Maths</label>
+    <input type="text" id="maths" name="maths" onchange="numericMarks(this.value)"><br><br>
+    <label for="science">Science</label>
+    <input type="text" id="science" name="science" onchange="numericMarks(this.value)"><br><br>
+    <label for="history">History</label>
+    <input type="text" id="history" name="history" onchange="numericMarks(this.value)"><br><br>
+    <button type="button" onclick="show()">Display</button>
+    <table id="tableid" style="display: none;">
+        <caption>REPORT CARD</caption>
+        <tr>
+            <th>RollNo</th>
+            <td id="rollid"></td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td id="nameid"></td>
+        </tr>
+        <tr>
+            <th>Maths</th>
+            <td id="mathsid"></td>
+        </tr>
+        <tr>
+            <th>Science</th>
+            <td id="scid"></td>
+        </tr>
+        <tr>
+            <th>History</th>
+            <td id="hisid"></td>
+        </tr>
+        <tr>
+            <th>TOTAL</th>
+            <td id="totalid"></td>
+        </tr>
+        <tr>
+            <th>PERCENTAGE</th>
+            <td id="perid"></td>
+        </tr>
+        <tr>
+            <th>GRADE</th>
+            <td id="gid" onclick="grade()"></td>
+        </tr>
+    </table>
+    <script>
+        class Student {
+            constructor(r, n, m, s, h) {
+                this.r = r;
+                this.n = n;
+                this.m = m;
+                this.s = s;
+                this.h = h;
+            }
+            getData() {
+                this.r = document.getElementById("rollno").value;
+                this.n = document.getElementById("name").value;
+                this.m = parseInt(document.getElementById("maths").value);
+                this.s = parseInt(document.getElementById("science").value);
+                this.h = parseInt(document.getElementById("history").value);
+            }
+            display() {
+                document.getElementById("rollid").innerHTML = this.r;
+                document.getElementById("nameid").innerHTML = this.n;
+                document.getElementById("mathsid").innerHTML = this.m;
+                document.getElementById("scid").innerHTML = this.s;
+                document.getElementById("hisid").innerHTML = this.h;
+                document.getElementById("totalid").innerHTML = this.total;
+                document.getElementById("perid").innerHTML = this.percentage;
+                document.getElementById("gid").innerHTML = this.g;
+                document.getElementById("gid").style.color = this.c;
+            }
+        }
+        class Result extends Student {
+            constructor(r, n, m, s, h) {
+                super(r, n, m, s, h);
+            }
+
+            display() {
+                document.getElementById("rollid").innerHTML = this.r;
+                document.getElementById("nameid").innerHTML = this.n;
+                document.getElementById("mathsid").innerHTML = this.m;
+                document.getElementById("scid").innerHTML = this.s;
+                document.getElementById("hisid").innerHTML = this.h;
+                document.getElementById("totalid").innerHTML = this.total;
+                document.getElementById("perid").innerHTML = this.percentage;
+                document.getElementById("gid").innerHTML = this.g;
+                document.getElementById("gid").style.color = this.c;
+            }
+            total() {
+                this.total = this.m + this.s + this.h;
+            }
+            percentage() {
+                this.percentage = this.total / 3;
+            }
+            grade() {
+                if (this.percentage >= 80) {
+                    this.c = "green";
+                    this.g = "A+";
+                }
+                else if (this.percentage < 80 && this.percentage >= 60) {
+                    this.c = "green";
+                    this.g = "A";
+                }
+                else if (this.percentage < 60 && this.percentage >= 55) {
+                    this.c = "red";
+                    this.g = "B+";
+                }
+                else if (this.percentage < 55 && this.percentage >= 40) {
+                    this.c = "red";
+                    this.g = "B";
+                }
+                else {
+                    this.c = "red";
+                    this.g = "No Grade";
+                }
+            }
+        }
+        function capsLetter(val) {
+            document.getElementById("name").value = val.toUpperCase();
+        }
+        function numericMarks(marks) {
+            if (document.getElementById("maths").value.match(/^[a-z_\-]/)) {
+                alert("Error:Enter only numeric data");
+            }
+            if (document.getElementById("science").value.match(/^[a-z_\-]/)) {
+                alert("Error:Enter only numeric data");
+            }
+            if (document.getElementById("history").value.match(/^[a-z_\-]/)) {
+                alert("Error:Enter only numeric data");
+            }
+        }
+            function show() {
+                let studentResult = new Result();
+                studentResult.getData();
+                studentResult.total();
+                studentResult.percentage();
+                studentResult.grade();
+                studentResult.display();
+                document.getElementById("tableid").style.display = "table";
+            }
+    </script>
+</body>
+
+</html>
