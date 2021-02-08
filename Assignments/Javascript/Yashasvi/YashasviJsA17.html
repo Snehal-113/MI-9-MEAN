@@ -8,9 +8,9 @@
             Roll Number: <input type="number" id="rollid"><br>
             Name: <input type="text" id="nameid"  onchange="uppercase()"><br>
             <legend name="sub">Subjects Details</legend>
-            Maths: <input type="number" id="mathsid" onchange="Maths()"><br>
-            Science: <input type="number" id="sciid" onchange="Science()"><br>
-            History: <input type="number" id="hisid" onchange="History()"><br>
+            Maths: <input type="text" id="mathsid" onchange="Maths()"><br>
+            Science: <input type="text" id="sciid" onchange="Science()"><br>
+            History: <input type="text" id="hisid" onchange="His()"><br>
             <input type="button" value="Submit" onclick="getReport()">
         </fieldset>
         <h2 id="heading"></h2>
@@ -96,7 +96,9 @@
             function Maths()
             {
                 var alphanumeric = document.getElementById("mathsid").value;
+                alert(document.getElementById("mathsid").value);
                 if(alphanumeric.match(/^[a-z_\-]/))
+
                 {
                     alert("Error:Enter only Numbers");
                 }
@@ -104,14 +106,16 @@
             function Science()
             {
                 var alphanumeric = document.getElementById("sciid").value;
+                alert(document.getElementById("sciid").value);
                 if(alphanumeric.match(/^[a-z_\-]/))
                 {
                     alert("Error:Enter only Numbers");
                 }
             }
-            function History()
+            function His()
             {
                 var alphanumeric = document.getElementById("hisid").value;
+                alert(document.getElementById("hisid").value);
                 if(alphanumeric.match(/^[a-z_\-]/))
                 {
                     alert("Error:Enter only Numbers");
@@ -123,7 +127,8 @@
 			    var name= document.getElementById("nameid").value;
 			    var maths= parseInt(document.getElementById("mathsid").value);
 			    var sci= parseInt(document.getElementById("sciid").value);
-			    var his = parseInt(document.getElementById("hisid").value);
+                var his = parseInt(document.getElementById("hisid").value);
+                console.log(maths+" "+sci+" "+his);
 			    s=new Student(rollno,name,maths,sci,his);
 			    s.getDetails();
 			    s.getTotal();
