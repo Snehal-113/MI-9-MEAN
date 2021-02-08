@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title> Assignment13 Q2</title>
+    </head>
+    <body>
+        <script language="javascript">
+            function getDateAgo(date,days)
+            {
+                date.setDate(date.getDate()-days);
+                return date.getDate();
+            }
+            var date = new Date(2021,0,31);
+            alert( getDateAgo(date,1));
+            alert( getDateAgo(date,2));
+            alert( getDateAgo(date,365));
+        </script>
+    </body>
+</html>

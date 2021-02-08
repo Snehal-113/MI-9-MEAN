@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Assignment16_2</title>
+    </head>
+    <body>
+        <p id="msg" style="text-align: center;">
+        "The HTML DOM can be accessed with JavaScript (and with other programming languages)<br>
+        In the DOM, all HTML elements are defined as objects.<br>
+        The programming interface is the properties and methods of each object.<br>
+        A property is a value that you can get or set (like changing the content of an HTML element).<br>
+        A method is an action you can do (like add or deleting an HTML element)."</p>
+            <fieldset>
+                <legend>COLOR</legend>
+                <button onclick="red()">RED</button>
+                <button onclick="green()">GREEN</button>
+                <button onclick="blue()">BLUE</button>
+                
+                <fieldset>
+                    <legend>SIZE</legend>
+                    <button onclick="x_small()">X-SMALL</button>
+                    <button onclick="large()">LARGE</button>
+                    <button onclick="x_large()">X-LARGE</button>
+
+                    <fieldset>
+                        <legend>FONT</legend>
+                        <button onclick="fonfamily1()">fonfamily1</button>
+                        <button onclick="fonfamily2()">fonfamily2</button>
+                        <button onclick="fonfamily3()">fonfamily3</button>
+                    </fieldset>
+                </fieldset>
+            </fieldset>
+        <script lang="javascript">
+        function red()
+        {
+         document.getElementById("msg").style.color = "red";
+        }
+        function green()
+        {
+         document.getElementById("msg").style.color= "green";
+        }
+        function blue()
+        {
+         document.getElementById("msg").style.color="blue";
+        }
+        function x_small()
+        {
+            document.getElementById("msg").style.fontSize= "x-small";
+        }
+        function large()
+        {
+            document.getElementById("msg").style.fontSize="large";
+        }
+        function x_large()
+        {
+         document.getElementById("msg").style.fontSize = "x-large";
+        }
+        function fonfamily1()
+        {
+            document.getElementById("msg").style.fontFamily="Impact,Charcoal,sans-serif";
+        }
+        function fonfamily2()
+        {
+            document.getElementById("msg").style.fontFamily="Arial, Helvetica, sans-serif";
+        }
+        function fonfamily3()
+        {
+         document.getElementById("msg").style.fontFamily = "Gill Sans";
+        }
+        </script>
+    </body>
+</html>

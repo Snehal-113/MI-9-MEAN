@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Calculate Date</title>
+    </head>
+    <body>
+        <h2>Calculate Date</h2>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date"><br>
+        <label for="number">Give a Number:</label><br>
+        <input type="number" name="number" id="number">
+        <button onclick="getDateAgo()">SHOW</button>
+        <script language="javascript">
+            function getDateAgo()
+            {
+                var date=document.getElementById("date").value;
+                var number=document.getElementById("number").value;
+                d=new Date(date);
+                n=new Date(d-number*(24*3600*1000));
+                alert(n);
+            }
+        </script>
+    </body>
+</html>
+
+
+

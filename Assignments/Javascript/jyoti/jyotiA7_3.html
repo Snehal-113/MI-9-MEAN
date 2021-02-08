@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>assignment7_3</title>
+        <script>
+            function Bubblesort(mark)
+            {
+                var i,j,temp;
+                for(i=0;i<n;i++)
+                {
+                    for(j=0;j<n;j++)
+                    {
+                        if(mark[j]<mark[j+1])
+                        {
+                            temp=mark[j];
+                            mark[j]=mark[j+1];
+                            mark[j+1]=temp;
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var n = prompt("Enter no of student");
+            var mark = [];
+            for(i=0;i<n;i++)
+            {
+                var mrk = prompt("Enter marks");
+                
+                mark.push(parseInt(mrk));
+            }
+            document.write("********Before sorting*********"+ mark);
+            document.write("<br>");
+            for(i = 0; i < mark.length; i++){
+                document.write("<br>Marks"+ (i+1)+":-- "+ mark[i]);
+            }
+            Bubblesort(mark);
+            document.write("********After sorting*********"+ mark);
+            document.write("<br>");
+            for(i = 0; i < mark.length; i++){
+                document.write("<br>Marks"+ (i+1)+":-- "+ mark[i]);
+            }
+        </script>
+    </body>    
+</html>

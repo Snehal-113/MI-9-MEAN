@@ -1,0 +1,103 @@
+<html>
+
+<head>
+  <title>A16_Q2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale-1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <style>
+    fieldset {
+      border: 1px solid #d6d6d6 !important;
+      margin: 0;
+      min-width: 0;
+      padding: 10px;
+      position: relative;
+      border-radius: 4px;
+      background-color: #ffffff;
+      padding-left: 10px !important;
+    }
+
+    legend {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 0px;
+      width: 35%;
+      border-radius: 4px;
+      padding: 5px 5px 5px 10px;
+    }
+    p{
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="pid">With the object model, JavaScript gets all the power it
+    needs to
+    create dynamic HTML:
+    JavaScript can change all the HTML elements in the page
+    JavaScript can change all the HTML attributes in the page
+    JavaScript can change all the CSS styles in the page
+    JavaScript can remove existing HTML elements and attributes
+  </p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <fieldset class="the-fieldset">
+          <legend class="the-legend">Colors</legend>
+          <button type="button" onclick="changeStyle('color','red')">Red</button>
+          <button type="button" onclick="changeStyle('color','blue')">Blue</button>
+          <button type="button" onclick="changeStyle('color','green')">Green</button>
+        </fieldset>
+      </div>
+      <div class="col">
+        <fieldset class="the-fieldset">
+          <legend class="the-legend">Size</legend>
+          <button type="button" onclick="changeStyle('size','20px')">20px</button>
+          <button type="button" onclick="changeStyle('size','30px')">40px</button>
+          <button type="button" onclick="changeStyle('size','40px')">80px</button>
+        </fieldset>
+      </div>
+      <div class="col">
+        <fieldset class="the-fieldset">
+          <legend class="the-legend">Font</legend>
+          <button type="button" onclick="changeStyle('fontFamily','Times New Roman')">Arial </button>
+          <button type="button" onclick="changeStyle('fontFamily','Verdana')">Verdana</button>
+          <button type="button" onclick="changeStyle('fontFamily','Helvetica')">Helvetica</button>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">
+    function changeStyle(type, value) {
+      if (type == "color") {
+          document.getElementById("pid").style.color=value;
+      }
+      else if(type=="size"){
+        document.getElementById("pid").style.fontSize=value;
+      }
+      else if(type=="fontFamily"){
+      document.getElementById("pid").style.fontFamily=value;
+      }
+      else{
+        document.write("please click on any button");
+      }
+    }
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

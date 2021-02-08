@@ -1,0 +1,57 @@
+<html>
+<body>
+    <p id="pid"></p>
+    <script lang="JavaScript">
+        var i;
+        var arr = [];
+        var newarr = [];
+       var  primePalindromearr = [];
+        let n = prompt("How many no you want to enter.");
+        for (let i = 0; i < n; i++) {
+            let x = prompt("Enter the numbers:");
+            arr.push(parseInt(x));
+        }
+        for (let i = 0; i < n; i++) 
+        {
+            var isPrime = prime(arr[i]);
+            var isPalindrome = palindrome(arr[i]);
+            if (isPalindrome && isPrime) {
+                primePalindromearr.push(parseInt(arr[i]));
+            }
+        }
+        document.write(primePalindromearr);
+        function prime(a) 
+        {
+            let isPrime = true;
+            for (let i = 2; i < a; i++)
+             {
+                if (a % i == 0) 
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+            return isPrime;
+        }
+        function palindrome(a) 
+        {
+            var newarr = [];
+            var isPalindrome = true;
+            while (a > 0) {
+                newarr.push(a % 10);
+                a = parseInt(a / 10);
+            }
+            for (var i = 0; i < newarr.length; i++) 
+            {
+                if (newarr[i] !== newarr[newarr.length - i - 1]) 
+                {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            return isPalindrome;
+        }
+    </script>
+</body>
+
+</html>

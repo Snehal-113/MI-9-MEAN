@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Fabonicci</title>
+    </head>
+    <body>
+        <input type="text" id="iVal1" name="pri1">
+        <button type="button"onclick="fab()">Convert</button>
+        <script language="javascript">
+            function fab(){
+            var a,b,c,i,n;
+            a=0;
+            b=1;
+            n=parseInt(document.getElementById("iVal1").value);
+            document.write(a+"&nbsp");
+            document.write(b+"&nbsp");
+            for(i=1;i<n;i++)
+            {
+                c=parseInt(a+b);
+                a=b;
+                b=c;
+                document.write(c+"&nbsp");
+            }
+            }
+        </script>
+    </body>
+</html>

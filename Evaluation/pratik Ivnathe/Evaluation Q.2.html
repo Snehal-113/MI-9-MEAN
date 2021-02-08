@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Mark Q.2</title>
+    </head>
+    <body>
+        <script lang="Javascript">
+            class student{
+                constructor(){
+                    this.rollNo=0;
+                    this.Name="";
+                    this.math=0;
+                    this.english=0;
+                    this.science=0;
+                }
+                display(){
+                    document.write("<br>Roll No:"+this.rollNo);
+                    document.write("<br>Name:"+this.Name);
+                    document.write("<br>MArk Math:"+this.math);
+                    document.write("<br>mark English:"+this.english);
+                    document.write("<br>mark of science"+this.science);
+                    document.write("<br>************************************<br>");
+                }
+                getDada(rollNo,Name,math,english,science){
+                    this.rollNo=rollNo;
+                    this.Name=Name;
+                    this.math=math;
+                    this.english=english;
+                    this.science=science;
+                }
+                calc(math,english,science)
+                {
+                  var total=math+english+science;
+                  var per=(total/3)*100;
+                  if(per>=80)
+            {
+                document.write("Grade: +A");
+            }
+            else if(per<80 || per>=60)
+            {
+                    document.write("Grade :A");
+            }
+            else if(per<60 || per>=55)
+           {
+                    document.write("Grade :B");
+           }
+            else if(per<55 || per>=40)
+            {
+                    document.getElementById("Grade :C");
+            }
+            else(per<45)
+            {
+                document.getElementById("Not Grade");
+            }
+         }
+      }
+      s1=new student();
+      a=prompt("Enter Roll no");
+      b=prompt("Enter Name ");
+      c=prompt("Enter math mark");
+      d=prompt("Enter english mark");
+      e=prompt("Enter Science Mark");
+      s1.getDada(a,b,c,d,e)
+      s1.calc(50,60,70);
+      s1.display();     
+        </script>
+    </body>
+</html>

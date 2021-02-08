@@ -1,0 +1,26 @@
+<html>
+  <head>
+      <title>Even Number and Odd Number</title>
+    </head>
+  <body>
+    <h1>Even Number or Odd Number</h1>
+    <p>Enter number: </p>
+    <input type="text" id="Even" name="Even" size="4">
+    <button type="button" onclick="evenNum()">Show</button>
+    <p id="even"></p>
+    <script language="JavaScript">
+
+     function evenNum(){
+      var num=parseInt(document.getElementById("Even").value);
+      if(num%2==0)
+      {
+      document.getElementById("even").innerHTML= num + " is a Even Number";
+      }
+      else
+      {
+      document.getElementById("even").innerHTML= num + " is a Odd Number";
+    }
+  }
+    </script>
+  </body>
+</html>

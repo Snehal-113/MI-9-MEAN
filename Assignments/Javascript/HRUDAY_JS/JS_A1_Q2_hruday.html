@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript/A1_Q2...</title>
+</head>
+
+<body>
+    <h1 >Coversion Of Celsius To Fahrenheit :</h1>
+    Temperature: <input type="text" id="temperature" name="val1" size="8"><sup style="color: rgb(255, 0, 0);">o</sup> <b style="color: rgb(255, 0, 0);" >C</b>  &nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="text" onclick="conversion()" style="background-color: springgreen; border: 2px solid rgb(247, 28, 255);">Convert to F.</button>
+
+    <h1>After conversion :</h1>
+    <p id="convert"></p>
+
+
+    <script>
+        function conversion() {
+            var C = parseInt(document.getElementById("temperature").value);
+            var F = C * 9 / 5 + 32;
+            document.getElementById("convert").innerHTML = C + "<sup>o</sup> Celsius is equal to :" + F + "<sup>o</sup> Fahrenheit";
+        }
+    </script>
+
+</body>
+
+</html>

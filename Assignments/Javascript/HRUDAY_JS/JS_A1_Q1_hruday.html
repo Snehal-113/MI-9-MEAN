@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JavaScript/A1_Q1...</title>
+</head>
+
+<body>
+  <h1 style="text-align: center;">Swapping Of Two Numbers</h1>
+  A: <input type="text" id="input1" name="val1" size="8">&nbsp;&nbsp; &nbsp;
+  B: <input type="text" id="input2" name="val2" size="8">&nbsp;&nbsp;
+  <button type="text" onclick="method1()" style="background-color: blue;color: seashell; border: 2px dotted red;">Method
+    1</button>&nbsp;&nbsp;
+  <button type="text" onclick="method2()"
+    style="background-color: rgb(255, 230, 0);color: rgb(10, 9, 10); border: 2px dotted rgb(255, 0, 98);">Method
+    2</button>
+  <h2>Method 1: with temprory variable..</h2>
+  <h4 id="view1"></h4>
+  <h2>Method 2: without temprory variable..</h2>
+  <h4 id="view2"></h4>
+
+
+  <script>
+
+    function method1() {
+
+      var a, b, temp;
+      a = parseInt(document.getElementById("input1").value);
+      b = parseInt(document.getElementById("input2").value);
+      temp = a;
+      a = b;
+      b = temp;
+      document.getElementById("view1").innerHTML = "After swapping (method1) - A : " + a + " and B : " + b;
+    }
+    function method2() {
+      var a, b;
+      a= parseInt(document.getElementById("input1").value);
+      b= parseInt(document.getElementById("input2").value);
+
+      a = a + b;  //Let  :a=4 ,b=2 ;     a = a + b assigns the value 4 + 2 to a (now 6).
+      b = a - b;  //b = a - b assigns the value 6 - 2 to b (now 4).
+      a = a - b;  //a = a - b assign the value 6 - 4 to a (now 2).
+
+      document.getElementById("view2").innerHTML = "After swapping (method2) - A : " + a + " and B : " + b;
+
+      // output: a is 2 and b is 4.
+
+    }
+
+  </script>
+
+</body>
+
+</html>

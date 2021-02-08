@@ -1,0 +1,25 @@
+<html>
+    <head><title>Fibonacci</title></head>
+    <body>
+        <input type="text" id="num" name="num">
+        <button type="button" onclick="find()">find</button>
+        <script>
+            function find(){
+                const a = parseInt(document.getElementById("num").value);
+                let n1 = 0;
+                let n2 = 1;
+                let n;
+                let count = 0;
+                console.log(n1); count++;
+                console.log(n2); count++;
+                for(let i = 2; count < a; i++){
+                    n = n2+n1;
+                    n1 = n2;
+                    n2 = n;
+                    console.log(n);
+                    count++;
+                }
+            }
+        </script>
+    </body>
+</html>

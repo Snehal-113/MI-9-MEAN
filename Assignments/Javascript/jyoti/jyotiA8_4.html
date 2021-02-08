@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Ass8 q4</title>
+    <script language="javascript">
+
+    function Bubble_sort(num)
+    {
+        var l,i,j;
+       l = num.length-1;;
+   for(var i = 0; i < l; i++)
+   {
+       for(var j = 0; j < l; j++)
+       {
+           if(num[j] > num[j+1])
+           {
+                temp = num[j];
+               num[j] = num[j+1];
+               num[j+1] = temp;
+           }
+       }
+   }
+}
+</script>
+</head>
+
+<body>
+    <script>
+        var a = [];
+        var x =[];
+        var y =[];
+        var i,j,k;
+        debugger;
+      var b = prompt("Enter the Student marks in section A");
+            for(i=0;i<a;i++)
+            {
+               var std1 = prompt("Enter marks of  students in section A");  
+                a.push(parseInt(std1));  
+            } 
+            for(i=0; i<b;i++)
+            {
+               document.write("<br>section A student marks"+ (i+1)+": "+ b[i]);
+            }
+            document.write("<br>**********************************")
+           var z = prompt("Enter the student mark in section B");
+            for(i=0;i<z;i++)
+            {
+               var std2 = prompt("Enter marks of  students in section B");  
+                x.push(parseInt(std2));  
+            } 
+            for(i=0; i<z;i++)
+            {
+               document.write("<br>section B student marks"+ (i+1)+": "+ x[i]);
+            }
+            Bubble_sort(a);
+            document.write("<br>after sorting section A:<br>" +a);
+            Bubble_sort(x);
+            document.write("<br>after sorting section B:<br>" +x);
+            var len =(a.length+x.length)-1;
+            for(i=0,j=0,k=0;i<=len;)
+            {
+                if(a[j]<=x[k])
+                {
+                    y[i]=a[j]
+                    i++;
+                    j++;
+                }
+                else{
+                    y[i]=x[k];
+                    i++;
+                    k++;
+                }
+                if(j==a.length || k==x.length)
+                break;
+                }
+                document.write("<br>value of i:" +i);
+                document.write("<br>value of j:" +j);
+                document.write("<br>value of k:" +k);
+
+                for(;j<a.length;)
+                {
+                    y[i]=a[j];
+                    i++;
+                    j++;
+                }
+                for(;k<x.length;)
+                {
+                    y[i]=x[k];
+                    i++;
+                    k++;
+                }
+                document.write("<br>final sort:" +y);
+        </script>
+    </body>
+</html>

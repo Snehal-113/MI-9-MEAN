@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Vowel check</title>
+</head>
+
+<body>
+    <input type="text" id="val" name="val">
+    <button type="button" onclick="check()">check</button>
+    <p id="pid"></p>
+    <script>
+        function check() {
+            let input = document.getElementById("val").value;
+            let lowerCasedInput = input.toLowerCase();
+            switch (lowerCasedInput) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u': document.getElementById('pid').innerHTML = "vowel";
+                    break;
+                default: document.getElementById('pid').innerHTML = "not vowel";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

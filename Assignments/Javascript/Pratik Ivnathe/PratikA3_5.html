@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>factorial</title>
+    </head>
+    <body>
+        <form name="Calc"> 
+            <label for="fact">Enter Number Here:</label><br>
+            <input type="text" id="id1" size="5">
+            <button type="button" onclick="fun()">click</button>
+            <p style="color: red;" id="pid"></p>
+        </form>
+        <script>
+            function fun(){
+                var i,fact=1,n;
+                i=parseInt(document.getElementById("id1").value);
+                for(i=i;i>=1;i--)
+                {
+                    fact=fact*i;
+                }
+                document.getElementById("pid").innerHTML="The Factorial is"+fact;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+<body>
+    <label for="text">Enter the number:</label>
+    <input type="text" id="num" name="num">
+    <p id="pid"></p>
+    <button type="button" onclick="check()">Check</button>
+    <script>
+      
+        function check() {
+            let x = parseInt(document.getElementById("num").value);
+            const isPrime = prime(x);
+            const isPalindrome = palindrome(x);
+            if(isPalindrome && isPrime){
+                document.getElementById("pid").innerHTML = "Prime Palindrome";
+                        }
+                    else {
+                        document.getElementById("pid").innerHTML =  "Not a Prime Palindrome";
+                    }
+                }
+            function prime(x) {
+                let isPrime = true;
+                for (let i = 2; i < x; i++) {
+                    if (x % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                return isPrime;
+            }
+            function palindrome(x){
+                isPalindrome = true;
+                const newarr = [];
+                while(x > 0){
+                    newarr.push(x % 10);
+                   x = parseInt(x/10);
+                }
+                for(let i = 0; i < newarr.length; i++){
+                    if(newarr[i] !== newarr[newarr.length-i-1]){
+                        isPalindrome = false;
+                        break;
+                    }
+                }
+                return isPalindrome;
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>ass9_q6</title>
+    </head>
+    <body>
+        Enter A number:<input type="text" id="no" name="n1" >
+        <button type="button" onclick="count()">check</button>
+        <p id="words"></p>
+        <p id="space"></p>
+        <script lang="JavaScript">
+       function count()
+            {
+                var string = document.getElementById("no").value;
+                console.log(string);
+                var spaceCount = (string.split(" ").length - 1);
+                console.log(spaceCount);
+                var count = 0;
+                var words = string.split(" ");
+                for (i = 0; i < words.length; i++)
+                {
+                    if (words[i] != "") 
+                    {
+                    count += 1;
+                    }
+                }
+                document.getElementById ("words").innerHTML= "total words : "+count;
+                document.getElementById ("space").innerHTML= "total spaces : "+spaceCount;
+            }
+        </script>
+    </body>
+</html>

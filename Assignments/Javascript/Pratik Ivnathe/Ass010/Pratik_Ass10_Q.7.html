@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html>
+     <head>
+         <title>Q.7</title>
+    </head>
+ <body>
+      <label>Enter Alphanumeric no. here</label>
+      <input type="text" id="id" size="5">
+      <button type="button" onclick="fun()">click</button>
+      <p id="pid"></p>
+      <script>
+          function fun(str)
+          {
+            var str=document.getElementById("id").value;
+               regexp = /^[A-Za-z0-9]+$/;
+            if (regexp.test(str))
+           {
+              document.getElementById("pid").innerHTML="Alphanumeric Id";
+           }
+           else
+           {
+             document.getElementById("pid").innerHTML="Not Alphanumeric Id";
+           }
+         }
+       
+      </script>
+ </body>
+</html>

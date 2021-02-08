@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q.6</title>
+    </head>
+    <body>
+        <label>Enter string</label>
+        <input type="text" id="id" size="10">
+        <button type="button" onclick="fun()">click</button>
+        <p id="pid"></p>
+        <script>
+            function fun()
+            {
+            var i=0 ,count=1,str,l,count1=1;
+            str=document.getElementById("id").value;
+            l=str.length;
+        for(i=0;i<l-1;i++)
+       {
+        /* check whether the current character is white space or new line or tab character*/
+        if(str[i]==' ' || str[i]=='\n' || str[i]=='\t')
+        {
+            count++;
+        } 
+       document.getElementById("pid").innerHTML="Number of words>>" +count;
+    }
+
+}
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> Assignment13 Q4</title>
+     </head>
+     <body>
+         <input type="date" id="date" name="date">
+         <button type="button" onclick="age()">Age</button>
+
+         <script language="javascript">
+             function age(){
+               let d=new Date(document.getElementById("date").value);
+               let d2= new Date();
+               let ageDiff = Math.abs(d2 - d);
+               let diffDays = Math.floor(ageDiff / (1000 * 60 * 60 * 24));
+               let years = Math.floor(diffDays / 365);
+               let monthDay = diffDays - 365 * years;
+               let months = Math.floor(monthDay / 30);
+               let days = monthDay - months * 30;
+               document.write("Age is" +years+ "years" +months+ "months" +days+ "days");
+             }
+         </script>
+     </body>
+</html>

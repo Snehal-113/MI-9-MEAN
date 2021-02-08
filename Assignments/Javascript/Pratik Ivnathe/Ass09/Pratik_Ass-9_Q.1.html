@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>palindrome</title>
+    </head>
+    <body>
+        <script>
+            var n,temp,sum=0,r;
+            n=prompt("enter number");
+            temp=n;
+            while(temp>0)    
+          {    
+             r=temp%10;    
+             sum=(sum*10)+r;    
+             temp=parseInt(temp/10);    
+           }    
+           if(sum==n){  
+           document.write("palindrome number ");    
+           }
+           else
+           {    
+           document.write("not palindrome"); 
+          }
+         
+        </script>
+    </body>
+</html>

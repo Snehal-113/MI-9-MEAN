@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>three digit</title>
+    </head>
+    <body>
+        <script>
+            var no,num,temp,sum=0,i;
+            no=prompt("Enter three digit number");
+            num=no.length;
+            if(num>4)
+            {
+                document.write("Invalid Number!!Please enter a 3 digit no.");
+            }
+            temp=no;
+            while(temp>0)
+            {
+               rem=temp%10;
+               temp=temp/10; 
+               if(i==1 || i==3)
+               {
+                   sum=sum+rem;
+               }
+               else
+              var b=sum;
+               i++;
+            }
+            if(sum==b)
+            {
+                document.write("Sum Match");
+            }
+            else
+            document.write("sum doesnt match");
+        </script>
+    </body>
+</html>

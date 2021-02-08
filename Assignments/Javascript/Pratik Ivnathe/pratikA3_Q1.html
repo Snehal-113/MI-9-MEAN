@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leap year</title>
+    </head>
+    <body>
+        <form name="Calc"> 
+            <label for="leap">Enter Leap Here:</label><br>
+            <input type="text" id="leap" size="5">
+            <button type="button" onclick="fun()">click</button>
+            <p style="color: red;" id="pid"></p>
+        </form>
+        <script>
+            function fun(){
+                var year;
+                year=parseInt(document.getElementById("leap").value);
+                if(year%4==0)
+                document.getElementById("pid").innerHTML="This is Leap Year";
+                else
+                document.getElementById("pid").innerHTML="This is not Leap Year;"
+            }
+        </script>
+    </body>
+</html>

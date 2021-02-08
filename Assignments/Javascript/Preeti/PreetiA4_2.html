@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Automarphic</title>
+</head>
+
+<body>
+    <input type="text" id="num" name="num">
+    <button type="button" onclick="compare()">compare</button>
+    <p id="pid"></p>
+    <script>
+        function square(a) {
+            return a * a;
+        }
+
+        function compare() {
+            const a = parseInt(document.getElementById("num").value);
+            if (square(a) % 10 == a) {
+                document.getElementById("pid").innerHTML = "automorphic"
+
+            }
+            else {
+                document.getElementById("pid").innerHTML = " not automorphic"
+            }
+        } 
+    </script>
+</body>
+
+</html>
