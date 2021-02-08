@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1>Ass_18_Q1</h1>
+<form>
+    Enter the Name:<input type="text" id="nm" name="name" size="5"><br><br>
+    Enter the Age:<input type="text" id="no" name="n" size="5"><br><br>
+    <button type="button" onclick="check()">Show</button>
+    <p id="pid"></p><br>
+    </form>
+    <script language="JavaScript">
+        function check()
+        {
+    var num = parseInt(document.getElementById("no").value);
+    if(num>=18)
+    {
+        alert("Name is Eligible for vote");  
+    }
+    else
+    {
+        alert("Name is not Eligible for vote"); 
+    }
+        }
+        </script>
+        </body>
+        </html>

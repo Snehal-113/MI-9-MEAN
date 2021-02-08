@@ -1,0 +1,24 @@
+<html>
+<body>
+<h1>Ass_18_Q2</h1>
+<form>
+    Enter the numbers:<input type="text" id="no" name="n" size="5"><br><br>
+    <button type="button" onclick="check()">Check</button>
+    <p id="pid"></p><br>
+</form>
+<script language="JavaScript">
+    function check()
+    {
+var num = parseInt(document.getElementById("no").value);
+if(num % 2 == 0)
+{
+    alert("This is even");  
+}
+else
+{
+    alert("this is odd"); 
+}
+    }
+    </script>
+    </body>
+    </html>

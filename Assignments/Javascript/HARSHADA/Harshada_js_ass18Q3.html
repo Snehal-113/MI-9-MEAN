@@ -1,0 +1,26 @@
+<html>
+<body>
+<h1>Ass_18_Q2</h1>
+<form>
+    Enter Shhoping Amount:<input type="text" id="no" name="amt" size="5"><br><br>
+    <button type="button" onclick="calculate()">Calculate</button>
+    <p id="pid"></p><br>
+</form>
+<script language="JavaScript">
+    function calculate()
+    {
+var num = parseInt(document.getElementById("no").value);
+if(num>1000)
+{
+    num=(num/100)* 15;
+    alert("Amount After 15% Disscount:"+num);
+}
+else
+{
+    num=(num/100)* 5;
+    alert("Amount After 5% Disscount"+num); 
+}
+    }
+    </script>
+    </body>
+    </html>
