@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Table</title>
+    </head>
+    <body>
+        <fieldset>
+            Enter a number:
+            <input type="text" id="number" name="number" size="4" onchange="info()">
+            <button type="button" onclick="table()">Create</button>
+            <p id="pid"></p>
+        </fieldset>
+        <script language="javascript">
+            function table()
+            {
+                var num;
+                num=parseInt(document.getElementById("number").value);
+                for (var i=1; i<=10; i++)
+                {
+                    var product=document.getElementById("pid");
+                    product = num*i ;
+                    document.write(num + "*" + i + "=" + product + "<br>");
+                }
+            }
+            function info()
+            {
+                var num = document.getElementById("number").value;
+                if(num.match(/^[a-z_\-]/))
+                {
+                alert("Error: Enter only Number");
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
