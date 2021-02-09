@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Assignment18 Q4</title>
+    </head>
+    <body>
+        <fieldset style="height:200px;width:500px">
+        <p id="pid">Selecy Country to find its capital</p>
+        <label for="country">Country:</label>
+        <select name="country" id="country" onchange="getcapital(this.value)">
+        <option value="India">India</option>
+        <option value="Algeria">Algeria</option>
+        <option value="Austeria">Austeria</option>
+        <option value="china">China</option>
+        </select>
+        <label for="capital">Capital:</label>
+        <select name="capital" id="capital">
+            <option value="New Delhi">New Delhi</optiion>
+            <option value="Algiers">Algiers</option>
+            <option value="Austeria">Vienna</option>
+            <option value="Beijing">Beijing</option>
+            </select>
+        </fieldset>
+        <script language="javascript">
+         const countryCapitalMap = {
+             'India':'New Delhi',
+             'Algeria':'Algiers',
+            'Austeria' :'Austeria',
+            'china':'Beijing'
+            }
+            function getcapital(country){
+                document.getElementById("capital").value=countryCapitalMap[country];
+            }
+
+        </script>
+    </body>
+</html>
