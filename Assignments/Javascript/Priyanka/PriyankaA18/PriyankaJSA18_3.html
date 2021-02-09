@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>discount</title>
+    </head>
+    <body>
+        <fieldset style="height: 200px;width: 600px;">
+            <label for="pri">Enter Shopping amount : </label>
+            <input type="text" name="pri1" id="pri"><br><br>
+            <button type="button"onclick="calculate()">Calculate</button>
+            <p id="pid"></p>
+
+        </fieldset>
+        <script language="javascript">
+            function calculate(){
+            var amount =parseInt(document.getElementById("pri").value);
+            var dis,total;
+            if(amount>1000){
+                dis=(15/100)*amount;
+                total=amount-dis;
+                document.getElementById("pid").innerHTML="Total amount : "+total;
+            }
+            else{
+                dis=(5/100)*amount;
+                total=amount-dis;
+                document.getElementById("pid").innerHTML="Total amount : "+total;
+            }
+            }
+        </script>
+    </body>
+</html>
