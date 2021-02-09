@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>multiply</title>
+    </head>
+    <body>
+    <label for="num">Enter a number:</label>
+    <input type="text"id="num" name="num"><br>
+    <button id="bid" onclick="mul()">click</button>
+    <p id="pid"></p>
+    <script lang="javascript">
+        function mul(){
+                 var numb=document.getElementById("num").value;
+                 var prd=1;
+                 for(let i=1;i<=10;i++){
+                     prd=numb*i;
+                     document.write(numb+"X"+i+"="+prd);
+                     document.write("<br>");
+                     
+               }
+             }
+    
+    
+    </script>
+    </body>
+</html>
