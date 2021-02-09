@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ass18</title>
+</head>
+<body>
+    <fieldset>
+	<div class="div1">
+		Enter Name :&nbsp;
+        <input type="text" name="name" id="nm"><br>
+		Enter Age :&nbsp;
+        <input type="text" name="num" id="num"><br>
+		<button onclick="show()">show</button>
+	</div>
+	        <p>Message</p>
+			<p id="msg">Enter Name and Age and Check if you are eligible to vote.</p>
+	<script>
+		function show() {
+			var name =document.getElementById("nm").value;
+			var num = parseInt(document.getElementById("num").value);
+			if (isNaN(num) || num<0) {
+				document.getElementById("msg").innerText="Invalid Input Enter valid data (i.e Age in numbers)!!";	
+			}
+			else {
+				if (num>=18) {
+					document.getElementById("msg").innerText=name+" is eligibe to vote";	
+				}
+				else {
+					document.getElementById("msg").innerText=name+" is not eligible to vote";
+				}
+			}
+		}
+    </script>
+    </fieldset>
+</body>
+</html>
+
