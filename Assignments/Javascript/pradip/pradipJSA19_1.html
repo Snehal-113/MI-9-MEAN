@@ -8,16 +8,17 @@
             <input type="text" id="num"><br><br>
             <button type="button" onclick="table()">Table</button>
         </fieldset>
+        <p id="list"></p>
         <script language="javascript">
             function table(){
                 var n = parseInt(document.getElementById("num").value);
-                var i;
+                var b=0;
                 var p=1;
-                for(i=1;i<=10;i++){
+                for(var i=1;i<=10;i++){
                     var p = i * n;
-                    document.write(n + "X" +i+ "=" +p);
-                    document.write("<br>");
+                    b = b+n + "X" +i+ "=" +p+"<br>";
                 }
+                document.getElementById("list").innerHTML=b;
             }
         </script>
     </body>
