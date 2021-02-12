@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title> Assignment Feb 12</title>
+    </head>
+    <style>
+        table,td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+    </style>
+    <body>
+        <table style="width: 60%; height: 20%;" id="tab"> 
+            <tr>
+                <td> </td>
+            </tr>
+            <tr>
+                <td> </td>
+            </tr>
+        </table>
+        <button type="button" onclick="AddRow()">AddRow</button>
+        <script language="javascript">
+            function AddRow(){
+                var tab = document.getElementById("tab");
+                var row = tab.insertRow();
+                row.insertCell();
+            }
+        </script>
+    </body>
+</html>
