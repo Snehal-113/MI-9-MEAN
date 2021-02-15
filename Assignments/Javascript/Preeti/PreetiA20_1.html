@@ -1,4 +1,12 @@
 <html>
+    <head>
+     <style>
+         table,th,td{
+           border: 1px solid black; 
+           border-collapse: collapse;
+         }
+     </style>
+    </head>
     <body>
         <table id="table1">
             <tr>
@@ -13,7 +21,7 @@
             </tr>
             <tr>
                 <td>cc</td>
-                <td>3</td>
+                <td>2</td>
                 <td>pune</td>
             </tr>
         </table>
@@ -21,13 +29,13 @@
         <script>
             function show(){
               let table = document.getElementById("table1");
-              let row = table.insertRow(2);
+              let row = table.insertRow(3);
               let cell1 = row.insertCell(0);
               let cell2 = row.insertCell(1);
               let cell3 = row.insertCell(2);
-              cell1.innerHTML = "aa";
-              cell2.innerHTML = "2";
-              cell3.innerHTML = "delhi";
+               cell1.innerHTML = "aa";
+              cell2.innerHTML = "3";
+              cell3.innerHTML = "delhi"; 
             }
         
         </script>
