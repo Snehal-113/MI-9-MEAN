@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ass18</title>
+	
+</head>
+<body>
+    <fieldset>
+	<div class="div">
+		Enter a Number :&nbsp;<input type="text" name="num" id="num"><br>
+		<button onclick="show()">show</button>
+	</div>
+	        <p>Message</p>
+			<p id="msg">Enter a number and check number is even or Odd</p>
+		
+     <script>
+		function show() {
+			var num = parseInt(document.getElementById("num").value);
+			if (isNaN(num)) {
+				document.getElementById("msg").innerText="Invalid Input Enter a Number!!";	
+			}
+			else {
+				if (num%2==0) {
+					document.getElementById("msg").innerText=num+" is an Even Number";	
+				}
+				else {
+					document.getElementById("msg").innerText=num+" is an Odd Number";
+				}
+			}
+		}
+    </script>
+    </fieldset>
+</body>
+</html>
