@@ -1,0 +1,65 @@
+html>
+    <head>
+        <title>Assignment 21</title>
+        <script>
+            function num1(){
+            a= document.getElementById("row").value;
+            if( a < 0 || a.match(/^[a-zA-z_\-]/)) 
+            {
+                alert("Error:Enter a value greater than 0 & numeric number  only");
+                document.getElementById("row").focus();
+                document.getElementById("row").value="";
+            }
+            }
+            function num2(){
+            b = document.getElementById("col").value;
+            if( b < 0  || b.match(/^[a-zA-z_\-]/))
+            {
+                alert("Error:Enter a value greater than 0 & numeric number only");
+                document.getElementById("col").focus();
+                document.getElementById("col").value="";
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <label for="row">Enter number of row :</label>
+        <input type="text" name="row11" id="row" onkeyup="num1()"><br><br>
+        <label for="col">Enter a number of column :</label>
+        <input type="text" name="col11" id="col" onkeyup="num2()"><br><br>
+        <button type="button" id="btn1" onclick="table1()">Create a table</button><br><br>
+        <label for="rowno">Rowno.</label>
+        <input type="text" name="rowns" id="rowno"><br><br>
+        <label for="colno">Colm no.</label>
+        <input type="text" name="cols" id="colno"><br><br>
+        <label for="cont">Content</label>
+        <input type="text" name="con" id="cont"><br><br>
+        <button type="button"id="bid2" onclick="change()">Change content</button><br><br>
+        <script language="javascript">
+            function table1()
+            {
+                var t = document.createElement("table");
+                t.style.border="2px solid red";
+                t.id="tid";
+                for(var i=0;i<a;i++)
+                {
+                    var r = t.insertRow();
+                    for(var j=0;j<b;j++)
+                    {
+                    var c =r.insertCell();
+                    c.style.border="2px solid red";
+                    c.innerHTML="Shivu";
+                    }
+                }
+                document.body.appendChild(t);
+            }
+            function change(){
+                var a = document.getElementById("rowno").value;
+                var b = document.getElementById("colno").value;
+                var c = document.getElementById("cont").value;
+                var t = document.getElementById("tid");
+                t.rows[a].cells[b].innerHTML=c;
+            }
+        </script>
+    </body>
+</html> 
