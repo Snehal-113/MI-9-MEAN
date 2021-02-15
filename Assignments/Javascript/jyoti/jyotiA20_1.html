@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Add Rows</title>
+    </head>
+    <body>
+        <table id="table" border="1" style="height: 30%; width: 50%;"> 
+            <tr>
+                <td>Akash</td> 
+            <td>40</td>
+        </tr> 
+            <tr>
+                <td>Pooja</td> 
+            <td>50</td>
+         </tr> 
+            </table>
+            <br> 
+            <input type="button" onclick="Addrow()" value="Add"> 
+            <script>
+                function Addrow()
+          {
+           var x=document.getElementById('table').insertRow(0);
+           var y = x.insertCell(0);
+           var z = x.insertCell(1);
+           y.innerHTML = "Name";
+           z.innerHTML = "Marks";
+           }
+            </script> 
+        </body>
+        </html>
