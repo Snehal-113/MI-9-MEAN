@@ -1,0 +1,101 @@
+
+
+<html>
+
+    <head></head>
+    
+    <body>
+    
+        <label for="rows">Rows</label>
+    
+        <input type="text" id="rows" name="rows" onkeyup="show()"><br><br>
+    
+        <label for="cols">Columns</label>
+    
+        <input type="text" id="cols" name="cols" onkeyup="show()"><br><br>
+    
+        <button type="button" onclick="table()">Table</button>
+    
+        <label for="rowno">Rowno.</label>
+    
+        <input type="text" id="rowno" name="rowno">
+    
+        <label for="colno">Colno.</label>
+    
+        <input type="text" id="colno" name="colno">
+    
+        <label for="content">content</label>
+    
+        <input type="text" id="content" name="content">
+    
+        <button type="button" onclick="change()">Change</button>
+    
+        <script>
+    
+            function show() {
+    
+                var a = document.getElementById("rows").value;
+    
+                var b = document.getElementById("cols").value;
+    
+                if (a.match(/[^0-9]/) || b.match(/[^0-9]/)) {
+    
+                    alert("Enter number greater than 0");
+    
+                    document.getElementById("rows").value = "";
+    
+                    document.getElementById("cols").value = "";
+    
+                }
+    
+            }
+    
+            function table() {
+    
+                var a = document.getElementById("rows").value;
+    
+                var b = document.getElementById("cols").value;
+    
+                let t = document.createElement("table");
+    
+                t.id = "tid";
+    
+                for (let i = 1; i <= a; i++) {
+    
+                    let r = t.insertRow();
+    
+                    for (let i = 1; i <= b; i++) {
+    
+                        let c = r.insertCell();
+    
+                        c.innerHTML = "aa";
+    
+                    }
+    
+                }
+    
+                document.body.appendChild(t);
+    
+            }
+    
+            function change(){
+    
+                let x = document.getElementById("rowno").value;
+    
+                let y = document.getElementById("colno").value;
+    
+                let z = document.getElementById("content").value;
+    
+                let t = document.getElementById("tid");
+    
+               t.rows[x].cells[y].innerHTML = z;
+    
+            }
+    
+        </script>
+    
+    </body>
+    
+    </html>
+    
+    

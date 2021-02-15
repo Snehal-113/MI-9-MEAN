@@ -10,19 +10,20 @@
 </fieldset>
 <script language="JavaScript">
     function check()
-    {
-var num = document.getElementById("nam").value;
-
-var nag = parseInt(document.getElementById("ag").value);
-document.write(+num);
-
-if(nag >18)
 {
-    alert(+num+"is eligible to vote"); 
+    var num = document.getElementById("nam").value;
+    var nag = parseInt(document.getElementById("ag").value);
+    document.write(num);
+    document.write("<br>");
+    document.write(nag);
+
+if(nag >=18)
+{
+    alert(num+ "is eligible to vote"); 
 }
 else
 {
-    alert(+num+"is not eligible to vote"); 
+    alert(num+ "is not eligible to vote"); 
 }
     }
     </script>
