@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <body>
+            <fieldset>
+            <label for="userid">User ID</label>
+            <input type="text" id="userid" name="userid"><br><br>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd"><br><br>
+            <button type="button" onclick="login()">Login</button>
+        </fieldset>
+            <script>
+                function login(){
+                let a = document.getElementById("userid").value.toUpperCase();   
+                let b = document.getElementById("pwd").value;  
+                if(a == "ADMIN" && b == "admin123"){
+                    alert("You can login now");
+                } 
+                else{
+                    alert("You cannot login");
+                }
+            }
+            </script>
+            </body>
+    </head>
+</html>
