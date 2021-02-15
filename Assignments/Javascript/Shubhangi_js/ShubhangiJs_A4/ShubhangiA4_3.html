@@ -1,0 +1,45 @@
+
+ <!DOCTYPE html>
+<html>
+
+<head>
+  <title>A4-Q3</title>
+</head>
+
+<body>
+  <h2 style="text-align: center;">Know the Number is Armstrong or not</h1>
+    Enter The Number :<input type="text" id="num" name="num">
+    <button type="button" onclick="check()">check</button>
+    <p id="krishn"></p>
+    <script>
+        function factorial(b) {
+             fact = 1;
+            for ( i = 1; i <= b; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+        function check() {
+             res = 0;
+             a = parseInt(document.getElementById("num").value);
+             flag = a;
+             b = [];
+            while (flag > 0) {
+                b.push(flag % 10);
+                flag = parseInt(flag / 10);
+            }
+            for ( i = 0; i < b.length; i++) {
+                res += factorial(b[i]);
+            }
+
+            if (res == a) {
+                document.getElementById("krishn").innerHTML =  a+ " Is a Krishnamurthy number";
+            }
+            else {
+                document.getElementById("krishn").innerHTML = a+ " Is Not a Krishnamurthy number";
+            }
+        }
+    </script>
+</body>
+
+</html>

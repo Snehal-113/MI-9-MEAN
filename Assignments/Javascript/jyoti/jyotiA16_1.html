@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ass16</title>
+    </head >
+    <body>
+        <h1 id="pid">Anuradha Engineering College</h1>
+        <caption>Left</caption><br>
+        <button type="button" onclick="left()">click me</button><br>
+        <caption>Right</caption><br>
+        <button type="button" onclick="right()">click me</button><br>
+        <caption>Center</caption><br>
+        <button type="button" onclick="center()">click me</button>
+
+       <script>
+           document.getElementById("pid").style.textAlign="center";
+           function left()
+           {
+               document.getElementById("pid").style.textAlign="left";
+           }
+           function right()
+           {
+               document.getElementById("pid").style.textAlign="right";
+           }
+           function center()
+           {
+               document.getElementById("pid").style.textAlign="center";
+           }
+       </script>
+    </body>
+</html>

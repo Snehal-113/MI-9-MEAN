@@ -1,0 +1,22 @@
+<html>  
+<head><title>Assignment13 4</title> 
+<body>
+    <script language="JavaScript">  
+        var getbdate = prompt("Enter Date_Of_Birth")  ;
+        var date= new Date(getbdate);  
+        if(getbdate==null) 
+        {  
+            document.write("Enter a valid date");    
+        } 
+        else
+        {    
+            var cal_age = Date.now()-date.getTime();  
+            var get_age = new Date(cal_age);   
+            var year = get_age.getUTCFullYear();    
+            var age = Math.abs(year - 1970);  
+            document.write( "Age is: " + age + "years");  
+        }  
+    </script>  
+</body>  
+</html>
+ 

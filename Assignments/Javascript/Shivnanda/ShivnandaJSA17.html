@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>Assignment 17</title>
+    </head>
+    <body>
+		<label for="roll">Roll No : </label>
+		<input type="text" name="roll" id="roll"><br><br>
+		<label for="name" >Name : </label>
+		<input type="text" onchange="change()" name="n" id="name"><br><br>
+		<label for="c">C++ marks : </label>
+		<input type="text" onchange="LTU()" name="cpp" id="c"><br><br>
+		<label for="java">JAVA marks : </label>
+		<input type="text" onchange="LTU1()" name="ja" id="java"><br><br>
+		<label for="js">javascript marks : </label>
+		<input type="text" onchange="LTU2()" name="javas" id="js"><br><br>
+		<button onclick="report()">Show Report Card</button>
+		<h1 id="h"></h1>
+		<p id="pid1"></p>
+		<p id="pid2"></p>
+		<p id="pid3"></p>
+		<p id="pid4"></p>
+		<p id="pid5"></p>
+		<p id="pid6"></p>
+		<p id="pid7"></p>
+		<p id="pid8"></p>	
+	<script language="javascript">
+		class Student {
+			constructor(rollno,name,cpp,java,js) {
+				this.rollno=rollno;
+				this.name=name;
+				this.cpp=cpp;
+				this.java=java;
+				this.js=js;
+			}
+			display() {
+				document.getElementById("h").innerHTML="*************Report Card*********";
+				document.getElementById("pid1").innerText="Roll No :"+this.rollno;
+				document.getElementById("pid2").innerText="Name :"+this.name;
+				document.getElementById("pid3").innerText="C++ :"+this.cpp;
+				document.getElementById("pid4").innerText="JAVA  :"+this.java;
+				document.getElementById("pid5").innerText="JAVASCRIPT  :"+this.js;
+			}
+			caltotal() {
+				this.total=this.cpp+this.java+this.js;
+				document.getElementById("pid6").innerText="Total :"+this.total;
+			}
+			calPer() {
+				this.per=this.total/3;
+				document.getElementById("pid7").innerText="Percentage :"+this.per;
+			}
+			Grade() {
+				var per=this.per;
+				var grade;
+				if (per>=80) {
+					grade="A+";
+					document.getElementById("pid8").innerText="Grade :"+grade;
+					document.getElementById("pid8").style.color="green";
+				}
+				else if (per<80 && per>=60){
+					grade="A";
+					document.getElementById("pid8").innerText="Grade :"+grade;
+					document.getElementById("pid8").style.color="green";
+				}
+				else if (per<60 && per>=55){
+					grade="B+";
+					document.getElementById("pid8").innerText="Grade :"+grade;
+					document.getElementById("pid8").style.color="orange";
+				}
+				else if (per<55 && per>=40){
+					grade="B";
+					document.getElementById("pid8").innerText="Grade :"+grade;
+					document.getElementById("pid8").style.color="orange";
+				}
+				else {
+					grade="NO GRADE";
+					document.getElementById("pid8").innerText="Grade :"+grade;
+					document.getElementById("pid8").style.color="red";
+				}
+			}
+		}
+		function change() {
+			var name= document.getElementById("name").value;
+			document.getElementById("name").value=name.toUpperCase();
+		}
+        function LTU(){
+            var a = document.getElementById("c").value;
+            if(a.match(/^[a-z_\-]/))
+            {
+                alert("Error : plz Enter only numeric value");
+            }
+        }
+        function LTU1(){
+            var b = document.getElementById("java").value;
+            if(b.match(/^[a-z_\-]/))
+            {
+                alert("Error : plz Enter only numeric value");
+            }
+        }
+        function LTU2(){
+            var c = document.getElementById("js").value;
+            if(c.match(/^[a-z_\-]/))
+            {
+                alert("Error : plz Enter only numeric value");
+            }
+        }
+		function report() {
+			var rollno= document.getElementById("roll").value;
+			var name= document.getElementById("name").value;
+			var cpp= parseInt(document.getElementById("c").value);
+			var java= parseInt(document.getElementById("java").value);
+			var js = parseInt(document.getElementById("js").value);
+			s=new Student(rollno,name,cpp,java,js);
+			s.display();
+			s.caltotal();
+			s.calPer();
+			s.Grade();
+		}
+	</script>
+</body>
+</html>

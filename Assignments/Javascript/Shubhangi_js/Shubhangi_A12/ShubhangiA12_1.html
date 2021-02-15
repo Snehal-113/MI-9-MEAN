@@ -1,0 +1,61 @@
+<html>
+
+<head>
+  <title>A12_Q1</title>
+</head>
+
+<body>
+  <script>
+    class Employee {
+
+      constructor(name, empno, address, city, salary) {
+        this.empno = 101;
+        this.name = "Ashok Kumar";
+        this.address = "43,Ramnagar";
+        this.city = "Pune,Maharashtra";
+        this.salary = 80000;
+      }
+
+      show_init() {
+        document.write("<br>employee No:" + this.empno);
+        document.write("<br> Name:" + this.name);
+        document.write("<br> address:" + this.address);
+        document.write("<br> city:" + this.city);
+        document.write("<br> salary:" + this.salary);
+      }
+      calculate(da, hra, pf, net, gross) {
+        var basic = this.salary * 12;
+        this.da = ((30 / 100) * this.salary);
+        this.hra = ((15 / 100) * this.salary);
+        this.pf = ((12.5/ 100) * this.salary);
+        this.gross = basic + this.da + this.hra;
+        this.net = this.gross - this.pf;
+        if (gross > 180000) {
+          alert("Income Tax Payer");
+        }
+        else {
+          alert("Not an income tax payer");
+        }
+
+      }
+      display() {
+        document.write("<br><hr>");
+        document.write("<br>employee No:" + this.empno);
+        document.write("<br> Name:" + this.name);
+        document.write("<br> gross:" + this.gross);
+        document.write("<br> net salary:" + this.net);
+
+      }
+
+    }
+    e1 = new Employee();
+    e1.show_init();
+    e1.calculate();
+    e1.display();
+
+
+
+  </script>
+</body>
+
+</html>

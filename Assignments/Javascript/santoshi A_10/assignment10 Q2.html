@@ -1,0 +1,27 @@
+<html>
+    <head><title>digit</title></head>
+    <body>
+        <script language="JavaScript">
+            var number=prompt("enter a number");
+            var visacard=/^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+            var mastercard=/^(?:5[1-5][0-9]{14})$/;
+            if(visacard.test(number)===false)
+                    {
+                        document.write("Error : please enter valid email id");
+
+                    }
+                    else{
+                    document.write("valid");
+                    }
+                    if(mastercard.test(number)===false)
+                    {
+                        document.write("Error : please enter valid email id");
+
+                    }
+                    else{
+                    document.write("valid");
+                    }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM AssQ2</title>
+    </head>
+    <body>
+        <p id="pid"> In ancient Greek folklore, a phoenix (/ˈfiːnɪks/; Ancient Greek: φοῖνιξ, phoînix) is a long-lived bird that cyclically regenerates or is otherwise born again. 
+            Associated with the sun, a phoenix obtains new life by arising from the ashes of its predecessor. Some legends say it dies in a show of flames and combustion, others that it simply dies and decomposes before being born again.</p>
+        <script lang="Javascript">
+         document.getElementById("pid").style.textAlign="center";
+         function red(){
+             document.getElementById("pid").style.color="red"
+         }
+         function blue(){
+             document.getElementById("pid").style.color="blue";
+         }
+         function Green(){
+             document.getElementById("pid").style.color="green";
+         }
+         function Big(){
+             document.getElementById("pid").style.fontSize="30px"
+         }
+         function Small(){
+             document.getElementById("pid").style.fontSize="20px";
+         }
+         function Normal(){
+             document.getElementById("pid").style.fontSize="10px";
+         }
+         function Serif(){
+             document.getElementById("pid").style.fontFamily="serif"
+         }
+         function cursive(){
+             document.getElementById("pid").style.fontFamily="Courier";
+         }
+         function Monospace(){
+             document.getElementById("pid").style.fontFamily="monospace";
+         }
+        </script>
+        <fieldset>
+            <legend>colors:-</legend>
+            <caption>Red</caption><br>
+            <button type="button" onclick="red()">click</button><br><br>
+            <caption>Blue</caption><br>
+            <button type="button" onclick="blue()">click</button><br><br>
+            <caption>Green</caption><br>
+            <button type="button" onclick="Green()">click</button><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Size:-</legend>
+            <caption>Big</caption><br>
+            <button type="button" onclick="Big()">click</button><br><br>
+            <caption>Small</caption><br>
+            <button type="button" onclick="Small()">click</button><br><br>
+            <caption>Normal</caption><br>
+            <button type="button" onclick="Normal()">click</button><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Size:-</legend>
+            <caption>Serif</caption><br>
+            <button type="button" onclick="Serif()">click</button><br><br>
+            <caption>Courier</caption><br>
+            <button type="button" onclick="cursive()">click</button><br><br>
+            <caption>Monospace</caption><br>
+            <button type="button" onclick="Monospace()">click</button><br><br>
+        </fieldset>
+    </body>
+</html> 

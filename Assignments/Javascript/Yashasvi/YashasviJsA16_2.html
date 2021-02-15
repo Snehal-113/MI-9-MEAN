@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <p id="pid" style="text-align:center">
+            Chhatrapati Shivaji Maharaj was born in the Shivneri Fort in 
+            Maharashtra on 19 February 1630. At 15 years, he conquered the Torna Fort.
+            The Chakan fort and the Kondana Fort were taken by bribing the Adil Shahi governor ll Raje Shivaji, 
+            Raje Shivaji killed him with Tiger claws. He became the biggest enemy of Mughal Emperor Aurangzeb. 
+            He was arrested in Agra Fort by Aurangzeb. 
+            In 1674 he made himself king.
+        </p>
+        <fieldset>
+            <legend>Color</legend>
+            <button onclick="red()">Red</button>
+            <button onclick="blue()">Blue</button>
+            <button onclick="green()">Green</button>
+        </fieldset>
+        <fieldset>
+            <legend>Size</legend>
+            <button onclick="small()">Small</button>
+            <button onclick="medium()">Medium</button>
+            <button onclick="large()">Large</button>
+        </fieldset>
+        <fieldset>
+            <legend>Font</legend>
+            <button onclick="font1()">Font 1</button>
+            <button onclick="font2()">Font 2</button>
+            <button onclick="font3()">Font 3</button>
+        </fieldset>
+        <script language="javascript">
+            function red()
+            {
+                document.getElementById("pid").style.color = "red";
+            }
+            function blue()
+            {
+                document.getElementById("pid").style.color = "blue";
+            }
+            function green()
+            {
+                document.getElementById("pid").style.color = "green";
+            }
+            function small()
+            {
+                document.getElementById("pid").style.fontSize = "small";
+            }
+            function medium()
+            {
+                document.getElementById("pid").style.fontSize = "medium";
+            }
+            function large()
+            {
+                document.getElementById("pid").style.fontSize = "large";
+            }
+            function font1()
+            {
+                document.getElementById("pid").style.fontFamily = "Impact,Charcoal,sans-serif";
+            }
+            function font2()
+            {
+                document.getElementById("pid").style.fontFamily = "Times New Roman";
+            }
+            function font3()
+            {
+                document.getElementById("pid").style.fontFamily = "Arial, Helvetica, sans-serif";
+            }
+        </script>
+    </body>
+</html>

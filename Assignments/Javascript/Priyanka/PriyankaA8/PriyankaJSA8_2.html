@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ten subjects extramarks Quick Sort</title>
+    </head>
+<body>
+    <script>
+        var marks = [];
+        var size = 10,
+            i;
+        var imarks = [];
+        var totalmarks = [];
+        for (i = 0; i < size; i++) {
+            marks[i] = prompt("Enter Your subject " + (i + 1) + " Marks");
+            if (marks[i] > 80)
+                prompt("Enter a valid marks as 80 is full marks");
+            imarks[i] = parseInt((20 * marks[i]) / 100);
+            totalmarks[i] = (parseInt(marks[i]) + parseInt(imarks[i]));
+
+        }
+        for (var j = 0; j < 10; j++) {
+            document.write("Student" + (j + 1) + " marks: " + totalmarks[j] + " <br>");
+        }
+        function swap(totalmarks, leftIndex, rightIndex)
+        {
+        var temp = totalmarks[leftIndex];
+        totalmarks[leftIndex] = totalmarks[rightIndex];
+        totalmarks[rightIndex] = temp;
+        }
+        function partition(totalmarks, left, right) {
+        var pivot   = totalmarks[Math.floor((right + left) / 2)], //middle element
+        i       = left, //left pointer
+        j       = right; //right pointer
+        while (i <= j) {
+        while (totalmarks[i] < pivot) {
+            i++;
+        }
+        while (totalmarks[j] > pivot) {
+            j--;
+        }
+        if (i <= j) {
+            swap(totalmarks, i, j); //sawpping two elements
+            i++;
+            j--;
+        }
+        }
+        return i;
+        }   
+
+        function quickSort(totalmarks, left, right) {
+        var index;
+        if (totalmarks.length > 1) {
+        index = partition(totalmarks, left, right); //index returned from partition
+        if (left < index - 1) { //more elements on the left side of the pivot
+            quickSort(totalmarks, left, index - 1);
+        }
+        if (index < right) { //more elements on the right side of the pivot
+            quickSort(totalmarks, index, right);
+        }
+        }
+        return totalmarks;
+        }
+         var sortedArray = quickSort(totalmarks, 0, totalmarks.length - 1);
+         document.write("<br>******After sorting marks:*****");
+        document.write("<br>Sorted Marks :"+sortedArray);
+        </script>
+    </body>
+</html> 

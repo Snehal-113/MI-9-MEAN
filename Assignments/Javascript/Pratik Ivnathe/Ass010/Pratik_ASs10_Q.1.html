@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q2</title>
+    </head>
+    <body>
+     <label>Enter string</label>
+     <input type="text" id="id" size="5">
+     <button type="button" onclick="fun()">click</button>
+     <p id="pid"></p>
+        <script>
+            function fun(){
+            var str=document.getElementById("id").value;
+            regexp = /^[A-Z]/;
+
+            if (regexp.test(str))
+            {
+            document.getElementById("pid").innerHTML="First Character Upper Case";
+            }
+            else
+            {
+                document.getElementById("pid").innerHTML="First Character is nt Upper case"
+            }
+        }
+
+        </script>
+    </body>
+</html>
+        

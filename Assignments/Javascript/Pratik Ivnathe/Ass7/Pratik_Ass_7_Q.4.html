@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>selection sort</title>
+    </head>
+    <body>
+        <script>
+            var n,i,j,temp,std=[];
+            n=prompt("enter number of student");
+            document.write("number of student"+n);
+            for(i=1;i<=n;i++)
+            {
+                j=prompt("Enter Marks of student");
+                std.push(j);
+            }
+            document.write("<br>***********************<br>")
+            document.write("Mark of student: "+std+"<br>");
+            for(var l=0;l<n;l++)
+            {
+                document.write("Mark "+(l+1) +":"+std[l]+"<br>");
+            }
+            document.write("*********************************<br>");
+            document.write("before selection sort:"+std+"<br>");
+             var n1=std.length;
+             var a,b,min;
+             for(a=0;a<n-1;a++)
+             {
+                 min=a;
+                 for(b=a+1;b<n;b++)
+                 {
+                     if(std[b]<std[min])
+                     {
+                         min=b;
+                     }
+                 }
+                 temp=std[a];
+                 std[a]=std[min];
+                 std[min]=temp;
+             }
+             document.write("After Sorting:"+std+"<br>");   
+             for(a=0;a<n;a++)
+             {
+                document.write("Mark"+(a+1)+":"+std[a]+"<br>");   
+ 
+             }   
+        </script>
+    </body>
+</html>

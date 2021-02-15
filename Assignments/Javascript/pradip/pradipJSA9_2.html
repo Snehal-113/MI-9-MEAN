@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>assignment9_2</title>
+    </head>
+    <body>
+        <label for="ival1"> Enter A number:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <button type="button" onclick="primePalindrome()">check</button>
+        <script lang="JavaScript">
+       function primePalindrome()
+            {
+                var rem, temp, final = 0,b=0;
+                var number = parseInt(document.getElementById("ival1").value);
+                temp = number;
+                for (i = 1; i <= temp; i++)
+                 {                
+                  if (temp % i == 0)
+                   {
+                     b = b + 1;
+                   }
+                 }
+                while(number>0)
+                {
+                    rem = number%10;
+                    number = parseInt(number/10);
+                    final = final*10+rem;
+                }
+                if(final==temp && b == 2)
+                {
+                    window.alert("The inputed number is prime Palindrome");
+                }
+                else
+                {
+                    window.alert("The inputted number is not prime palindrome");
+                }
+            }
+        </script>
+    </body>
+</html>

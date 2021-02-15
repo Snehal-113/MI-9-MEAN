@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leap year</title>
+    </head>
+    <body>
+        <label for="fname"> First Name :&nbsp;</label>
+        <input type="text" id="fname" placeholder="first name">
+        <br><br>
+        <label for="lname">Last Name :&nbsp;</label>
+        <input type="text" placeholder="last name">
+        <br>  <br>
+        <label for="uname">Username : &nbsp;</label>
+        <input type="text" id="uname" placeholder="username" onblur="username()" maxlength="15" minlength="8">
+        <br><br>
+        <label for="pass"> Password :&nbsp; &nbsp;</label>
+        <input type="password" id="pass" placeholder="password" onblur="password()" maxlength="15 " minlength="8" >
+        <script>
+            function username(){
+                var a= document.getElementById("uname").value;
+                if(!a.match(/^[a-zA-Z](\w|\d){7,14}/)){
+                    window.alert("inter valid username");
+                    document.getElementById("uname").value;
+                    document.getElementById("uname").focus();
+
+                }
+                
+            }
+
+            function password(){
+                var b=document.getElementById("pass").value;
+                if(b.match(/w{1,}\d{1,}\w{1,})/)){
+                    window.alert("enter valid password");
+                    document.getElementById("pass").value;
+                    document.getElementById("pass").focus();
+                }
+            }
+	
+
+
+
+            
+        </script>
+       
+    </body>
+
+</html>

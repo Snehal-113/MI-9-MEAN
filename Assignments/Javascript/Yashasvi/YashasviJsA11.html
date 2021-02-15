@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Marks of Students</title>
+        <script>
+            function bubble(total,a)
+            {
+               l = total.length;
+           for(i = 0; i < l-1; i++)
+           {
+            for(x = 0; x < l; x++)
+            {
+                if(total[x] < total[x+1])
+                {
+                    temp = total[x];
+                    total[x] = total[x+1];
+                    total[x+1] = temp;
+                    temp = a[x];
+                    a[x] = a[x+1];
+                    a[x+1] =temp;                }
+           }
+       }
+    }
+</script>
+    </head>   
+     <body>
+         <form action="">
+             Enter any Roll Number:
+            <input type ="text" id="num" ><br><br>
+            <button type="button" onclick="search()">Search</button>
+            <p id="demo"></p>
+         </form>
+        <script>
+            var i,m,std,d,x,temp
+            var a=[];
+            var b = [];
+            var total=[];
+            for(i=0;i<10;i++){
+                a[i]=prompt("Enter Roll Number")
+            }
+            document.write("<br>Roll Number:"+a);
+            for(i=0;i<10;)
+                {  
+                 std = prompt("Enter marks of Student");
+                 if(std <0 || std > 50 || std == null )
+                   {
+                      alert("Invalid marks");
+                   }
+                   else
+                   {
+                   b.push(parseInt(std));
+                   i++;
+                }
+                document.write("<br>Marks"+ (i+1)+": "+ b);
+            }
+            for(i=0;i<10;i++){
+                d =b[i]/100 * 20;
+               total[i] =b[i] + d;
+               document.write("<br>Marks scored by Student "+ (i+1)+": "+ total);
+            }
+            bubble(total,a);
+            document.write("<br>Roll Number  &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;Marks");
+            for(i=0;i<10;i++)
+            {
+            document.write("<br><br>"+a[i]+ "&ensp;   &ensp;&ensp;&ensp;&ensp;&ensp;"+total[i])
+            }
+            function search()
+            {
+                newarr=parseInt(document.getElementById("num").value);
+                find(newarr,a,total);
+            }
+            function find(newarr,a,total)
+            {
+                for(i=0;i<a.length;i++)
+                {
+                    if(newarr==a[i])
+                    {
+                        document.getElementById("demo").innerHTML="Roll Number " +newarr+ " has got "+total[i]+" Marks";
+                        break;   
+                    }
+
+                }
+            }
+        </script>
+    </body>
+</html>
+

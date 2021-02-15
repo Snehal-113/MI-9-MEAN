@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Assignment15_1</title>
+</head>
+
+<body>
+    <script lang="javaScript">
+        class BankDet {
+            constructor() {
+                this.sr_no = 0;
+                this.acc_no = 0;
+                this.acc_name = null;
+                this.bal = 0;
+            }
+            display() {
+                document.write("<br>SrNo. &nbsp&nbsp&nbsp&nbsp&nbsp Acc_NO. &nbsp&nbsp&nbsp&nbsp&nbsp Name &nbsp&nbsp&nbsp&nbsp&nbsp Balance");
+                document.write("<br>" + this.sr_no + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + this.acc_no + "&nbsp&nbsp&nbsp&nbsp&nbsp" + this.acc_name + "&nbsp&nbsp&nbsp&nbsp&nbsp" + this.bal);
+            }
+            get_data(sr_no, acc_no, acc_name, bal) {
+                this.sr_no = sr_no;
+                this.acc_no = acc_no;
+                this.acc_name = acc_name;
+                this.bal = bal;
+            }
+            deposit(dep_amt) {
+                this.bal = this.bal + dep_amt;
+                document.write("<br>Amount deposite:" + dep_amt);
+                document.write("<br>Deposite Money :" + this.bal);
+            }
+            try {
+            withdraw(wit_amt)
+            }
+            throw {
+                if (wit_amt > this.bal) {
+                    alert("ERROR Insufficient Funds")
+                }
+                else {
+                    this.bal = this.bal - wit_amt;
+                    document.write("<br>Amount withdraw:" + wit_amt);
+                    document.write("<br>Remain Money :" + this.bal);
+                }
+                if (this.bal < 1000) {
+                    document.write("<br>Warning-Balance below 1000")
+                }
+            }
+        }
+        catch (err) {
+                document.write("<br>Error: " + err.message);
+        }
+        bank = new BankDet();
+        bank.display();
+        bank1 = new BankDet();
+        bank1.get_data(1, 2345, "VAPPSR", 20000);
+        bank1.display();
+        bank1.deposit(10000);
+        bank1.withdrow(2900);
+    </script>
+</body>
+
+</html>

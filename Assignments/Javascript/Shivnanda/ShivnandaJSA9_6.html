@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>assignment9 6</title>
+    </head>
+    <body>
+        <script lang="JavaScript">
+       
+                var str = prompt("Enter a string");
+                document.write(str);
+                var spaceCount = (str.split(" ").length - 1);
+                document.write(spaceCount);
+                var count = 0;
+                var words = str.split(" ");
+                for (i = 0; i < words.length; i++)
+                {
+                    if (words[i] != "") 
+                    {
+                    count += 1;
+                    }
+                }
+                document.write("total words : "+count);
+                document.write("total spaces : "+spaceCount);
+            
+        </script>
+    </body>
+</html>
+

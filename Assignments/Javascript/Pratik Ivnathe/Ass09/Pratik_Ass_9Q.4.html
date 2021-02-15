@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array palindrom</title>
+    </head>
+    <body>
+        <script>
+            debugger;
+            var n,x,rev,sum=0,temp;
+            x=prompt("Enter Any Name");
+            z=x.length;
+            document.write("Length of string:"+z+"<br>");
+            temp=z;
+            while(temp>0)
+            {
+              rev=temp%10;
+              sum=(sum*10)+rev;
+              temp=parseInt(temp/10);
+            }
+            if(sum==z)
+            {
+                document.write("Number is Palindrom");
+            }
+            else
+            {
+                document.write("Number is not Palindrom");
+            }
+        </script>
+    </body>
+</html>

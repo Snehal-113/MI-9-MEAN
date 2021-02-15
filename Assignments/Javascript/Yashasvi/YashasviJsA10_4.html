@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Search a date within a string</title>
+    </head>
+    <body>
+        <h2>Search a date within a string</h2>
+        <script language="javascript">
+            var str = prompt("Enter the string for cheking date");
+            if(/(\d{1,2}[\.\/]){2,2}(\d{2,4})?/g.test(str))
+            {
+                document.write("Given String is valid Date")
+            }
+            else
+            {
+                document.write("Given String is not valid Date")
+            }
+        </script>
+    </body>
+</html>
