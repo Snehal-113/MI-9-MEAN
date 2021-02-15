@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <form >
+            Username:<input type="username" id="usename" name="username"><br /><br />
+            Password:<input type="text" id="password" name="password"><br /><br />
+            <button type = "submit" onclick="login()">Login</button>
+        </form>
+        <script language="javascript">
+            function login()
+            {
+                var x = document.getElementById("usename").value;
+                var y = document.getElementById("password").value;
+                if(x.toUpperCase() == "ADMIN" && y == "admin123")
+                {
+                    window.alert("You can Login");
+
+                }
+                else{
+                    window.alert("You cannot  Login");
+                }
+            }
+
+        </script>
+    </body>
+    
+</html>
