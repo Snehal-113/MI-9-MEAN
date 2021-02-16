@@ -19,7 +19,7 @@
             }
              function pwdcheck(){
                  let b = document.getElementById("pwd").value;
-                if(!b.match(/(\w{1,}|\d{1,}|\W{1,}){8,}/)){
+                if(!b.match(/(\w{1,}\d{1,}\W{1,}){8,}/)){
                     alert("Enter a valid password"); 
                 }
             } 
