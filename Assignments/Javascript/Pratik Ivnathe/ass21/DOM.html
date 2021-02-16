@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>  
+    </head>
+    <body>
+        <fieldset>
+        <label><b>User Name:</b></label>
+        <input type="text" id="id1" size="10"><br><br>
+        <label><b>Password:</b></label>
+        <input type="password" id="id2" size="10"><br><br>
+        <button type="button" onclick="Login()">Login</button>
+        </fieldset>
+        <script>
+            function  Login()
+            {
+            var a=document.getElementById("id1").value;        
+            var b=document.getElementById("id2").value;
+            if(a=="admin" && b=="admin123@")
+            {
+             alert("You can Login Now")
+            }
+            else
+            {
+             alert("Invalid User And Password");
+            }
+        }
+        </script>
+    </body>
+</html>
