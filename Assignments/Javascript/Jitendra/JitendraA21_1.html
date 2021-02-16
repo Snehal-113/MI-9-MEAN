@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Row and coloumn Addition and changing content at runtime</title>
+</head>
+
+<body>
+    Enter number of rows:<input type="text" id="rows" onkeyup="rowerror()"> Enter number of coloumn:<input type="yext" id="cols" onkeyup="colerror()">
+    <button id="button" onclick="Table()">Create Table</button>
+    <table id="tableid" style="height: 200px; width: 600px; border: 2px;"></table>
+    Enter Row Number: <input type="text" id="rownum"><br><br> Enter Column Number: <input type="text" id="colnum"><br><br> Enter Text to be Change: <input type="text" id="txt"><br><br>
+    <button id="button" onclick="changecontent()">Change Content </button>
+    <script language="javascript">
+        alert("Indexing Started from 0");
+
+        function Table() {
+            var row_no = document.getElementById("rows").value;
+            var col_no = document.getElementById("cols").value;
+            for (var i = 0; i <= parseInt(row_no, 11); i++) {
+                var x = document.getElementById("tableid").insertRow(i);
+                for (var j = 0; j <= parseInt(col_no, 11); j++) {
+                    var y = x.insertCell(j);
+                    y.innerHTML = "update cell";
+                }
+            }
+        }
+
+        function rowerror() {
+            var a = document.getElementById("rows").value;
+            if (a < 0 || a.match(/^[a-zA-z_\-]/)) {
+                alert("Error:Enter a value greater than 0 & numeric number  only");
+                document.getElementById("rows").focus();
+                document.getElementById("rows").value = "";
+            }
+        }
+
+        function colerror() {
+            var b = document.getElementById("cols").value;
+            if (b < 0 || b.match(/^[a-zA-z_\-]/)) {
+                alert("Error:Enter a value greater than 0 & numeric number only");
+                document.getElementById("cols").focus();
+                document.getElementById("cols").value = "";
+            }
+        }
+
+        function changecontent() {
+            var x = document.getElementById("rownum").value;
+            var y = document.getElementById("colnum").value;
+            var z = document.getElementById("txt").value;
+            document.getElementById("tableid").rows[x].cells[y].innerHTML = z;
+        }
+    </script>
+</body>
+
+</html>
