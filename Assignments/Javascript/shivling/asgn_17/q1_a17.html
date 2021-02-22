@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leap year</title>
+    </head>
+    <body>
+      <fieldset>
+        <label for="no">Enter Number : &nbsp; </label>
+        <input type="number" id="no" name="no" placeholder="enter no" required>
+        <br> <br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" style="color: green; border-radius: 5px;" onclick="even()">Even/Odd</button>
+      </fieldset>
+      <p id="num">  </p>
+      <p id="even"> </p>
+        <script>
+
+            function even(){
+                var num=document.getElementById("no").value;
+                if(num==1){
+                    document.getElementById("num").innerHTML="enter number is neither even nor odd"+num
+                }
+                else if(num%2==0){
+                    document.getElementById("num").innerHTML="enter number is even"+num;
+
+                }
+                else{
+                    document.getElementById("num").innerHTML="enter number is odd "+num;
+                }
+
+                
+            }
+	
+
+
+
+            
+        </script>
+       
+    </body>
+
+</html><!DOCTYPE html>

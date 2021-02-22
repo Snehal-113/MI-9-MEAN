@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2nd greatest no.between 5</title>
+    </head>
+    <body>
+
+        <form name="calc">
+            <input type=" text" id="ival1" name="ival1">
+            
+            <input type="text"  id="ival2" name="ival2">
+            <input type=" text" id="ival3" name="ival3">
+            <input type=" text" id="ival4" name="ival4">
+            <input type=" text" id="ival5" name="ival5">
+            
+            
+            <button type="button" onclick="greatest()">show me</button>
+            
+        </form>
+        <h1 id="ggg"> </h1>
+        <script>
+
+        function greatest(){
+            
+
+            var a,b,c,d,e;
+            a=parseInt(document.getElementById("ival1").value);
+            b=parseInt(document.getElementById("ival2").value);
+            c=parseInt(document.getElementById("ival3").value);
+            d=parseInt(document.getElementById("ival4").value);
+            e=parseInt(document.getElementById("ival5").value);
+
+            if(a>b&&a>c&&a>d&&a>e){
+                document.getElementById("ggg").innerHTML= a+" is greatter";
+            }
+
+            else if(b>a&&b>c&&b>d&&b>e){
+                document.getElementById("ggg").innerHTML= b+" is greatter";
+
+            }
+
+            else if(c>a&&c>b&&c>d&&c>e){
+                document.getElementById("ggg").innerHTML= c+" is greatter";
+
+            }
+            else if(d>a&&d>b&&d>c&&d>e){
+                document.getElementById("ggg").innerHTML= d+" is greatter";
+
+            }
+            else{
+                document.getElementById("ggg").innerHTML= e+" is greatter";
+
+            }
+
+
+        </script>
+
+        
+
+
+
+
+    </body>
+</html>
