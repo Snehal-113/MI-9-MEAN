@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 18</title>
+</head>
+<body>
+    <fieldset>
+	<div class="div">
+		Enter Shopping Amount :&nbsp;<input type="text" name="num" id="num"><br>
+		<button onclick="check()">check</button>
+	</div>
+	        <p>Message</p>
+			<p id="msg"> Check to get discount !</p>
+		<script>
+		function check() {
+			var tot=0;
+			var num = parseInt(document.getElementById("num").value);
+			tot=num;
+			if (isNaN(num) || num<0) {
+				document.getElementById("msg").innerText="Invalid Input Enter a Number!!";	
+			}
+			else {
+				if (num>=1000) {
+					tot = tot - (tot*15/100);
+					document.getElementById("msg").innerText="Total amount is "+tot;	
+				}
+				else {
+					tot = tot - (tot*5/100);
+					document.getElementById("msg").innerText="Total amount is "+tot;
+				}
+			}
+		}
+    </script>
+    </fieldset>
+</body>
+</html>
