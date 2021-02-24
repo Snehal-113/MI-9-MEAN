@@ -1,0 +1,23 @@
+<html>
+    <head><title>Assignment19_2</title></head>
+    <body>
+        <ol id="ol">
+            <li>SDLC</li>
+            <li>HTML</li>
+            <li>BOOTSTRAP</li>
+            <li>CSS</li>
+        </ol>
+        <input type="text" id="new" name="new">
+        <button type="button" onclick="add()">Add</button>
+        <script>
+            function add(){
+            let x = document.createElement("li");
+            let a = document.getElementById("new").value;
+            let b = document.createTextNode(a);
+            x.appendChild(b);
+            let name = document.getElementById("ol");
+            name.appendChild(x); 
+            }
+        </script>
+    </body>
+</html> 

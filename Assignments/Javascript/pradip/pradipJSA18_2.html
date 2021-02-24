@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>assignment18_2</title>
+    </head>
+    <body>
+        <fieldset style="width: 250px;">
+        <label for="ival1"> Enter A Name:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <br><br>
+        <label for="ival2"> Enter A Age:</label>
+        <input type="text" id="ival2" name="val2" size="5">
+        <br><br>
+        <button type="button" onclick="check()">check</button>
+        </fieldset>
+        <p id="age"></p>
+        <script lang="JavaScript">
+            function check() {
+                var a,b;
+                b=document.getElementById("ival1").value;
+                a=parseInt(document.getElementById("ival2").value);
+                if(a<18) 
+                    {
+                    document.getElementById("age").innerHTML=b+ " "+" is not eligible to vote.";
+                    }
+                else{
+                    document.getElementById("age").innerHTML=b+" " +"is eligible to vote.";
+                    }
+                }               
+        </script>
+    </body>
+</html>
