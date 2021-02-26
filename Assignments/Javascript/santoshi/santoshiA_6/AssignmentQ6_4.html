@@ -1,28 +1,37 @@
 <html>
-    <head><title>Array</title></head>
+    <head>
+        <title>4</title>
+    </head>
     <body>
         <script>
-            function fact(a) {
-            let factorial = a;
-            for (let i = 1; i < a; i++) {
-                 factorial *= i;
+            function fact(n) 
+            {
+            var factorial = n;
+            for (var i = 1; i < n; i++) 
+            {
+                factorial = factorial * i;
             }
             return factorial;
+
         }
         const num = [];
-        let sum = 0;
-        while (true) {
-            let n = prompt("Enter the number:");
-            if (n == "X" || n == null) {
+        var sum = 0;
+        for(i=0;i<5;i++)
+        {
+            var no = prompt("Enter the number");
+            if (no == "X" || no == null)
+             {
                 break;
             }
-            num.push(parseInt(n));
+            num.push(parseInt(no));
         }
-        for (let i = 0; i < num.length; i++) {
-            sum += fact(num[i]);
+        document.write("Numbers  :"+ num);
+        for (var i = 0; i < num.length; i++)
+         {
+            sum =sum + fact(num[i]);
         }
-        document.write(sum);
+        document.write("<br>Sum of factorials all the numbers :"+ sum);
 
-        </script>
+        </script> 
     </body>
-</html> 
+</html 

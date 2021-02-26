@@ -4,7 +4,8 @@
         const arr = [];
         let num = prompt("Enter the number:");
         let x;
-        for (let i = 0; i < num; i++) {
+        for (let i = 0; i < num; i++) 
+        {
             x = prompt("Enter marks:");
             if (x <= 80) {
                 arr.push(parseInt(x));
@@ -13,7 +14,8 @@
         document.write(arr+"<br>");
         let n = arr.length;
         let newarr = [];
-        for (let i = 0; i < n; i++) {
+        for (let i = 0; i < n; i++) 
+        {
             arr[i] += arr[i] * 0.2;
             newarr.push(arr[i]);
             document.write("<br>"+arr[i]);

@@ -1,23 +1,28 @@
 <html>
-    <head><title>Array</title></head>
+    <head>
+        <title>Priyanka</title>
+    </head>
     <body>
         <script>
             const names = [];
-            while(true){
-            let a = prompt("enter the names:");
-            if(a == null || a == "X"){
+            var i;
+            for(i=0;i<5;i++)
+            {
+            var num = prompt("Please enter the names");
+            if(num == null || num == "X")
+            {
                 break;
             }
-            names.push(a.toUpperCase());
+            names.push(num.toUpperCase());
             }
-            for(let i = 0; i < names.length; i++){
+            for(i = 0; i < names.length; i++)
+            {
                 document.write("<br>Names"+(i+1)+":"+names[i]);
             }
-            document.write("<br>Names List:"+ names);
-            document.write("<br>"+names.join("~"));
-            document.write("<br>"+names.sort());
-            document.write("<br>"+names.reverse ());
-
+            document.write("<br>Names List: "+ names);
+            document.write("<br>Seperated list of all the names : "+names.join("~"));
+            document.write("<br>Name in ascending order: "+names.sort());
+            document.write("<br>Name in Descending order: "+names.reverse ());
         </script>
     </body>
-</html> 
+</html>

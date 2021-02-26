@@ -3,20 +3,22 @@
         <title>Array</title>
     </head>
     <body>
-        <script>
-            let names = [];
-            while(true){
-                var a = prompt("Enter names:");
-                if(a == ""){
-                    break;
-                }
-                names.push(a);
+        <script langauge="javascript">
+            var i,k,n;
+            n=[];
+            for(i=0;i<5;i++)
+            {
+                n[i]=prompt("Enter 5 names");
             }
-            document.write("<br>Name list: " + names);
-            for(let i = 0; i < names.length; i++){
-                document.write("<br>Name"+ (i+1)+": "+ names[i]);
+            for(i=0;i<5;i++)
+            {
+                document.write(n[i]+"," );
             }
-
+            document.write("<br>*********");
+            for(i=0;i<5;i++)
+            {
+                document.write("<br>Name "+(i+1)+" :"+n[i]);
+            }
         </script>
     </body>
 </html> 

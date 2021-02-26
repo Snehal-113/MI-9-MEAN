@@ -1,39 +1,25 @@
 <html>
-
-<head>
-    <title>Arrays</title>
-</head>
-
-<body>
-    <script>
-        function fact(a) {
-            let factorial = a;
-            for (let i = 1; i < a; i++) {
-                 factorial *= i;
+    <head>
+        <title>sum of fact</title>
+    </head>
+    <body>
+        <script>
+            var fact=1,number=[],k=[],j=[],fact1=0;
+            for(j=0;j<=3;j++)
+            {
+             var n=prompt("enter number");
+             number.push(n);
             }
-            return factorial;
-        }
-        const num = [];
-        const newArr = [];
-        let sum = 0;
-        while (true) {
-            let n = prompt("Enter the number:");
-            if (n == "X" || n == null) {
-                break;
-            }
-            num.push(parseInt(n));
-        }
-        for (let i = 0; i < num.length; i++) {
-            let f = fact(num[i]);
-            sum += f;
-            newArr.push(f);
-        }
-        document.write("Sum of factorials:"+ sum);
-
-        document.write("<br> List of factorials:" + newArr);
-        newArr.sort(function(a,b){return(a-b)});
-        document.write("<br> Sorted array:"+ newArr);
-    </script>
-</body>
-
+                debugger;
+            for ( var i = 1; i <= n; ++i) {
+              fact= fact*i;
+              k.push(fact);
+              fact1=fact1+fact;
+           }          document.write("output of array of number<br>"+number);
+          document.write("<br>************************************<br>")
+          document.write("output of factorial store in array<br>"+k);
+          document.write("<br>************************************<br>");
+          document.write("output of factorial in dessending order<br>"+k.reverse());
+      </script>
+    </body>
 </html> 

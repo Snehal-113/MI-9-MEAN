@@ -1,22 +1,28 @@
+
 <html>
     <head>
-        <title>Array</title>
+        <title>Assignmnt6_3</title>
     </head>
     <body>
         <script>
-            const num = [];
-            let sum = 0;
-            while(true){
-                let n = prompt("Enter the number:");
-                if(n == "X" || n == null){
+            const no = [];
+            var sum = 0;
+            var i;
+            for(i=0;i<5;i++)
+            {
+                var num = prompt("Enter the number for sum");
+                if(num == "X" || num == null)
+                {
                     break;
                 }
-                num.push(parseInt(n));
+                no.push(parseInt(num));
             }
-            for(i = 0; i < num.length; i++){
-               sum += num[i];
+            document.write(" Numbers added in array:"+ no);
+            for(i = 0; i < no.length; i++)
+            {
+               sum = sum + no[i];
             }
-               document.write("Sum of all the numbers:"+ sum);
+               document.write("<br>Sum of all the numbers added in array:"+ sum);
         </script>
     </body>
 </html> 

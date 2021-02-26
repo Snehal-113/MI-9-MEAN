@@ -1,34 +1,26 @@
 <html>
     <head>
-        <title>Assignment19 Q1</title>
+        <title> Assignment19_1</title>
     </head>
-<body>
-    <input type="text" id="num" name="num">
-    <button type="button" onclick="table()">Table</button>
-    <p id="pid"></p>
-    <script>
-        function table() {
-            let result = 0;
-            let i,res;
-            let x = document.getElementById("num").value;
-            if (x.match(/[^0-9]/)) {
-                alert("Enter a valid number");
-            }
-            else {
-                for (let i = 1; i <= 10; i++) {
-                    let res = parseInt(x) * i;
-                    document.write(x + "*" + i + "=" + res + "<br>");
-                for ( i = 1; i <= 10; i++) {
-                    res = parseInt(x) * i;
-                     result = result + parseInt(x) + "*" + i + "=" + res + "<br>";
+    <body>
+        <fieldset style="height:100px;width:300px">
+            <label for="num"> Enter a Number : </label>
+            <input type="text" id="num"><br><br>
+            <button type="button" onclick="table()">Table</button>
+        </fieldset>
+        <p id="list"></p>
+        <script language="javascript">
+            function table(){
+                var n = parseInt(document.getElementById("num").value);
+                var a=0;
+                var b=i;
+                for(var i=1;i<=10;i++)
+                {
+                    var b = i * n;
+                    a = a+n + "X" +i+ "=" +b+"<br>";
                 }
-                    document.getElementById("pid").innerHTML =(result);
-                }
+                document.getElementById("list").innerHTML=a;
             }
-        }
-
-
-    </script>
-</body>
+        </script>
+    </body>
 </html>
-
