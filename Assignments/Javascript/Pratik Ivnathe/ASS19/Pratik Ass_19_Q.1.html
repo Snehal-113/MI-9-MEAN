@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>multi</title>
+    </head>
+    <body>
+        <input type="text" id="id1" size="10">
+        <button type="button" onclick="mul()">click</button>
+        <p id="pid2"></p>
+        <script>
+            function mul()
+            {   
+               var n=document.getElementById("id1").value;
+                if(n.match(/^[a-zA-Z_\-]/))
+                {
+                    alert("Error:please enter numeric data only");
+                }
+                var  prd=1,n,str=0;
+                for(var i=1;i<=10;i++)
+                {
+                   prd=n*i;
+                     str=str+n+"X"+i+"="+prd+"<br>";
+                }
+                     document.getElementById("pid2").innerHTML=str;
+                
+            }    
+        </script>
+    </body>
+    
+</html>
