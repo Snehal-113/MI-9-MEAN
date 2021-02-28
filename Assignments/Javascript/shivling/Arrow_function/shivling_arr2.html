@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>5     
+        <style>
+
+        </style>
+        <script>
+            function display(){
+
+            }
+            function reg_f(){
+                document.getElementById(("p_reside")).innerHTML +=this;
+            }
+            var arrow_f=()=>{
+                document.getElementById(("p_reside_arr")).innerHTML +=this;
+            }
+        </script>
+        <title> xyz </title>
+        <body>
+          <h1 id="hid"> this is heading -click me</h1>
+
+        <p id='pid'>this is paraghraph</p>
+        <button id='btn'>click me(not arrow)</button>
+        <p id="p_reside"></p>
+
+        <h1 id="hid_arr"> this is heading WITH ARROW FUNCTION -click me</h1>
+
+        <p id='pid_arr'>this is paraghraph</p>
+        <button id='btn_arr'>click me(arrow)</button>
+        <p id="p_reside_arr"></p>
+            
+
+            <script>
+                document.getElementById("pid").addEventListener("click", reg_f);
+                document.getElementById("hid").addEventListener("click", reg_f);
+                document.getElementById("btn").addEventListener("click", reg_f);
+                
+                var reside_arr=()=>{
+                    document.getElementById("p_reside_arr")
+                }
+                document.getElementById("pid_arr").addEventListener("click", arrow_f);
+                document.getElementById("hid_arr").addEventListener("click", arrow_f);
+                document.getElementById("btn_arr").addEventListener("click", arrow_f);
+              
+            
+
+
+                
+            </script>
+        </body>                                                   
+    </head>
+</html>

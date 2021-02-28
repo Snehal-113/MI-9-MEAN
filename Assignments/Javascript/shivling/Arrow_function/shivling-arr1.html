@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+        <title> arrow function </title>
+        <script>
+            function display(){
+                return "this is function with name"
+            }
+        </script>
+        <body>    
+
+        <script>
+            debugger;
+             var a=2,b=3;
+
+             var str=display();
+             document.write(str+ "<br>");
+             var str1= function(){
+                 return "hello - this is a function without name (<b> anonymous function <b>)"
+                 
+             }
+             document.write(str1()+ "<br> <br>");
+
+             var str2=()=>{
+                 return "hello - this is arrow function"
+             }
+             document.write(str2()+ "<br>")
+
+             a=prompt("enter value of a");
+             b=prompt("enter value of b");
+             
+            
+             var str3=(a,b) => { 
+                 return  a*b;
+
+             }
+             document.write("multiplication is " +str3(a,b)+ "<br>");
+             document.write("type of function :  " +typeof(str3)+'<br>');
+             
+             
+            
+
+
+                
+        </script>
+        </body>
+    </head>
+</html>
