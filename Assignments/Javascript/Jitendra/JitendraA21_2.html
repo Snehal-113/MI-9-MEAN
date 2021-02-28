@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <form >
+            Username:<input type="username" id="usename" name="username"><br /><br />
+            Password:<input type="text" id="password" name="password"><br /><br />
+            <button type = "submit" onclick="login()">Login</button>
+        </form>
+        <script language="javascript">
+            function login()
+            {
+                var x = document.getElementById("usename").value;
+                var y = document.getElementById("password").value;
+                if(x == "admin" && y == "admin123")
+                {
+                    window.alert("You are loggedIn");
+
+                }
+                else{
+                    window.alert("You cannot Login due to either password or username mismatch");
+                }
+            }
+
+        </script>
+    </body>
+
+</html>

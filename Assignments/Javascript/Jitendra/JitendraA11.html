@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Evalution 25th jan</title>
+    <script>
+        function bubble(total, arr) {
+            l = total.length;
+            for (i = 0; i < l - 1; i++) {
+                for (x = 0; x < l; x++) {
+                    if (total[x] < total[x + 1]) {
+                        temp = total[x];
+                        total[x] = total[x + 1];
+                        total[x + 1] = temp;
+                        temp = arr[x];
+                        arr[x] = arr[x + 1];
+                        arr[x + 1] = temp;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        Enter any Roll Number:
+        <input type="text" id="num"><br><br>
+        <button type="button" onclick="search()">Search</button>
+        <p id="demo"></p>
+    </form>
+    <script>
+        var arr = [];
+        var marks = [];
+        var total = [];
+        var i;
+        for (i = 0; i < 10; i++) {
+            arr[i] = prompt("Enter your roll-Number");
+        }
+
+        for (i = 0; i < 10;) {
+            marks[i] = prompt("Enter your marks");
+            if (marks[i] > 50 || marks[i] < 0 || marks[i] == null) {
+                window.alert("Invalid marks");
+
+            } else {
+                i++;
+
+            }
+        }
+        for (i = 0; i < 10; i++) {
+            total[i] = (parseInt(marks[i]) + parseInt(marks[i] * 20) / 100);
+
+        }
+        document.write("Roll-Number: " + arr);
+        document.write("<br>" + "Marks: " + marks);
+        document.write("<br>" + "Marks: " + total);
+        bubble(total, arr);
+        document.write("<br><b>Roll Number  &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;<b>Marks");
+        for (i = 0; i < 10; i++) {
+            document.write("<br><br>" + arr[i] + "&ensp;   &ensp;&ensp;&ensp;&ensp;&ensp;" + total[i])
+        }
+
+        function search() {
+            newarr = parseInt(document.getElementById("num").value);
+            find(newarr, arr, total);
+        }
+
+        function find(newarr, arr, total) {
+            for (i = 0; i < arr.length; i++) {
+                if (newarr == arr[i]) {
+                    document.getElementById("demo").innerHTML = "Roll Number " + newarr + " has got " + total[i] + " Marks";
+                    break;
+                }
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
