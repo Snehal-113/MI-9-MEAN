@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Answer1</title>
+</head>
+
+<body>
+    <!-- <label for="bal">Balance</label>
+        <input type="text" id="bal" name="bal"><br>
+        <label for="deposit">Deposit</label>
+        <input type="text" id="deposit" name="deposit">
+        <button type="button" onclick="deposit()">Deposit</button><br>
+        <label for="withdraw">Withdraw</label>
+        <input type="text" id="withdraw" name="withdraw">
+        <button type="button" onclick="withdraw()">Withdraw</button>
+        <p id="pid"></p> -->
+    <script>
+        class BankDet {
+            constructor(acc_no, acc_name, bal) {
+                this.acc_no = 0;
+                this.acc_name = "";
+                this.bal = 0;
+            }
+            getData() {
+                this.acc_no = 1;
+                this.acc_name = "Preeti";
+                this.bal = 5000;
+            }
+            display() {
+                document.write("<br>Account no: " + this.acc_no);
+                document.write("<br>Name: " + this.acc_name);
+                document.write("<br>Balance: " + this.bal);
+            }
+        }
+        class BankOperations extends BankDet {
+            constructor(acc_no, acc_name, bal) {
+                super(acc_no, acc_name, bal);
+            }
+            deposit() {
+                let d = parseInt(prompt("Enter the amount to be deposited:"));
+                this.bal += d;
+            }
+            withdraw() {
+                let w = parseInt(prompt("Enter the amount to be withdrawn:"));
+                if (w > this.bal)
+                    throw "Error: Insufficient funds";
+                if (w < this.bal) {
+                    this.bal -= w;
+                }
+            }
+            checkMinBalance() {
+                if (this.bal <= 1000)
+                    throw "Warning-Balance below 1000";
+            }
+        }
+        /*   withdraw() {
+
+              let w = parseInt(prompt("Enter the amount to be withdrawn:"));
+              try {
+                  if (w > this.bal)
+                      throw "Error: Insufficient funds";
+              }
+              catch (err) {
+                  document.write("<br>" + err);
+              }
+              if (w < this.bal) {
+                  this.bal -= w;
+              }
+          }
+          checkMinBalance() {
+              try {
+                  if (this.bal <= 1000)
+                      throw "Warning-Balance below 1000";
+              }
+              catch (err) {
+                  document.write("<br>" + err);
+              }
+          } */
+
+
+        let x = new BankOperations();
+
+        x.getData();
+        x.deposit();
+        try {
+            x.withdraw();
+            x.checkMinBalance();
+        } 
+            catch(err) {
+                document.write(err);
+            }
+        x.display();
+
+    </script>
+</body>
+
+</html>

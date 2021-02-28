@@ -1,0 +1,46 @@
+ <html>
+    <head>
+        <style>
+            table,th,td{
+              border: 1px solid black; 
+              border-collapse: collapse;
+            }
+        </style>
+       </head>
+    <body>
+        <table id="table1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+         <tr>
+                <td>bb</td>
+                <td>1</td>
+                <td>lko</td>
+            </tr>
+            <tr>
+                <td>cc</td>
+                <td>2</td>
+                <td>pune</td>
+            </tr>
+        </table><br>
+        <label for="rows">Rows</label>
+        <input type="text" id="rows" name="rows"><br><br>
+        <label for="cols">Columns</label>
+        <input type="text" id="cols" name="cols"><br><br>
+        <label for="val">Value</label>
+        <input type="text" id="val" name="val"><br><br>
+        <button type="button" onclick="show()">Show</button>
+        <script>
+            function show(){
+              let table = document.getElementById("table1");
+             let r = document.getElementById("rows").value;
+             let c = document.getElementById("cols").value;
+             let value = document.getElementById("val").value;
+             table.rows[r].cells[c].innerHTML = value;
+            }
+        
+        </script>
+    </body>
+</html> 

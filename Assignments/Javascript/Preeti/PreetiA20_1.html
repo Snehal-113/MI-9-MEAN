@@ -1,0 +1,43 @@
+<html>
+    <head>
+     <style>
+         table,th,td{
+           border: 1px solid black; 
+           border-collapse: collapse;
+         }
+     </style>
+    </head>
+    <body>
+        <table id="table1">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+         <tr>
+                <td>bb</td>
+                <td>1</td>
+                <td>lko</td>
+            </tr>
+            <tr>
+                <td>cc</td>
+                <td>2</td>
+                <td>pune</td>
+            </tr>
+        </table>
+        <button type="button" onclick="show()">Show</button>
+        <script>
+            function show(){
+              let table = document.getElementById("table1");
+              let row = table.insertRow(3);
+              let cell1 = row.insertCell(0);
+              let cell2 = row.insertCell(1);
+              let cell3 = row.insertCell(2);
+               cell1.innerHTML = "aa";
+              cell2.innerHTML = "3";
+              cell3.innerHTML = "delhi"; 
+            }
+        
+        </script>
+    </body>
+</html>

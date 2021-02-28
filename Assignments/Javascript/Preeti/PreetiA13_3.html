@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Answer3</title>
+    </head>
+    <body>
+        <script>
+              let days = prompt("Enter no. of days:");
+            function getDateAgo(date, days){
+                let d1 = new Date();
+                document.write("Today is"+ d1.toLocaleString());
+                d1.setDate(d1.getDate()-days);
+           document.write("<br>"+days+"days ago was"+d1.toLocaleString());
+            }
+            getDateAgo(new Date(), days);
+        </script>
+    </body>
+</html>
