@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Assignment18 Q3</title>
+</head>
+<body>
+    <fieldset style="height:200px;width:500px">
+    Enter the shopping Amount :<input type="text" id="sh" name="s" size="5"><br><br>
+    <button type="button" onclick="cal()">calculate</button>
+</fieldset>
+<script language="JavaScript">
+    function cal()
+    {
+var am = parseInt(document.getElementById("sh").value);
+document.write("<br>Total Amount :"+am);
+
+if(am >1000)
+{
+    var a=(am/100)*15
+    document.write("<br>discount on your amount:"+a);
+}
+else
+{
+    var a=(am/100)*5
+    document.write("<br>discount on your amount:"+a); 
+}
+    }
+</script>
+    </body>
+    </html>

@@ -1,17 +1,17 @@
 <html>
     <head>
-        <title>Assignment part2</title>
+        <title>Assignment part1</title>
     </head>
     <body>
         <script language="javascript">
         class Employee{
             constructor(name1,empno,address,city,salary)
             {
-                this.empno=empno;
-                this.name1=name1;
-                this.address=address;
-                this.city=city;
-                this.salary=salary;
+                this.empno=101;
+                this.name1="Ashok Kumar";
+                this.address="43,Ramnagar";
+                this.city="Pune, Maharastra";
+                this.salary=80000;
             }
 
             show_init(){
@@ -45,18 +45,12 @@
                     document.write("<br>employee  net salary:"+this. net);
                 }
             }
-            
+            }
 
-              e1=new Employee(1, "santoshi","adarsh nagar", "Lakhani",10000);
+              e1=new Employee();
               e1.show_init();
               e1.calcuate();
               e1.display();
-
-              e2=new Employee(2, "Gunjan","Ashok nagar", "Lakhani",90000);
-              e2.show_init();
-              e2.calcuate();
-              e2.display();
-
 
         </script>
     </body>
