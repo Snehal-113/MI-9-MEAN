@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Assignment20_1
+        </title>
+        <style>
+            table,td
+             {
+                border-collapse: collapse;
+                border: 1px solid black;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <table id="table" width="350px">
+            <tr>
+                <td>1</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+        </table>
+        <button id="button" onclick="addrow()">Add</button>
+        <script language=javascript>
+            function addrow() 
+            {
+
+                    var table = document.getElementById("table");
+                    var row = table.insertRow();
+                    var col1 = row.insertCell();
+                    var col2 = row.insertCell();
+                    col1.innerHTML = "3"
+                    col2.innerHTML = ""
+
+                }
+        </script>
+    </body>
+</html>
