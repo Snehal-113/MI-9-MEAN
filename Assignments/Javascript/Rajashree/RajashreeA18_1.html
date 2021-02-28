@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Ass18 q1</title>
+<script language="JavaScript">
+    function check()
+    {
+var num = parseInt(document.getElementById("no").value);
+if(num % 2 == 0)
+{
+    document.write("This is even")  
+}
+else
+{
+    document.write("this is odd")  
+}
+    }
+function data()
+{
+    var num = document.getElementById("no").value;
+if(num.match(/^[a-z_\-]/))
+            {
+                alert("please Enter only numeric value");
+            }
+    }
+    </script>
+    </head>
+<body>
+    <fieldset style="width:300px">
+    Enter the numbers:<input type="text" onchange="data()" id="no" name="n" size="5"><br><br>
+    <button type="button" onclick="check()">even/odd</button>
+</fieldset>
+    </body>
+    </html>
