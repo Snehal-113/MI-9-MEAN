@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Alpha Numeric</title>
+    </head>
+    <body>
+        <script language="javascript">
+            var str = prompt("Enter a value");
+            var regexp = /^[0-9a-zA-Z]+$/;
+            if(regexp.test(str))
+            {
+                document.write("Given value is Alpha numeric");
+            }
+            else
+            {
+                document.write("Given value is not alpha numeric");
+            }
+
+        </script>
+    </body>
+</html>

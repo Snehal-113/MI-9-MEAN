@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Alpha,dash,underscore</title>
+    </head>
+    <body>
+        <script language="javascript">
+            var str = prompt("Enter a string");
+            var regexp = /^[a-z0-9_\-]+$/i;
+            if (regexp.test(str))
+            {
+                document.write("Given value is alpha,dash and underscore string");
+            }
+            else
+            {
+                document.write("Given value is not alpha,dash and underscore string");
+            }
+
+        </script>
+    </body>
+</html>

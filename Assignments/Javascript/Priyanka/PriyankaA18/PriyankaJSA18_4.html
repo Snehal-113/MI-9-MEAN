@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Country-capital</title>
+    </head>
+    <body>
+        <fieldset style="height: 200px;width: 600px;">
+            <p id="pri">Select country to find it's capital</p>
+            <p id="pri1"></p>
+            <select name="con" id="cons" onchange="show()">Country
+                <option value="India">India</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+                <option value="Germany">Germany</option>
+                <option value="Iran">Iran</option>
+                <option value="Italy">Italy</option>
+                <option value="Japan">Japan</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Rassia">Rassia</option>
+            </select>
+            <select name="cap" id="caps">Capital
+                <option value="New Delhi">New Delhi</option>
+                <option value="Brasillia">Brasillia</option>
+                <option value="Ottawa">Ottawa</optio></option>
+                <option value="Beijing">Beijing</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Tehran">Tehran</option>
+                <option value="Rome">Rome</option>
+                <option value="Tokayo">Tokayo</option>
+                <option value="Kathmandu">Kathmandu</option>
+                <option value="Moscow">Moscow</option>
+            </select>
+
+        </fieldset>
+        <script language="javascript">
+            function show(){
+                var a=document.getElementById("cons").value;
+                //var b=document.getElementById("caps").value;
+                if(a == "India"){
+                    document.getElementById("caps").value="New Delhi";
+                    document.getElementById("pri1").innerHTML="New Delhi";
+                }
+                else if (a == "Brazil"){
+                    document.getElementById("caps").value="Brasillia";
+                    document.getElementById("pri1").innerHTML="Brasillia";
+                }
+                else if(a == "Canada"){
+                    document.getElementById("caps").value="Ottawa";
+                    document.getElementById("pri1").innerHTML="Ottawa";
+                }
+                else if(a == "China"){
+                    document.getElementById("caps").value="Beijing";
+                    document.getElementById("pri1").innerHTML="Beijing";
+                }
+                else if(a == "Germany"){
+                    document.getElementById("caps").value="Berlin";
+                    document.getElementById("pri1").innerHTML="Berlin";
+                }
+                else if(a == "Iran"){
+                    document.getElementById("caps").value="Tehran";
+                    document.getElementById("pri1").innerHTML="Tehran";
+                }
+                else if(a == "Italy"){
+                    document.getElementById("caps").value="Rome";
+                    document.getElementById("pri1").innerHTML="Rome";
+                }
+                else if(a == "Japan"){
+                    document.getElementById("caps").value="Tokayo";
+                    document.getElementById("pri1").innerHTML="Tokayo";
+                }
+                else if(a == "Nepal"){
+                    document.getElementById("caps").value="Kathmandu";
+                    document.getElementById("pri1").innerHTML="Kathmandu";
+                }
+                else{
+                    document.getElementById("caps").value="Moscow";
+                    document.getElementById("pri1").innerHTML="Moscow";
+                }
+            }
+        </script>
+    </body>
+</html>

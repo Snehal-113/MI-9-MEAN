@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Table</title>
+        <style>
+            table,th,td{
+                border: 2px solid black;
+                border-collapse: collapse;
+            }
+            th,td{
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="pri1">
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+               
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Priyanka</td>
+            </tr>
+            <tr>
+                <td> 2 </td>
+                <td> Deepti</td>
+            </tr>
+        </table><br>
+        <fieldset>
+            <label for="row">Enter a Row Number : </label>
+            <input type="text" id="row" name="row1"><br><br>
+            <label for="col">Enter a column Number : </label>
+            <input type="text" id="col" name="col1"><br><br>
+            <label for="strr">Enter a string to be change : </label>
+            <input type="text" id="strr" name="strr1"><br><br>
+        <button type="button"onclick="add()">Add Row</button>
+        </fieldset>
+        <script language="javascript">
+            function add()
+            {
+                var a = document.getElementById("row").value;
+                var b = document.getElementById("col").value;
+                var c = document.getElementById("strr").value;
+                document.getElementById("pri1").rows[a].cells[b].innerHTML = c;
+            }
+        </script>
+    </body>
+</html>
