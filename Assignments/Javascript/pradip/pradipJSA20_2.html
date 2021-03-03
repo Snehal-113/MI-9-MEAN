@@ -1,0 +1,101 @@
+<!-- <html>
+    <head>
+        <title>Assignment20_2</title>
+    </head>
+    <body>   
+        <table  id="table" padding="50px"  border="1px";>
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>AAAA</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>CCCC</td>
+        </tr>
+        </table>
+        <br><br>
+         <input type="text" id="row" placeholder="Enter Row Number"><br><br>
+        <input type="text" id="col" placeholder="Enter Column Number"><br><br>
+        <input type="text" id="str" placeholder=" Enter String to be Change"><br><br>
+        <button type="button" onclick="update()">Update</button><br><br>
+        <script language="javascript">
+            function update(){
+                var a = document.getElementById("row").value;
+                var b = document.getElementById("col").value;
+                var c = document.getElementById("str").value;
+                document.getElementById("table").rows[a].cells[b].innerHTML = c;
+            }
+        </script>
+    </body>
+</html> -->
+<html>
+    <head>
+        <title>Assignment22 Q2</title>
+    </head>
+    <body>
+        <table  id="table" padding="50px"  border="1px";>
+            <tr>
+                <th>Select</th>
+                <th>Sr No</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Mobile</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>AAAA</td>
+                <td>ggggg</td>
+                <td>122344</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+                <td>CCCC</td>
+                <td>hhhhh</td>
+                <td>3444555</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>3</td>
+                <td>DDDD</td>
+                <td>iiiiii</td>
+                <td>3444555</td>
+            </tr>
+            </table><br><br>
+            Sr No:<input type="text" id="no" name="no"><br><br>
+            Name:<input type="text" id="nm" name="nm"><br><br>
+            Address:<input type="text" id="add" name="add"><br><br>
+            Mobile No:<input type="text" id="mn" name="mn"><br><br>
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="edit()">Edit</button>
+            <button type="button" onclick="remove()">Delete</button>
+    </body>
+    <script language="javascript">
+        function add(){
+            var newRow = document.getElementById("table");
+            var row = newRow.insertRow();
+            var col1 = row.insertCell();
+            var col2 = row.insertCell();
+            var col3 = row.insertCell();
+            var col4 = row.insertCell();
+            var col5 = row.insertCell();
+            var col6 = row.insertCell();
+            var srno = document.getElementById("no").value;
+            var name = document.getElementById("nm").value;
+            var address = document.getElementById("add").value;
+            var mbno = document.getElementById("mn").value;
+            col1.innerHTML=""
+            col2.innerHTML= srno;
+            col3.innerHTML= name;
+            col4.innerHTML= address;
+            col5.innerHTML= mbno;
+        }
+    </script>
+</body>
+</html>
+</html>
