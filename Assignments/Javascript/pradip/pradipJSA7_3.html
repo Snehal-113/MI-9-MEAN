@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <title>Assignment7_3</title>
+    </head>
+    <body>
+        <script>
+            var i,j,k;
+            const name = [];
+            let num = prompt("how many students he/she wants to enter the marks.");
+            for(i = 0; i < num; i++)
+            {
+                let std = prompt("Enter the student mark");
+                name.push(parseInt(std));
+            }
+            document.write("Before sorting student marks:"+name);
+            for(i = 0; i < num; i++)
+            {
+            document.write("<br>Marks"+ (i+1)+":"+ name[i]);
+            }
+            document.write("<br>Bubble sort")
+            var n = name.length;
+            for(i = 0; i < n-1; i++)
+            {
+                for(j = 0; j < n-1-i; j++)
+                {
+                    if(name[j] > name[j+1])
+                    {
+                        k = name[j];
+                        name[j] = name[j+1];
+                        name[j+1] = k;
+                        document.write("<br>iterations:"+name);
+                    }
+
+                }
+            }
+            document.write("<br>After sorting student marks:"+ name);
+            for(i = 0; i < n; i++)
+            {
+            document.write("<br>Marks"+ (i+1)+":"+ name[i]);
+            }
+        </script>
+    </body>
+</html>

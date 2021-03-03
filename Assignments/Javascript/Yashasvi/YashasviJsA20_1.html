@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Add Rows</title>
+        <style>
+            table,th,td
+            {
+                border:1px solid black;
+                border-collapse: collapse;
+            }
+            th,td
+            {
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="table">
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>aaa</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>bbb</td>
+            </tr>
+        </table>
+        <br>
+        <button id="button" onclick="addrow()">Add Row</button>
+        <script language=javascript>
+            function addrow()
+            {
+                var table=document.getElementById("table");
+                var row=table.insertRow();
+                var col1=row.insertCell();
+                var col2=row.insertCell();
+                // line 40 and 41 are committed to display empyt rows
+                //col1.innerHTML="3"
+                //col2.innerHTML="ccc"
+            }
+        </script>
+    </body>
+</html>

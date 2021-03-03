@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Assignment10_5</title>
+</head>
+
+<body>
+    <form action="">
+        Enter the string : <br>
+        <textarea id="string" name="message" rows="10" cols="30"></textarea> <br>
+        <input type="button" name="count" value="Number of words" onclick="countwords()">
+        <input id="numberofword" type="text" value="" size="5">
+    </form>
+    <script lang="javascript">
+        function countwords() {
+            str = document.getElementById("string").value;
+            //exclude  start and end white-space
+            str = str.replace(/(^\s*)|(\s*$)/gi, "");
+            //convert 2 or more spaces to 1  
+            str = str.replace(/[ ]{2,}/gi, " ");
+            // exclude newline with a start spacing  
+            str = str.replace(/\n /, "\n");
+            document.getElementById("numberofword").value = str.split(' ').length;
+        }
+    </script>
+</body>
+
+</html>

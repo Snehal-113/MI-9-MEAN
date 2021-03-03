@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>double letter</title>
+    </head>
+    <body>
+        <input type="text" id="val" name="val">
+        <button type="button" onclick="double()">Show</button>
+        <p id="pid"></p>
+        <script>
+            function double() {
+                var count = 0;
+                var arr = [];
+                var a = document.getElementById("val").value;
+                for (let j = 0; j < a.length - 1; j++) {
+                    if (a[j] == a[j + 1]) {
+                        count++;
+                        arr.push(a[j]);
+                    }
+                }
+            document.getElementById("pid").innerHTML = ("double letter:" + arr);
+            }
+        </script>
+    </body>
+</html>

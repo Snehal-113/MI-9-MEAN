@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Assignment part2</title>
+    </head>
+    <body>
+        <script language="javascript">
+        class Employee{
+            constructor(name1,empno,address,city,salary)
+            {
+                this.empno=empno;
+                this.name1=name1;
+                this.address=address;
+                this.city=city;
+                this.salary=salary;
+            }
+            get_data(){
+                    this.empno=prompt("Enter Employee No : "+this.empno);
+                    this.name=prompt("Enter Employee Name: "+this.name);
+                    this.address=prompt("Enter Employee Address : "+this.address);
+                    this.city=prompt("Enter Employee City : "+this.city);
+                    this.salary=prompt("Enter Employee salary : "+this.salary);
+                }
+
+            show_init(){
+                document.write("<br>employee No:"+this.empno);
+                document.write("<br>employee name1:"+this.name1);
+                document.write("<br>employee address:"+this.address);
+                document.write("<br>employee city:"+this.city);
+                document.write("<br>employee salary:"+this.salary);
+            }
+
+            calcuate(da,hra,pf,net,gross){
+                var basic=this.salary*12;
+                this.da=((this.salary/100)*30);
+                this.hra=((this.salary/100)*15);
+                this.pf=((this.salary/100)*12.5);
+                this.gross=basic+this.da+this.hra;
+                this.net=this.gross-this.pf;
+                if(gross>180000){
+                    alert("Income tax player");
+                }
+                    else{
+                        alert("Not an income tax player")
+                    }
+                
+                }
+                display()
+                {
+                    document.write("<br>employee No:"+this.empno);
+                    document.write("<br>employee name1:"+this.name1);
+                    document.write("<br>employee gross:"+this.gross);
+                    document.write("<br>employee  net salary:"+this. net);
+                }
+            }
+            
+
+              e1=new Employee();
+              e1.get_data();
+              e1.show_init();
+              e1.calcuate();
+              e1.display();
+
+              e2=new Employee();
+              e2.get_data();
+              e2.show_init();
+              e2.calcuate();
+              e2.display();
+
+
+        </script>
+    </body>
+</html>

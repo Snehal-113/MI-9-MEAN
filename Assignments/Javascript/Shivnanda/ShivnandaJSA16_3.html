@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> Assignment16 Q3</title>
+    </head>
+    <body>
+        <h1 id="hid"> DOM Document </h1>
+        <h3 id="hid2"> Book1</h3>
+        <img id="img1" src="Abc.jpeg"alt="text" style="width: 300px;height: 300px;">
+        <button type="button" onclick="Change()">Play</button>
+        <script language="javascript">
+            var f=0;
+            document.getElementById("hid").style.textAlign="left";
+            function Change(){
+                if(f==0){
+                    document.getElementById("img1").src="Abc.jpeg";
+                    document.getElementById("hid2").innerHTML="Book1";
+                    f=1;
+                }
+                else if(f==1){
+                    document.getElementById("img1").src="index.jpeg";
+                    document.getElementById("hid2").innerHTML="Book2";
+                    f=2;
+                }
+                else{
+                    document.getElementById("img1").src="index1.jpeg";
+                    document.getElementById("hid2").innerHTML="Book3";
+                    f=0;
+                }
+            }
+        </script>
+    </body>
+</html>

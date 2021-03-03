@@ -1,0 +1,50 @@
+<html>
+<head><title>Inheritence</title></head>
+<body>
+<script language="javascript">
+class BankDet{
+constructor(){
+this.acc_no=0;;
+this.acc_name="";
+this.bal=0;
+}
+getData(){
+    this.acc_no=prompt("Enter Account No"+this.acc_no);
+    this.acc_name=prompt("Enter Account Name"+this.acc_name);
+    this.bal=prompt("Enter Account Balance"+this.bal);
+     }
+deposit(amount){
+    this.amount=prompt("enter amount to deposit");
+    this.bal=parseInt(this.bal) + parseInt(this.amount);
+    document.write("<br>Deposited Account Balance is "+this.bal);
+    }
+withdraw(amount){
+this.amount=prompt("Enter amount to withdraw");
+if(this.amount > this.bal)
+{
+    alert("Error:Insufficient Funds");
+}
+else{
+    this.bal =this.bal-this.amount;
+    document.write("<br> Available Balance"+this.bal);
+if(this.bal==1000)
+            {
+                alert("Warning-Balance below 1000!!");
+
+            }
+           }
+        }
+display(){
+    document.write("<br><b>Acc_no &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Name &nbsp Balance &nbsp");
+    document.write("<br>"+this.acc_no +"&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp" +  this.acc_name + " &nbsp &nbsp&nbsp &nbsp" +  this.bal);
+
+        }
+}
+        bd=new BankDet();
+        bd.getData();
+        bd.deposit();
+        bd.withdraw();
+        bd.display();        
+        </script>
+    </body>
+</html>

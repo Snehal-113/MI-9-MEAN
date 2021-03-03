@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Credit Card Number</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            var number=prompt("Enter credit card number");
+            var creditcard=/^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+            var mastercard=/^(?:5[1-5][0-9]{14})$/;
+            if(creditcard.test(number)===false)
+                    {
+                        document.write("Error : please enter valid credit card number");
+                    }
+                    else{
+                    document.write("valid");
+                    }
+                    if(mastercard.test(number)===false)
+                    {
+                        document.write("Error : please enter valid credit card number");
+                    }
+                    else{
+                    document.write("valid");
+                    }
+
+        </script>
+    </body>
+</html>

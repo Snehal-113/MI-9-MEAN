@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>4</title>
+    </head>
+    <body>
+        <script>
+            function fact(n) 
+            {
+            var factorial = n;
+            for (var i = 1; i < n; i++) 
+            {
+                factorial = factorial * i;
+            }
+            return factorial;
+
+        }
+        const num = [];
+        var sum = 0;
+        for(i=0;i<5;i++)
+        {
+            var no = prompt("Enter the number");
+            if (no == "X" || no == null)
+             {
+                break;
+            }
+            num.push(parseInt(no));
+        }
+        document.write("Numbers  :"+ num);
+        for (var i = 0; i < num.length; i++)
+         {
+            sum =sum + fact(num[i]);
+        }
+        document.write("<br>Sum of factorials all the numbers :"+ sum);
+
+        </script> 
+    </body>
+</html 

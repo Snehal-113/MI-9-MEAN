@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Evaluation 5th feb</title>
+    </head>
+    <body>
+        <form>
+        <label>Enter RollNo. of Student</label>
+        <input type="mark" name="RollNo of student" id="id1" size=10><br>
+        <label>Enter Name of Student</label>
+        <input type="mark" name="Name of student" id="id2" size=10><br>
+        <label>Enter Math Mark</label>
+        <input type="mark" name="mark of student" id="id3" size=10><br>
+        <label>Enter English Mark</label>
+        <input type="mark" name="mark of student" id="id4" size=10><br>
+        <label>Enter Science Mark</label>
+        <input type="mark" name="mark of student" id="id5" size=10><br>
+        <button type="button" onclick="Student()">click</button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <p id="pid2"></p>
+        <p id="pid3"></p>
+        <p id="pid4"></p>
+        <p id="pid5"></p>
+        <p id="pid6"></p>
+        <p id="pid7"></p>
+        <p id="A">+A</p>
+        <p id="B">A</p>
+        <p id="C">+B</p>
+        <p id="D">B</p>
+        <p id="E">NO GRADE</p>
+        </form>
+        <script lang="Javascript"> 
+        var a,b,c,i,m,k,res;
+        function Student(){ 
+            a=parseInt(document.getElementById("id1").value);
+            b=parseInt(document.getElementById("id2").value);
+            c=parseInt(document.getElementById("id3").value);
+            d=parseInt(document.getElementById("id4").value);
+            e=parseInt(document.getElementById("id5").value);
+          
+            var total=c+d+e;
+            var per=(total/3)*100;
+
+            document.getElementById("pid").innerHTML="******REPORT CARD*********"
+            document.getElementById("pid1").innerHTML="student Id:"+a;
+            document.getElementById("pid2").innerHTML="student Name:"+b;
+            document.getElementById("pid3").innerHTML="Math:"+c;
+            document.getElementById("pid4").innerHTML="English:"+d;
+            document.getElementById("pid5").innerHTML="Science:"+e;
+            document.getElementById("pid6").innerHTML="Total:"+total;
+            document.getElementById("pid7").innerHTML="Percentage:"+per;
+            
+            if(per>=80)
+            {
+                document.getElementById("A").style.color="green";
+            }
+            else if(per<80 || per>=60)
+            {
+                    document.getElementById("B").style.color="green";
+            }
+            else if(per<60 || per>=55)
+           {
+                    document.getElementById("C").style.color="brown";
+           }
+            else if(per<55 || per>=40)
+            {
+                    document.getElementById("D").style.color="brown";
+            }
+            else(per<45)
+            {
+                document.getElementById("E").style.color="red";
+            }
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Employee {
+			constructor() {
+				this.empno=0;
+				this.name = "";
+				this.address = "";
+				this.city ="";
+				this.salary = 0;
+			}
+			get_data() {
+				this.empno=window.prompt("Employee No : "+this.empno);
+				this.name=window.prompt("Name of Employee : "+this.name);
+				this.address=window.prompt("Address :"+this.address);
+				this.city=window.prompt("City :"+this.city);
+				this.salary=window.prompt("Salary :"+this.salary);
+			}
+			show_init() {
+				document.write("<br>empno "+this.empno);
+				document.write("<br>Name "+this.name);
+				document.write("<br>address "+this.address);
+				document.write("<br>city "+this.city);
+				document.write("<br>salary "+this.salary);
+			}
+			calculate() {
+				var da=parseInt(this.salary)*30/100;
+				var hra=parseInt(this.salary)*15/100;
+				var pf=parseInt(this.salary)*125/1000;
+				var gross=parseInt(this.salary)+da+hra;
+				var net=gross-pf;
+				gross=gross*12;
+				if (gross>180000) {
+					alert("Income Tax Payer");
+				}
+				else {
+					alert("Not an Income Tax Payer");
+				}
+				this.gross=gross;
+				this.net=net;
+			}
+			display() {
+				document.write("<br>Name of Employee : "+this.name);
+				document.write("<br>Employee No : "+this.empno);
+				document.write("<br>Gross salary : "+this.gross);
+				document.write("<br>Net salary : "+this.net);
+			}
+		}
+		e = new Employee();
+		e.get_data();
+		e.show_init();
+		e.calculate();
+		document.write("<hr>");
+		e.display();
+
+	</script>
+</body>
+</html>

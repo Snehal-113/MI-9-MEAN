@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Assignment 17</title>
+  </head>
+  <body>
+    <label for="rollno">Roll No :</label>
+    <input type="number" name="rollno" id="rollno" /><br /><br />
+    <label for="name">Name :</label>
+    <input type="text" onchange="change()" name="name" id="name" /><br /><br />
+    <label for="math">Math marks :</label>
+    <input
+      type="text"
+      onchange=" numericmarks()"
+      name="math"
+      id="math"
+    /><br /><br />
+    <label for="sci">Science marks :</label>
+    <input
+      type="text"
+      onchange=" numericmarks1()"
+      name="sci"
+      id="sci"
+    /><br /><br />
+    <label for="phy">Physics marks :</label>
+    <input
+      type="text"
+      onchange=" numericmarks2()"
+      name="phy"
+      id="phy"
+    /><br /><br />
+    <button onclick="report()">Show report card</button>
+    <h1 id="heading"></h1>
+    <p id="rollno1"></p>
+    <p id="name1"></p>
+    <p id="math1"></p>
+    <p id="sci1"></p>
+    <p id="phy1"></p>
+    <p id="total"></p>
+    <p id="per"></p>
+    <p id="grade"></p>
+    <script lang="JavaScript">
+               class student{
+                   constructor(Rollno,Name,Math,Sci,Phy){
+                       this.Rollno=Rollno;
+                       this.Name=Name;
+                       this.Math=Math;
+                       this.Sci=Sci;
+                       this.Phy=Phy;
+                   }
+                   show(){
+                       document.getElementById("heading").innerHTML="********Report Card********";
+                       document.getElementById("rollno1").innerHTML="Roll No :"+this.Rollno;
+                       document.getElementById("name1").innerHTML="Name :"+this.Name;
+                       document.getElementById("math1").innerHTML="Math marks :"+this.Math;
+                       document.getElementById("sci1").innerHTML="Science marks :"+this.Sci;
+                       document.getElementById("phy1").innerHTML="Physics marks :"+this.Phy;
+                   }
+                   findtotal(){
+                       this.total=this.Math+this.Sci+this.Phy;
+                       document.getElementById("total").innerHTML="Total Marks :"+this.total;
+                   }
+                   findper(){
+                       this.per=this.total/3;
+                       document.getElementById("per").innerHTML="Percentage :"+this.per;
+                   }
+                   findgrade(){
+                       var per= this.per;
+                       var grade;
+                       if(per>=80){
+                           grade= "A+";
+                           document.getElementById("grade").innerHTML=" Grade :"+grade;
+                           document.getElementById("grade").style.color="green";
+                       }
+                       else if(per<80 && per>=60){
+                           grade= "A";
+                           document.getElementById("grade").innerHTML=" Grade :"+grade;
+                           document.getElementById("grade").style.color="green";
+                       }
+                       else if(per<60 && per>=55){
+                           grade= "B+";
+                           document.getElementById("grade").innerHTML=" Grade :"+grade;
+                           document.getElementById("grade").style.color="orange";
+                       }
+                       else if(per<55 && per>=40){
+                           grade= "B";
+                           document.getElementById("grade").innerHTML=" Grade :"+grade;
+                           document.getElementById("grade").style.color="orange";
+                       }
+                       else{
+                           grade= "No Grade";
+                           document.getElementById("grade").innerHTML=" Grade :"+grade;
+                           document.getElementById("grade").style.color="red";
+                       }
+                   }
+               }
+               function change() {
+      var Name= document.getElementById("name").value;
+      document.getElementById("name").value=Name.toUpperCase();
+         }
+               function numericmarks(){
+               var a = document.getElementById("math").value;
+               if(a.match(/^[a-z_\-]/))
+               {
+                   alert("Error : plz Enter only numeric value");
+               }
+               }
+               function numericmarks1(){
+               var b = document.getElementById("sci").value;
+               if(b.match(/^[a-z_\-]/))
+               {
+                   alert("Error : plz Enter only numeric value");
+               }
+               }
+               function numericmarks2(){
+               var c = document.getElementById("phy").value;
+               if(c.match(/^[a-z_\-]/))
+               {
+                   alert("Error : plz Enter only numeric value");
+               }
+               }
+               function report()
+               {
+               var Rollno =document.getElementById("rollno").value;
+               var Name =document.getElementById("name").value;
+               var Math =parseInt(document.getElementById("math").value);
+               var Sci =parseInt(document.getElementById("sci").value);
+               var Phy =parseInt(document.getElementById("phy").value);
+               std = new student(Rollno,Name,Math,Sci,Phy);
+               std.show();
+               std.findtotal();
+               std.findper();
+               std.findgrade();
+               }
+    </script>
+  </body>
+</html>

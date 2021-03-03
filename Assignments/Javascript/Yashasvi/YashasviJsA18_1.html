@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Odd/Even Number</title>
+    </head>
+    <body>
+        <fieldset>
+            Enter number: 
+            <input type="text" id="Even" name="Even" size="4" onchange="info()">
+            <br>
+            <button type="button" onclick="evenNum()">Odd/Even</button>
+        </fieldset>
+        <p id="even"></p>
+        <script language="javascript">
+
+            function evenNum()
+            {
+                var num=parseInt(document.getElementById("Even").value);
+                if(num%2==0)
+                {
+                    document.getElementById("even").innerHTML= num + " is a Even Number";
+                }
+                else
+                {
+                document.getElementById("even").innerHTML= num + " is a Odd Number";
+                }
+            }
+            function info()
+            {
+                var num = document.getElementById("Even").value;
+                if(num.match(/^[a-z_\-]/))
+                {
+                alert("Error: Enter only Number");
+                }
+            }
+           </script>
+    </body>
+</html>

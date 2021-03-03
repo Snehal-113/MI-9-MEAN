@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eval %th feb</title>
+</head>
+
+<body>
+    Roll No. : <input type="number" id="roll" value="Number"><br> Name : <input type="text" id="name1" style="text-transform: uppercase" value="Name"><br> DBMS Marks :
+    <input type="number" id="dbms" value="DBMS Number"><br> Operating System: <input type="number" id="os" value="OperatingS Number"><br> Web :<input type="number" id="web" value="Number"><br><br>
+    <button type="button" onclick=upper()>Submit</button>
+    <p id="per"></p>
+    <p id="grd"></p>
+    <script>
+        function upper() {
+            var rnum = document.getElementById("roll").value;
+            var nam = document.getElementById("name1").value;
+            var uname = nam.toUpperCase();
+            var marks1 = document.getElementById("dbms").value;
+            var marks2 = document.getElementById("os").value;
+            var marks3 = document.getElementById("web").value;
+            var total = parseInt(marks1) + parseInt(marks2) + parseInt(marks3);
+            var pct = document.getElementById("per").value = total / 3;
+            regexp = /^[0-9a-zA-Z]+$/;
+            if (regexp.test(marks1)) {
+                console.log("A correct input");
+            } else {
+                document.write("Error: You Entered a alphanumeric string for dbms marks");
+
+            }
+            if (regexp.test(marks2)) {
+                console.log("A correct input");
+            } else {
+                document.write("Error: You Entered a alphanumeric string for  os marks");
+
+            }
+            if (regexp.test(marks3)) {
+                console.log("A correct input");
+            } else {
+                document.write("Error: You Entered a alphanumeric string for web marks");
+
+            }
+            if (pct >= 80) {
+                grade = document.getElementById("grd").innerHTML = "<span style='color: red;'>A+</span>";
+
+            } else if (pct >= 60 && pct < 80) {
+                grade = document.getElementById("grd").innerHTML = "<span style='color: red;'>A</span>";
+            } else if (pct >= 55 && pct < 60) {
+                grade = document.getElementById("grd").innerHTML = "<span style='color: blue;'>B+</span>";
+            } else if (pct >= 40 && pct < 55) {
+                grade = document.getElementById("grd").innerHTML = "<span style='color: blue;'>B</span>";
+            } else {
+                grade = document.getElementById("grd").innerHTML = "No Grade";
+            }
+            document.write("*****REPORT CARD******<br><br><br>");
+            document.write("ROLL NUMBER:    " + rnum + "<br>");
+            document.write("Name:    " + uname + "<br>");
+            document.write("DBMS:    " + marks1 + "<br>");
+            document.write("OS:   " + marks2 + "<br>");
+            document.write("WEB:     " + marks3 + "<br>");
+            document.write("TOTAL:    " + total + "<br>");
+            document.write("PERCENTAGE:" + Math.abs(pct) + "<br>");
+            document.write("GRADE:    " + grade);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Age and Vote</title>
+    </head>
+    <body>
+        <fieldset>
+            Enter a Name: <input type="text" id="name"><br>
+            Enter a Age: <input type="text" id="age"><br>
+            <button type="button" onclick="check()">Show</button>
+        </fieldset>
+        <p id="pid"></p>
+        <script language="javascript">
+            function check()
+            {
+                var name = document.getElementById("name").value;
+                var age = parseInt(document.getElementById("age").value);
+                
+                if(age>=18)
+                {
+                    document.getElementById("pid").innerHTML=name+ " is eligible to vote";
+                }
+                else
+                {
+                    document.getElementById("pid").innerHTML=name+ " is not eligible to vote";
+                }
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Ass16 q3</title>
+    </head>
+    <body>
+        <h1 id="pid">City</h1>
+        <img id="imid" src="ind.jpeg" style="height: 300px; width: 300px;">
+        <button type="button" onclick="photo()">Play</button>
+        <script lang="javascript">
+            var flag=0;
+            function photo()
+            {
+            if(flag==0)
+            {
+                document.getElementById("pid").innerHTML="Jammu Kashmir";
+                document.getElementById("imid").src="jambu.jpeg";
+                flag=1;
+            }
+            else if(flag==1)
+            {
+                document.getElementById("pid").innerHTML="Goa";
+                document.getElementById("imid").src="goa.jpg";
+                flag=2;
+            }
+            else
+            {
+                document.getElementById("pid").innerHTML="Kull Manali";
+                document.getElementById("imid").src="kull%20manali.jpeg";
+                flag=0;
+            }
+        }
+        </script>
+        </body>
+        </html>

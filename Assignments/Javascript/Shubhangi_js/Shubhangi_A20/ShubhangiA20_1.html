@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <title>A20_Q1</title>
+  <style>
+    table,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <table id="tid">
+    <tr>
+      <td>Row 1</td>
+    </tr>
+    <tr>
+      <td>Row 2</td>
+    </tr>
+  </table>
+  <button type="button" onclick="myFun()">Add Row</button>
+  <script language="javascript">
+    function myFun(){
+      var table = document.getElementById("tid");
+      var row = table.insertRow();
+      row.innerHTML ="<td>Row 3 </td>"
+    }
+  </script>
+</body>
+</html>

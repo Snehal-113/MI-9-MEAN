@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q.2</title>
+    </head>
+    <body>
+        <script>
+            class Employee{
+                constructor(empno,name,address,city,salary)
+                {
+                   this.empno=empno;
+                   this.name=name;
+                   this.address=address;
+                   this.city=city;
+                   this.salary=salary;
+                }
+                show_init(){
+                    document.write("<br>Employee no:"+this.empno);
+                    document.write("<br>Employee name:"+this.name);
+                    document.write("<br>Employee address:"+this.address);
+                    document.write("<br>Employee city:"+this.city);
+                    document.write("<br>Employee salary:"+this.salary);
+                }
+                display(){
+                    document.write("<br>***********************************");
+                    document.write("<br>Employee Da:"+this.da);
+                    document.write("<br>Employee Hra:"+this.hra);
+                    document.write("<br>Employee Pf:"+this.pf);
+                    document.write("<br>Employee Gross:"+this.gross);
+                    document.write("<br>Employee Total:"+this.total);
+                    document.write("<br>***********************************");
+
+                }
+                calculate(){
+                    this.da=(30/100)*this.salary;
+                    this.hra=(15/100)*this.salary;
+                    this.pf=(12.5/100)*this.salary;
+                    this.gross=this.salary+this.da+this.hra;
+                    this.total=12*this.gross;
+                 if(this.total>180000)
+                 {
+                     window.alert("Income Tax Payer");
+                 }
+                 else
+                 {
+                     window.alert("Not an income tax payer.")
+                 }
+                 this.net = this.gross-this.pf;
+             }
+            }
+            s1=new Employee(200,"Pratik","Ayodhya Nagar 101","Nagpur",10000);
+            s1.show_init();
+            s1.calculate();
+            s1.display();
+            s2=new Employee(120,"Mangesh","Shivaji chowk","Mumbai",20000);
+            s2.show_init();
+            s2.calculate();
+            s2.display();
+        </script>
+    </body>
+</html>

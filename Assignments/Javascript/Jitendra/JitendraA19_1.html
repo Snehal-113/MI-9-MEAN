@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    Enter a number: <input type="number" id="num">
+    <button onclick=table1()>Create Table</button>
+    <p id="pid"></p>
+    <script>
+            function table1()
+            { 
+                var a = parseInt(document.getElementById("num").value);
+                var prd=1;
+                var str=0;
+                for(var i=1;i<=10;i++)
+                {
+                    prd= a*i;
+                    var str = str+a+"X"+i+"="+prd+"<br>";
+                }
+                document.getElementById("pid").innerHTML=str;
+            }
+    </script>
+</body>
+
+</html>

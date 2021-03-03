@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Check URL</title>
+    </head>
+    <body>
+        <script language="javascript">
+            var myurl=prompt("Enter url");
+            url="((http|https)://)(www.)?"+"[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]"+"{2,6}\\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)";
+            if(url.test(myurl))
+            {
+                document.write("Valid URL");
+            }
+            else{
+                document.write("Not Valid URL");
+            }
+        </script>
+    </body>
+</html>
+

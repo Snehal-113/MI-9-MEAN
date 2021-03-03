@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Automarphic number
+        </title>
+    </head>
+    <h1>Automarphic number</h1>
+    <body>
+        Enter any Number: <input type = "number" name = "n"  id="no" size="5">
+        <button onclick="auto()">Check</button></br></br>
+        <script language="JavaScript">
+        function auto()
+    {
+        var num, a, b,c = 10;
+        num=Number(document.getElementById("no").value);
+        b = c;
+        while (num > b) 
+        {
+        b = b * c;
+        }
+        a = (num * num) % b;
+        if (a == num)
+        {
+        alert("  Given no is Automarphic number");
+        }
+        else
+        {
+        alert("given no is Not Automarphic number");
+        }
+    }
+        </script>
+    </body>
+</html>

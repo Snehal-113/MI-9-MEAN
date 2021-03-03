@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>factorial</title>
+    </head>
+    <body>
+       <script>
+        
+                var n,fact=1,temp,sum=0,rem;
+                n=prompt("Enter Number");
+                temp=n;
+                while(temp>0)
+                {
+                    rem=temp%10;
+                for(var j=1;j<=n;j++)
+                {
+                    fact=fact*j;
+                }
+                sum=sum+fact;
+                temp=parseInt(temp/10);
+              }
+              if(sum==temp)
+              {
+                 document.write("No is krishnamurthy");
+              }
+             else
+             {
+                 document.write("No is not Krishnamurthy");
+             }       
+        </script>
+    </body>
+</html>

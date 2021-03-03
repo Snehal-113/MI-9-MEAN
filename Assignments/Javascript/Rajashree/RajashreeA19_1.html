@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Ass18 q2</title>
+    <script language="JavaScript">
+        function cal()
+        {
+        var i,num;
+        num =parseInt(document.getElementById("nam").value);
+        document.write("<br>this is" +num+ "table");
+        for(i=1;i<=10;i++)
+        {
+            var tab=num*i;
+            
+            document.write("<br>"+num+" X "+i+"="+tab);
+            
+        }
+    }
+    function cond(){
+            var num =document.getElementById("nam").value;
+            if(num.match(/^[a-z_\-]/))
+            {
+                alert("Error : plz Enter only numeric value");
+            }
+        }
+        </script>
+        </head>
+<body>
+    <fieldset style="width:300px">
+    Enter the Number:<input type="text" id="nam" onchange="cond()" name="na" size="5"><br><br>
+    <button type="button" onclick="cal()">create</button>
+</fieldset>
+    </body>
+    </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leap year</title>
+    </head>
+    <body>
+        <fieldset>
+            <label for="name1">Enter Name :</label>
+            <input type="text" id="name1" placeholder="enter name" required>
+            <br>
+            <br>
+            <label for="age">Enter age :&nbsp; &nbsp;</label>
+            <input type="number" id="age" placeholder="enter age in year" style="color: green;">
+            <br> <br> 
+            <button type="button" onclick="show()"> show </button>
+            
+            <p id="ag"> </p>
+            <p id="op"></p>
+        </fieldset>
+
+        <script>
+            function show(){
+                var age1=parseInt(document.getElementById("age").value);
+                var nm= document.getElementById("name1").value;
+
+            if(age1<18){
+                document.getElementById("ag").innerHTML=nm+ " is not eligible for Vote";
+            }
+            else{
+                document.getElementById("ag").innerHTML=nm+ "  is  eligible for Vote";
+            }
+
+            }
+            
+
+
+
+            
+        </script>
+       
+    </body>
+
+</html>

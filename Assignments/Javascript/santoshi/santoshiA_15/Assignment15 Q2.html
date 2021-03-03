@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Assignment15 2</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            class salesman{
+                constructor(){
+                    this.Sid=0;
+                    this.Sname="";
+                }
+                getdata(id,name){
+                    this.Sid=id;
+                    this.Sname=name;
+                }
+                display()
+                {
+                    document.write("<br><b>SalesmanId &nbsp &nbsp SalesmanName &nbsp &nbsp &nbsp Commission &nbsp &nbsp &nbsp Sales");
+                    document.write("<br>"+this.Sid+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"+this.Sname);
+                }
+            }
+            class commissions extends salesman{
+                constructor(){
+                    super();
+                    this.commi=0;
+                    this.sale=0;
+                }
+                getdata(id,name,sales){
+                    super.getdata(id,name);
+                    this.sales=sales;
+                }
+                salcommission(sales)
+                {
+                    var commission;
+                    try{
+                        if(isNaN(sales))
+                        {
+                            throw  "Please Enter only Number"
+                        }
+                    }
+                    catch(err)
+                    {
+                        document.write(err);
+                    }
+                    if (sales>= 0 && sales<=5000){
+                        commission=0.02;
+                    }
+                    else if(sales>=5001 && sales<= 12000){
+                        commission=0.05;
+                    }
+                    else if(sales>=12001 && sales <=50000)
+                    {
+                        commission=0.1;
+                    }
+                    else{
+                        commission=0.5;
+                    }
+                    this.commi=(sales)*commission;
+                }
+                display(){
+                    super.display();
+                    document.write("&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"+this.commi+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"+this.sales);
+                }
+            }
+            c1=new commissions();
+            var id=prompt("Enter a salesman id");
+            var name=prompt("Enter a salesman name");
+            var sales=prompt("enter salescommission");
+            try{
+                if(sales < 0){
+                    throw "Please enter valid number";
+                }
+            c1.getdata(id,name,sales);
+            c1.salcommission(sales);
+            c1.display();
+            }
+            catch(e){
+                alert(e);
+            }
+        </script>
+    </body>
+</html>

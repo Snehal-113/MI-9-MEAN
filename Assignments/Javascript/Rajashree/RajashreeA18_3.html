@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Ass18 q3</title>
+<script language="JavaScript">
+    function cal()
+    {
+var am = parseInt(document.getElementById("sh").value);
+document.write("<br>Total Amount :"+am);
+
+if(am >1000)
+{
+    var a=(am/100)*15
+    document.write("<br>discount on your amount:"+a);
+}
+else
+{
+    var a=(am/100)*5
+    document.write("<br>discount on your amount:"+a); 
+}
+    }
+    </script>
+    </head>
+<body>
+    <fieldset style="width:300px">
+    Enter the shopping Amount :<input type="text" id="sh" name="s" size="5"><br><br>
+    <button type="button" onclick="cal()">calculate</button>
+</fieldset>
+    </body>
+    </html>

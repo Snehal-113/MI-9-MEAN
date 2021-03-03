@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Assignmnt6_3</title>
+    </head>
+    <body>
+        <script>
+            const no = [];
+            var sum = 0;
+            var i;
+            while(true)
+            {
+                var num = prompt("Enter the number for sum");
+                if(num == "X" || num == null)
+                {
+                    break;
+                }
+                no.push(parseInt(num));
+            }
+            for(i = 0; i < no.length; i++)
+            {
+               sum = sum + no[i];
+            }
+               document.write("Sum of all the numbers added in array:"+ sum);
+        </script>
+    </body>
+</html>

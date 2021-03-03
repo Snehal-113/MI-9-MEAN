@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>prime palindrome</title>
+    </head>
+    <body>
+        <script>
+            var n,i,temp,sum=0,rem,count=0,j,x;
+            x=[];
+            n1=prompt("Enter number");
+            document.write("Number Enter::"+n1+"<br>");
+            for(j=1;j<=n1;j++)
+            {
+            n=prompt("Enter Any number");
+            x.push(n);
+            }
+            temp=n;
+            debugger;
+            while(temp>0){
+                rem=temp%10;
+                sum=(sum*10)+rem;
+                temp=parseInt(temp/10);
+            }
+            if(sum==temp)
+                for(i=1;i<=n;i++)
+                {
+                   if(n%i==0)
+                    {
+                        count++;
+                    }
+                }  
+            if(count==2 && sum==temp)
+            {
+                
+                document.write(+n+">>"+"Number is Prime Palindrom"+"<br>");
+                
+            }
+            else
+            {
+                document.write(+n+">>"+"Number is not Prime palindrom"+"<br>");
+            }
+            document.write("list of number>>"+x);
+        </script>
+    </body>
+</html>

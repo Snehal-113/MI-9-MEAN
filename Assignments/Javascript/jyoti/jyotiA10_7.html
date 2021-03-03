@@ -1,0 +1,33 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<title> 
+		ass10
+	</title> 
+</head> 
+
+<body > 
+	
+		Input: <input id = "input1" type = "text" /> 
+       <button onclick = "show()">click me </button> 
+       <p id = "show_DOWN"></p>
+     
+	<script> 
+		var el_up = document.getElementById('show_Up'); 
+		var el_down = document.getElementById('show_DOWN'); 
+		var input = document.getElementById('input1'); 
+		
+		el_up.innerHTML = "Click on the button to " 
+				+ "validate alphanumeric input.";	 
+		
+		function show() { 
+			var val = input.value; 
+			var RegEx = /^[a-z0-9]+$/i; 
+			var Valid = RegEx.test(val); 
+			el_down.innerHTML = Valid; 
+		} 
+	</script> 
+</body> 
+
+</html> 

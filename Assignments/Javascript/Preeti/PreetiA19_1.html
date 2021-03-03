@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <input type="text" id="num" name="num">
+    <button type="button" onclick="table()">Table</button>
+    <p id="pid"></p>
+    <script>
+        function table() {
+            let result = 0;
+            let i,res;
+            let x = document.getElementById("num").value;
+            if (x.match(/[^0-9]/)) {
+                alert("Enter a valid number");
+            }
+            else {
+                for ( i = 1; i <= 10; i++) {
+                    res = parseInt(x) * i;
+                     result = result + parseInt(x) + "*" + i + "=" + res + "<br>";
+                }
+                    document.getElementById("pid").innerHTML =(result);
+                }
+        }
+        
+        
+    </script>
+</body>
+
+</html>

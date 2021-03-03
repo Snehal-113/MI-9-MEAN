@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Assignmnt7_4</title>
+</head>
+<body>
+    <script>
+        var i, j, temp;
+        const name = [];
+        var num = prompt("how many students he/she wants to enter the marks");
+        for(i = 0; i < num; i++)
+        {
+            var std = prompt("Enter the student mark");
+            name.push(parseInt(std));
+        }
+        document.write("Before sorting student marks" + name);
+        for(i = 0; i < num; i++)
+        {
+            document.write("<br>Marks"+ (i+1)+":"+ name[i]);
+        }
+        var n = name.length;
+        for(i = 0; i < n; i++)
+        {
+            for(j = i+1; j < n; j ++)
+            {
+                if(name[i] > name[j])
+                {
+                temp = name[i];
+                name[i] = name[j];
+                name[j] = temp;
+                document.write("<br>iterations:"+name);
+            }
+        }
+        }
+        document.write("<br>After sorting student marks:"+ name);
+        for(i = 0; i < n; i++)
+        {
+            document.write("<br>Marks"+ (i+1)+":"+ name[i]);
+        }
+    </script>
+</body>
+</html>

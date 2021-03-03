@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>Assignment11</title>
+    <script lang="JavaScript">
+        function Rollno()
+        {
+          m= parseInt(document.getElementById("ival1").value);
+          console.log(m)
+          find(m,roll,marks)
+        }
+        function find(m,roll,marks) {
+            for(var i=0;i<roll.length;i++){
+                if(m == roll[i]){
+                    document.getElementById("z").innerHTML="roll number"+m+"has got"+marks[i];
+                }
+            }
+        }
+     function bubble(newarr,rl)
+     {
+      var i,j,temp;
+      var n=newarr.length;
+      for (i=0;i<n-1;i++)
+      {
+          for(j=0;j<n;j++)
+          {
+              if(newarr[j]<newarr[j+1])
+              {
+               temp=newarr[j];
+               newarr[j]=newarr[j+1];
+               newarr[j+1]=temp;
+               temp=rl[j];
+               rl[j]=rl[j+1];
+               rl[j+1]=temp;   
+              }
+          }
+      } 
+      return newarr; 
+     }   
+    </script>
+</head>
+<body>
+    <label for="ival1"> Enter A number:</label>
+    <input type="text" id="ival1" name="roll" size="5">
+    <button type="button" onclick="Rollno()">check</button>
+    <p id="z"></p>
+    <script lang="JavaScript">
+        var roll=[];
+        var marks=[];
+        var x,y,i,j;
+        for(i=0;i<5;i++)
+        {
+            y=prompt("enter roll number:");
+            roll.push(parseInt(y));
+        }
+        for(i=0;i<5;)
+        {
+            x=prompt("enter marks:");
+            if(x>50 || x<0 || x==null)
+            {
+                alert("Error - Invalid Marks.");
+            }
+            else
+            {
+                marks.push(parseInt(x));
+                i++;
+            }
+        }   
+            document.write("<br>Marks"+(i+1)+":"+marks);
+            var newarr=[];
+            for (j=0;j<5;j++)
+            {
+                newarr[j]=parseInt(((20*marks[j])/100)+marks[j]);
+            }
+            // var arr1=[];
+            // var rl=[];
+            // rl=roll;
+            document.write("<br>before sorting : "+newarr);
+            bubble(newarr,roll);
+            document.write("<br>After adding 20% : "+newarr);
+            document.write("<br>Rollno &nbsp;  Marks");
+            for(let i=0;i<5;i++)
+            {
+                document.write("<br>"+roll[i]+"&nbsp&nbsp&nbsp&nbsp"+marks[i]);
+            }
+            for( let i=0;i<5;i++)
+            {
+                document.write("<br>"+roll[i]+"&nbsp&nbsp&nbsp&nbsp"+newarr[i]);
+            }
+            {
+                
+            }
+            
+    </script>
+</body>
+</html>

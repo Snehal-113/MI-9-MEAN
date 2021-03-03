@@ -1,0 +1,57 @@
+<html>
+    <head><title>Employee Info</title></head>
+    <body>
+        <script>
+            
+           class employee{
+               constructor(name, empno,address, city,salary, da, hra, pf, gross, net){
+                   this.name = name;
+                   this.empno = empno;
+                   this.address = address;
+                   this.city = city;
+                   this.salary = salary;
+               }
+               display(){
+                   document.write("empno = "+this.empno);
+                   document.write("<br>name = "+this.name);
+                   document.write("<br>address = "+this.address);
+                   document.write("<br>city = "+this.city);
+                   document.write("<br>salary = "+this.salary);
+                   document.write("<br>da = "+this.da);
+                   document.write("<br>hra = "+this.hra);
+                   document.write("<br>pf = "+this.pf);
+                   document.write("<br>gross = "+this.gross);
+                   document.write("<br>net = "+this.net);
+               }
+               calculate(){
+                   this.da = this.salary * 0.3;
+                    this.hra = this.salary * 0.15;
+                   this.pf = this.salary * 0.125;
+                   this.gross = (this.salary*12) + this.da + this.hra+this.pf;
+                   this.net = this.gross - this.pf;
+                
+               } 
+               check(){
+                   let new_gross = this.gross * 12;
+                   if(new_gross >180000){
+                    document.write("<br>Income Tax Payer");
+                   }
+                   else{
+                       document.write("<br>Not an income tax payer");
+                   
+                   }
+               }
+            }
+
+        
+        function show_init(){
+              let emp = new employee(101,"Ashok Kumar","43, Ramnagar","Pune , Maharashtra",80000);
+              
+              emp.calculate();
+              emp.display();
+              emp.check();
+           }
+        show_init();
+        </script>
+    </body>
+</html>

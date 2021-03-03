@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Employee class</title>
+</head>
+
+<body>
+    <script language="javascript">
+        class employee {
+            constructor(empno, name, address, city, salary) {
+                this.empno = empno;
+                this.name = name;
+                this.address = address;
+                this.city = city;
+                this.salary = salary;
+            }
+            show_init() {
+                document.write("<br>Employee Number: " + this.empno);
+                document.write("<br>Employee Name: " + this.name);
+                document.write("<br>Employee Address: " + this.address);
+                document.write("<br>Employee City: " + this.city);
+                document.write("<br>Employee Salary: " + this.salary);
+                document.write("<br>");
+            }
+            get_data(empno, name, address, city, salary) {
+                this.empno = empno;
+                this.name = name;
+                this.address = address;
+                this.city = city;
+                this.salary = salary;
+            }
+            calculate() {
+                this.da = (30 / 100) * this.salary;
+                this.hra = (15 / 100) * this.salary;
+                this.pf = (12.5 / 100) * this.salary;
+                this.gross = this.salary + this.da + this.hra;
+                if (this.gross > 180000) {
+                    window.alert("Income Tax Payer");
+                } else {
+                    window.alert("Not an Income Tax Payer");
+                }
+                this.net = this.gross - this.pf;
+            }
+            Display() {
+                document.write("<br>Employee Salary: " + this.salary);
+                document.write("<br>Da of Employee: " + this.da);
+                document.write("<br>Hra of Employee: " + this.hra);
+                document.write("<br>Pf of Employee: " + this.pf);
+                document.write("<br>Gross Salary of Employee: " + this.gross);
+                document.write("<br>Net Salary of Employee: " + this.net + "<br>");
+            }
+
+        }
+        s1 = new employee();
+        s2 = new employee();
+        s1.get_data(101, "Ashok Kumar", "43, Ramnagar", "Pune,Maharashtra", 80000);
+        s2.get_data(104, "Jitenda Kumar", "45, Bhadous", "Sheikhpura,Bihar", 150000);
+        s1.show_init();
+        s1.calculate();
+        s2.calculate();
+        s1.Display();
+        s2.show_init();
+        s2.Display();
+    </script>
+</body>
+
+</html>
