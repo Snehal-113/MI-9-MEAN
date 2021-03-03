@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A18/Q1...</title>
+</head>
+<body>
+    <fieldset>
+        Enter the number : <input type="number" id="input" name="num"><br><br>
+        <button type="button" style="color: rgb(31, 11, 105);"  onclick="formula()">CHECK</button>
+      </fieldset>
+      <p id="output"></p>
+      <script>
+        function formula() {
+          var num = parseInt(document.getElementById("input").value);
+          if (num % 2 == 0) {
+          document.getElementById("output").innerHTML= "The Entered number is an Even Number.";
+          }
+          else {
+            document.getElementById("output").innerHTML="The Entered Number is an Odd Number.";
+          }
+    
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>A19_Q2</title>
+  </head>
+  <body>
+     <ol id="list">
+      <li>SDLC</li>
+      <li>HTML</li>
+      <li>FIGMA</li>
+      <li>CSS</li>
+     </ol> 
+    <input type="text" id="sub" name="sub" text-transform="uppercase">
+    <button type="button" onclick="add()">Add</button>
+    <script language="javascript">
+      function add() {
+       let a = document.createElement("li");
+       let sub = document.getElementById("sub").value;
+       let node = document.createTextNode(sub);
+       a.appendChild(node);
+      let element = document.getElementById("list");
+      element.appendChild(a); 
+      }
+    </script>
+  </body>
+</html>

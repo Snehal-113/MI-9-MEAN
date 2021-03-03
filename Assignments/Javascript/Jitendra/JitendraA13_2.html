@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GET WEEK DAY</title>
+    </head>
+    <body>
+        <script language="javascript">
+            function getWeekDay(d1)
+            {
+              var days = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA' , 'SU'];
+              return days[d1.getDay()];
+            }
+            var d1 = new Date(2021,0,31);
+            alert ("Given date is "+getWeekDay(d1));
+
+        </script>
+    </body>
+</html>

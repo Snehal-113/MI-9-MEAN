@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Assignment18 Q2</title>
+</head>
+<body>
+    <fieldset style="height:200px;width:500px">
+    Enter the Name:<input type="text" id="nam" name="na" size="5"><br><br>
+    Enter the Age :<input type="text" id="ag" name="n" size="5"><br><br>
+    <button type="button" onclick="check()">Show</button>
+</fieldset>
+<script language="JavaScript">
+    function check()
+{
+    var num = document.getElementById("nam").value;
+    var nag = parseInt(document.getElementById("ag").value);
+    document.write(num);
+    document.write("<br>");
+    document.write(nag);
+
+if(nag >=18)
+{
+    alert(num+ "is eligible to vote"); 
+}
+else
+{
+    alert(num+ "is not eligible to vote"); 
+}
+    }
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>Answer 2</title>
+</head>
+
+<body>
+    <!-- <label for="sr_no">Sr_No</label>
+    <input type="text" id="sr_no" name="sr_no"><br><br>
+    <label for="acc_no">Acc_No</label>
+    <input type="text" id="acc_no" name="acc_no"><br><br>
+    <label for="sr_no">Acc_Name</label>
+    <input type="text" id="acc_name" name="acc_name"><br><br>-->
+    <label for="bal">Balance</label>
+    <input type="text" id="bal" name="bal" readonly><br><br>
+    <p id="pid" style="color:red"></p>
+    <p id="pid1" style="color:goldenrod"></p>
+    <label for="deposit">Deposit</label>
+    <input type="text" id="deposit" name="deposit"><br><br>
+    <label for="withdraw">withdraw</label>
+    <input type="text" id="withdraw" name="withdraw"><br><br>
+    <!-- <label for="check">Check</label>
+    <input type="text" id="check" name="bal"><br><br>
+    <label for="check_bal">Check_bal</label>
+    <input type="text" id="check_bal" name="check_bal"><br><br> -->
+    <button type="button" onclick="deposit()">Deposit</button>
+    <button type="button" onclick="withdraw()">withdraw</button>
+   <!--  <button type="button" onclick="checkIfInsuffiecientFunds()">check</button>
+    <button type="button" onclick="checkMinBalance()">check_bal</button><br><br> -->
+    <script>
+        class BankDet {
+            constructor(sr_no, acc_no, acc_name, bal) {
+                this.sr_no = 0;
+                this.acc_no = 0;
+                this.acc_name = "";
+                this.bal = 0;
+            }
+            getData() {
+                this.sr_no = prompt("Enter serial no");
+                this.acc_no = prompt("Enter account number");
+                this.acc_name = prompt("Enter account name");
+                this.bal = prompt("Enter initial balance");
+                document.getElementById("bal").value = parseInt(this.bal);
+            }
+            display() {
+                document.write("SrNo.&ensp;&ensp;");
+                document.write("AccNo.&ensp;&ensp;");
+                document.write("Name&ensp;&ensp;");
+                document.write("Balance<br>");
+                document.write(this.sr_no + "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;");
+                document.write(this.acc_no + "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;");
+                document.write(this.acc_name + "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;");
+                document.write(this.bal + "&ensp;&ensp;&ensp;&ensp;");
+
+            }
+        }
+
+        class BankOperations extends BankDet {
+            constructor(acc_no, acc_name, bal) {
+                super(acc_no, acc_name, bal);
+            }
+            checkIfInsuffiecientFunds(withdrawn) {
+                if (this.bal - withdrawn < 0 ) {
+                    return true;
+                }
+            }
+            checkMinBalance(withdrawn) {
+                if (this.bal - withdrawn  < 1000) {
+                    this.bal = this.bal - withdrawn;
+                    return true;
+                }
+            }
+        }
+                let bankDet = new BankOperations();
+                bankDet.getData();
+
+                function deposit() {
+                    resetMessages();
+                    const deposited = parseInt(document.getElementById("deposit").value);
+                    bankDet.bal = parseInt(bankDet.bal) + deposited;
+                    document.getElementById("bal").value = bankDet.bal;
+                    document.getElementById("deposit").value = "";
+                    if (bankDet.checkMinBalance(withdrawn)) {
+                        document.getElementById("pid1").innerHTML = "Warning – Balance below 1000";
+                    }
+                }
+
+                function resetMessages() {
+                    document.getElementById("pid").innerHTML = "";
+                    document.getElementById("pid1").innerHTML = "";
+                }
+                function withdraw() {
+                    resetMessages();
+                    const withdrawn = parseInt(document.getElementById("withdraw").value);
+                              
+                    if (bankDet.checkIfInsuffiecientFunds(withdrawn)) {
+                        document.getElementById("pid").innerHTML = "Error:Insufficient Funds";
+                    }
+                    else if (bankDet.checkMinBalance(withdrawn)) {
+                        document.getElementById("pid1").innerHTML = "Warning – Balance below 1000";
+                    } else {
+                        bankDet.bal = parseInt(bankDet.bal) - withdrawn;
+                    }
+                    document.getElementById("bal").value = bankDet.bal;
+                    document.getElementById("withdraw").value = "";
+                }
+
+        
+    </script>
+</body>
+
+</html>

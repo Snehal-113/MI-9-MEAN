@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Emp info</title>
+</head>
+
+<body>
+    <script>
+        class employee {
+            constructor(name, empno, address, city, salary, da, hra, pf, gross, net) {
+                this.empno = 0;
+                this.name = "";
+                this.address = "";
+                this.city = "";
+                this.salary = 0;
+            }
+            
+            show_init() {
+                document.write("<br>empno = " + this.empno);
+                document.write("<br>name = " + this.name);
+                document.write("<br>address = " + this.address);
+                document.write("<br>city = " + this.city);
+                document.write("<br>salary = " + this.salary);
+            }
+           get_data() {
+               this.name = prompt("name:");
+               this.address = prompt("address:");
+               this.city = prompt("city:");
+               this.salary = prompt("net salary:");
+            }
+         calculate() {
+                this.da = this.salary * 0.3;
+                this.hra = this.salary * 0.15;
+                this.pf = this.salary * 0.125;
+                this.gross = (this.salary*12) + this.da + this.hra + this.pf;
+                this.net = this.gross - this.pf;
+            }
+            display(){
+                document.write("<br>gross salary= "+this.gross);
+            }
+            check() {
+                let new_gross = this.gross * 12;
+                if (new_gross > 180000) {
+                    document.write("<br>Income Tax Payer");
+                }
+                else {
+                    document.write("<br>Not an income tax payer");
+
+                }
+            } 
+        }
+        function show() {
+            let emp1 = new employee();
+            let emp2 = new employee();
+            emp1.show_init();
+            emp2.get_data();
+            emp2.show_init();
+            emp2.calculate();
+            emp2.display();
+            emp2.check(); 
+        }
+        show();
+    </script>
+</body>
+
+</html>

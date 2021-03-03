@@ -1,0 +1,35 @@
+<head>
+  <title>A20_Q2</title>
+  <style>
+    table,
+    td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <table id="tid">
+    <tr>
+      <td>first Row Col 1</td>
+      <td>first Row Col 2</td>
+    </tr>
+    <tr>
+      <td>Second Row Col 1</td>
+      <td>Second Row Col 2</td>
+    </tr>
+  </table>
+  <button type="button" onclick="myFun()">Add Row</button>
+  <script language="javascript">
+    function myFun() {
+      var table = document.getElementById("tid");
+      var row = table.insertRow();
+      var col1 = row.insertCell();
+      var col2 = row.insertCell();
+      col1.innerHTML = "<td>Third Row Col 1</td>";
+      col2.innerHTML = "<td>Third Row Col 2</td>";
+    }
+  </script>
+</body>
+
+</html>

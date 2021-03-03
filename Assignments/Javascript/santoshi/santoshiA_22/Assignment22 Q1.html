@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Assignment22 Q1</title>
+    </head>
+    <style>
+        body{
+          text-align: center;
+        }
+        input{
+          margin-top: 10px;
+        }
+      </style>
+    <body>
+        <h1>Login Page</h1>
+        <fieldset>
+            First Name:<input typr="text" id="fname" name="fname"><br><br>
+            Last Name:<input type="text" id="lname" name="lname"><br><br>
+            Username:<input type="text" id="uname" name="uname" minlength="8" maxlength="15" onblur="user()"><br><br>
+            Password:<input type="password" id="pid" name="pid"minlength="8"onblur="pass()"><br><br>
+            <button type="button" id="bid" onclick="login()">LogIn</button>
+        </fieldset>
+        <script language="javascript">
+            
+          var a= document.getElementById("fname").value;
+         var b= document.getElementById("lname").value;
+          function user(){
+            var c=document.getElementById("uname").value;
+          if(c.match(/^[A-Za-z]{7,14}/))
+        {
+             alert("You can continue");
+        }
+        else
+        {
+            alert("  username start with alphabet and must be atleast 8 characters and maximum of 15 characters");
+            document.getElementById("uname").value="";
+            document.getElementById("uname").focus(); 
+        }
+          }
+           function pass(){
+            var d=document.getElementById("pid").value;
+        if(d.match(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,20}/))
+        {
+             alert("You can continue");
+        }
+        else
+        {
+            alert(" password atleast 8 characters and having atleast 1 special character,1 number and 1 alphabet");
+            document.getElementById("pid").value="";
+            document.getElementById("pid").focus(); 
+
+        }
+     }
+     function login(){
+         alert("sucessfully")
+ }
+        </script>
+    </body>
+</html>

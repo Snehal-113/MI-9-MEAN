@@ -1,0 +1,35 @@
+<html>
+    <head><title>Answer4</title></head>
+    <body>
+        <p id="pid">Select country to find its capital</p>
+        <label for="country">Country:</label>
+        <select name="country" id="country" onchange="getCapital(this.value)">
+            <option value="India">India</option>
+            <option value="Australia">Australia</option>
+            <option value="Algeria">Algeria</option>
+            <option value="Angola">Angola</option>
+            <option value="Benin">Benin</option>
+        </select>
+        <label for="capital">Capital:</label>
+        <select name="capital" id="capital">
+            <option value="New Delhi">New Delhi</option>
+            <option value="Canberra">Canberra</option>
+            <option value="Algiers">Algiers</option>
+            <option value="Luanda">Luanda</option>
+            <option value="Porto-Novo">Porto-Novo</option>
+        </select>
+        <script>
+            const countryCapitalMap = {
+                'India': 'New Delhi',
+                'Australia': 'Canberra',
+                'Algeria': 'Algiers',
+                'Angola': 'Luanda',
+                 'Benin': 'Porto-Novo'
+            }
+            function getCapital(country){
+                document.getElementById("capital").value = countryCapitalMap[country];
+            }
+            
+        </script>
+    </body>
+</html>

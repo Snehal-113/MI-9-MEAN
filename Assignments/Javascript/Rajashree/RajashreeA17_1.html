@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Evaluation</title>
+</head>
+<body>
+        Roll No:<input type="text"id="rn"><br>
+        Name:<input type="text" id="name"><br>   
+        Subject Marks:
+            computer:<input type="text" id="sub1" ><br>
+            Electronics:<input type="text" id="sub2"><br>
+            Math:<input type="text" id="sub3"><br>           
+        <input type="button" value="Result" onClick="Report()">
+    </form>
+    <h2>Report Card</h2>
+       Roll No:<input type="text" id ="rno"><br>
+       Name   :<input type="text" id ="nm"><br>
+       computer:<input type="text" id ="comp"><br>
+       Electronics:<input type="text" id ="elec"><br>
+       Math:<input type="text" id ="math" ><br>
+       TOTAL:<input type="text" id ="TotalMarks"><br>
+       PERCENTAGE:<input type="text" id ="AvgMarks"><br>
+       GRADE:<input type="text" id ="Grade"><br>
+    <script lang="JavaScript">
+         function Report(){ 
+        var grade = "";  
+        var  result="";  
+        var rno = document.getElementById("rn").value;
+        var nm  = document.getElementById("name").value;
+        var comp = document.getElementById("sub1").value;
+        var elec = document.getElementById("sub2").value;
+        var math = document.getElementById("sub3").value;
+         var totalMarks = comp -(-elec) -(- math);
+        var averageMarks = totalMarks/3.0;                                
+        switch(
+                (averageMarks > 80 && averageMarks <= 100)? 1 : 
+                (averageMarks > 50 && averageMarks < 60) ? 2 : 
+                (averageMarks > 40 && averageMarks < 50) ? 3 : 
+                (averageMarks <40)? 4 : 0 
+              )
+                {
+                    case 3 :document.getElementById("Grade").style.color="orange";grade = "B";break;
+                    case 2 :document.getElementById("Grade").style.color="green";grade = "A"; break;
+                    case 1 :document.getElementById("Grade").style.color="green";grade= "A+"; break;
+                    case 0 :document.getElementById("Grade").style.color="orange";grade = "B+"; break;
+                    case 4 :document.getElementById("Grade").style.color="red";grade = "no grade";break;
+                }
+                document.getElementById("rno").value = document.getElementById("rn").value;
+                document.getElementById("nm").value = document.getElementById("name").value.toUpperCase();
+            document.getElementById("comp").value = document.getElementById("sub1").value ;
+            document.getElementById("elec").value = document.getElementById("sub2").value ;
+            document.getElementById("math").value = document.getElementById("sub3").value ;
+        document.getElementById("TotalMarks").value = totalMarks;
+        document.getElementById("AvgMarks").value = averageMarks;
+        document.getElementById("Grade").value = grade;
+}
+</script>
+</body>
+</html>

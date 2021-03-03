@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 18</title>
+	<style type="text/css">
+		.div1 {
+			width: 50%;
+			margin-left: 25%;
+			height: 150px;
+			border: 1px solid black;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<center>Enter Name :&nbsp;<input type="text" name="name" id="nm"></center><br>
+		<center>Enter Age :&nbsp;<input type="text" name="num" id="num"></center><br>
+		<center><button onclick="check()">Check</button></center>
+	</div>
+	<div class="div2">
+		<fieldset>
+			<legend>Message</legend>
+			<p id="msg">Enter Name and Age then click Check to see if you are eligible to vote.</p>
+		</fieldset>
+	</div>
+	<script type="text/javascript">
+		function check() {
+			var name =document.getElementById("nm").value;
+			var num = parseInt(document.getElementById("num").value);
+			if (isNaN(num) || num<0) {
+				document.getElementById("msg").innerText="Invalid Input Enter valid data (i.e Age in numbers)!!";	
+			}
+			else {
+				if (num>=18) {
+					document.getElementById("msg").innerText=name+" is eligibe to vote";	
+				}
+				else {
+					document.getElementById("msg").innerText=name+" is not eligible to vote";
+				}
+			}
+		}
+	</script>
+</body>
+</html>

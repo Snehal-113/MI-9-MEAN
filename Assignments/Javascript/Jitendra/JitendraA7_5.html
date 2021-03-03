@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>pattern</title>
+    </head>
+    <body>
+        <script>
+            var i,j,k;
+            const array = [];
+            let num = prompt("total number of students");
+            for(i = 0; i < num; i++)
+            {
+                let std = prompt("Enter the student mark");
+                array.push(parseInt(std));
+            }
+            document.write("Before sorting marks are:"+array);
+            for(i = 0; i < num; i++)
+            {
+            document.write("<br>Marks"+ (i+1)+":"+ array[i]);
+            }
+            var n = array.length;
+            for(i = 1; i < n; i++)
+        {
+            for(j = i; j >= 0; j--)
+            {
+                if(array[j-1]>array[j])
+                {
+                    temp = array[j-1];
+                    array[j-1] = array[j];
+                    array[j] = temp;
+                    document.write("<br>After " +i+ " iteration: "+ array);
+                }
+                else{
+                    break;
+                }
+            }
+            document.write("<br>After " +i+ " iteration:"+ array);
+        }
+            document.write("<br>After sorting  marks are:"+ array);
+            for(i = 0; i < n; i++)
+            {
+            document.write("<br>Marks"+ (i+1)+":"+ array[i]);
+            }
+        </script>
+    
+    </body>
+</html>

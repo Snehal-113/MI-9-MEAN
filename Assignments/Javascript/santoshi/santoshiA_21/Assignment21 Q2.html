@@ -1,0 +1,30 @@
+<html>
+<head>
+    
+    <title>Assignment21 Q2</title>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <fieldset style="height:200px;width:500px">
+        User Name:<input type="text"  id="no1" name="n" size="5"><br><br>
+        Password:<input type="password"  id="no2" name="n" size="5"><br><br>
+        <button type="button" id="b1" onclick="change()">LogIn</button>
+        </fieldset>
+    
+
+<script language="javascript">
+    function change(){
+        var a= document.getElementById("no1").value;
+        var b=document.getElementById("no2").value;
+        if(a.toUpperCase()=="ADMIN" && b=="admin@123")
+        {
+             alert("you are Login");
+        }
+        else{
+            alert("you are not Login");
+        }
+    }
+
+</script>
+</body>
+</html>

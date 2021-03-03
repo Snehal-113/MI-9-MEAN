@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image and Heading toggle</title>
+</head>
+
+<body>
+    <h1 id="head2">Left allignment of heading</h1>
+    <button type="button" onclick=image1()>Left Allignment</button>
+    <fieldset>
+        <legend id="logo">LOGO</legend>
+        <img src="LOGO.png" id="img1" alt="logo">
+        <button type="button" onclick=image1()>Play</button>
+
+    </fieldset>
+
+    <script>
+        flag = 0;
+
+        function image1() {
+            document.getElementById("head2").style.textAlign = "left";
+
+            if (flag == 0) {
+                document.getElementById('img1').src = 'person.png';
+                document.getElementById("logo").innerHTML = "Person LOGO";
+                flag++;
+            } else if (flag == 1) {
+                document.getElementById('img1').src = 'practicals.png';
+                document.getElementById("logo").innerHTML = "Computer LOGO";
+                flag++;
+            } else {
+                document.getElementById('img1').src = 'bar.png';
+                document.getElementById("logo").innerHTML = "bar LOGO";
+                flag = 0;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

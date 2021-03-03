@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <p id="pid"></p>
+        <script>
+            let string = prompt("Enter the words:");
+            let words = string.split(" ");
+            let wordsWithoutSpace = string.trim();
+            let oneWhiteSpace = string.replace(/\s\s+/g,' ');
+            document.write(words.length);
+            document.getElementById("pid").innerHTML = wordsWithoutSpace;
+            document.getElementById("pid").innerHTML = oneWhiteSpace;
+        </script>
+    </body>
+</html>

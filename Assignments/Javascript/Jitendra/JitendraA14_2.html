@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inheritence Bank-Details</title>
+    </head>
+    <body>
+        <script language="javascript">
+            class BankDet
+            {
+                constructor()
+                {
+                    this.acc_no=0;
+                    this.acc_name="";
+                    this.bal=0;
+                }
+                getData()
+                {
+                    this.acc_no=prompt("Enter Account Number : "+this.acc_no);
+                    this.acc_name=prompt("Enter Account Name : "+this.acc_name);
+                    this.bal=prompt("Enter Balance Amount : "+this.bal);
+                }
+                deposit(amount)
+                {
+                    this.amount=prompt("Enter Deposit Amount : "+this.amount);
+                    this.bal=parseInt(this.bal)+parseInt(this.amount);
+                    document.write("<br>Total Deposited Amount is : "+this.bal);
+                }
+                withdraw(amount)
+                {
+                    this.amount=prompt("Enter Withdrawal Amount : "+this.amount);
+                    if(this.amount>this.bal)
+                    {
+                        alert("Error:Insufficient Funds");
+                    }
+                    else
+                    {
+                        this.bal=this.bal-this.amount;
+                        document.write("<br>Blance Available : "+this.bal);
+                        if(this.bal==1000)
+                              {
+                                  alert("Warning-Balance below 1000");
+                              }
+                    }
+                }
+                display()
+                    {
+                      document.write("<br>Acc_no &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Name &nbsp&nbsp&nbsp&nbsp&nbsp Balance");
+                      document.write("<br>"+this.acc_no+ " &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" +this.acc_name+ "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" +this.bal);
+                    }
+            }
+            s=new BankDet();
+            s.getData();
+            s.deposit();
+            s.withdraw();
+            s.display();
+
+        </script>
+    </body>
+</html>

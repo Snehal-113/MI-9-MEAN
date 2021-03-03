@@ -1,0 +1,42 @@
+<html><head>
+    <title>A21</title>
+</head>
+<body>
+    Enter the number of rows to add : <input type="number" id="rid" name="rname" onkeyup="input1()"><br>
+    Enter the number of columns to add : <input type="number" id="cid" name="cname" onkeyup="input1()"><br>
+    <button type="button" onClick="input1()">Ceate Table</button> 
+     <script language="javascript">
+      function input1() {
+        var row = document.getElementById("rid").value;
+        var col = document.getElementById("cid").value;     
+         if (row.match(/[^0-9]/) || col.match(/[^0-9]/)) 
+         {
+          alert("Enter number greater than 0");      
+        }
+      }
+      function table() 
+      {
+        var row = document.getElementById("rows").value;
+        var col = document.getElementById("cols").value;
+        let table = document.createElement("table");
+        table.id = "tid";
+        for (let i = 1; i <= row; i++)
+         {
+          let r = table.insertRow();
+          for (let i = 1; i <= col; i++) 
+          {
+            let c = row.insertCell();
+            c.innerHTML = "aa";
+          }
+        }
+        document.body.appendChild(table);
+      }    function change() {
+        let a = document.getElementById("rowno").value;
+        let b = document.getElementById("colno").value;
+        let c = document.getElementById("content").value;
+        let table = document.getElementById("tid");
+        table.rows[a].cells[b].innerHTML = z;
+      }
+    </script>
+  </body>
+  </html>

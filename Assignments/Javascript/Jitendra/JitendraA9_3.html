@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prime-Pallindrome in Array</title>
+    <script>
+        function check(x) {
+            
+            var n=x,sum=0,rem,count=0;
+            for(var i=1;i<=x;i++)
+            {
+                if(x%i==0)
+                    count++;
+            }
+            if(count==2){
+            while(n>0){
+                rem=parseInt(n%10);
+                sum=sum*10+rem;
+                n= parseInt(n/ 10);    
+            }
+            if(sum==x)
+                return true;
+            
+                
+            
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <script>
+        var arr=[];
+        var temp=[];
+        for(var i=0;i<5;i++)
+        {
+            arr[i]=prompt("Enter your Number");
+        }
+        for(var i=0;i<5;i++)
+        {
+            if(check(arr[i]))
+            {
+              
+                temp[i]=arr[i];
+               
+            }
+            
+        }
+        document.write(temp)
+        
+       
+    </script
+    
+    
+</body>
+
+</html>
