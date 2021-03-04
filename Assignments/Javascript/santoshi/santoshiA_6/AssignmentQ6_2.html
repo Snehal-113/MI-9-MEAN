@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Priyanka</title>
+    </head>
+    <body>
+        <script>
+            const names = [];
+            var i;
+            for(i=0;i<5;i++)
+            {
+            var num = prompt("Please enter the names");
+            if(num == null || num == "X")
+            {
+                break;
+            }
+            names.push(num.toUpperCase());
+            }
+            for(i = 0; i < names.length; i++)
+            {
+                document.write("<br>Names"+(i+1)+":"+names[i]);
+            }
+            document.write("<br>Names List: "+ names);
+            document.write("<br>Seperated list of all the names : "+names.join("~"));
+            document.write("<br>Name in ascending order: "+names.sort());
+            document.write("<br>Name in Descending order: "+names.reverse ());
+        </script>
+    </body>
+</html>

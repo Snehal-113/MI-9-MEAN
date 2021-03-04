@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Assignment16_3</title>
+    </head>
+    <body>
+        <h1 id="text"> car traffic photo</h1>
+        <img id="img1" src="images.jpg" alt="this is img" style="height: 300px;width: 300px;">
+        <button type="button" onclick="img_change()">play</button>
+        <script lang="javascript">
+            var flag =0;
+            function img_change() {
+                if(flag==0) {
+                    document.getElementById("text").innerHTML="keyboard photo";
+                    document.getElementById("img1").src=document="website.png";
+                    flag=1;
+                }
+                else if(flag==1) {
+                    document.getElementById("text").innerHTML="flower photo";
+                    document.getElementById("img1").src="download.jfif";
+                    flag=2;
+                }
+                else{
+                    document.getElementById("text").innerHTML="car traffic photo";
+                    document.getElementById("img1").src="images.jpg";
+                    flag=0;
+                }
+            }
+        </script>
+    </body>
+</html>

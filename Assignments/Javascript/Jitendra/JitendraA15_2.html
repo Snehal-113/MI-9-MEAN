@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Salesman</title>
+</head>
+
+<body>
+    <script>
+        class salesman {
+            constructor() {
+                this.id = 0;
+                this.name = "";
+            }
+            get_data(id1, name1) {
+                this.id = id1;
+                this.name = name1;
+            }
+            display() {
+                {
+                    document.write("<br>ID &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Name");
+                    document.write("<br>" + this.id + " &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + this.name);
+                }
+            }
+
+        }
+        class comm extends salesman {
+            constructor() {
+                super(id1, name1);
+                this.commission = 0;
+                this.sales = 0;
+            }
+            salescommission(sales) {
+                var commission;
+                if (sales > 0 && sales <= 5000) {
+                    this.commission = sales * 0.02;
+                } else if (sales > 5000 && sales < 12000) {
+                    this.commission = sales * 0.05;
+                } else if (sales > 12000 && sales < 50000) {
+                    this.commission = sales * 0.1;
+                } else {
+                    this.commission = sales * 0.15;
+                }
+
+            }
+            display() {
+                {
+                    super.display();
+                    document.write("<br>Sales Amount &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Commission Earned");
+                    document.write("<br>" + sales + " &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + this.commission);
+                }
+            }
+        }
+        s1 = new comm();
+        var id1 = prompt("Enter saleman id");
+        var name1 = prompt("Enter salesman name");
+        var sales = prompt("Enter saleman Total sales");
+        s1.get_data(id1, name1);
+        try {
+            if (sales < 0 && typeof(sales) == "string") {
+                throw "Invalid input!"
+            }
+
+            s1.salescommission(sales);
+            s1.display();
+        } catch (e) {
+            document.write("Invalid Input!");
+        }
+    </script>
+</body>
+
+</html>

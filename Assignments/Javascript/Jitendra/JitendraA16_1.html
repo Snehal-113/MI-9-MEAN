@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heading allignment</title>
+</head>
+
+<body>
+    <h1 id="head1">Center/Left/Right allignment of heading</h1>
+    <h1 id="head2">Left allignment of heading</h1>
+    <button type="button" onclick=leftall()>Left Allignment</button>
+    <button type="button" onclick=rightall()>Rightt Allignment</button>
+    <button type="button" onclick=centerall()>Center Allignment</button>
+
+
+    <script>
+        document.getElementById("head1").style.textAlign = "center";
+
+        function leftall() {
+            document.getElementById("head2").style.textAlign = "left";
+        }
+
+        function rightall() {
+            document.getElementById("head2").style.textAlign = "right";
+        }
+
+        function centerall() {
+            document.getElementById("head2").style.textAlign = "center";
+        }
+    </script>
+</body>
+
+</html>

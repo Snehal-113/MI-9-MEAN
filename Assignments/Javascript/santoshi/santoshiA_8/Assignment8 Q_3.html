@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3</title>
+    </head>
+<body>
+    <script>
+        var marks = [];
+        var size = 10,
+            i;
+        var imarks = [];
+        var totalmarks = [];
+        for (i = 0; i < size; i++) {
+            marks[i] = prompt("Enter Your subject " + (i + 1) + " Marks");
+            if (marks[i] > 80)
+                prompt("Enter a valid marks as 80 is full marks");
+            imarks[i] = parseInt((20 * marks[i]) / 100);
+            totalmarks[i] = (parseInt(marks[i]) + parseInt(imarks[i]));
+
+        }
+        for (var j = 0; j < 10; j++) {
+            document.write("Student" + (j + 1) + " marks: " + totalmarks[j] + " <br>");
+        }
+        function swap(totalmarks, leftIndex, rightIndex)
+        {
+            var temp = totalmarks[leftIndex];
+            totalmarks[leftIndex] = totalmarks[rightIndex];
+            totalmarks[rightIndex] = temp;
+        }
+        function bubble()
+        {
+            var i, j;
+            for (i = 0; i < totalmarks.length; i++) {
+                for (j = 0; j < totalmarks.length - i; j++) {
+                    if (totalmarks[j] > totalmarks[j + 1]) {
+                        var temp = totalmarks[j];
+                        totalmarks[j] = totalmarks[j + 1];
+                        totalmarks[j + 1] = temp;
+                    }
+                }
+             }
+        document.write("sorting using bubble sort "+totalmarks);
+        }
+        function insertionSort(inputArr) {
+        let n = inputArr.length;
+        for (let i = 1; i < n; i++) {
+            let current = inputArr[i];
+            let j = i-1; 
+            while ((j > -1) && (current < inputArr[j])) {
+                inputArr[j+1] = inputArr[j];
+                j--;
+            }
+            inputArr[j+1] = current;
+        }
+        return inputArr;
+        }
+        function selectionSort(inputArr) { 
+        let n = inputArr.length;
+        for(let i = 0; i < n; i++) {
+        let min = i;
+        for(let j = i+1; j < n; j++)
+        {
+            if(inputArr[j] < inputArr[min]) 
+            {
+                min=j; 
+            }
+         }
+         if (min != i) 
+         {
+            let tmp = inputArr[i]; 
+            inputArr[i] = inputArr[min];
+            inputArr[min] = tmp;      
+        }
+    }
+        return inputArr;
+    }
+        function partition(totalmarks, left, right) {
+        var pivot   = totalmarks[Math.floor((right + left) / 2)], 
+        i       = left, 
+        j       = right; 
+        while (i <= j) {
+        while (totalmarks[i] < pivot) {
+            i++;
+        }
+        while (totalmarks[j] > pivot) {
+            j--;
+        }
+        if (i <= j) {
+            swap(totalmarks, i, j); 
+            i++;
+            j--;
+        }
+    }
+    return i;
+    }
+
+        function quickSort(totalmarks, left, right) {
+            var index;
+            if (totalmarks.length > 1) {
+            index = partition(totalmarks, left, right); 
+            if (left < index - 1) { 
+            quickSort(totalmarks, left, index - 1);
+            }
+            if (index < right) { 
+            quickSort(totalmarks, index, right);
+            }
+        }
+        return totalmarks;
+    }
+        var choice;
+        var choice = prompt("Enter Your Favourite Technique");
+        switch(choice) {
+        case "4":
+        var sortedArray = quickSort(totalmarks, 0, totalmarks.length - 1);
+        document.write("Sorted Marks using Quick sort  :"+sortedArray);
+        break;
+        case "1":
+        bubble();
+        break;
+        case "2":
+        var sortedArray = insertionSort(totalmarks);
+        document.write("Sorted Marks using insertion sort  :"+sortedArray);
+        break;
+        case "3":
+        var sortedArray = selectionSort(totalmarks);
+        document.write("Sorted Marks using selection sort  :"+sortedArray);
+        break;
+        if(choice==5 || X)
+        break;
+        } 
+        </script>
+    </body>
+</html> 

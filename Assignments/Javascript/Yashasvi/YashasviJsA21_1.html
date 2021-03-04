@@ -1,0 +1,71 @@
+<html> 
+    <head> 
+        <title>Create Table</title> 
+        <style>
+            table
+            {
+                border:1px solid black;
+                border-collapse: collapse;
+            } 
+        </style>  
+    </head>
+    <body>
+        <fieldset>
+            <legend> Create Table </legend>
+                Enter Number of Rows : <input type="text" id="row" onkeyup="error1()" ><br><br>
+                Enter Number of Columns : <input type="text" id="col" onkeyup="error2()" ><br><br>
+                <button id="button" onclick="Table()">Create</button>
+        </fieldset>
+        <fieldset>
+            <legend> Change Content </legend>
+            Enter Row Number: <input type="text" id="row1"><br><br>
+            Enter Column Number: <input type="text" id="col1"><br><br>
+            Enter String to be Change: <input type="text" id="str"><br><br>
+            <button id="button" onclick="changecontent()">Change Content </button>
+            </fieldset>
+        <table id="tableid" border="1px"> </table>
+        <script  language="javascript">
+            function Table()
+            {
+                var row_no = document.getElementById("row").value;
+                var col_no = document.getElementById("col").value;
+                for(var i=0;i<parseInt(row_no,10);i++)
+                {
+                    var x=document.getElementById("tableid").insertRow(i);
+                    for(var j=0;j<parseInt(col_no,10);j++)  
+                    {
+                        var y=  x.insertCell(j);
+                        y.innerHTML="cell"; 
+                    }
+                }
+            }
+            function error1()
+            {
+                var a= document.getElementById("row").value;
+                if( a < 0 || a.match(/^[a-zA-z_\-]/)) 
+                {
+                    alert("Error:Enter a value greater than 0 & numeric number  only");
+                    document.getElementById("row").focus();
+                    document.getElementById("row").value="";
+                }
+            }
+            function error2()
+            {
+                var b = document.getElementById("col").value;
+                if( b < 0  || b.match(/^[a-zA-z_\-]/))
+                {
+                    alert("Error:Enter a value greater than 0 & numeric number only");
+                    document.getElementById("col").focus();
+                    document.getElementById("col").value="";
+                }
+            }
+            function changecontent()
+            {
+                var x = document.getElementById("row1").value;
+                var y = document.getElementById("col1").value;
+                var z = document.getElementById("str").value;
+                document.getElementById("tableid").rows[x].cells[y].innerHTML = z;
+            }
+        </script>
+    </body>
+</html>

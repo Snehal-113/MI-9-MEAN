@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Ass13</title>
+    </head>
+    <body>
+        <script>
+            function getDateAgo(date, days) {
+            let dateCopy = new Date(date);
+                                                                                                                                      
+             dateCopy.setDate(date.getDate() - days);
+            return dateCopy.getDate();
+            }
+                                                                                                                                      
+           let date = new Date(2020, 0, 2);
+                                                                                                                                      
+          document.write( getDateAgo(date, 1) );
+          document.write( getDateAgo(date, 2) ); 
+          document.write( getDateAgo(date, 365) ); 
+        </script>
+    </body>
+</html>

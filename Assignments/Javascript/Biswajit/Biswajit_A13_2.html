@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS</title>
+</head>
+<body>
+	<input type="date" name="date" id="dt">
+	<button onclick="getWeekDay()">Show</button>
+	<script type="text/javascript">
+		function getWeekDay(){
+			var val=document.getElementById("dt").value;
+			d=new Date(val);
+			switch(d.getDay()) {
+				case 0:
+					document.write(val +" is SU");
+					break;
+				case 1:
+					document.write(val +" is MO");
+					break;
+				case 2:
+					document.write(val +" is TU");
+					break;
+				case 3:
+					document.write(val +" is WE");
+					break;
+				case 4:
+					document.write(val +" is TH");
+					break;
+				case 5:
+					document.write(val +" is FR");
+					break;
+				case 6:
+					document.write(val +" is SA");
+					break;
+				default:
+					document.write("Something Went Wrong!");
+			}
+		}
+	</script>
+</body>
+</html>

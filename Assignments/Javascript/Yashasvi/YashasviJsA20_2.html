@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Change Content in Table</title>
+        <style>
+            table,th,td
+            {
+                border:1px solid black;
+                border-collapse: collapse;
+            }
+            th,td
+            {
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="table">
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>aaa</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>bbb</td>
+            </tr>
+        </table>
+        <br>
+        <fieldset>
+        Enter Row Number: <input type="text" id="row"><br><br>
+        Enter Column Number: <input type="text" id="col"><br><br>
+        Enter String to be Change: <input type="text" id="str"><br><br>
+        <button id="button" onclick="changecontent()">Change Content </button>
+        </fieldset>
+        <script language=javascript>
+            function changecontent()
+            {
+                var x = document.getElementById("row").value;
+                var y = document.getElementById("col").value;
+                var z = document.getElementById("str").value;
+                document.getElementById("table").rows[x].cells[y].innerHTML = z;
+            }
+        </script>
+    </body>
+</html>
+

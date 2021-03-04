@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 18</title>
+	<style type="text/css">
+		.div1 {
+			width: 50%;
+			margin-left: 25%;
+			height: 100px;
+			border: 1px solid black;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<center>Enter a Number :&nbsp;<input type="text" name="num" id="num"></center><br>
+		<center><button onclick="check()">Check</button></center>
+	</div>
+	<div class="div2">
+		<fieldset>
+			<legend>Message</legend>
+			<p id="msg">Enter a Number and click Check to see if the number is Even or Odd.</p>
+		</fieldset>
+	</div>
+	<script type="text/javascript">
+		function check() {
+			var num = parseInt(document.getElementById("num").value);
+			if (isNaN(num)) {
+				document.getElementById("msg").innerText="Invalid Input Enter a Number!!";	
+			}
+			else {
+				if (num%2==0) {
+					document.getElementById("msg").innerText=num+" is an Even Number";	
+				}
+				else {
+					document.getElementById("msg").innerText=num+" is an Odd Number";
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+html>
+<body>
+<h1>Facto</h1>
+<form>
+    Enter the numbers:<input type="text" id="no" name="n" size="5"><br><br>
+    <button type="button" onclick="fact()">Check</button>
+    <p id="pid"></p><br>
+</form>
+<script language="JavaScript">
+    function fact()
+    {
+var num = parseInt(document.getElementById("no").value);
+var i, f = 1;
+for (i = 1; i <= num ; i++) 
+{
+f = f * i;
+}
+//return(f)
+document.getElementById("pid").innerHTML= num+ "factorial is "+f;
+}
+</script>
+</body>
+</html> 

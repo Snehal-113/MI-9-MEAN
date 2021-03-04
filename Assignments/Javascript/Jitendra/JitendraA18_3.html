@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Discount</title>
+    </head>
+    <body>
+        
+            Enter shopping amount:<input type="number" id="amtid"><br>
+            <button type="button" onclick="total()">Calculate</button>
+        
+        <p id="pid"></p>
+        <p id="pid1"></p>
+
+        <script language="javascript">
+            function total()
+            {
+                var tamount = parseInt(document.getElementById("amtid").value);
+                if (tamount>=1000)
+                {
+                    tamount=(tamount/100)*15;
+                    document.getElementById("pid").innerHTML="Offer: 15% discount";
+                    document.getElementById("pid1").innerHTML="Discounted amount :"+tamount;
+                }
+                else
+                {
+                     tamount=(tamount/100)*5;
+                    document.getElementById("pid").innerHTML="Offer: 5% discount <br>";
+                    document.getElementById("pid1").innerHTML="Discounted amount :"+tamount;
+                }
+            }
+
+        </script>
+
+    </body>
+</html> 

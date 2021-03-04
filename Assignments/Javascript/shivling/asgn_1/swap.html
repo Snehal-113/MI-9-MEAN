@@ -1,0 +1,67 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>swap 2 no</title>
+    </head>
+    <body>
+
+        <h1> swapping of 2 no</h1>
+        
+       
+        <form name="swap">
+            <label for="val1">A: &nbsp;&nbsp;</label>
+            <input type="text" id="val1" name="val1">
+
+            <label for="val2">B:&nbsp;&nbsp;</label>
+            <input type="text" id="val2" name="val2" > &nbsp;&nbsp;
+            <button type="button" onclick="meth1()">method1</button>
+            <button type="button" onclick="meth2()">method2</button>
+
+            <p style="color: gold;" id="swap"> </p>
+            <h1 style="color: lightblue;" id="swap33"> </h1>
+            <h3 style="color: gold;" id="swap11"> </h3>
+
+
+        </form>
+
+        <script lang="javascript">
+            function meth1(){
+
+                var A, B ,C;
+
+                A=parseInt(document.getElementById("val1").value)
+                B=parseInt(document.getElementById("val2").value)
+                C=A;
+                A=B;
+                B=C;
+
+                document.getElementById("swap").innerHTML= "After swapping (method1)-A:"+A+" B: "+B ;
+
+             
+            }
+
+            function meth2(){
+
+                var A, B ,C;
+
+                A=parseInt(document.getElementById("val1").value)
+                B=parseInt(document.getElementById("val2").value)
+                C=A+B;
+                A=C-A;
+                B=C-B;
+                document.getElementById("swap33").innerHTML="After swapping (method1)-A:"+A+" B: "+B ;
+
+
+
+
+
+            }
+        
+
+               
+            
+        </script>
+
+
+    </body>
+</html>

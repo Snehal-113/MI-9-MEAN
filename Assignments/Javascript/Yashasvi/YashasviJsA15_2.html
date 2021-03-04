@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Exception</title>
+    </head>
+    <body>
+        <script language="javascript">
+            class sales
+            {
+                constructor()
+                {
+                    this.name="";
+                    this.id="";
+                }
+                getData(name1,id1)
+                {
+                    this.name=name1;
+                    this.id=id1;
+                }
+            }
+            class sales1 extends sales
+            {
+                constructor(n)
+                {
+                    super();
+                    this.total=0;
+                }
+                getData(name1,id1,total)
+                {
+                    super.getData();
+                    this.total=total;
+                }
+                calculate(total)
+                {
+                    if(total>=0 && total<=5000)
+                    {
+                        total=(2/100)*total;
+                        document.write("Total Commission of Salesman is :"+total);
+                    }
+                    else if(total>=5001 && total<=12000)
+                    {
+                        total=(5/100)*total;
+                        document.write("Total Commission of Salesman is :"+total);
+                    }
+                    else if(total>=12001 && total<=50000)
+                    {
+                        total=(10/100)*total;
+                        document.write("Total Commission of Salesman is :"+total);
+                    }
+                    else if(total>50000)
+                    {
+                        total=(15/100)*total;
+                        document.write("Total Commiion of Salesman is :"+total);
+                    }
+                    else
+                    {
+                        document.write("Error:Invalid Value");
+                    }  
+                }
+                display(name1,id1,total){
+                    document.write("<br>Sr No. &ensp;&ensp;&ensp;&ensp;&ensp; Salesman's Name: &ensp;&ensp;&ensp;&ensp;&ensp; Salesman's id &ensp;&ensp;&ensp;&ensp;&ensp;Total Sales");
+                    document.write( "<br> 1 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;"+name1+" &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; "+id1 +"&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;"+this.total+"&ensp;&ensp;&ensp;&ensp;&ensp;");
+                }
+            }
+            s2=new sales1();
+            var name1=prompt("Enter Salesman Name");
+            var id1=prompt("Enter id of Salesman");
+            var total=prompt("Enter Total Sales Amount :");
+            try
+            {
+                if(total<0 )
+                {
+                    throw "Error:Enter Valid Number "
+                }
+            s2.getData(name1,id1,total);
+            s2.calculate(total);
+            s2.display(name1,id1,total);
+            }
+            catch(e)
+            {
+                alert(e);
+            }
+        </script>
+    </body>
+</html>

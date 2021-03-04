@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Add Language</title>
+    </head>
+    <body>
+        <fieldset>
+            <ol id="olid">
+                <li>SDLC</li>
+                <li>HTML</li>
+                <li>FIGMA</li>
+                <li>CSS</li>
+            </ol>
+            <input type="text" name="lang" id="langid" >
+            <button type="button" onclick="add()">Add</button>
+        </fieldset>
+        <script language="javascript">
+            function add()
+            {
+                var a=document.getElementById("langid").value;
+                var b=document.createElement("li");
+                b.textContent=a;
+                var ol=document.getElementById("olid");
+                ol.insertBefore(b,ol.lastElementChild.nextSibling);
+            }
+
+        </script>
+    </body>
+</html>

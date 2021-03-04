@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pallindrome</title>
+</head>
+
+<body>
+    <label for="num">Enter the number</label>
+    <input type="text" id="num" name="num">
+    <p id="pid"></p>
+    <button type="button" onclick="check()">Check</button>
+    <script>
+        function check() {
+            let x = parseInt(document.getElementById("num").value);
+            var n=x,sum=0,rem;
+            while(n>0){
+                rem=parseInt(n%10);
+                sum=sum*10+rem;
+                n= parseInt(n/ 10);    
+            }
+            if(sum==x)
+                document.write("Pallindrome Number");
+            else
+                document.write("Not a Pallindrome Number");
+                
+            
+        }
+
+
+    </script>
+</body>
+
+</html>

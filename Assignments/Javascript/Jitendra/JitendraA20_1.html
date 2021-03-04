@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="jit">
+        <tr>
+            <th>Sr No.</th>
+            <th>Name</th>
+
+        </tr>
+        <tr>
+            <td> 1 </td>
+            <td> Jitendra</td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td> Amarjeet</td>
+        </tr>
+    </table><br>
+    <button type="button" onclick="add()">Add Row</button> Enter Row Number: <input type="text" id="rownum"><br><br> Enter Column Number: <input type="text" id="colnum"><br><br> Enter Text to be Change: <input type="text" id="txt"><br><br>
+    <script language="javascript">
+        function add() {
+            var a = document.getElementById("jit");
+            var row = a.insertRow();
+            var c1 = row.insertCell();
+            var c2 = row.insertCell();
+            c1.innerHTML = "3";
+            c2.innerHTML = "Rabindra";
+        }
+    </script>
+</body>
+
+</html>

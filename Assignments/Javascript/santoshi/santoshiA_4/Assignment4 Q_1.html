@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Assignment1 Q1</title>
+    </head>
+    <body>
+            <h3>Check whether a number is armstrong number are not</h3>
+            <form>
+                <input type="number" name="num1" id="num1">
+                <input type="button" value="check" onclick="demo()">
+                </form>
+                <script language="javascript">
+                    function demo()
+                    {
+                        debugger;
+                        var num=document.getElementById("num1").value;
+                    var sum=0,power,originalnum,len,last;
+                    len=num.toString().length;
+                    document.write(len);
+                    originalnum=num;
+                    while(num>0)
+                    {
+                        last=num%10;
+                        power=Math.pow(last,len);
+                        sum=sum+power;
+                        num=parseInt(num/10);
+                    }
+                    if(originalnum==sum)
+                    {
+                       alert("this is armstrong number"); 
+                       }
+                        else{alert("this is not armstrong number");}
+                    }
+                    </script>
+    </body>
+</html>

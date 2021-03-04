@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 17</title>
+        <style>
+            #name1{
+                text-transform:uppercase;
+            }
+            #pid2{
+                text-transform: uppercase;
+
+            }
+        </style>
+        <script language="javascript">
+            function numeric1(){
+            maths = document.getElementById("math").value;
+            if(maths.match(/^[a-z_\-]/))
+            {
+                alert("Error:Enter a numeric data only");
+            }
+            }
+            function numeric2(){
+            science = document.getElementById("sci").value;
+            if(science.match(/^[a-z_\-]/))
+            {
+                alert("Error:Enter a numeric data only");
+            }
+            }
+            function numeric3(){
+            history = document.getElementById("his").value;
+            if(history.match(/^[a-z_\-]/))
+            {
+                alert("Error:Enter a numeric data only");
+            }
+            }
+           
+                
+
+        </script>
+    </head>
+    <body>
+        <label for="roll">Roll No : </label>
+        <input type="text" name="pri" id="roll"><br><br>
+        <label for="name1">Name : </label>
+        <input type="text" name="pri2" id="name1"><br><br>
+        <label for="math">Math</label>
+        <input type="text" name="pri3" id="math"onchange="numeric1()"><br><br>
+        <label for="sci">Science</label>
+        <input type="text" name="pri4" id="sci"onchange="numeric2()"><br><br>
+        <label for="his">History</label>
+        <input type="text" name="pri5" id="his"onchange="numeric3()"><br><br>
+        <input type="text" name="pri6" id="his1"onchange="numeric()"><br><br>
+        
+        <button type="button" onclick="report()">Submit</button>
+        <h1 id="hid1"></h1>
+        <p id="pid1"></p>
+        <p id="pid2"></p>
+        <p id="pid3"></p>
+        <p id="pid4"></p>
+        <p id="pid5"></p>
+        <h4 id="pid6"></h4>
+        <h4 id="pid7"></h4>
+        <h4 id="pid8"></h4>
+        <script language="javascript">
+            class student {
+                constructor(rollno,name,maths,science,history){
+                    this.rollno=rollno;
+                    this.name=name;
+                    this.maths=maths;
+                    this.science=science;
+                    this.history=history;
+                }
+                read(){
+                    document.getElementById("hid1").innerHTML="***REPORT CARD****";
+                    document.getElementById("pid1").style.fontFamily="bol";
+                    document.getElementById("pid1").innerText="Roll No : "+this.rollno;
+                    document.getElementById("pid2").innerText="Name : "+this.name;
+                    document.getElementById("pid3").innerText="Maths :"+this.maths;
+                    document.getElementById("pid4").innerText="Science : "+this.science;
+                    document.getElementById("pid5").innerText="History : "+this.history;
+                }
+                calculate(total,per,grade){
+                    total=this.maths+this.science+this.history;
+                    document.getElementById("pid6").innerText="Total :"+total;
+                    per=total/3;
+                    document.getElementById("pid7").innerText="Percentage : "+per;
+                    if(per>=80){
+                        grade="A+";
+                        document.getElementById("pid8").innerText="Grade : "+grade;
+                        document.getElementById("pid8").style.color="green";
+                    }
+                    else if(per < 80 && per>=60){
+                        grade="A";
+                        document.getElementById("pid8").innerText="Grade : "+grade;
+                        document.getElementById("pid8").style.color="green";
+                    }
+                    else if(per < 60 &&per>=55){
+                        grade="B+";
+                        document.getElementById("pid8").innerText="Grade : "+grade;
+                        document.getElementById("pid8").style.color="brown";
+                    }
+                    else if(per <55 && per>=40){
+                        grade="B";
+                        document.getElementById("pid8").innerText="Grade : "+grade;
+                        document.getElementById("pid8").style.color="brown";
+                    }
+                    else{
+                        document.getElementById("pid8").innerText=" Grade :No Grade";
+                        document.getElementById("pid8").style.color="red";
+                    }
+                    
+                }
+
+            }
+            function report(){
+            var rollno = document.getElementById("roll").value;
+            var name = document.getElementById("name1").value;
+            var maths = parseInt(document.getElementById("math").value);
+            var science= parseInt(document.getElementById("sci").value);
+            var history =parseInt(document.getElementById("his").value);
+            var total,per,grade;
+            s = new student(rollno,name,maths,science,history);
+            s.read();
+            s.calculate(total,per,grade);
+            }
+
+
+        </script>
+
+    </body>
+</html>

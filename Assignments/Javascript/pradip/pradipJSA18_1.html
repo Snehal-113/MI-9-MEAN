@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>assignment18_1</title>
+    </head>
+    <body>
+        <fieldset style="width: 250px;">
+        <label for="ival1"> Enter A Number:</label>
+        <input type="text" id="ival1" name="val1" size="5">
+        <br><br>
+        <button type="button" onclick="check()">even/odd</button>
+        </fieldset>
+        <h3>even no or odd no:</h3>
+        <p id="no"></p>
+        <script lang="JavaScript">
+            function check() {
+                var a;
+                a=parseInt(document.getElementById("ival1").value);
+                if(a%2==0) 
+                    {
+                    document.getElementById("no").innerHTML=a+ " is an Even number";
+                    }
+                else{
+                    document.getElementById("no").innerHTML=a+ "is an Odd number";
+                    }
+                }               
+        </script>
+    </body>
+</html>

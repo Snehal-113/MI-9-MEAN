@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evaluation Q1</title>
+	<style type="text/css">
+		#nm {
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+		<label for="roll">Roll No : </label>
+		<input type="text" name="roll" id="roll"><br><br>
+		<label for="nm">Name : </label>
+		<input type="text" name="name" id="nm"><br><br>
+		<label for="math">Maths marks : </label>
+		<input type="text" name="math" id="math"><br><br>
+		<label for="sc">Science marks : </label>
+		<input type="text" name="sc" id="sc"><br><br>
+		<label for="history">History marks : </label>
+		<input type="text" name="hs" id="hs"><br><br>
+		<button onclick="report()">Show Report Card</button>
+		<h1 id="heading"></h1>
+		<p id="orl"></p>
+		<p id="onm"></p>
+		<p id="omth"></p>
+		<p id="osc"></p>
+		<p id="ohs"></p>
+		<p id="otot"></p>
+		<p id="oper"></p>
+		<p id="ograd"></p>	
+	<script type="text/javascript">
+		class Report {
+			constructor(rollno,name,math,sc,hs) {
+				this.rollno=rollno;
+				this.name=name;
+				this.math=math;
+				this.sc=sc;
+				this.hs=hs;
+			}
+			show() {
+				document.getElementById("heading").innerHTML="*****Report Card*****";
+				document.getElementById("orl").innerText="Roll No :"+this.rollno;
+				document.getElementById("onm").innerText="Name :"+this.name;
+				document.getElementById("omth").innerText="Math :"+this.math;
+				document.getElementById("osc").innerText="Science :"+this.sc;
+				document.getElementById("ohs").innerText="History  :"+this.hs;
+			}
+			findTot() {
+				this.tot=this.math+this.sc+this.hs;
+				document.getElementById("otot").innerText="Total :"+this.tot;
+			}
+			findPer() {
+				this.per=this.tot/3;
+				document.getElementById("oper").innerText="Percentage :"+this.per;
+			}
+			findGrade() {
+				var per=this.per;
+				var grade;
+				if (per>=80) {
+					grade="A+";
+					document.getElementById("ograd").innerText="Grade :"+grade;
+					document.getElementById("ograd").style.color="green";
+				}
+				else if (per<80 && per>=60){
+					grade="A";
+					document.getElementById("ograd").innerText="Grade :"+grade;
+					document.getElementById("ograd").style.color="green";
+				}
+				else if (per<60 && per>=55){
+					grade="B";
+					document.getElementById("ograd").innerText="Grade :"+grade;
+					document.getElementById("ograd").style.color="orange";
+				}
+				else if (per<55 && per>=40){
+					grade="B+";
+					document.getElementById("ograd").innerText="Grade :"+grade;
+					document.getElementById("ograd").style.color="orange";
+				}
+				else if (per<40){
+					grade="No Grade";
+					document.getElementById("ograd").innerText="Grade :"+grade;
+					document.getElementById("ograd").style.color="red";
+				}
+				else {
+					grade="N/A";
+					document.getElementById("ograd").innerText="Grade :"+grade;
+					document.getElementById("ograd").style.color="red";
+				}
+			}
+
+		}
+		/*function change() {
+			var name= document.getElementById("nm").value;
+			document.getElementById("nm").value=name.toUpperCase();
+		}*/
+		function report() {
+			var rollno= document.getElementById("roll").value;
+			var name= document.getElementById("nm").value;
+			var math= parseInt(document.getElementById("math").value);
+			var sc= parseInt(document.getElementById("sc").value);
+			var hs= parseInt(document.getElementById("hs").value);
+			var check=0;
+			if (isNaN(math) || math<0 || math>100) {
+				alert("Math mark is either not a number or an Invalid input !!");
+				check=1;
+			}
+			if (isNaN(sc) || sc<0 || sc>100) {
+				alert("Science mark is either not a number or an Invalid input !!");
+				check=1;
+			}
+			if (isNaN(hs) || hs<0 || hs>100) {
+				alert("History mark is either not a number or an Invalid input !!");
+				check=1;
+			}
+			if (check==1) {
+				check=1;
+			}
+			else{
+				r=new Report(rollno,name,math,sc,hs);
+				r.show();
+				r.findTot();
+				r.findPer();
+				r.findGrade();
+			}	
+		}
+	</script>
+</body>
+</html>

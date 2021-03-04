@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Assignmnt5_1</title>
+</head>
+<body>
+    <script language="javascript">
+        var num = prompt("Enter the three digit no");
+        var len = num.length;
+        var sum = 0;
+        if(len != 3)
+        {
+            alert("Sorry!!Please enter only a 3 digit no"); 
+        }
+        else{
+            var temp = num % 100;
+            var midle = parseInt(temp / 10);
+
+            var last = num % 10;
+            var first = parseInt(num / 100);
+            sum = first + last; 
+            if (sum == midle)
+            alert("Given 3 digit number is Equal to the Sum of Other Two digits");
+            else
+            alert("Given 3 digit number is not Equal to the Sum of Other Two digits");
+        }
+    </script>
+</body>
+</html> 

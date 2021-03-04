@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <form >
+            First Name: <input type="text" id="firstname" name="firstname"><br><br>
+            Last Name: <input type="text" id="lastname" name="lastname"><br><br>
+            Username:<input type="username" id="usename" name="username" onblur="userName()"><br><br>
+            Password:<input type="text" id="password" name="password" onblur="passWord()"><br><br>
+            <button type = "submit" onclick="login()">Login</button>
+        </form>
+        <script language="javascript">
+            function userName()
+            {
+                let a = document.getElementById("usename").value;
+                if(!a.match(/^[a-zA-Z](\w|\d){7,14}/))
+                {
+                    alert("Please enter valid Username")
+                    document.getElementById("username").value;
+                    document.getElementById("username").focus();
+                }
+            }
+            function passWord()
+            {
+                let b = document.getElementById("password").value;
+                if(!b.match(/(w{1,}\d{1,}\w{1,})/))
+                {
+                    alert("Please enter valid Password");
+                    document.getElementById("password").value;
+                }
+            }
+        </script>
+    </body>
+</html>

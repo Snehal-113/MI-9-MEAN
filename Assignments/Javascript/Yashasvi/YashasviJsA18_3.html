@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Discount</title>
+    </head>
+    <body>
+        <fieldset>
+            Enter shopping amount:<input type="number" id="amountid"><br>
+            <button type="button" onclick="cal()">Calculate</button>
+        </fieldset>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+
+        <script language="javascript">
+            function cal()
+            {
+                var amount = parseInt(document.getElementById("amountid").value);
+                if (amount>=1000)
+                {
+                    amount=(amount/100)*15;
+                    document.getElementById("pid").innerHTML="You got 15% discount";
+                    document.getElementById("pid1").innerHTML="Total amount :"+amount;
+                }
+                else
+                {
+                     amount=(amount/100)*5;
+                    document.getElementById("pid").innerHTML="You got 5% discount";
+                    document.getElementById("pid1").innerHTML="Total amount :"+amount;
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

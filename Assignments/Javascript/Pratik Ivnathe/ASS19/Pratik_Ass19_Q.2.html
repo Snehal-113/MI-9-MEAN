@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Value</title>
+    </head>
+    <body>
+        <ol id="id2">
+            <li>SDLC</li>
+            <li>HTML</li>
+            <li>FIGMA</li>
+            <li>CSS</li>
+        </ol>
+        <input type="text"  id="id1" size="10">
+        <button type="button" onclick="add()">Add</button>
+        <script language="javascript">
+            function add()
+            {
+                var a=document.getElementById("id1").value;
+                var li1=document.createElement("li");
+                li1.textContent=a;
+                var ol=document.getElementById("id2");
+                ol.insertBefore(li1,ol.lastElementChild.nextSibling);
+            }
+        </script>
+    </body>
+</html>
+
+

@@ -1,0 +1,69 @@
+    <head>
+        <title>Ass15 q1</title>
+    </head>
+    <body>
+        <script langauge="javascript">
+            class BankDet{
+                constructor(){
+                    this.acc_no=0;
+                    this.acc_name="";
+                    this.bal=0;
+                }
+                getData(acc_no,acc_name,bal){
+                    this.acc_no=prompt("Enter Account number");
+                    this.acc_name=prompt("Enter  Account name");
+                }
+                deposit(depos){
+                    var depos=prompt("Enter deposited amount");
+                    this.bal=parseInt(this.bal)+parseInt(depos);
+                }
+                withdraw(withd){
+                    var withd=prompt("Enter withdraw amount");
+                    try
+                    {
+                        if(w>this.bal)
+                        {
+                            throw "Error:Insufficient Funds";
+                        }
+                        else
+                        {
+                        this.bal=parseInt(this.bal)-parseInt(withd);
+                    try
+                    {
+                        if(this.bal<1000)
+                        {
+                            throw "Warning-Balance below 1000";
+                        }
+                    }
+                    catch(e)
+                    {
+                        document.write("<br> Error:"+e.message);
+                        document.write("<br>After withdraw balance amount : "+this.bal);
+                    }
+                    }
+                        }
+                    catch(e)
+                    {
+                        document.write("<br>Error is "+e.message);
+                        document.write("<br>Insufficient funds");
+                    }
+                }
+                display()
+                {
+                    document.write("<br>Acc_no &ensp;&ensp;&ensp;Name &ensp;&ensp;&ensp;&ensp;&ensp; Balance");
+                    document.write( "<br>"+this.acc_no+ "&ensp;&ensp;&ensp;&ensp;&ensp; "+this.acc_name +" &ensp;&ensp;&ensp;&ensp;&ensp;"+this.bal);
+                }
+            }
+            bd1 = new BankDet();
+            bd1.getData(); 
+            bd1.deposit();
+            bd1.withdraw();
+            bd1.display();
+            bd2 = new BankDet();
+            bd2.getData(); 
+            bd2.deposit();
+            bd2.withdraw();
+            bd2.display();
+        </script>
+    </body>
+</html>

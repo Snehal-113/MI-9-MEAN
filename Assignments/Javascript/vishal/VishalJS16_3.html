@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            Assignment16_3
+        </title>
+    </head>
+    <body>
+        <p id="Photo">This Is Photo</p>
+        <img id="img" src="s.jpg" alt="THis IS Image" style="height: 300px;width: 300px;">
+        <button type="button" onclick="img_change()">Play</button>
+        <script lang="javascript">
+            var flag=0;
+            function img_change(){
+                if (flag==0){
+                document.getElementById("Photo").innerHTML = "PubG";
+                document.getElementById("img").src="s1.jpg";
+                flag=1;
+                }
+                else if(flag==1){
+                document.getElementById("Photo").innerHTML = "Library";
+                document.getElementById("img").src= "s2.jpg";
+                flag=2;
+                }
+                else{
+                document.getElementById("Photo").innerHTML = "Books";
+                document.getElementById("img").src = "s.jpg";
+                flag = 0;
+                }
+                
+            }
+        </script>
+    </body>
+</html>

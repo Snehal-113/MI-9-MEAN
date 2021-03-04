@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <script>
+            function fact(a) {
+                var factorial = a;
+                for (var i = 1; i < a; i++) {
+                     factorial = factorial * i;
+                }
+                return factorial;
+            }
+            var num = [];
+            var newArr = [];
+            var sum = 0;
+            while (true) {
+                let no = prompt("Enter the number");
+                if (no == "X" || no == null) {
+                    break;
+                }
+                num.push(parseInt(no));
+            }
+            for (var i = 0; i < num.length; i++) {
+                var f = fact(num[i]);
+                sum = sum + f;
+                newArr.push(f);
+            }
+            document.write("Sum of factorials:"+ sum);
+            document.write("<br>");
+            document.write("List of factorials:" + newArr);
+            newArr.sort(function(a,b){return(a-b)});
+            document.write("<br>");
+            document.write("Sorted array:"+ newArr);
+        </script>
+    </body>
+    
+    </html> 

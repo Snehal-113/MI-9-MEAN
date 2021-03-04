@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            DOM-Create Element
+        </title>
+        <script lang="javascript">
+            function check()
+        {
+            var lis = document.createElement("li");
+            var ele = document.getElementById("nam").value;
+            var nd = document.createTextNode(ele);
+            lis.appendChild(nd);
+            var typ = document.getElementById("ol1");
+            typ.appendChild(lis); 
+            }
+            </script>
+    </head>
+    <body>
+            <fieldset style="width:300px">
+            Enter the Name:<input type="text" id="nam" name="na" size="5"><br><br>
+            <button type="button" onclick="check()">Show</button>
+        <ol id="ol1">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVa</li>
+            <li>Bootstrap</li>
+            <li>PHP</li>
+        </ol>
+    </fieldset>
+    </body>
+    </html>
