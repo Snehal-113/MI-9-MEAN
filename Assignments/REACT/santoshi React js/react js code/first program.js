@@ -25,4 +25,3 @@ render(){
 }
 
 ReactDom.render(<Greeting />,document.getElementById("root"));
-
