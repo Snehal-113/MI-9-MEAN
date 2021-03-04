@@ -1,7 +1,8 @@
+import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 class Time extends React.Component
-
 {
-  
   render()
   {
   let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -24,4 +25,4 @@ class Time extends React.Component
   }
   }
 const comp_fun=(<Time />)
-ReactDOM.render(<Time />,document.getElementById("root"));*/
+ReactDOM.render(comp_fun,document.getElementById("root"));

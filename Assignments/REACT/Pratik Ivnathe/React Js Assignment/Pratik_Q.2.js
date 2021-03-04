@@ -11,4 +11,4 @@ function Greeting()
   );
 }
 const comp_fun_element=<Greeting />
-ReactDOM.render(<Greeting />, document.getElementById("root"));
+ReactDOM.render(comp_fun_element, document.getElementById("root"));

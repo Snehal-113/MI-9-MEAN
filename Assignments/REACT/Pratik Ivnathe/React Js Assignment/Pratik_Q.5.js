@@ -1,3 +1,6 @@
+import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 function Greeting(props) {
     return (
       <div>
@@ -17,4 +20,4 @@ function Greeting(props) {
     );  
   }
   const comp_fun_element=<Main />
-  ReactDOM.render(<Main />,document.getElementById("root"));
+  ReactDOM.render(comp_fun_element,document.getElementById("root"));

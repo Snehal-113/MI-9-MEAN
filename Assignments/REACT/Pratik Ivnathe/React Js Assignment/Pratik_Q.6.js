@@ -1,3 +1,6 @@
+import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 class Greeting extends React.Component
 {
   render()
@@ -11,4 +14,4 @@ class Greeting extends React.Component
   }
 }
 const comp_fun_element=<Greeting />
-ReactDOM.render(<Greeting />,document.getElementById("root"));
+ReactDOM.render(comp_fun_element,document.getElementById("root"));

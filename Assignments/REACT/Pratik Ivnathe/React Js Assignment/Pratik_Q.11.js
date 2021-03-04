@@ -1,21 +1,24 @@
-function Time() {    
-    let date=prompt("Enter Date");
-    let inputD=new Date(date);
-    let currentD=new Date();
-    let day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    var month=["january","february","March","April","May","June","july","August","september","Octomber","November","December"];
-    if(inputD.setHours(0,0,0,0)==currentD.setHours(0,0,0,0));
-    {
-    return (
-       <div>
-         <h2>Today Date is {day[currentD.getDay()]} </h2>
-         <h1>Month is {month[currentD.getMonth()]}</h1>
-        <h1>Current Time {currentD.getTime()}</h1>
-        <h1>Year {currentD.getFullYear()}</h1>
-       </div>
-     );
-    }
-   }
-   const comp_fun_element=<Time />
-   ReactDOM.render(<Time />, document.getElementById("root"));
-  
+
+import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+  function Time() {    
+  let date=new Date(i);
+  let Cmonth=date.getMonth();
+  let yr=date.getFullYear();
+  let day=["Sunday","monday","tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var month=["january","february","March","April","May","June","july","August","september","Octomber","November","December"];
+
+return (
+     <div>
+       <h2>Today Date is {i} </h2>
+       <h1>Day is {day[date.getDay()]}</h1>
+       <h1>Month is {month[Cmonth]}</h1>
+       <h1>Year {yr}</h1>
+     </div>
+   );
+ }
+ let i=prompt("enter date");
+ const comp_fun_element=<Time />
+ ReactDOM.render(comp_fun_element, document.getElementById("root"));

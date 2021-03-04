@@ -1,3 +1,6 @@
+import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 class Time extends React.Component{
     constructor(props){
       super(props);
@@ -19,5 +22,5 @@ class Time extends React.Component{
     ReactDOM.render(time_element, document.getElementById("root"));
      
   
-    setInterval(Time ,1000);*/
+    setInterval(Time ,1000);
   

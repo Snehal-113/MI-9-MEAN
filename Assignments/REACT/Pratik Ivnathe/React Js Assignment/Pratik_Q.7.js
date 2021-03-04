@@ -1,3 +1,6 @@
+import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 function Time() {
     let d = new Date().getDaysInMonth();
     let  Day =new Date().getDay();
@@ -10,6 +13,6 @@ function Time() {
     );  
   }
   const comp_fun_element=<Time />
-  ReactDOM.render(<Time />, document.getElementById("root"));
-  setInterval(Time ,1000);*/
+  ReactDOM.render(comp_fun_element, document.getElementById("root"));
+  setInterval(Time ,1000);
   

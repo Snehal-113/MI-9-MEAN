@@ -1,6 +1,9 @@
+import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 function Time() {
     let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    let days=["Sundamonday","tuesday","Wednesday","Thursday","Friday","Saturday"];
+    let days=["Sunday","monday","tuesday","Wednesday","Thursday","Friday","Saturday"];
     let tday=days[new Date().getDay()];
     let date=new Date().toLocaleDateString();
     let time=new Date().toLocaleTimeString();
@@ -18,5 +21,5 @@ function Time() {
     );
   }
   const comp_fun=<Time />
-  ReactDOM.render(<Time /> ,document.getElementById("root"));*/
+  ReactDOM.render(comp_fun ,document.getElementById("root"));
   
