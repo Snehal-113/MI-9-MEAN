@@ -21,6 +21,7 @@ function Main_Comp(){
       <Greeting name="Everyone" />
       <Greeting name="Yashasvi" />
       <Greeting name="Vishal" />
+      <Greeting title="Tiwari" />
     </div>
   );
 }

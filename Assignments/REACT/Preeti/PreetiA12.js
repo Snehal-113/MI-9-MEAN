@@ -59,7 +59,7 @@ class ShowTime extends React.Component{
      default : currentMonth = "December";
       break;
     }
-    let year = new Date().getFullYear();
+    let year =this.state.date.getFullYear();
     return(
         <div>
           <h1>By using class component</h1>
