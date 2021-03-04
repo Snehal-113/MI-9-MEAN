@@ -10,16 +10,15 @@
             <input type="number" name="a" id="age"><br><br>
             <button type="button" onclick="Show()">Show</button>
         </fieldset>
-        <p id="pid"></p>
         <script language="javascript">
             var name = document.getElementById("name").value;
             var age = parseInt(document.getElementById("age").value);
             function Show(){
-                if(age>18){
-                    document.getElementById("pid").innerHTML=name+" is Eligible to vote";
+                if(age>=18){
+                    alert(name+"Eligible for vote");
                 }
                 else{
-                    document.getElementById("pid").innerHTML=name+" is not Eligible to vote";
+                    alert(name+"Not Eligible for vote");
                 }
             }
         </script>

@@ -15,15 +15,17 @@
         <script language="javascript">
             var amt = parseInt(document.getElementById("amt").value);
             function cal(){
-                document.getElementById("pid1").innerHTML="Your Totala mt "+amt;
+                var dis;
                 if(amt >1000){
-                    amt = (amt/100) * 15;
-                    document.getElementById("pid").innerHTML= "You save your "+amt+" rupees because You Have a 15% discount";
+                    dis = 15;
+                    document.getElementById("pid").innerHTML= "15% of discount on total amount";
                 }
                 else{
-                    amt = (amt/100) * 5;
-                    document.getElementById("pid").innerHTML= "You Save Your "+amt+"rupees because You Have a 5% discount";
+                    dis = 5;
+                    document.getElementById("pid").innerHTML= "5% of discount on total amount";
                 }
+                var TotalAmount = amt -((dis/100) *amt);
+                document.getElementById("pid1").innerHTML= TotalAmount;
             }
         </script>
     </body>
