@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDom from "react-dom";
 class Greeting extends React.Component {
   render() {
@@ -11,4 +11,4 @@ class Greeting extends React.Component {
     );
   }
 }
-
+ReactDom.render(<Greeting />,document.getElementById("root"));
