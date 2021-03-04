@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <fieldset>
+            <label for="fn">FirstName</label>
+            <input type="text" id="fn" name="fn"><br><br>
+            <label for="ln">LastName</label>
+            <input type="text" id="ln" name="ln"><br><br>
+            <label for="un">UserName</label>
+            <input type="text" id="un" name="un" onblur="check()"><br><br>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd" onblur="check()">
+        </fieldset>
+        <script>
+            function check(){   
+                let a = document.getElementById("un").value;
+                if(!a.match(/^[a-zA-Z](\w|\d){7,14}/)){
+                    alert("Enter a valid username");
+                    document.getElementById("un").value = "";
+                    document.getElementById("un").focus();
+                }
+            }
+             function pwdcheck(){
+                 let b = document.getElementById("pwd").value;
+                if(!b.match(/(\w{1,}\d{1,}\W{1,}){8,}/)){
+                    alert("Enter a valid password"); 
+                    document.getElementById("pwd").value = "";
+                }
+            } 
+        </script>
+    </body>
+</html>

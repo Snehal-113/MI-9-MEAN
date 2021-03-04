@@ -1,28 +1,170 @@
 <html>
-    <body>
-        <fieldset>
-            <label for="fn">FirstName</label>
-            <input type="text" id="fn" name="fn"><br><br>
-            <label for="ln">LastName</label>
-            <input type="text" id="ln" name="ln"><br><br>
-            <label for="un">UserName</label>
-            <input type="text" id="un" name="un" onchange="check()"><br><br>
-            <label for="pwd">Password</label>
-            <input type="password" id="pwd" name="pwd" onchange="check()">
-        </fieldset>
-        <script>
-            function check(){   
-                let a = document.getElementById("un").value;
-                if(!a.match(/^[a-zA-Z](\w|\d){7,14}/)){
-                    alert("Enter a valid username");
+
+<head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="mytable">
+        <tr>
+            <th>Select</th>
+            <th>Sr No.</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>City</th>
+        </tr>
+        <tr id="row1">
+            <td><input type="checkbox" id="chk1" name="c" value="2"></td>
+            <td id="s1">1</td>
+            <td>a</td>
+            <td>123</td>
+            <td>Delhi</td>
+        </tr>
+        <tr id="row2">
+            <td><input type="checkbox" id="chk2" name="c" value="2"></td>
+            <td id="s2">2</td>
+            <td id="x">b</td>
+            <td id="x">456</td>
+            <td id="x">Gurgaon</td>
+        </tr>
+        <tr id="row3">
+            <td><input type="checkbox" id="chk3" name="c" value="3"></td>
+            <td id="s3">3</td>
+            <td>c</td>
+            <td>789</td>
+            <td>Noida</td>
+        </tr>
+    </table><br>
+    <button type="button" id="btnAdd" onclick="add()">Add</button>
+    <button type="button" id="btnEdit" onclick="edit()">Edit</button>
+    <button type="button" id="btnDelete" onclick="deleteRows()">Delete</button>
+
+    <br>
+
+    <!--  <label for="srno.">sr no.</label>
+    <input type="text" id="srno." name="srno.">
+    <label for="name">name</label>
+    <input type="text" id="name" name="name">
+    <label for="mobile">mobile</label>
+    <input type="tel" id="mobile" name="mobile">
+    <label for="city">city</label>
+    <input type="text" id="city" name="city">  -->
+    <script>
+        let numberOfRows = 3;
+        function add() {
+            document.getElementById("btnAdd").disabled = true;
+            let table = document.getElementById("mytable");
+            let row = table.insertRow();
+            numberOfRows++;
+            row.id = "row" + numberOfRows;
+            let count = table.rows[0].cells.length;
+            let chk;
+            for (let i = 1; i <= count; i++) {
+                cell = row.insertCell();
+                if (i == 1) {
+                    chk = document.createElement("input");
+                    chk.type = "checkbox";
+                    chk.value = "";
+                    chk.id = "chk" + numberOfRows;
+                    chk.disabled = false;
+                    cell.appendChild(chk);
+                }
+                else if (i == 2) {
+                    cell.id = "s" + numberOfRows;
+                    let srNo = document.createTextNode(numberOfRows);
+                    cell.appendChild(srNo);
+                }
+                else {
+                    let input = document.createElement("input");
+                    input.type = "text";
+                    cell.appendChild(input);
                 }
             }
-             function pwdcheck(){
-                 let b = document.getElementById("pwd").value;
-                if(!b.match(/(\w{1,}\d{1,}\W{1,}){8,}/)){
-                    alert("Enter a valid password"); 
+            cell = row.insertCell();
+            cell.id = "btnSaveCell" + numberOfRows;
+            btn = document.createElement("input");
+            btn.id = "btn" + numberOfRows;
+            btn.value = "Save";
+            btn.type = "button";
+            btn.addEventListener("click", function(){
+                                        save(numberOfRows);
+                                    });
+            cell.appendChild(btn);
+        }
+        function save(rowNumber) {            
+            document.getElementById("btnAdd").disabled = false;
+            document.getElementById("btnEdit").disabled = false;
+            document.getElementById("btnDelete").disabled = false;
+            document.getElementById("chk"+rowNumber).checked = false;
+
+            let btnSaveCell = document.getElementById("btnSaveCell" + rowNumber);
+            btnSaveCell.remove();
+            let row = document.getElementById("row" + rowNumber);
+            let count = row.cells.length;
+
+
+            for (let i = 2; i < count; i++) {
+                let cell = row.cells[i];
+                let input = cell.firstChild;
+                
+                input.remove();
+                cell.appendChild(textNode);
+            }
+
+        }
+        function edit() {
+            document.getElementById("btnAdd").disabled = true;
+             document.getElementById("btnEdit").disabled = false;
+            document.getElementById("btnDelete").disabled = true;
+            
+            for (let i=0; i< selectedCheckboxes.length; i++) {
+                let checkbox = selectedCheckboxes[i];
+                let rowNumber = checkbox.id.substring(3);
+                let row = document.getElementById("row" + rowNumber);
+                let count = row.cells.length;
+
+                for (let i = 2; i < count; i++) {
+                    let cell = row.cells[i];
+                    let textNode = cell.firstChild;
+                    let input = document.createElement("input");
+                    input.type = "text";
+                    input.value = textNode.nodeValue;
+                    textNode.remove();
+                    cell.appendChild(input);
                 }
-            } 
-        </script>
-    </body>
+                cell = row.insertCell();
+                cell.id = "btnSaveCell" + rowNumber;
+                btn = document.createElement("input");
+                btn.id = "btn" + rowNumber;
+                btn.value = "Save";
+                btn.type = "button";
+                btn.addEventListener("click", function(){
+                                        save(rowNumber);
+                                    });
+                cell.appendChild(btn);
+
+            }
+        }
+        function deleteRows() {
+                let selectedCheckboxes = document.querySelectorAll('input[type=checkbox]:checked');
+                for (let i=0; i< selectedCheckboxes.length; i++) {
+                    let checkbox = selectedCheckboxes[i];
+                    let rowNumber = checkbox.id.substring(3);
+                    let row = document.getElementById("row" + rowNumber);
+                    row.remove();
+            }
+        }
+
+
+
+    </script>
+</body>
+
 </html>
