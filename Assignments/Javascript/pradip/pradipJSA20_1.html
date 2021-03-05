@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Assignment 20_1</title>
+    </head>
+    <body>
+     <table  id="table" padding="50px"  border="2px">
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>AAAA</td>
+            <td>BBBB</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>CCCC</td>
+            <td>DDDD</td>
+            <td>20</td>
+        </tr>
+        </table>
+        <br><br>
+        <button type="button" onclick="addrow()">Add Row</button><br><br>
+        <script language="javascript">
+            function addrow(){  
+                var newRow = document.getElementById("table");
+
+                var row = newRow.insertRow();
+                var col1 = row.insertCell();
+                var col2 = row.insertCell();
+                var col3 = row.insertCell();
+                var col4 = row.insertCell();
+
+                col1.innerHTML="3"
+                col2.innerHTML="EEEEE"
+                col3.innerHTML="FFFF"
+                col4.innerHTML="14"
+            }
+        </script>
+    </body>
+</html>

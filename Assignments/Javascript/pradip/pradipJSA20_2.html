@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Assignment20_2</title>
+    </head>
+    <body>
+        <table id="table" padding="50px" border="1px" ;>
+            <tr>
+                <th>Sr No</th>
+                <th>Name</th>
+                <th>city</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>AAAA</td>
+                <td>pune</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>CCCC</td>
+                <td>mumabai</td>
+            </tr>
+        </table>
+        <br /><br />
+        <input type="text" id="row" placeholder="Enter Row Number" /><br /><br />
+        <input type="text" id="col" placeholder="Enter Column Number" /><br /><br />
+        <input type="text" id="str" placeholder=" Enter String to be Change" /><br /><br />
+        <button type="button" onclick="update()">Update</button><br /><br />
+        <script language="javascript">
+            function update() {
+                var table1 = document.getElementById("table");
+                var a = document.getElementById("row").value;
+                var b = document.getElementById("col").value;
+                var c = document.getElementById("str").value;
+                table1.rows[a].cells[b].innerHTML = c;
+            }
+        </script>
+    </body>
+</html>
