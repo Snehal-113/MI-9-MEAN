@@ -1,0 +1,33 @@
+<html>
+    <head>
+      <script>
+          function display(){
+              return "Hello - This is a function with name";
+          }
+      </script>
+    </head>
+    <body>
+        <script>
+            var str = display();
+            document.writeln(str+"<br>");
+            console.log(display());
+            var str1 = function(){
+                return "Hello - This is a Anonymous function name";
+            }
+            document.writeln(str1()+"<br>");
+
+            var str2 =()=>"Hello - This is a Arrow function ";
+            document.writeln(str2()+"<br>");
+
+            var str3 =()=>{return "Hello - This is a Arrow function with curley braces"};
+            document.writeln(str3()+"<br>");
+
+                 var a= parseInt(prompt("Enter the value for a"));
+                 var b= parseInt(prompt("Enter the value for b"));
+                 var add = (a,b) =>{ return a+b;};
+                document.writeln("Adding is :"+add(a,b)+"<br>");
+                document.writeln("Type of:"+typeof(add)+"<br>");
+                 document.writeln("Value :"+(add instanceof Function)+"<br>");
+        </script>
+    </body>
+</html>

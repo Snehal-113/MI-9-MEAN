@@ -1,0 +1,72 @@
+<html>
+        <head>
+    <title>Elements</title>
+
+        <script>
+
+            function clickFun(){
+
+                document.getElementById("p_resid").innerHTML += this;
+
+            }
+
+            var res_rr;
+
+            res_rr = ()=>{
+
+                document.getElementById("p_residarr").innerHTML += this;  
+
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <h1> Using Normal Function</h1>
+
+        <h2 id="hid">This is heading - Click me</h2>
+
+        <p id="pid">This is paragraph - click me</p>
+
+        <button type="button" id="btnid">Click me</button>
+
+        <p id="p_resid"></p>
+
+​
+
+        <h1> Using Arrow Function</h1>
+
+        <h2 id="hid_arr">This is heading - Click me</h2>
+
+        <p id="pid_arr">This is paragraph - click me</p>
+
+        <button type="button" id="btnid_arr">Click me</button>
+
+        <p id="p_residarr"></p>
+
+        <script>
+
+            window.addEventListener("load",clickFun);
+
+            document.getElementById("hid").addEventListener("click",clickFun);
+
+            document.getElementById("pid").addEventListener("click",clickFun);
+
+            document.getElementById("btnid").addEventListener("click",clickFun);
+
+            document.getElementById("hid_arr").addEventListener("click",res_rr);
+
+            document.getElementById("pid_arr").addEventListener("click",res_rr);
+
+            document.getElementById("btnid_arr").addEventListener("click",res_rr);
+
+​
+
+        </script>
+
+    </body>
+
+</html>
+
