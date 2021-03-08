@@ -34,5 +34,7 @@ function ShowTime() {
     </div>
   );
   ReactDom.render(element, document.getElementById("root"));
+  
+  
 }
 setInterval(ShowTime, 1000);
