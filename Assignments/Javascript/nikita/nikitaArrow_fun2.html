@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Elements</title>
+        <script>
+            
+            var res_arr;
+            res_arr = ()=>{
+                document.getElementById("p_resid_arr").innerHTML += this;  
+            }
+        </script>
+    </head>
+    <body>
+       
+
+        <h1> Using Arrow Function</h1>
+        <h2 id="hid_arr">This is heading - Click me</h2>
+        <p id="pid_arr">This is paragraph - click me</p>
+        <button type="button" id="btnid_arr">Click me</button>
+        <p id="p_resid_arr"></p>
+        <script>
+            window.addEventListener("load",clickFun);
+            document.getElementById("hid_arr").addEventListener("click",res_arr);
+            document.getElementById("pid_arr").addEventListener("click",res_arr);
+            document.getElementById("btnid_arr").addEventListener("click",res_arr);
+
+        </script>
+    </body>
+</html> 
