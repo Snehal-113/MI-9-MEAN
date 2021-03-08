@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Priyanka</title>
+    </head>
+    <body>
+        <fieldset>
+            <label for="use">User Name :</label>
+            <input type="text" name="use1" id="use"><br><br>
+            <label for="use">Password :</label>
+            <input type="password" name="use11" id="pwd1"><br><br>
+            <button type="button" onclick="check()">Login</button>
+        </fieldset>
+        <script langauge="javascript">
+            function check(){
+                var a  = document.getElementById("use").value;
+                var b = document.getElementById("pwd1").value;
+                if(a.toUpperCase() == "ADMIN" && b == "admin123")
+                {
+                    window.alert("You can Login");
+                    
+                }
+                else{
+                    window.alert("You cannot  Login");
+                }
+            }
+        </script>
+    </body>
+</html>

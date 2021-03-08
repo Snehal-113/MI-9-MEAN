@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Assignment 21_1</title>
+        <script>
+            function number1() {
+                a = document.getElementById("row1").value;
+                if (a < 0 || a.match(/^[a-zA-z_\-]/)) {
+                    alert("Error:Enter a value greater than 0 & numeric number  only");
+                    document.getElementById("row1").focus();
+                    document.getElementById("row1").value = "";
+                }
+            }
+            function number2() {
+                b = document.getElementById("col1").value;
+                if (b < 0 || b.match(/^[a-zA-z_\-]/)) {
+                    alert("Error:Enter a value greater than 0 & numeric number only");
+                    document.getElementById("col1").focus();
+                    document.getElementById("col1").value = "";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label for="row1">Enter number of row :</label>
+        <input type="text" name="row11" id="row1" onkeyup="number1()" /><br /><br />
+        <label for="">Enter a number of column :</label>
+        <input type="text" name="col11" id="col1" onkeyup="number2()" /><br /><br />
+        <button type="button" id="btn1" onclick="table1()">Create a table</button><br /><br />
+        <label for="rowno">Row no.</label>
+        <input type="text" name="rowns" id="rowno" /><br /><br />
+        <label for="colno">Col no.</label>
+        <input type="text" name="cols" id="colno" /><br /><br />
+        <label for="cont">Content</label>
+        <input type="text" name="con" id="cont" /><br /><br />
+        <button type="button" id="bid2" onclick="change()">Change content</button><br /><br />
+        <script language="javascript">
+            function table1() {
+                var t = document.createElement("table");
+                t.style.border = "2px solid red";
+                t.id = "tid";
+                for (var i = 0; i < a; i++) {
+                    var r = t.insertRow();
+                    for (var j = 0; j < b; j++) {
+                        var c = r.insertCell();
+                        c.style.border = "2px solid red";
+                        c.innerHTML = "pradip";
+                    }
+                }
+                document.body.appendChild(t);
+            }
+            function change() {
+                var x = document.getElementById("rowno").value;
+                var y = document.getElementById("colno").value;
+                var z = document.getElementById("cont").value;
+                var t = document.getElementById("tid");
+                t.rows[x].cells[y].innerHTML = z;
+            }
+        </script>
+    </body>
+</html>

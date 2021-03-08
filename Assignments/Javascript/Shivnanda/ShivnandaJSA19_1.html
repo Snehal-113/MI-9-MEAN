@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Assignment19 Q1</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <label for="num"> Enter a Number : </label>
+                <input type="text" id="num1"><br><br>
+                <button type="button" onclick="mul()"> Table</button>
+            </fieldset>
+            <p id="pid"></p>
+        </form>
+        <script language="javascript">
+            function mul(){
+                var n = parseInt(document.getElementById("num1").value);
+                var i;
+                var p=1;
+                for(i=1;i<=10;i++){
+                    var p = i * n;
+                    document.write(n + "X" +i+ "=" +p);
+                    document.write("<br>");
+                }
+            }
+        </script>
+    </body>
+</html>

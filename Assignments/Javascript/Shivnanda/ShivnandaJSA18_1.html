@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> Assignment17 Q1</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <label for="num"> Enter a Number : </label>
+                <input type="number" name="number" id="num"><br><br>
+                <button type="button" onclick="EvenOdd()"> Even/Odd</button>
+            </fieldset>
+        </form>
+        <script language="javascript">
+            var num = parseInt(document.getElementById("num").value);
+            function EvenOdd(){
+                if(num % 2 ==0)
+                {
+                    alert("Given number is even");
+                }
+                else{
+                    alert("Given number is odd");
+                }
+            }
+        </script>
+    </body>
+</html>
