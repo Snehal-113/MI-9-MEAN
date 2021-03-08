@@ -18,13 +18,7 @@ render(){
 
 
     let cap;
-    if(this.state.toggle){
-        cap="ON";
-    }
-    else{
-        cap="OFF";
-    }
-   return  <button onClick={this.toggleFun}>{this.state.toggle?'ON':'OFF'}</button>
+      return  <button onClick={this.toggleFun}>{this.state.toggle?'ON':'OFF'}</button>
 
     //return(<button onClick={this.toggleFun}>{this.state.toggle?'ON':'OFF'}</button>);  
 }
