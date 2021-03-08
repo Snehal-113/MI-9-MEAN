@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Documnent</title>
+    <script lang="javascript">
+      function display() {
+          return "Hello - This is a funcion With Name"
+      }
+    </script>
+  </head>
+  <body>
+    <script lang="javascript">
+      var str = display();
+      document.writeln(str+"<br>");
+      console.log(display());
+      var str1 = function(){
+          return "Hello - This is a Anonymous function";
+      }
+      document.writeln(str1()+"<br>");
+
+      var str2 = ()=> "Hello - This is a Arrow function";
+      document.writeln(str2()+"<br>");
+
+      var str3 = ()=> { return "Hello - This is a Arrow function with curly braces";};
+      document.writeln(str3()+"<br>");
+
+      let a,b;
+      var add = (x,y) => {
+          a = parseInt(prompt("Enter the value for a"));
+          b = parseInt(prompt("Enter the value for b"));
+          return a+b; };
+          document.writeln("Addition is :" +add(a,b)+"<br>");
+          document.writeln("Type Of :" +typeof(add)+"<br>");
+          document.writeln("Value :" +(add instanceof(Function))+"<br>");
+
+          document.write("*************************END**********************************<br>");
+    </script>
+  </body>
+</html>
