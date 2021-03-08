@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow function</title>
+</head>
+<body>
+    <h1 id="id1">This is Function</h1>
+    <p id="id2">Normal Function</p>
+    <button id="btn1">Click</button>
+    <p id="result1"></p><br><br>
+    <h2 id="Arr1">This Arrow function</h2>
+    <p id="Arr2">Arrow function</p>
+    <button id="btn2">Click</button>
+    <p id="result2"></p>
+    <script>
+       function reg_fun()
+       {
+           document.getElementById("result1").innerHTML+=this;
+       }
+       var arr_fun = () =>{
+           document.getElementById("result2").innerHTML+=this;
+       };
+       window.document.getElementById("id1").addEventListener('click',reg_fun);
+       window.document.getElementById("id2").addEventListener('click',reg_fun);
+       window.document.getElementById("btn1").addEventListener('click',reg_fun);
+       window.document.getElementById("Arr1").addEventListener('click',arr_fun);
+       window.document.getElementById("Arr2").addEventListener('click',arr_fun);
+       window.document.getElementById("btn2").addEventListener('click',arr_fun);
+    </script>
+
+</body>
+</html>

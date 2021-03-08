@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>array3 Add</title>
-    </head>
-    <body>
-        <script lang="JavaScript">  
-          var no = [];
-         for(var i = 1;i<=4;i++)                                                           
-       {   
-           var z = prompt("Enter numbers for Sum");   
-           no.push(z);                              
-       }   
-        document.write("number are:"+no);    
-        document.write("<br>********************************<br>")
-        var sum = 0;      
-       for(var j = 0; j< no.length; j++)     
-      {   
-        sum =sum + +no[j];   
-      }   
-       document.write("sum is:"+sum)
-        </script>
-    </body>
+<head>
+  <title>work</title>
+</head>
+<body>
+  <script>
+    var no=[],x,i,sum=0;
+    for(i=1;i<=4;i++)
+    {
+      var y=prompt("enter number");
+      no.push(y);
+    }
+    document.write("Enter number:"+no);
+    document.write("<br>************<br>");
+    
+   for(i=1;i<=no.length;i++)
+   {
+    sum=sum+ +no[i];
+   }
+   document.write(+sum+"<br>");
+  </script>
+
+</body>
 </html>
