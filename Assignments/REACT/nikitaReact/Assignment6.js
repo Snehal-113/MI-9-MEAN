@@ -71,10 +71,6 @@ function Show() {
         <h3>year:{year}</h3>
           </div>
         );
-      
-    
-
-
   ReactDom.render(element,document.getElementById("root"));
         }
   setInterval(Show,1000);

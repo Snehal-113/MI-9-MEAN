@@ -19,4 +19,3 @@ import ReactDom from "react-dom";
   }
      const etime = <ShowTime />
      ReactDom.render(etime,document.getElementById("root"));
-   setInterval(ShowTime,1000);

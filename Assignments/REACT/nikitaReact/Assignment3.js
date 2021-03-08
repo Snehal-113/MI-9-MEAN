@@ -2,7 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 function ShowTime() {
   let date = new Date().toLocaleDateString();
-  let day = new Date().getDay();
+  let day = new Date().getDay()+1;
   let d;
   switch (day) {
     case 1:
@@ -36,4 +36,3 @@ function ShowTime() {
   ReactDom.render(element, document.getElementById("root"));
 }
 setInterval(ShowTime, 1000);
-// condition ? expression1 : expression2

@@ -1,5 +1,8 @@
-function Show() {
-    var d1=prompt("Enter the date MM/DD/YYYY")
+import React from "react";
+import ReactDom from "react-dom";
+
+    function Show() {
+        var d1=prompt("Enter the date MM/DD/YYYY")
         let locdate=new Date(d1).toLocaleDateString();
         let day=new Date(d1).getDay();
         let d;
