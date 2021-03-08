@@ -5,6 +5,9 @@ function ShowTime() {
   let day = new Date().getDay();
   let d;
   switch (day) {
+    case 0:
+      d = "Sunday";
+      break;
     case 1:
       d = "Monday";
       break;
@@ -22,9 +25,6 @@ function ShowTime() {
       break;
     case 6:
       d = "Saturday";
-      break;
-    case 7:
-      d = "Sunday";
       break;
   }
   const element = (

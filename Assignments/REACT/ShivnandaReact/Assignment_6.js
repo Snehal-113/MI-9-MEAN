@@ -8,6 +8,8 @@ function Show() {
    let year=new Date().getUTCFullYear();
    switch(day)
    {
+       case 0:d="Sunday";
+       break;
        case 1:d="Monday";
        break;
        case 2:d="Tuesday";
@@ -19,8 +21,6 @@ function Show() {
        case 5:d="Friday";
        break;
        case 6:d="Saturday";
-       break;
-       case 7:d="Sunday";
        break;
    }
    let loctime=new Date().toLocaleTimeString();

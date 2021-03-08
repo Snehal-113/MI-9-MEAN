@@ -9,6 +9,8 @@ function Show() {
       let year=new Date(getdate).getUTCFullYear();
       switch(day)
       {
+          case 0:d="sunday";
+          break;
           case 1:d="monday";
           break;
           case 2:d="Tuesday";
@@ -21,14 +23,12 @@ function Show() {
           break;
           case 6:d="saturday";
           break;
-          case 7:d="sunday";
-          break;
       }
       let month=new Date(getdate).getMonth()+1;
       let m;
       switch(month)
       {
-          case 1:m="January";
+          case 0:m="January";
           break;
           case 2:m="February";
           break;

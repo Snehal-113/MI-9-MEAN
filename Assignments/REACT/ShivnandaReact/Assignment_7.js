@@ -12,6 +12,8 @@ class Show extends React.Component {
       let year=this.state.getUTCFullYear();
       switch(day)
       {
+          case 0:d="Sunday";
+          break;
           case 1:d="Monday";
           break;
           case 2:d="Tuesday";
@@ -23,8 +25,6 @@ class Show extends React.Component {
           case 5:d="Friday";
           break;
           case 6:d="Saturday";
-          break;
-          case 7:d="Sunday";
           break;
       }
       let loctime=this.state.toLocaleTimeString();
@@ -71,4 +71,4 @@ class Show extends React.Component {
   }
     const element=<Show/>;
     ReactDom.render(element,document.getElementById("root"));
-    setInterval(Show,1000);
+  
