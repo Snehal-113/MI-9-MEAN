@@ -36,4 +36,3 @@ function ShowTime() {
   ReactDom.render(element, document.getElementById("root"));
 }
 setInterval(ShowTime, 1000);
-// condition ? expression1 : expression2
