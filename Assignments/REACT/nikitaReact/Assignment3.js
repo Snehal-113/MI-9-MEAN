@@ -2,7 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 function ShowTime() {
   let date = new Date().toLocaleDateString();
-  let day = new Date().getDay();
+  let day = new Date().getDay() + 1;
   let d;
   switch (day) {
     case 1:
