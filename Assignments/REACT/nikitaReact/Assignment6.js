@@ -1,9 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-
-
 function Show() {
-
     var d = new Date();
     document.getElementById("demo").innerHTML = d.getFullYear();  
        let loc=new Date().toLocaleTimeString();
@@ -71,10 +68,6 @@ function Show() {
         <h3>year:{year}</h3>
           </div>
         );
-      
-    
-
-
   ReactDom.render(element,document.getElementById("root"));
         }
   setInterval(Show,1000);
