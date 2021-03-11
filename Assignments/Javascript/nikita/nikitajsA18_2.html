@@ -1,0 +1,30 @@
+<html>
+    <head><title>assi18 2</title>
+        </head>
+    <body>
+    <div style="text-align: center;">
+    <fieldset>
+    <label for="nm">Enter a Name:</label>
+     <input type="text" id="nm" name="nm"><br><br>
+     <label for="ag">Enter a age:</label>
+     <input type="text" id="ag" name="ag"><br><br>
+     <button onclick="voting_age()">show</button>
+    </fieldset>
+    </div>
+    <script lang="javascript">
+        function voting_age()
+        {
+            var name=document.getElementById("nm").value;
+            var age=document.getElementById("ag").value;
+            if(age>=18){
+                alert(name+"Eligible for vote");
+            }
+            else{
+                alert(name+"Not Eligible for vote");
+            }
+            
+        }
+    </script>
+    </body>
+
+</html>

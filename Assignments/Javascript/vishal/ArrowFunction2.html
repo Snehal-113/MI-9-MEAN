@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Documnent</title>
+    <script lang="javascript">
+      function display() {
+          return "Hello - This is a funcion With Name"
+      }
+
+      function clickfunc(){
+          document.getElementById("p_resid").innerHTML += this;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Using Normal Function</h1>
+    <h2 id="hid">This Is Heading - Click Me</h2>
+    <p id="pid">This Is Heading - Click Me</p>
+    <button type="button" id="btnid">Click Me</button>
+
+    <p id="p_resid"></p>
+
+    <h1>Using Arrow Function</h1>
+    <h2 id="hid_arr">This Is Heading - Click Me</h2>
+    <p id="pid_arr">This Is Heading - Click Me</p>
+    <button type="button" id="btnid_arr">Click Me</button>
+
+    <p id="p_resid_arr"></p>
+
+    <script lang="javascript">
+      window.addEventListener("load",clickfunc);
+      document.getElementById("hid").addEventListener("click",clickfunc);
+      document.getElementById("pid").addEventListener("click",clickfunc);
+      document.getElementById("btnid").addEventListener("click",clickfunc);
+
+      var res_arr;
+      res_arr = ()=>{
+          document.getElementById("p_resid_arr").innerHTML += this;
+      }
+
+      window.addEventListener("load",res_arr);
+      document.getElementById("hid_arr").addEventListener("click",res_arr);
+      document.getElementById("pid_arr").addEventListener("click",res_arr);
+      document.getElementById("btnid_arr").addEventListener("click",res_arr);
+    </script>
+  </body>
+</html>

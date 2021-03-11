@@ -1,0 +1,103 @@
+<html>
+    <head><title>Assi</title></head>
+    <body>
+        <script language="JavaScript">
+            class salesman{
+            constructor(){
+                this.id=0;
+                this.name="";
+
+            }
+            getdata(id1,name1){
+                this.id=id1;
+                this.name=name1;
+
+            }
+              
+             display()
+            {
+             document.write("<br><b>SalesmanId &nbsp &nbsp SalesmanName &nbsp ");
+             document.write("<br>"+this.id+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"+this.name);
+
+            }
+            }
+            class commi extends salesman{
+                constructor(){
+                 super();
+                 this.commission=0;
+                 this.sales=0;
+                 
+            }
+            getdata(id1,name1,sales){
+                super.getdata(id1,name1);
+                this.sales=sales;
+            }
+           /* Inputdata(sales){
+                  this.sales=sales;
+            }*/
+            salcommission(sales)
+            {
+                var commission1;
+                if(sales >=0 && sales<=5000){
+                    commission1=0.02;
+                   // commission1=(sales)*0.02; 
+
+                }
+                else if(sales>=5001 && sales<=12000){
+                    commission1=0.05;
+                 //   commission1=(sales)*0.05; 
+
+                }
+                else if(sales>=12001 && sales<=50000){
+                    commission1=0.1;
+                //    commission1=(sales)*0.1; 
+
+                }
+                else
+                {
+                    commission1=0.5;
+
+                }
+                this.commission=(sales)*commission1; 
+
+                  
+                   }
+                display()
+                {
+                    super.display();
+                document.write("<br>"+this.commission+"&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp"+this.sales);
+
+            }  
+                
+        }
+            
+            s1=new commi();
+            var id1=prompt("Enter a salesman id");
+            var name1=prompt("Enter a salesman name");
+            var sales=prompt("Enter sales");
+            try{
+                if(sales <0){
+                    throw "Error1: sales is not nigative";
+                    sales="";
+                    return;
+                }
+                if(isNaN(sales)){
+                    throw "Not a number";
+                    sales="";
+                    return;
+
+                }
+            
+            s1.getdata(id1,name1,sales);
+            //s1.Inputdata(sales);
+            s1.salcommission(sales);
+            s1.display();
+            }
+            catch(e){
+                alert(e);
+            }
+
+
+        </script>
+    </body>
+</html>

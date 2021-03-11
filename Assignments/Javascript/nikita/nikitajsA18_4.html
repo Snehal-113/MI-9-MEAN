@@ -1,0 +1,62 @@
+<html>
+  <head><title>ass18 Q4</title></head>
+  <body>
+    <div id="div1">
+      <p style="text-align: center;">Choose a country to know its capital</p>
+      <label for="country" class="element">country</label>
+      <select id="country" onchange="change()"></select>
+
+      <label for="capital">capital</label>
+      <input type="text" id="capital" name="capital"></select>
+    </div>
+
+    <script lang="javascript">
+      var ele=[
+                {
+                   "country":"Afghanistan",
+                   "city":"kabul"
+                },
+                {
+                   "country":"Albania",
+                   "city":"Tirana"
+                },
+                {
+                   "country":"India",
+                   "city":"New Delhi"
+                },
+                {
+                   "country":"Zimbabwe",
+                   "city":"Harare"
+                },
+                {
+                   "country":"Iran",
+                   "city":"Tehran"
+                },
+                {
+                   "country":"Italy",
+                   "city":"Rome"
+                }
+              ];
+              for(let i=0;i<ele.length;i++){
+                var opt=document.createElement("option");
+                var m=document.createTextNode(ele[i].country);
+                opt.appendChild(m);
+                opt.value=ele[i].country;
+                var par=document.getElementById("country");
+                par.appendChild(opt);
+              }
+              
+            function change(){
+                 var cou=document.getElementById("country").value;
+                 var cap="";
+                 for(let i=0;i<ele.length;i++){
+                     if(ele[i].country==cou){
+                       cap=ele[i].city;                     
+               }
+              }
+              document.getElementById("capital").value;
+            }
+      
+    </script>
+  </body>
+</html>
