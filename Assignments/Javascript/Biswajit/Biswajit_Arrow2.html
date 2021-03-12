@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow2</title>
+</head>
+<body>
+	<div>
+		<h1 id="regh">Function</h1>
+		<p id="regp">Using a regular function.</p>
+		<button id="regb">Click Me</button>
+		<p id="res"></p>
+	</div>
+	<div>
+		<h1 id="arrh">Function</h1>
+		<p id="arrp">Using a regular function.</p>
+		<button id="arrb">Click Me</button>
+		<p id="res_arr"></p>
+	</div>
+	<script type="text/javascript">
+		function reg_func() {
+			document.getElementById("res").innerHTML+=this;
+		}
+
+		var arr_func = () => {
+			document.getElementById("res_arr").innerHTML+=this;
+		};
+		
+		document.getElementById("regh").addEventListener('click',reg_func);
+		document.getElementById("regp").addEventListener('click',reg_func);
+		document.getElementById("regb").addEventListener('click',reg_func);
+
+		document.getElementById("arrh").addEventListener('click',arr_func);
+		document.getElementById("arrp").addEventListener('click',arr_func);
+		document.getElementById("arrb").addEventListener('click',arr_func);
+		
+	</script>
+</body>
+</html>
