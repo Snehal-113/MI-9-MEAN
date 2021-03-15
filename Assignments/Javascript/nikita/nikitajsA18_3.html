@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>A18_Q3</title>
+  </head>
+  <body>
+    Enter Shopping Amount : <input type="number" id="nid" name="amount">
+    <button type="button" onclick="Shopping_dis()">Calculate</button>
+    <p id="pid"></p>
+    <p id="pid2"></p>
+    <script language="javascript">
+      function Shopping_dis() {
+      var discount;
+      var amount = parseInt(document.getElementById("nid").value);
+        if(amount>1000){
+        discount=15;
+        document.getElementById("pid").innerHTML=" 15% of discount on total amount";
+      }
+      else {
+        discount=5;
+        document.getElementById("pid").innerHTML="  5% of discount on total amount";
+      }
+        var TotalAmount = amount -((discount/100) *amount);
+        document.getElementById("pid2").innerHTML= TotalAmount;
+    }
+    </script>
+  </body>
+</html> 

@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>evolution</title>
+       <script language="javascript">
+           
+           function bubble(newarr,rl)
+           {
+            var i,j,temp;
+            var n=newarr.length;
+             for(i=0;i<n-1;i++)
+            {
+             for(j=0;j<n;j++)
+             {
+               if(newarr[j]<newarr[j+1])
+                {
+                   swap(newarr[j],newarr[j+1]);
+                   swap(rl[j],rl[j+1]);
+
+                }
+           }
+           }
+           return newarr;
+           }
+
+           function swap(a,b){
+               var temp;
+                   temp=a;
+                   a=b;
+                   b=temp;
+           }
+           function find(){
+            var Rollno=parseInt(document.getElementById("rollno").value);
+               for(i=0;i<roll.length;i++)
+               {                    
+                   if(Rollno==roll[i])
+                   {
+                       document.getElementById("pid").innerHTML="roll"+roll[i]+"number"+arr1[i];
+                       break;
+                   }
+               }
+               
+           }
+    </script>
+    </head>
+        <body>
+             <form>
+            Enter the Roll: <input type="text" id="rollno">
+            <button type="button" onclick="find()">show</button>
+            <p id="pid"></p>
+             </form>
+             <script language="javascript">
+
+                var roll = [];
+                var marks=[];
+                 var x,y,i,j;
+         
+                   for (i = 0; i <10; i++) {
+                    y = prompt("Enter roll numbers:");
+                    roll.push(parseInt(y));
+                    }
+                    for (i = 0; i <10;) {
+                    x = prompt("Enter marks:");
+                    if (x>50||x<0||x==null) {
+                        alert("Error-invalid Marks!!");
+                    }
+                    else{
+                        marks.push(parseInt(x));
+                        i++;
+                        }
+                    }
+                    document.write("<br>marks"+(i+1)+":"+marks);
+                    
+                    var newarr=[];
+                    for (j = 0; j<10; j++) {
+                        newarr[j]=parseInt(((20*marks[j])/100)+marks[j]);
+ 
+                    }
+                    var arr1=[];
+                    
+                    arr1=bubble(newarr,roll);
+                    document.write("<br>After adding 20%"+arr1);
+                    document.write("<br><b>ROLLNO &ensp;&ensp <b>Marks");
+                   /* for(let i=0;i<5;i++)
+                    {
+                    document.write("<br>"+roll[i]+"&ensp;&ensp;"+marks[i]);
+                    
+                    }*/
+                    for(let i=0;i<5;i++)
+                    {
+                    document.write("<br>"+roll[i]+"&ensp;&ensp;"+arr1[i]);
+                    }
+
+            
+        </script>
+    </body>
+</html>
