@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow_Function_2</title>
+
+    <script>
+      function myFun() {
+        document.getElementById("p_resid").innerHTML += this;
+      }
+      var arrow;
+      arrow = () => {
+        document.getElementById("p_residarr").innerHTML += this;
+      };
+    </script>
+  </head>
+
+  <body>
+    <h2><u>Using Normal Function</u> </h2>
+    <h3 id="heading">This is heading - Click me</h3>
+    <p id="para">This is paragraph - click me</p>
+    <button type="button" id="btn">Click me</button>
+    <p id="p_resid"></p>
+
+    <h2> <u>Using Arrow "=>" Function</u> </h2>
+    <h3 id="h_arrow">This is heading - Click me</h3>
+    <p id="p_arrow">This is paragraph - click me</p>
+    <button type="button" id="b_arrow">Click me</button>
+    <p id="p_residarr"></p>
+
+    <script>
+      window.addEventListener("load", myFun);
+      document.getElementById("heading").addEventListener("click", myFun);
+      document.getElementById("para").addEventListener("click", myFun);
+      document.getElementById("btn").addEventListener("mouseover", myFun);
+
+      document.getElementById("h_arrow").addEventListener("click", arrow);
+      document.getElementById("p_arrow").addEventListener("click", arrow);
+      document.getElementById("b_arrow").addEventListener("mouseover", arrow);
+    </script>
+  </body>
+</html>
+
+
