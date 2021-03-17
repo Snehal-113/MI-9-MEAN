@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrow1</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function name() {
+			return "This is a regular function with name.";
+		}
+		var func = function() {
+			return "This is a regular anonymous function.";
+		}
+		var funcArrow = () => "This is a arrow function.";
+		var add = (a,b) => {
+			return a+b;
+		}
+
+		document.write(name(),"<br>");
+		document.write(func(),"<br>");
+		document.write(funcArrow(),"<br>");
+
+		var a = parseInt(prompt("Enter a :"));
+		var b = parseInt(prompt("Enter b :"));
+
+		document.write("Result is "+add(a,b),"<br>",
+			"Type of the instance is :"+typeof(add),
+			"<br>","Value :" ,add instanceof Function);
+	</script>
+</body>
+</html>

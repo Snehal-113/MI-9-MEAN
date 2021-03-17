@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDom from "react-dom";
-
     function Show() {
         var d1=prompt("Enter the date MM/DD/YYYY")
         let locdate=new Date(d1).toLocaleDateString();
@@ -65,10 +64,6 @@ import ReactDom from "react-dom";
         <h3>year:{year}</h3>
           </div>
         );
-      
-    
-
-
   ReactDom.render(element,document.getElementById("root"));
   }
   setInterval(Show,1000);

@@ -2,8 +2,12 @@ import React from "react";
 import ReactDom from "react-dom";
 function ShowTime() {
   let date = new Date().toLocaleDateString();
-  let day = new Date().getDay()+1;
+  let day = new Date().getDay();
+  let d;
   switch (day) {
+    case 0:
+      d = "Sunday";
+      break;
     case 1:
       d = "Monday";
       break;
@@ -22,14 +26,11 @@ function ShowTime() {
     case 6:
       d = "Saturday";
       break;
-    case 7:
-      d = "Sunday";
-      break;
   }
   const element = (
     <div>
       <h1>Hello</h1>
-      <h1>Today is {d}</h1>
+      <h1>Today's Day is  {d}</h1>
     </div>
   );
   ReactDom.render(element, document.getElementById("root"));

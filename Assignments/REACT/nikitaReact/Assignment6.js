@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-
 function Show() {
-
     var d = new Date();
     document.getElementById("demo").innerHTML = d.getFullYear();  
        let loc=new Date().toLocaleTimeString();

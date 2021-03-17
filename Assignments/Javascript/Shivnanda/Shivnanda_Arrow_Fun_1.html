@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Arrow Function</title>
+    </head>
+    <body>
+        <script language="javascript">
+
+            var str = ()=> "Hello - This is a Arrow Functon <br>";
+            document.write(str());
+
+            var str1= ()=>{ return " Hello - This is a Arrow Function with curly braces <br>";}
+            document.write(str1());
+
+            let a= parseInt(prompt("Enter the value for a"));
+            let b= parseInt(prompt("Enter  the value for b"));
+
+            var add = (x,y)=> {return x+y; };
+            document.write("Addition  is = "+add(a,b)+"<br>");
+            document.write("Type Of : "+typeof(add)+"<br>");
+            document.write("Value  :  " +(add instanceof Function) +"<br>");
+
+        </script>
+    </body>
+</html>
