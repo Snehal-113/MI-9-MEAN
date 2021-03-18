@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Arrow Function 2</title>
+    <script>
+      function display() {
+        return "Hello this is function with name";
+      }
+      function clickFun() {
+        document.getElementById("p_resid").innerHTML += this;
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="hid">This is Heading - Click Me</h1>
+    <p id="pid">This is Paragraph - Click Me</p>
+    <button id="btnid">Click Me</button>
+
+    <p id="p_resid"></p>
+
+    <h1 id="hid_arr">This is Heading - Click Me</h1>
+    <p id="pid_arr">This is Paragraph - Click Me</p>
+    <button id="btnid_arr">Click Me</button>
+
+    <p id="p_resid_arr"></p>
+
+    <script>
+      window.addEventListener("load", clickFun);
+      document.getElementById("hid").addEventListener("click", clickFun);
+      document.getElementById("pid").addEventListener("click", clickFun);
+      document.getElementById("btnid").addEventListener("click", clickFun);
+
+      var res_arr;
+      res_arr = () => {
+        document.getElementById("p_resid_arr").innerHTML += this;
+      };
+      window.addEventListener("load", res_arr);
+      document.getElementById("hid_arr").addEventListener("click",  res_arr);
+      document.getElementById("pid_arr").addEventListener("click", res_arr);
+      document.getElementById("btnid_arr").addEventListener("click", res_arr);
+    </script>
+  </body>
+</html>

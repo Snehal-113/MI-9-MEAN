@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Arrow Function 1</title>
+    <script>
+      function display() {
+        return "Hello This is function with name";
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      var str = display();
+      document.writeln(str + "<br>");
+
+
+      var str1 = function () {
+        return "Hello This is anonymous function without name";
+      };
+      document.writeln(str1() + "<br>");
+
+
+      var str2 = ()=> "Hello This is arrow function without return";
+      document.writeln(str2()+ "<br>")
+
+
+      var str3 = ()=>{
+         return "Hello This is arrow function with return";
+    }
+    document.writeln(str3() + "<br>")
+    </script>
+  </body>
+</html>
