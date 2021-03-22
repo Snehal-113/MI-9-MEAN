@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prime-Pallindrome</title>
+</head>
+
+<body>
+    <label for="num">Enter the number</label>
+    <input type="text" id="num" name="num">
+    <p id="pid"></p>
+    <button type="button" onclick="check()">Check</button>
+    <script>
+        function check() {
+            let x = parseInt(document.getElementById("num").value);
+            var n=x,sum=0,rem,count=0;
+            for(var i=1;i<=x;i++)
+            {
+                if(x%i==0)
+                    count++;
+            }
+            if(count==2){
+            while(n>0){
+                rem=parseInt(n%10);
+                sum=sum*10+rem;
+                n= parseInt(n/ 10);    
+            }
+            if(sum==x)
+                document.write("prime Pallindrome Number");
+            else
+                document.write("prime but not a Pallindrome Number");
+                
+            
+        }else  document.write("Not a prime Number");
+    }
+     
+
+
+    </script>
+</body>
+
+</html>

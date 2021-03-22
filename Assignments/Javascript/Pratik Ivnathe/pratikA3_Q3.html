@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>even number</title>
+    </head>
+    <style>
+        .A{
+            color: red;
+        }
+    </style>
+    <body>
+        <form name="Calc">
+            <label for=even>Enter number here</label><br>
+            <input type="text" id="no" size=5>
+            <button type="button" onclick="Ev()">click</button>
+            <p id="pi"></p>
+        </form>
+        <script lang="JavaScript">
+            function Ev(){
+              var x,no;
+              no=parseInt(document.getElementById("no").value);
+            for(x=0;x<=no;x++)
+            {
+                if(x===0) {
+                    document.getElementById("pi").innerHTML=+x+"...is even number";
+                }
+                else if(x%2===0) {
+                    document.getElementById("pi").innerHTML=+x+"....is Even number";
+                }
+                else{
+                    document.getElementById("pi").innerHTML=+x+"....is odd number";
+                }
+            } 
+          }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript">
+        function display()
+        {
+            return "Hello- this is a funtion with name";
+        }
+        
+
+    </script>
+</head>
+<body>
+    <script language="javascript">
+
+         var str = display();
+        document.writeln(str+"<br>");
+        console.log(display());
+        var str1 = function()
+        {
+            return "hello-this is anonymous function";
+        }
+        document.writeln(str1()+"<br>");
+        var str2 = ()=> "hello-this is arrow function";
+        document.writeln(str2()+"<br>");
+
+        let a = parseInt(prompt("Enter the value for a"));
+        let b = parseInt(prompt("Enter the value for b"));
+
+        var add = (x,y) =>{ return x+y; };
+        document.writeln("Addition is :"+add(a,b)+"<br>");
+        document.writeln("type of :"+typeof(add)+"<br>");
+        document.writeln("value :"+(add instanceof Function)+"<br>");
+    </script>
+
+    
+</body>
+</html>

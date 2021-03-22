@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Assignment6_Q1</title>
+    </head>
+    <body>
+        <script>
+            var name = [];
+            while(true){
+                var n = prompt("Enter names:");
+                if(n == ""){
+                    break;
+                }
+                name.push(n);
+            }
+            document.write("<br>Name list: " + name);
+            for(let i = 0; i < name.length; i++){
+                document.write("<br>Name"+ (i+1)+": "+ name[i]);
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Even or odd</title>
+        <script language="javascript">
+            function numeric1(){
+            number = document.getElementById("pri1").value;
+            if(number.match(/^[a-zA-Z!@#$%^&*_\-]/))
+            {
+                alert("Error:Enter a numeric data only");
+            }
+            }
+
+        </script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <fieldset style="height: 200px;width: 600px;">
+            <label for="pri1">Enter a Number : </label>
+            <input type="text" name="pri" id="pri1"onchange="numeric1()"><br><br>
+            <button type="button"onclick="even()">Even/Odd</button>
+            <p id="pid"></p>
+
+        </fieldset>
+        <script language="javascript">
+            function even(){
+            var number= document.getElementById("pri1").value;
+            if(number % 2==0)
+            {
+                document.getElementById("pid").innerText="The "+number+" number is Even ";
+            }
+            else{
+                document.getElementById("pid").innerText="The "+number+" number is odd";
+            }
+            }
+
+        </script>
+    </body>
+    
+</html>

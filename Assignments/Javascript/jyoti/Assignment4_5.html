@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment4_5</title>
+    </head>
+    <body>
+        <h3>Uppercase To Lowercase</h3>
+        <button onclick="myFunction()">Click Me</button>
+        <h3>Lowecase to Uppercase</h3>
+        <button onclick="Uppercase()">show</button>
+        <p id="Lowercase"></p>
+        <p id="Uppercase"></p>
+        <script>
+       function myFunction() {
+       var str = "Hello World!";
+       var res = str.toLowerCase();
+       document.getElementById("Lowercase").innerHTML = res;
+      }
+      </script>
+      <script>
+          function Uppercase(){
+              var str ="hello world";
+              var res =str.toUpperCase();
+              document.getElementById("Uppercase").innerHTML = res;
+          }
+      </script>
+    </body>
+</html>

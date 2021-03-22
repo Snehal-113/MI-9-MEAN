@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Assignmnt5 Q1</title>
+</head>
+<body>
+    <script language="javascript">
+        var n = prompt("Enter a positive integer");
+        var len = n.length;
+        var sum = 0;
+        if(len != 3)
+        {
+            document.write("Invalid Number!!Please enter a 3 digit no"); 
+        }
+        else{
+            var temp = n % 100;
+            var mid = parseInt(temp / 10);
+
+            var last = n % 10;
+            var first = parseInt(n / 100);
+            sum = first + last; 
+            if (sum == mid)
+                document.write("Sum Matched");
+            else
+                document.write("Sum does not Matched");
+
+        }
+    </script>
+</body>
+
+</html>

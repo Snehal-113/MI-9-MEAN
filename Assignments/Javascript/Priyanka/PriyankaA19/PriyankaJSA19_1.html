@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Table</title>
+        <script>
+            function numeric(){
+                a = document.getElementById("tab").value;
+                if(a.match(/^[a-zA-z_\-]/))
+                window.alert("Error:Please Enter a numeric data only");
+            }
+        </script>
+    </head>
+    <body>
+        <label for="tab">Enter a Number : </label>
+        <input type="text" name="pri" id="tab" onchange="numeric()">
+        <button type="button" onclick="table1()">Create</button>
+        <p id="pid"></p>
+        <script language="javascript">
+            function table1()
+            { 
+                var a = parseInt(document.getElementById("tab").value);
+                var prd=1;
+                var str=0;
+                debugger;
+                for(var i=1;i<=10;i++)
+                {
+                    prd= a*i;
+                    var str = str+a+"X"+i+"="+prd+"<br>";
+                }
+                document.getElementById("pid").innerHTML=str;
+            }
+                
+               
+               
+
+            
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head><title>Assignment 2</title></head>
+    <body>
+        <label for="m1">num1</label>
+        <input type="text" name="m1" id="m1"><br>
+        <label for="m1">num2</label>
+        <input type="text" name="m2" id="m2"><br>
+        <label for="m1">num3</label>
+        <input type="text" name="m3" id="m3"><br>
+        <label for="m1">num4</label>
+        <input type="text" name="m4" id="m4"><br>
+        <label for="m1">num5</label>
+        <input type="text" name="m5" id="m5"><br>
+        <button type="button" onclick="find()">Find</button>
+        <p id="pid">2nd largest</p>
+        <script>
+
+            function find(){
+                let arr = [];
+                let a = parseInt(document.getElementById("m1").value);
+                let b = parseInt(document.getElementById("m2").value);
+                let c = parseInt(document.getElementById("m3").value);
+                let d = parseInt(document.getElementById("m4").value);
+                let e = parseInt(document.getElementById("m5").value);
+              arr = [a,b,c,d,e];
+                let largest = Math.max(...arr);
+                arr.splice(arr.indexOf(largest),1);
+                let secondLargest = Math.max(...arr);
+                document.getElementById("pid").innerHTML = secondLargest;
+                }
+        </script>
+    </body>
+</html>

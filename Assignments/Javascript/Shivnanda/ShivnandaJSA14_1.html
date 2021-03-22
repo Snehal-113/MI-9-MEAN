@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Assignment14 Q1</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+         class student{
+         constructor(RollNo,Name){
+             this.RollNo=RollNo;
+             this.Name=Name;
+         }
+         display(){
+             document.write("<br>Inside Display")
+             document.write("<br>Roll No  :"+this.RollNo);
+             document.write("<br>Name  :"+this.Name);
+            }
+         }
+        class Marks extends student{
+            constructor(RollNo,Name,Mark){
+                super(RollNo,Name);
+                this.Mark=Mark;
+                this.created=(d1.getDate()+"/"+d1.getMonth()+"/"+d1.getFullYear())
+            }
+            Marks(){
+                document.write("<br>Inside Date----Created on  :"+this.created);
+                document.write("<br>Inside Names----Name  :"+this.Name);
+                document.write("<br>Inside Marks----Marks :"+this.Mark);
+
+            }
+        }
+        d1=new Date();
+        m2=new Marks(101,"Shiv",60);
+        m2.Marks();
+        m2.display();
+        m2.show();
+        </script>
+    </body>
+</html>

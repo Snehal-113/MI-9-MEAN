@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Answer 2</title>
+    </head>
+    <body>
+        <script>
+            class Sales{
+                constructor(name,id){
+                    this.name = prompt("Enter salesman's name:");
+                    this.id = prompt("Enter his id:");
+                }
+            }
+            class TotalSales extends Sales{
+                constructor(name,id){
+                    super(name,id);
+                }
+                sales(){
+                    this.sales = prompt("Enter the number of sales:");
+                }
+                calculateCommission(){
+                    if(this.sales < 0)
+                    {
+                        throw "sales should be greater than 0";
+                        this.sales = "";
+                        return;
+                    }
+                    if(isNaN(this.sales))
+                    {
+                     throw "not a number";
+                     this.sales = "";
+                     this.commissionRate = "";
+                     return;
+                    }
+                    if (parseInt(this.sales) <= 5000 && this.sales >= 0){
+                        this.commissionRate = this.sales*0.02+"%";
+                    }
+                    else if (parseInt(this.sales) > 5000 && this.sales <= 12000){
+                        this.commissionRate = this.sales*0.05+"%";
+                    }
+                    else if (parseInt(this.sales) > 12000 && this.sales <= 50000){
+                        this.commissionRate = this.sales*0.1+"%";
+                    }
+                    else {
+                        this.commissionRate = this.sales*0.15+"%";
+                    }
+                    
+                }
+                display(){
+                    document.write("<br>Sales&ensp;&ensp;CommisionRate<br>");
+                    document.write(this.sales+"&ensp;&ensp;&ensp;&ensp;"+this.commissionRate+"<br>");
+                }
+            }
+            let x = new TotalSales();
+                x.sales();
+                try{
+              x.calculateCommission();
+              x.display();
+                }
+                catch(err){
+                    document.write(err+"<br>");
+                }
+               
+        </script>
+    </body>
+</html>

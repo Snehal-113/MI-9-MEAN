@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Assignment18 Q2</title>
+    </head>
+    <form>
+        <fieldset>
+            <label for="name"> Enter Name : </label>
+            <input type="text" name="n" id="name"> <br><br>
+            <label for="age"> Enter Age : </label>
+            <input type="number" name="a" id="age"><br><br>
+            <button type="button" onclick="Show()">Show</button>
+        </fieldset>
+        <script language="javascript">
+            var name = document.getElementById("name").value;
+            var age = parseInt(document.getElementById("age").value);
+            function Show(){
+                if(age>=18){
+                    alert(name+"Eligible for vote");
+                }
+                else{
+<<<<<<< HEAD
+                    alert(name+"Not Eligible for vote");
+=======
+                    alert(name+" Not Eligible for vote");
+>>>>>>> c45378cf9a4ac90e1557d8a2b88e103de09f2e01
+                }
+            }
+        </script>
+    </form>
+</html>

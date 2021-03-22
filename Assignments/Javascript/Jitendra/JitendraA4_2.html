@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Automarphic Number</title>
+
+</head>
+
+<body>
+
+    <script>
+        var n = prompt("Enter a positive integer");
+        let sum = 0;
+        let temp = n;
+        sum=temp*temp;
+        var m=sum % 10;
+        var k=n%10;
+
+        
+
+        if (m==k) {
+            document.write(`${n} is an Automarphic number`);
+        } else {
+            document.write(`${n} is not an Automarphic number.`);
+        }
+    </script>
+</body>
+
+</html>

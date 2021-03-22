@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Evalution</title>
+    <script language="javascript">
+        function mark()
+        {
+            m=parseInt(document.getElementById("iVal1").value);
+            console.log(m)
+            find(m,roll,marks)
+        }
+        function find(m,roll,marks)
+        {
+            for(i=0;i<roll.length;i++)
+            {
+                if(m==roll[i])
+                {
+                    document.getElementById("pid").innerHTML="marks"+marks[i];
+                }
+            }
+        }
+        function bubble(newarr,rl)
+        {
+            var i,j,temp;
+            var n=newarr.length;
+            for (i=0;i<n-1;i++)
+            {
+                for(j=0;j<n;j++)
+                {
+                    if(newarr[j]<newarr[j+1])
+                    {
+                        temp=newarr[j];
+                        newarr[j]=newarr[j+1];
+                        newarr[j + 1]=temp;
+                        temp=rl[j];
+                        rl[j]=rl[j+1];
+                        rl[j+1]=temp;
+                    }
+                }
+            }
+            return newarr;
+        }
+    </script>
+    </head>
+        <body>
+            <form name="Evalution">
+                <input type="text" id="iVal1" name="val1" size="5">
+                <button type="button" onclick="mark()">SHOW</button>
+                <p id="pid"></p>
+            </form>
+            <script language="javascript">
+
+                var roll = [];
+                var marks=[];
+                var x,y,i,j;
+
+                for (i=0;i<5;i++)
+                {
+                    y = prompt("Enter roll numbers:");
+                    roll.push(parseInt(y));
+                }
+                for (i=0; i<5;)
+                {
+                    x = prompt("Enter marks:");
+                    if (x>50 || x<0 || x==null)
+                    {
+                        alert("Error-Invalid Marks");
+                    }
+                    else{
+                        marks.push(parseInt(x));
+                        i++;
+                    }
+                }
+                    document.write("<br>marks"+(i+1)+":"+marks);
+
+                    var newarr=[];
+                    for (j = 0; j<5; j++){
+                        newarr[j]=parseInt(((20*marks[j])/100)+marks[j]);
+
+                    }
+                    var arr1=[];
+                    var rl=[];
+                    rl=roll;
+                    document.write("<br>Before Sorting" + newarr);
+                    bubble(newarr,rl);
+                    document.write("<br>After adding 20%"+newarr);
+                    document.write("<br>RollNo Marks");
+                    for(let i=0;i<5;i++)
+                    {
+                        document.write("<br>"+roll[i]+marks[i]);
+                    }
+                    for(let i=0;i<5;i++)
+                    {
+                        document.write("<br>"+roll[i]+newarr[i]);
+                    }
+            </script>
+        </body>
+ 
+</html>

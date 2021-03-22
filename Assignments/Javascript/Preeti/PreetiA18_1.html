@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Answer1</title>
+</head>
+
+<body>
+    <fieldset>
+        <label for="num">Enter a number:</label>
+        <input type="text" id="num" name="num">
+        <button type="button" onclick="check()">Check</button><br><br>
+        <label for="result:"></label>
+        <input type="text" id="res" name="res">
+    </fieldset>
+    <script>
+        function check() {
+            let num = document.getElementById("num").value;
+            if (num.match(/^[0-9]/)) {
+                let res = num % 2;
+                if (res == 0) {
+                    document.getElementById("res").value = "Even";
+                }
+                else {
+                    document.getElementById("res").value = "Odd";
+                }
+            }
+            else{
+                alert("Enter a number:");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

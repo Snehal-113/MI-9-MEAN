@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Assignment16 Q2</title>
+    </head>
+            <body>
+                <p id="pid" style="text-align: center;">William Henry Gates III (born October 28, 1955) is an American business magnate,<br> 
+                    software developer, and philanthropist.<br>
+                     He is a co-founder of Microsoft Corporation.<br> During his career at Microsoft, Gates held the positions of chairman, <br>
+                     chief executive officer (CEO), president and chief software architect, while also being the largest individual shareholder until May 2014.<br> 
+                     He is one of the best-known entrepreneurs and pioneers of the microcomputer revolution of the 1970s and 1980s. </p>
+                <table>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend>Colors</legend>
+                                <button type="button" onclick="gray()">Gray</button>
+                                <button type="button" onclick="orange()">Orange</button>
+                                <button type="button"onclick="green()">Green</button>
+                            </fieldset>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend>Size</legend>
+                                <button type="button" onclick="small()">Small</button>
+                                <button type="button" onclick="x_large()">x-large</button>
+                                <button type="button"onclick="large()">large</button>
+                            </fieldset>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend>Font</legend>
+                                <button type="button" onclick="cursive()">cursive</button>
+                                <button type="button" onclick="times()">Times new roman</button>
+                                <button type="button"onclick="Arial()">Arial</button>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+                <script language="JavaScript">
+                    function gray()
+                    {
+                        document.getElementById("pid").style.color="gray";
+                    }
+                    function orange()
+                    {
+                        document.getElementById("pid").style.color="orange";
+                    }
+                    function green()
+                    {
+                        document.getElementById("pid").style.color="green";
+                    }
+                    function small()
+                    {
+                        document.getElementById("pid").style.fontSize="small";
+                    }
+                    function x_large()
+                    {
+                        document.getElementById("pid").style.fontSize="x-large";
+                    }
+                    function large()
+                    {
+                        document.getElementById("pid").style.fontSize="large";
+                    }
+                    function cursive()
+                    {
+                        document.getElementById("pid").style.fontFamily="cursive";
+                    }
+                    function times()
+                    {
+                        document.getElementById("pid").style.fontFamily="times";
+                    }
+                    function Arial()
+                    {
+                        document.getElementById("pid").style.fontFamily="arial";
+                    }
+        
+                </script>
+            </body>
+        </html>

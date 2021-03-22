@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <fieldset>
+            <label for="form"><b>First Name:</b>&nbsp;</label>
+            <input type="text" id="id1" size="10" onblur="login()"><br><br>
+            <label for="form"><b>Last Name:</b>&nbsp;</label>
+            <input type="text" id="id2" size="10"><br><br>
+            <label for="form"><b>Password:</b>&nbsp;&nbsp;&nbsp;</label>
+            <input type="password" id="id3" size="10"><br><br>
+            <button type="button" onclick="login()">Login</button>
+        </fieldset>
+        <script lang="Javascript">
+            function login()
+            {
+           var a=document.getElementById("id1").value;
+           var b=document.getElementById("id2").value;
+           var c=document.getElementById("id3").value;
+           reg1=/([a-zA-Z])$/
+           reg2=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+           if(reg1.test(a) && reg1.test(b) && reg2.test(c))
+            {
+              alert("Login Sucessfully!")
+            }
+            else
+            {
+                alert("User name and password Invalid!");
+            }
+        }
+        </script>
+    </body>
+</html>

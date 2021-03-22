@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <script language="javascript">
+        function ClickFun(){
+            document.getElementById("pidd").innerHTML += this;
+        }
+    </script>
+    <body>
+        <h1 id="hid">This is heading- click me</h1><br>
+        <p id="pid"> This is paragraph : clock me</p><br>
+        <button type="button" id="bid">Click Me</button><br>
+        <p id="pidd"></p>
+
+        <h1 id="hid_arr">This is heading- click me</h1><br>
+        <p id="pid_arr"> This is paragraph : clock me</p><br>
+        <button type="button" id="bid_arr">Click Me</button><br>
+        <p id="pidd_arr"></p>
+
+        <script language="javascript">
+            window.addEventListener("load",ClickFun);
+            document.getElementById("hid").addEventListener("click",ClickFun);
+            document.getElementById("pid").addEventListener("click",ClickFun);
+            document.getElementById("bid").addEventListener("click",ClickFun);
+
+            var res_arr;
+            res_arr=()=>{
+                document.getElementById("pidd_arr").innerHTML += this;
+            }
+            window.addEventListener("load",res_arr);
+            document.getElementById("hid_arr").addEventListener("click",res_arr);
+            document.getElementById("pid_arr").addEventListener("click",res_arr);
+            document.getElementById("bid_arr").addEventListener("click",res_arr);
+        </script>
+    </body>
+</html>

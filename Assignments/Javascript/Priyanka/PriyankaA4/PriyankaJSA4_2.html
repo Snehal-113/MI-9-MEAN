@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <Title>Armstong Number</Title>
+    </head>
+    <body>
+        <input type="text" id="pri" name="pri1">
+        <button type="button" onclick="Automarphic()">Show</button>
+        <p id="pid"></p>
+        <script language="javascript">
+            function Automarphic(){
+            var n,prd,rem;
+            n=document.getElementById("pri").value;
+            prd=1;
+            prd=n*n;
+            rem = prd % 10;
+            if(n == rem){
+            document.getElementById("pid").innerHTML=n+" is Automarphic number";
+            }
+            else{
+            document.getElementById("pid").innerHTML= n+" is not Automarphic number";
+            }
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Calculate Age</title>
+    </head>
+    <body>
+        <script language="javascript">
+            var getBirthdate = prompt("Enter your Birth Date");
+            var date =new Date(getBirthdate);
+            if(getBirthdate==null)
+            {
+                document.write("Enter Valid Date");
+            }
+            else
+            {
+                var month_diff=Date.now()-date.getTime();
+                var age_date=new Date(month_diff);
+                var year=age_date.getUTCFullYear();
+                var age=Math.abs(year-1970);
+                document.write("Age is "+age+" Years");
+            }
+        </script>
+    </body>
+</html>
+

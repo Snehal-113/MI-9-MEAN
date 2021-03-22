@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS/A5/Q1...</title>
+
+</head>
+
+<body>
+
+    <script>
+        var i = prompt("Enter Your Number :");
+        var len = i.length;
+        if (i.length == 3) {
+            var lemp = i % 100;
+            var num2 = parseInt(lemp / 10);
+
+            var num3 = i % 10;
+            var num1 = parseInt(i / 100);
+            if (num1 + num3 == num2)
+                document.write("Sum of the Number Match...");
+            else
+                document.write("Sum of the Number doesn't Match...");
+
+        }
+        else {
+            document.write("The Entered Number is Invalid...!!   Please Enter a Three digit number...");
+        }
+    </script>
+</body>
+
+</html>

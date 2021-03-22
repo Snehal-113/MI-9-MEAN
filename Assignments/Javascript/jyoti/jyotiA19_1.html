@@ -1,0 +1,20 @@
+<html>
+	<head>
+        <title>Ass19</title>
+    </head>
+    <body>
+		<input type="text" id="number">
+        <input type="button" value="Add" onclick='show()'>
+        <p id="1"></p>
+       <script>
+			function show(){
+				var a;
+				a=Number(document.getElementById('number').value);
+				for(var i=1; i<=10; i++){
+					var b= document.getElementById('1');
+					b.innerHTML += (a*i) + "<br/>" 
+				}
+			}
+		</script>
+    </body>
+    </html>

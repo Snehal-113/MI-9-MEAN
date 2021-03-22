@@ -1,0 +1,23 @@
+<html>
+    <head><title>Array</title></head>
+    <body>
+        <script>
+            const names = [];
+            while(true){
+            let X = prompt("enter the names:");
+            if(X == null || X == "y"){
+                break;
+            }
+            names.push(X.toUpperCase());
+            }
+            for(let i = 0; i < names.length; i++){
+                document.write("<br>Names"+(i+1)+":"+names[i]);
+            }
+            document.write("<br>Names List:"+ names);
+            document.write("<br>"+names.join("~"));
+            document.write("<br>"+names.sort());
+            document.write("<br>"+names.reverse ());
+
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,97 @@
+ 
+<html>
+    <head>
+     <title>form1</title>
+    </head>
+    <style>
+    .add {
+     background-color: lightblue;
+     color: black;
+     padding: 10px;
+     text-align:end;
+    }
+    </style>
+    <body>
+     <h3 class="add">MI-9 intern HTML Assesment</h3>
+     <hr>
+     <p class="add"><b>Personal Details </b></p>
+     <form> 
+       <label for="ifname">First Name:&nbsp;</label>
+       <input type="text" id="ifname" name="ifname" placeholder="first name">
+       <br>
+       <br>
+       <label for="ilname">Last Name:&nbsp;</label>
+       <input type="text" id="ilname" name="ilname" placeholder="last name">
+       <br>
+       <br>
+       <label for="gender">Gender:</label>
+       <input type="radio" id="male" name="gender" value="male">
+       <label for="male">male</label>
+       <input type="radio" id="female" name="gender" value="female">
+       <label for="female">female</label>
+       <input type="radio" id="other" name="gender" value="other">
+       <label for="other">other</label>
+       <br>
+       <br>
+       <label for="age"> Age :</label>
+       <input type="radio" id="less than 18" name="age" value="less than 18">
+       <label for="less than 18">less than 18</label>
+       <input type="radio" id="18-25" name="age" value="18-25" checked="checked">
+       <label for="18-25">18-25</label>
+       <input type="radio" id="26-40" name="age" value="26-40">
+       <label for="26-40">26-40</label>
+       <br>
+       <br>
+       <p class="add"><b>professional Details</b></p>
+       <fieldset>
+         <legend>Academic Details</legend>
+       <label for="skill set">SkillSet:</label>
+       <input type="checkbox" id="chtml" name="course" value="HTML">
+       <label for="chtml">HTML</label>
+       <input type="checkbox" id="cjasp" name="course1" value="Java Script" >
+       <label for="cjasp">Java Script </label>
+       <input type="checkbox" id="java" name="course2" value="Java">
+       <label for="java">Java</label>
+       <input type="checkbox" id="oracle" name="course3" value="Oracle">
+       <label for="oracle">Oracle</label>
+       <br><br>
+       <label for ="high">Highest Qualification :</label>
+       <select id="high" name="high">
+         <option value="dcp">diploma in computer science</option>
+         <option value="sg">science graduate</option>
+         <option value="be">bachelor in engg.</option>
+         <option value="mcs">master in computer science</option>
+         <option value="me">master in engg.</option>
+         <option value="other">other</option>
+       </select>
+        <br><br>
+         <label for="university">University :</label>
+         <input list="university" name="university">
+         <datalist id="university">
+           <option value="mumbai university">
+           <option value="pune university">
+           
+         </datalist>
+        <br><br>
+         <label for="area">areas of expertise:</label>
+         <select id="area" name="area" size="4" multiple>
+           <option value="software">software</option>
+           <option value="trsining">trsining</option>
+         </select>
+           you can select multiple filds
+       </fieldset>
+      <fieldset>
+        <legend>Resume</legend>
+        <label for="resume">Upload Resume :</label>
+        <input type="file" id="resume" name="resume" >
+        <br><br>
+        <label for= "comments"> Comments :</label>
+        <textarea id="comments" name="comments" rows="6" cols="40"> </textarea>
+      </fieldset>
+      <p style="text-align: center;">
+      <input type="submit">
+      </p> 
+     </form>
+    </body>
+   </html>
+   

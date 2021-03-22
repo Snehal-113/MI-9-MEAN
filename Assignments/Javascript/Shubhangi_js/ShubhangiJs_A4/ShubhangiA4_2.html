@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A4-Q2</title>
+</head>
+
+<body>
+  <h2 style="text-align: center;">Know the Number is Automorphic or not</h2>
+  Enter The Number :<input type="text" name="num" id="num" />
+  <button type="button" onClick=" Automorphic()">CHECK</button>
+  <p id="auto"></p>
+  <p id="auto1"></p>
+
+
+  <script language="javascript">
+    function Automorphic() {
+      var number, square;
+      number = parseInt(document.getElementById("num").value);
+      square = number * number;
+      document.getElementById('auto').innerHTML = "Square of " + number + " is: " + square;
+      if (number % 10 != square % 10) {
+        document.getElementById('auto1').innerHTML = number + " is not an atomorphic number";
+        number = number / 10;
+        square = square / 10;
+      }
+      else {
+        document.getElementById('auto1').innerHTML = number + " is an automorphic number";
+      }
+    }
+  </script>
+</body>
+
+</html>

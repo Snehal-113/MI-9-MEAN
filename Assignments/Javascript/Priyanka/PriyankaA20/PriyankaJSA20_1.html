@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Table</title>
+        <style>
+            table,th,td{
+                border: 2px solid black;
+                border-collapse: collapse;
+            }
+            th,td{
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="pri1">
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+               
+            </tr>
+            <tr>
+                <td> 1 </td>
+                <td> Priyanka</td>
+            </tr>
+            <tr>
+                <td> 2 </td>
+                <td> Deepti</td>
+            </tr>
+        </table><br>
+        <button type="button"onclick="add()">Add Row</button>
+        <script language="javascript">
+            function add()
+            {
+                var a=document.getElementById("pri1");
+                var row=a.insertRow();
+                var c1 = row.insertCell();
+                var c2=row.insertCell();
+                c1.innerHTML ="3";
+                c2.innerHTML ="Aditya";
+            }
+        </script>
+    </body>
+</html>

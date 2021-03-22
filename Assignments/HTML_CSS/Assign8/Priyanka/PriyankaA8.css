@@ -1,0 +1,30 @@
+.img_left{
+    float: left;
+    height: 200px;
+    width:200px;
+    clear:left;}
+.div_right{
+                float: right;
+                overflow: auto;
+                background-color: cyan;
+                border: 2px solid cyan;
+                height:200px;
+                width: 500;}
+.img_right{
+    float: right;
+    height: 200px;
+    width:200px;
+    clear:right;}
+.div_left{
+                float: left;
+                overflow: auto;
+                background-color: cyan;
+                border: 2px solid cyan;
+                height:200px;
+                width: 500;}
+.outer{
+    
+    border:2px solid cyan;
+    background-color: cyan;
+    height:200px;
+    width: 1000px;}

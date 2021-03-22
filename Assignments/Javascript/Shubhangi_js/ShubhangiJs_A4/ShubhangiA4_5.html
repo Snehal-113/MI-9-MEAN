@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A4_Q5</title>
+  </head>
+  <body>
+    <h2 style="text-align: center;">Conversion</h2>
+   <input type="text" id="str" name="str">
+   <button type="button" onclick="cases()">Show</button>
+    <p id="pid"></p>
+   <script>
+        
+        function cases() {
+             input = document.getElementById("str").value;
+             lower = input.toLowerCase();
+             upper = input.toUpperCase();
+            if (input == lower) {
+              console.log("conversion");
+                document.getElementById("pid").innerHTML =  "After conversion : "+upper;
+            }
+            else {
+                document.getElementById("pid").innerHTML = "After conversion :" +lower ;
+            }
+        }
+     </script>
+  </body>
+</html> 
+
+
+

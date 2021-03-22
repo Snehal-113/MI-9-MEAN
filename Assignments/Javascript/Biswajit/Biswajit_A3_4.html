@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Square/Rectangle</title>
+</head>
+<body>
+	<h2>Draw Rectangle</h2>
+	Rows :<input type="number" name="rws" id="rws">
+	Columns :<input type="number" name="cls" id="cls">
+	<button onclick="rect()">Show</button>
+	<script type="text/javascript">
+		function rect() {
+			var rows,cols;
+			rows=document.getElementById("rws").value;
+			cols=document.getElementById("cls").value;
+			for(var i=1;i<=rows;i++) {
+				for(var j=1;j<=cols;j++) {
+					document.write("* ");
+				}
+				document.write("<br>");
+			}
+		}
+	</script>
+</body>
+</html>

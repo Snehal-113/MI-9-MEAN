@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inheritence Bank-Details</title>
+    </head>
+    <body>
+        <script language="javascript">
+            class BankDet
+            {
+                constructor()
+                {
+                    this.acc_no=0;
+                    this.acc_name="";
+                    this.bal=0;
+                }
+                getData(acc_no,acc_name,bal)
+                {
+                    this.acc_no=acc_no;
+                    this.acc_name=acc_name;
+                    this.bal=bal;
+                }
+                deposit(amount)
+                {
+                    
+                    this.bal=parseInt(this.bal)+parseInt(amount);
+                    document.write("<br>Total Amount After Deposit is : "+this.bal);
+                }
+                withdraw(wamount)
+                {
+                    var message;
+                    
+                    try{
+                            if(wamount>this.bal) 
+                            {
+                                throw "Insufficient funds";
+                            }else{
+                                this.bal=parseInt(this.bal)-parseInt(wamount);
+                                try{
+                                    if(this.bal<1000){
+                                        throw "Minimum Balance";
+                                    }
+                                }
+                                catch{
+                                    document.write("<br>Warning-Balance Below 1000");
+                                    document.write("<br>Total  Amount is : "+this.bal);
+                                }
+                                 
+                            }
+                    }
+                    catch(err) {
+                            document.write("<br>Insufficient funds to withdraw");
+                        }
+                }
+                display()
+                    {
+                      document.write("<br>Acc_no &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Name &nbsp&nbsp&nbsp&nbsp&nbsp Balance");
+                      document.write("<br>"+this.acc_no+ " &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" +this.acc_name+ "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" +this.bal);
+                    }
+            }
+            s=new BankDet();
+            var a=prompt("Enter Account Number : ");
+            var b=prompt("Enter Account Name : ");
+            var c=prompt("Enter Balance Amount : ");
+            s.getData(a,b,c);
+            var d=prompt("Enter Ammount to be deposited");
+            s.deposit(d);
+            var w=prompt("Enter Ammount to be withdrwan");
+            s.withdraw(w);
+            s.display();
+
+        </script>
+    </body>
+</html>

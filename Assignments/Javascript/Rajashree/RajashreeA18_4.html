@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Ass18 Q4</title>
+        <script language="javascript">
+            const countryCapitalMap = {
+                'India':'New Delhi',
+                'Algeria':'Algiers',
+               'Austeria' :'Austeria',
+               'china':'Beijing'
+               }
+               function get_capital(country){
+                   document.getElementById("capital").value=countryCapitalMap[country];
+               }
+               
+           </script>
+    </head>
+    <body>
+        <fieldset style="width:300px">
+        <label for="country">Country:</label>
+        <select name="country" id="country" onchange="get_capital(this.value)">
+        <option value="India">India</option>
+        <option value="Algeria">Algeria</option>
+        <option value="Austeria">Austeria</option>
+        <option value="china">China</option>
+        </select>
+        <label for="capital">Capital:</label>
+        <select name="capital" id="capital">
+            <option value="New Delhi">New Delhi</optiion>
+            <option value="Algiers">Algiers</option>
+            <option value="Austeria">Vienna</option>
+            <option value="Beijing">Beijing</option>
+            </select>
+           
+        </fieldset>
+        <p id="pid"></p>
+    </body>
+</html> 

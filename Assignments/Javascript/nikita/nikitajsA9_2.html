@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>prime pallindrome</title>
+    </head>
+    <body>
+        <script lang="JavaScript">
+       
+                var rem, temp, final = 0,b=0;
+                number=prompt("Enter a number;");
+                temp = number;
+                for (i = 1; i <= temp; i++)
+                 {                
+                  if (temp % i == 0)
+                   {
+                     b = b + 1;
+                   }
+                 }
+                while(number>0)
+                {
+                    rem = number%10;
+                    number = parseInt(number/10);
+                    final = final*10+rem;
+                }
+                if(final==temp && b == 2)
+                {
+                    window.alert("The inputed number is prime Palindrome");
+                }
+                else
+                {
+                    window.alert("The inputted number is not prime palindrome");
+                }
+            
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,24 @@
+<html>
+    <head><title>Answer3</title></head>
+    <body>
+        <label for="shopping">Enter Shopping amount</label>
+        <input type="text" id="shopping" name="shopping">
+        <button type="button" onclick="calculate()">Calculate</button><br><br>
+        <label for="discount">Discount</label>
+        <input type="text" id="discount" name="discount">
+        <script>
+            function calculate(){
+                let discount;
+                let amt = parseInt(document.getElementById("shopping").value);
+                if(amt > 1000){
+                     discount = amt * .15;
+                    document.getElementById("discount").value = discount;
+                }
+                else{
+                    discount = amt * 0.05;
+                    document.getElementById("discount").value = discount;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Factorial</title>
+    </head>
+    <body>
+        <input type="text" id="pri1" name="pri">
+        <button type="button" onclick="Factorial()">Show</button>
+        <p id="pid"></p>
+        <script language="JavaScript">
+            function Factorial(){
+            var a,n,m;
+            a=1;
+            n=parseInt(document.getElementById("pri1").value);
+            if(n == 0){
+            document.getElementById("pid").innerHTML="1";}
+            for(m=n; m>=1; m--){
+                a=a*m;
+            }
+            document.getElementById("pid").innerHTML=a;
+            }
+        </script>
+    </body>
+</html> 

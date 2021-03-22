@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <title>Assignment10_2</title>
+</head>
+
+<body>
+    <script language="JavaScript">
+        var num = prompt("enter a number");
+        var visacard = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+        if (visacard.test(num) === false) {
+            document.write("Error : please enter valid No.");
+        }
+        else {
+            document.write("valid");
+        }
+    </script>
+</body>
+
+</html>

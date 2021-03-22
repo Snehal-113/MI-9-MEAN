@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Evaluation</title>
+    </head>
+    <body>
+        <script lang="Javascript">
+            class std{
+                constructor(){
+                    this.rollNo=0;
+                    this.Name="";
+                    this.computer=0;
+                    this.Electronics=0;
+                    this.Math=0;
+                }
+                accept()
+                {
+                    this.rollNo=prompt("Enter Roll no"+this.rollNo);
+                    this.Name=prompt("Enter Name"+this.Name);
+                    this.computer=prompt("Enter computer mark"+this.computer);
+                    this.Electronics=prompt("Enter Electronicsmark"+this.Electronics);
+                    this.Math=prompt("Enter Math Mark"+this.Math);
+                }
+                display(){
+                    document.write("<br>Roll No:"+this.rollNo);
+                    document.write("<br>Name:"+this.Name);
+                    document.write("<br>Mark computer:"+this.computer);
+                    document.write("<br>Mark Electronics:"+this.Electronics);
+                    document.write("<br>Mark of Math:"+this.Math);
+                    document.write("<br>************************************<br>");
+                }
+                calc(per)
+                {
+                  var total=(this.computer)-(-this.Electronics)-(-this.Math);
+                  this.per=(total/3);
+                  document.write("per"+this.per);
+                  if(this.per >=80)
+            {
+                document.write("Grade Is: +A");
+            }
+            else if(this.per<80 || this.per>=60)
+            {
+                    document.write("Grade Is:A");
+            }
+            else if(this.per<60 || this.per>=55)
+           {
+                    document.write("Grade Is:B");
+           }
+            else if(this.per<55 || this.per>=40)
+            {
+                    document.getElementById("Grade Is:C");
+            }
+            else(this.per<45)
+            {
+                document.getElementById("Not Grade");
+            }
+         }
+      }
+      st=new std();
+      st.accept();
+      st.calc();
+      st.display();
+           
+        </script>
+    </body>
+</html>

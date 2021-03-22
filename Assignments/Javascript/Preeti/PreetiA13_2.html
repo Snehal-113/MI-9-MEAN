@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Assignment 13</title>
+</head>
+<body>
+    <input type="date" id="date" name="date">
+    <button type="button" onclick="getWeekDay()">Day</button>
+    <script>
+       
+        function getWeekDay(){
+            let weekDay;
+        let d1 = new Date(document.getElementById("date").value);
+         weekDay=d1.getDay();
+       switch(weekDay){
+          case 1: 
+            document.write("MO");
+          break;
+          case 2: 
+          document.write("TU");
+          break;
+          case 3: 
+          document.write("WE");
+          break;
+          case 4:
+          document.write("TH");
+          break;
+          case 5:
+          document.write("FR");
+          break;
+          case 6: 
+          document.write("SA");
+          break;
+          default:
+          document.write("SU");
+    }
+}
+getWeekDay();
+    </script>
+</body>
+
+</html>

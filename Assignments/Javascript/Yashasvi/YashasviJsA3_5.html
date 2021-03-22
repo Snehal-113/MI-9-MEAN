@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <title>Factorial</title>
+</head>
+
+<body>
+  <h1>Calculate Factorail</h1>
+  <h3>Enter Number:</h3>
+  <input type="input" id="fact" name="fact" size="5">
+  <button type="text" onclick="factorial()">Show Factorail</button>
+  <p id="factorial"></p>
+  <script>
+    function factorial()
+     {
+      debugger
+      var num = parseInt(document.getElementById("fact").value);
+      var factorial = 1;
+      for (num; num > 1; num--) {
+        factorial = factorial * num
+      }
+      document.getElementById("factorial").innerHTML="The Factorail of " + num +" is :" +factorial;
+
+      console.log(factorial)
+
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q.1</title>
+        <style>
+           td,th,table{
+               border: 1px solid black;
+               padding: 5px; 
+               border-collapse: collapse;      
+           }
+        </style>
+    </head>
+    <body>
+        <table id="id1">
+            <tr>
+                <th>Row1</th>
+                <th>Row2</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </table>
+        <button type="button" onclick="tb()">click</button>
+        <script lang="Javascript">
+           function tb()
+          {
+              var tbl=document.getElementById("id1");
+              var row=tbl.insertRow();
+              var cell1=row.insertCell();
+              var cell2=row.insertCell();
+          }
+        </script>
+    </body>
+</html>

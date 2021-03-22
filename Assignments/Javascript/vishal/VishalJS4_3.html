@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <h1>Krishnamurthy Number</h1>
+            Enter the Number:<input type="text" id="num" name="y" size="5"><br><br>
+        <button type="button" onclick="kri()">Check</button>
+    <script language="JavaScript">
+        function kri()
+    {
+        var no = parseInt(document.getElementById("num").value);
+        var temp;
+        var sum = 0; 
+        var temp = no; 
+        while (temp != 0) 
+        {    
+        var rem=temp%10;
+        sum = sum +fact(rem); 
+        temp = parseInt(temp / 10); 
+        } 
+        if(sum == no)
+        {
+        alert("Given no is a Krishnamurthy number") 
+        }
+        else
+        {
+        alert("Given no is Not a Krishnamurthy number")   
+        } 
+    } 
+        function fact(n)
+        {   
+         if(n==1)
+         return 1;
+         return n*fact(n-1);
+        }
+        </script>
+    </body>
+</html>
+
+        
+       
+      
+   
+
+    

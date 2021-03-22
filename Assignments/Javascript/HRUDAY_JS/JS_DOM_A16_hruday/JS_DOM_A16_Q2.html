@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM/A16/Q2...</title>
+</head>
+
+<body>
+    <p id="para" style=" width: 600px; margin: auto; background-color: rgb(0, 0, 0);color: beige;">Lorem ipsum dolor,
+        sit amet consectetur adipisicing elit. Praesentium deserunt consequuntur cupiditate. Atque ratione aperiam
+        aliquid dolorum, nostrum nisi ipsa enim similique, distinctio architecto placeat voluptates doloribus modi,
+        aspernatur dolores cupiditate obcaecati cum tempore? Doloremque rem voluptate, ducimus mollitia nemo voluptas
+        nobis cum porro. Esse laboriosam aut est fugiat eius. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Recusandae tenetur officiis voluptas maiores veritatis labore rem, voluptates soluta sunt repudiandae. Nemo
+        quaerat officia veritatis accusantium minus hic atque. Nulla, omnis.</p>
+    <fieldset>
+        <legend>COLORS:</legend>
+        <button type="button" onclick="color1()" style="background-color: darkblue; color: darkgray;">BLUE</button>
+        <button type="button" onclick="color2()" style="background-color: rgb(173, 6, 6); color: darkgray;">RED</button>
+        <button type="button" onclick="color3()"
+            style="background-color: rgb(231, 8, 252); color: rgb(5, 4, 4);">PINK</button>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>SIZE:</legend>
+        <button type="button" onclick="size1()" style="background-color: darkblue; color: darkgray;">SMALL</button>
+        <button type="button" onclick="size2()"
+            style="background-color: rgb(173, 6, 6); color: darkgray;">MEDIUM</button>
+        <button type="button" onclick="size3()"
+            style="background-color: rgb(231, 8, 252); color: rgb(5, 4, 4);">LARGE</button>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>FONT:</legend>
+        <button type="button" onclick="style1()" style="background-color: darkblue; color: darkgray;">STYLE1</button>
+        <button type="button" onclick="style2()"
+            style="background-color: rgb(173, 6, 6); color: darkgray;">STYLE2</button>
+        <button type="button" onclick="style3()"
+            style="background-color: rgb(231, 8, 252); color: rgb(5, 4, 4);">STYLE3</button>
+    </fieldset>
+
+    <!-- script starts from here -->
+    
+    <script>
+        // color
+        function color1() {
+            document.getElementById("para").style.color = "blue";
+        }
+        function color2() {
+            document.getElementById("para").style.color = "red";
+        }
+        function color3() {
+            document.getElementById("para").style.color = "darkmagenta";
+        }
+
+        // font size
+
+        function size1() {
+            document.getElementById("para").style.fontSize = "3px";
+        }
+        function size2() {
+            document.getElementById("para").style.fontSize = "20px";
+        }
+        function size3() {
+            document.getElementById("para").style.fontSize = "30px";
+        }
+
+        // font Family
+
+        function style1() {
+            document.getElementById("para").style.fontFamily = "cursive";
+        }
+        function style2() {
+            document.getElementById("para").style.fontFamily = "monospace";
+        }
+        function style3() {
+            document.getElementById("para").style.fontFamily = "fantasy";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

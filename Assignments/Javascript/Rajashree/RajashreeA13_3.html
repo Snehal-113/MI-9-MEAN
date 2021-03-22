@@ -1,0 +1,19 @@
+<html>
+    <head>Ass13 q3</head>
+    <body>
+             <h2></h2>
+              Date:<input type="date" name="date" id="date"><br>
+              Enter Number:<input type="number" name="number" id="num"><br>
+              <button onclick="getDateAgo()">SHOW</button>
+             <script language="javascript">
+                   function getDateAgo()
+                  {
+            var date=document.getElementById("date").value;
+            var number=document.getElementById("num").value;
+            d=new Date(date);
+            no=new Date(d-number*(24*3600*1000));
+            alert(no);
+        }
+    </script>
+</body>
+</html>

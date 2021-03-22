@@ -1,0 +1,26 @@
+
+<<html>
+    <head>
+        <title>Assignment19 Q2</title>
+        </head>
+    <body>
+        <ol id="1">
+            <li>SDLC</li>
+            <li>HTML</li>
+            <li>FIGMA</li>
+            <li>CSS</li>
+        </ol>
+        <input type="text" id="p">
+        <button type="button" onclick="show()">Add</button>
+        <script>
+            function show(){
+            let a = document.createElement("li");
+            let node = document.getElementById("p").value;
+            let node1 = document.createTextNode(node);
+            a.appendChild(node1);
+            let element = document.getElementById("1");
+            element.appendChild(a); 
+            }
+        </script>
+    </body>
+</html>

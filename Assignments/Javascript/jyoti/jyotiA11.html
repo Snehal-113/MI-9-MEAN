@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>28jan</title>
+        <script>
+            function Bubble_sort(total,a)
+            {
+               l = total.length;
+           for(i = 0; i < l-1; i++)
+           {
+            for(x = 0; x < l; x++)
+            {
+                if(total[x] < total[x+1])
+                {
+                    temp = total[x];
+                    total[x] = total[x+1];
+                    total[x+1] = temp;
+                    temp = a[x];
+                    a[x] = a[x+1];
+                    a[x+1] =temp;                }
+           }
+       }
+    }
+</script>
+    </head>   
+     <body>
+        <input type ="text" id="1" ><br><br>
+        <button type="button" onclick="show()">Show</button>
+        <p id="pid"></p>
+        <script>
+            var i,m,std,d,x,temp
+            var a=[];
+            var b = [];
+            var total=[];
+            for(i=0;i<10;i++){
+                a[i]=prompt("Enter roll no")
+            }
+            document.write("<br>Roll No:"+a);
+            for(i=0;i<10;)
+                {  
+                 std = prompt("enter the student mark");
+                 if(std <0 || std > 50 || std == null )
+                   {
+                      alert("Error-Invalid marks!! ");
+                   }
+                   else
+                   {
+                   b.push(parseInt(std));
+                   i++;
+                }
+                document.write("<br>mark"+ (i+1)+": "+ b);
+            }
+            for(i=0;i<10;i++){
+                d =b[i]/100 * 20;
+               total[i] =b[i] + d;
+               document.write("<br>the marks scored student "+ (i+1)+": "+ total);
+            }
+            Bubble_sort(total,a);
+            document.write("<br>Roll No &ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;Marks");
+            for(i=0;i<10;i++)
+            {
+            document.write("<br><br>"+a[i]+ "&ensp; &ensp; &ensp;&ensp; &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;"+total[i])
+            }
+            function show()
+            {
+                newarr=parseInt(document.getElementById("1").value);
+                find(newarr,a,total);
+            }
+            function find(newarr,a,total)
+            {
+                for(i=0;i<a.length;i++)
+                {
+                    if(newarr==a[i])
+                    {
+                        document.getElementById("pid").innerHTML="Roll number " +newarr+ " has got "+total[i]+" marks";
+                        break;   
+                    }
+               
+                }
+            }
+        </script>
+    </body>
+</html>
+​

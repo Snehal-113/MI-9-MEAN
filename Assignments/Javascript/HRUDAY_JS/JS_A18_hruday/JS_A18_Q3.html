@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A18_Q3...</title>
+</head>
+<body>
+  <b>Enter Shopping amount : </b> 
+  <input type="text" id="shopping" name="shopping"> <br><br>
+  <button type="button" onclick="func()"><b> CALCULATE </b></button><br><br>
+  <hr>
+ <b> Discount Amount : </b>
+  <input type="text" id="discount" name="discount" size="45">
+  <script>
+      function func(){
+          var discount;
+          var amount = parseInt(document.getElementById("shopping").value);
+          if(amount > 1000){
+              discount = amount * .15;
+              document.getElementById("discount").value ="Congratulation ! You Got 15% Discount.." + discount + " " + "/- ruppes";
+          }
+          else{
+              discount = amount * 0.05;
+              document.getElementById("discount").value ="Congratulation ! You Got 5% Discount.." + discount + " " + "/- ruppes";
+          }
+      }
+  </script>
+</body>
+</html>
+

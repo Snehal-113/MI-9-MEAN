@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Ass16 q2</title>
+    </head>
+    <body>
+        <p id="pid" style="text-align: center;">
+        Emerson says that nature is beautiful because it is alive, moving,reproductive.<br>
+        In nature we observe growth and development in living things, contrasted with the static<br>
+        or deteriorating state of the vast majority of that which is man-made.<br>
+        “If you truly love nature, you will find beauty everywhere.”<br> 
+        "Nature always wears the colors of the spirit." "Look deep into nature,<br>
+        and then you will understand everything better.
+       </p>
+            <fieldset>
+                <legend>COLOR</legend>
+                <button onclick="r()">RED</button>
+                <button onclick="g()">GREEN</button>
+                <button onclick="b()">BLUE</button>
+
+                <fieldset>
+                    <legend>SIZE</legend>
+                    <button onclick="small()">XX-SMALL</button>
+                    <button onclick="large()">LARGE</button>
+                    <button onclick="x_large()">XX-LARGE</button>
+
+                    <fieldset>
+                        <legend>FONT</legend>
+                        <button onclick="ff1()">font family1</button>
+                        <button onclick="ff2()">font family2</button>
+                        <button onclick="ff3()">font family3</button>
+                    </fieldset>
+                </fieldset>
+            </fieldset>
+        <script lang="javascript">
+        function r()
+        {
+         document.getElementById("pid").style.color = "red";
+        }
+        function g()
+        {
+         document.getElementById("pid").style.color= "green";
+        }
+        function b()
+        {
+         document.getElementById("pid").style.color="blue";
+        }
+        function small()
+        {
+            document.getElementById("pid").style.fontSize= "xx-small";
+        }
+        function large()
+        {
+            document.getElementById("pid").style.fontSize="large";
+        }
+        function xx_large()
+        {
+         document.getElementById("pid").style.fontSize = "xx-large";
+        }
+        function ff1()
+        {
+            document.getElementById("pid").style.fontFamily="Helvetica";
+        }
+        function ff2()
+        {
+            document.getElementById("pid").style.fontFamily="Book Antiqua";
+        }
+        function ff3()
+        {
+         document.getElementById("pid").style.fontFamily = "Arial";
+        }
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Assi18 1</title>
+    </head>
+    <body>
+        <div style="text-align: center;">
+        <fieldset>
+        <label for="num">Enter a Number:</label>
+        <input type="text" id="num" name="num"><br><br>
+        <button onclick="even_odd()">Even/Odd</button>
+
+    </fieldset>
+    </div>
+    <script lang="javascript">
+        function even_odd(){
+            var number=Number(document.getElementById('num').value);
+            if(number%2==0){
+                alert("even number");
+            }
+            else
+            {
+                alert("odd number");
+            }
+        }
+    </script>
+    </body>
+
+</html>

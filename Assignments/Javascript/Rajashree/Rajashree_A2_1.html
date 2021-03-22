@@ -1,0 +1,95 @@
+<html>
+<body>
+<h1>Second larg no</h1>
+<form>
+    Enter first numbers: <input type="text" id="one"><br><br>
+    Enter Second numbers: <input type="text" id="two"><br><br>
+    Enter third numbers: <input type="text" id="three"><br><br>
+    Enter fourth numbers: <input type="text" id="four"><br><br>
+    Enter fifth numbers: <input type="text" id="five"><br><br>
+    <button type="button" onclick="check()">Check</button>
+   <p id="pid"></p><br>
+</form>
+<script language="Javascript">
+    function check(){
+var a = parseInt(document.getElementById("one").value);
+var b = parseInt(document.getElementById("two").value);
+var c = parseInt(document.getElementById("three").value);
+var d = parseInt(document.getElementById("four").value);
+var e = parseInt(document.getElementById("five").value);
+
+if(a>b && a>c && a>d && a>e){
+                    document.getElementById("pid").innerHTML=a+" is Greater no ";
+                    if(b>c && b>d && b>e){
+                        document.getElementById("pid").innerHTML=b+" is Second Greater no ";
+                    }
+                    else if(c>b && c>d && c>e){
+                        document.getElementById("pid").innerHTML=c+" is Second Greater no ";
+                    }
+                    else if(d>b && d>c && d>e)
+                    {
+                        document.getElementById("pid").innerHTML=d+" is Second Greater no ";
+                    }
+                    else
+                        document.getElementById("pid").innerHTML=e+" is Second Greater no ";
+                }
+
+                else if(b>a && b>c && b>d && b>e)
+                {
+                    document.getElementById("pid").innerHTML=b+" is Greater no ";
+                    if(a>c && a>d && a>e){
+                        document.getElementById("pid").innerHTML=a+" is Second Greater no ";
+                    }
+                    else if(c>a && c>d && c>e){
+                        document.getElementById("pid").innerHTML=c+" is Second Greater no ";
+                    }
+                    else if(d>a && d>c && d>e)
+                    {
+                        document.getElementById("pid").innerHTML=d+" is Second Greater no ";
+                    }
+                    else
+                        document.getElementById("pid").innerHTML=e+" is Second Greater no ";
+                }
+                else if(c>a && c>b && c>d && c>e)
+                {
+                    document.getElementById("pid").innerHTML=c+" is Greater no ";
+                   
+                    if(a>b && a>d && a>e){
+                        document.getElementById("pid").innerHTML=a+" is Second Greater no ";
+                    }
+                    else if(b>a && b>d && b>e){
+                        document.getElementById("pid").innerHTML=b+" is Second Greater no ";
+                    }
+                    else if(d>a && d>b && d>e)
+                    {
+                        document.getElementById("pid").innerHTML=d+" is Second Greater no ";
+                    }
+                    else
+                        document.getElementById("pid").innerHTML=e+" is Second Greater no ";
+                }
+                else if(d>a && d>b && d>b && b>e)
+                {
+                    document.getElementById("pid").innerHTML=d+" is Greater no ";
+                    
+                    if(a>b && a>c && a>e){
+                        document.getElementById("pid").innerHTML=a+" is Second Greater no ";
+                    }
+                    else if(b>a && b>c && b>e){
+                        document.getElementById("pid").innerHTML=b+" is Second Greater no ";
+                    }
+                    else if(c>a && c>b && c>e)
+                    {
+                        document.getElementById("pid").innerHTML=c+" is Second Greater no ";
+                    }
+                    else
+                        document.getElementById("pid").innerHTML=e+" is Second Greater no ";
+                }
+                else {
+                    document.getElementById("pid").innerHTML=e+"is greater";
+                   
+                }
+                
+            }
+        </script>
+    </body>
+</html>

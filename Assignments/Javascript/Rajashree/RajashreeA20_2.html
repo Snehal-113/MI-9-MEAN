@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Ass20 q2</title>
+        <style>
+              td,table {
+              border: 1px solid black;
+
+            }
+            th,td
+            {
+                padding: 30px;
+            }
+        </style>
+        <script language=javascript>
+            function chcont()
+            {
+                var row = document.getElementById("row").value;
+                var col = document.getElementById("col").value;
+                var stri = document.getElementById("str").value;
+                document.getElementById("tab").rows[row].cells[col].innerHTML = stri;
+            }
+        </script>
+    </head>
+    <body>
+        <table id="tab">
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Rajashree</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Megha</td>
+            </tr>
+        </table>
+        <br>
+        <fieldset>
+        Enter Row Number: <input type="text" id="row"><br><br>
+        Enter Column Number: <input type="text" id="col"><br><br>
+        Enter String to be Change: <input type="text" id="str"><br><br>
+        <button id="button" onclick="chcont()">Change Content </button>
+        </fieldset>
+    </body>
+</html>

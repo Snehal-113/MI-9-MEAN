@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Changing Upper to lower and viceversa</title>
+
+</head>
+
+<body>
+    <input type="text" id="mystring">
+    <button type="button" onclick="upperlower()">Convert</button>
+
+    <script>
+        function upperlower() {
+            var str = document.getElementById("mystring").value;
+            var upperstr = str.toUpperCase();
+            var lowerstr = str.toLowerCase();
+            if (str == lowerstr)
+                document.write(upperstr);
+            if (str == upperstr)
+                document.write(lowerstr);
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let arr = [];
+            let num = prompt("Enter the number:");
+            let x;
+            for(let i = 0; i < num; i++){
+                    x = prompt("Enter marks:");
+                    if(x <= 80){
+                        arr.push(parseInt(x));
+                    }
+                }
+                let newarr = [];
+            for(let i = 0; i < num; i++){
+                arr[i] += arr[i] * 0.2;
+                newarr.push(arr[i]);
+            }
+            document.write("Total marks before sorting:"+newarr);
+           
+            function quick_sort(newarr){
+                if (newarr.length === 1){
+                    return newarr;
+                }
+                const pivot = arr[newarr.length-1];
+                const leftArr = [];
+                const rightArr = [];
+                for(let i = 0; i < newarr.length-1; i++){
+                    if(newarr[i] < pivot){
+                        leftArr.push(newarr[i]);
+                    }
+                    else{
+                        rightArr.push(newarr[i]);
+                    }
+                }
+                if(leftArr.length > 0 && rightArr.length > 0){
+                    return [...quick_sort(leftArr),pivot,...quick_sort(rightArr)];
+                }
+                else if(leftArr.length > 0){
+                    return [...quick_sort(leftArr),pivot];
+                }
+                else{
+                    return [pivot,...quick_sort(rightArr)];
+                }
+            }
+            document.write("<br>"+ quick_sort(newarr));
+        </script>
+    </body>
+</html>

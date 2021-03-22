@@ -1,0 +1,52 @@
+<html>
+<head>
+   <title>Assignment 22_1</title>
+   <style>
+       .field{
+           text-align: center;
+       }
+   </style>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <fieldset style="height:200px;width:250px" class="field">
+        First Name:<input type="text"  id="no1" name="first" size="15" ><br><br>
+        Last Name:<input type="text"  id="no2" name="last" size="15"><br><br>
+        User Name:<input type="text"  id="no3" name="user" size="15" onblur="user()"><br><br>
+        Password:<input type="password"  id="no4" name="password" size="15" onblur="password()" ><br><br>
+        <button type="button" id="b1" onclick="change1()">LogIn</button>
+        <input type="reset" value="Cancel">
+        </fieldset>
+<script language="javascript">
+        var a= document.getElementById("no1").value;
+        var b=document.getElementById("no2").value;        
+        function user(){
+        var c =document.getElementById("no3").value;
+            if(/^[A-Za-z]*/.test(c) && c.length>=8 &&c.length<=15)
+            {
+              alert("Correct username");
+            }
+            else{
+                alert("USerName must start with alphabet and must be atleast 8 characters and maximum of 15 characters");
+                document.getElementById("no3").value="";
+                document.getElementById("no3").focus();
+            }
+        }
+        function password() {
+            var d=document.getElementById("no4").value;
+            if(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}/.test(d))
+            {
+              alert("correct password");
+            }
+            else{
+                alert("password must be of atleast 8 characters and having atleast 1 special character,1 number and 1 alphabet");
+                document.getElementById("no4").value="";
+                document.getElementById("no4").focus();
+            }
+        }
+        function change1() {
+            alert("sucessfully");
+        }
+</script>
+</body>
+</html> 

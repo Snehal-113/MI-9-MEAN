@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>AssignmentA5_4</title>
+    </head>
+    <body>
+        <script>
+            var lowerNumber = prompt('Enter lower number: ');
+            var higherNumber = prompt('Enter higher number:');
+            
+        for (let i = lowerNumber; i <= higherNumber; i++) {
+        let flag = 0;
+        for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            flag = 1;
+            break;
+        }
+    }
+
+   if (i > 1 && flag == 0) {
+       document.write(i)
+    }
+}
+        </script>
+    </body>
+</html>

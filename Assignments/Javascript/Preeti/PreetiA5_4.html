@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Sum</title>
+</head>
+
+<body>
+    <label for="num">Enter a 6 digit number:</label>
+    <input type="text" id="num1" name="num1">
+    <button type="button" onclick="check()">check</button>
+    <p id="pid1"></p>
+    <p id="pid2"></p>
+    <script>
+        function check() {
+            let sum = 0;
+            let prd = 1;
+            const a = parseInt(document.getElementById("num1").value);
+            const b = [];
+            let temp = a;
+            while (temp > 0) {
+                b.push(temp % 10);
+                temp = parseInt(temp / 10);
+            }
+            for (let i = 0; i < b.length; i++) {
+                if (b[i] % 2 == 0) {
+                    sum += b[i];
+                }
+                if (b[i] % 2 !== 0){
+                    prd *= b[i];
+                }
+            }
+            document.getElementById("pid1").innerHTML = sum;
+            document.getElementById("pid2").innerHTML = prd;
+        }
+    </script>
+</body>
+
+</html>

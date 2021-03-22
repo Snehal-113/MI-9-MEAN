@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> Assignment18 Q3</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <label for="amt"> Enter Shopping Amount : </label>
+                <input type="text" name="amount" id="amt"><br></br>
+                <button type="button" onclick="cal()">Calculate</button>
+            </fieldset>
+            <p id="pid"></p>
+            <p id="pid1"></p>
+        </form>
+        <script language="javascript">
+            var amt = parseInt(document.getElementById("amt").value);
+            function cal(){
+                var dis;
+                if(amt >1000){
+                    dis = 15;
+                    document.getElementById("pid").innerHTML= "15% of discount on total amount";
+                }
+                else{
+                    dis = 5;
+                    document.getElementById("pid").innerHTML= "5% of discount on total amount";
+                }
+                var TotalAmount = amt -((dis/100) *amt);
+                document.getElementById("pid1").innerHTML= TotalAmount;
+            }
+        </script>
+    </body>
+</html>

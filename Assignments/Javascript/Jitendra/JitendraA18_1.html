@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Odd/Even Number</title>
+</head>
+
+<body>
+    <fieldset style="height: 300px; border: 2px solid red;">
+        <legend style="color: brown;">Odd/Even Tester</legend>
+        <br><br><br><br><br> Enter number: <input type="text" id="num">
+        <br><br>
+        <button type="button" onclick="oddeven()">Odd/Even</button>
+    </fieldset>
+    <p id="nm"></p>
+    <script language="javascript">
+        function oddeven() {
+            var a = document.getElementById("num").value;
+            if (!a.match(/^[0-9]*\d$/)) {
+                alert("Error: Enter only  a Number");
+                document.getElementById("nm").innerHTML="";
+            } 
+            //var a = document.getElementById("num").value;
+            else{
+            if (a % 2 == 0) {
+                document.getElementById("nm").innerHTML = a + " is a Even Number";
+            } else {
+                document.getElementById("nm").innerHTML = a + " is a Odd Number";
+            }
+         }
+        }
+
+        function alpha() {
+            var a = document.getElementById("num").value;
+            if (!a.match(/^[0-9]*\d$/)) {
+                alert("Error: Enter only  a Number");
+                document.getElementById("nm").innerHTML="";
+            }
+        }
+    </script>
+</body>
+
+</html>
