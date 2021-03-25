@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
+import Counter from './Priyanka_component/PriyankaRA1_1'
+import Currency from './Priyanka_component/PriyankaRA2_1'
+import Temperature from './Priyanka_component/PriyankaRA2_2'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Counter />
+    <Currency />
+    <Temperature />
   </React.StrictMode>,
   document.getElementById('root')
 );
