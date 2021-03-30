@@ -37,18 +37,27 @@ class TConverter extends React.Component {
 
         return (
 
-            <div className = "part" >
-            <h1> Temperature Converter </h1>  
-            <label > Temperature in Celsius </label>  
-            <input value = { this.state.txtval }onChange = { this.handletxt }/>  
-            <select id = "sel"value = { this.state.value }onChange = { this.handleChange } >
-                <option value = "select" > Select </option> 
-                <option value = "Celsius" > Celsius </option>  
-                <option value = "Farenheit" > Farenheit </option> 
-                <option value = "Kelvin" > Kelvin </option> 
-            </select> <button variant = "success"type = "button"onClick = { this.handleSubmit } > Convert </button>  <div className = "curr" >
-            <label> { this.state.current + " " + this.state.value } </label>  </div> 
-            </div>
+            <
+            div className = "part" >
+            <
+            h1 > Temperature Converter < /h1>   <
+            label > Temperature in Celsius < /label>   <
+            input value = { this.state.txtval }
+            onChange = { this.handletxt }
+            />   <
+            select id = "sel"
+            value = { this.state.value }
+            onChange = { this.handleChange } >
+            <
+            option value = "select" > Select < /option>  <
+            option value = "Celsius" > Celsius < /option>   <
+            option value = "Farenheit" > Farenheit < /option>  <
+            option value = "Kelvin" > Kelvin < /option>  <
+            /select> <button variant = "success"type = "button"onClick = { this.handleSubmit } > Convert </button > < div className = "curr" >
+            <
+            label > { this.state.current + " " + this.state.value } < /label>  </div >
+            <
+            /div>
         )
     }
 }

@@ -39,19 +39,29 @@ class Converter extends React.Component {
 
         return (
 
-            <div className = "part" >
-            <h1> Currency Converter </h1>  
-            <label > Amount IN INR </label>  
-            <input value = { this.state.txtval } onChange = { this.handletxt }/ > 
-            <select id = "sel"value = { this.state.value }onChange = { this.handleChange } >
-                <option value = "select" > Select </option> 
-                <option value = "INR" > INR </option> 
-                <option value = "USD" > USD </option >
-                <option value = "EURO" > EURO </option>  
-            </select > 
-            <button variant = "success"type = "button"onClick = { this.handleSubmit } > Convert </button>
-            <div className = "curr" > <label > { this.state.current + " " + this.state.value } </label> </div > 
-            </div>
+            <
+            div className = "part" >
+            <
+            h1 > Currency Converter < /h1>   <
+            label > Amount IN INR < /label>   <
+            input value = { this.state.txtval }
+            onChange = { this.handletxt }
+            / >  <
+            select id = "sel"
+            value = { this.state.value }
+            onChange = { this.handleChange } >
+            <
+            option value = "select" > Select < /option>  <
+            option value = "INR" > INR < /option>  <
+            option value = "USD" > USD < /option > <
+            option value = "EURO" > EURO < /option>   <
+            /select >  <
+            button variant = "success"
+            type = "button"
+            onClick = { this.handleSubmit } > Convert < /button> <
+            div className = "curr" > < label > { this.state.current + " " + this.state.value } < /label> </div >
+            <
+            /div>
         )
     }
 }
