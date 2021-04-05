@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import CurrencyConverter from './CurrencyConverter';
-import  TempConverter from './TempConverter';
-import Counter from './Counter';
+import CurrencyConverter from './component/CurrencyConverter';
+import  TempConverter from './component/TempConverter';
+import Counter from './component/Counter';
+import  'bootstrap/dist/css/bootstrap.min.css';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <div>
- <CurrencyConverter />
- <TempConverter />
  <Counter />
+ <hr></hr>
+ <CurrencyConverter />
+ <hr></hr>
+ <TempConverter />
     </div>
   </React.StrictMode>,
   document.getElementById('root')
