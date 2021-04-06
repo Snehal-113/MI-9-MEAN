@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import IcedecApp from './components/icedecApp';
+import CurrencyApp from './components/currencyApp';
+import TempApp from './components/tempApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <IcedecApp/>
+    <CurrencyApp/>
+    <TempApp/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
