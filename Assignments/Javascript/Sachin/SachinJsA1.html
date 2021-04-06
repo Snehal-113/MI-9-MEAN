@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A1_B2</title>
+</head>
+<body>
+  <h1 style="text-align: center;">Swapping Of Two Numbers</h1>
+  A: <input type="text" id="input1" name="val1" size="5">&nbsp;&nbsp;
+  B: <input type="text" id="input2" name="val2" size="5">
+  <button button type="text" onclick="swapeWithThirdVariable()">Method1</button>
+  <button button type="text" onclick="swapeWithoutThirdVariable()">Method2</button>
+  <h2>Method 1: with temprory variable</h2>
+  <p id="resultm1"></p>
+  <h2>Method 2: without temprory variable</h2>
+  <p id="resultm2"></p>
+
+  <!-- JavaScript -->
+  <script language="JavaScript">
+
+    function swapeWithThirdVariable() {
+
+      var input1, input2, temp;
+      input1 = parseInt(document.getElementById("input1").value);
+      input2 = parseInt(document.getElementById("input2").value);
+      temp = input1;
+      input1 = input2;
+      input2 = temp;
+      document.getElementById("resultm1").innerHTML = "After swapping (method1) - A : " + input1 + " and B : " + input2
+    }
+    function swapeWithoutThirdVariable() {
+      var input1, input2;
+      input1 = parseInt(document.getElementById("input1").value);
+      input2 = parseInt(document.getElementById("input2").value);
+      input1 = input1 + input2;
+      input2 = input1 - input2;
+      input1 = input1 - input2;
+      document.getElementById("resultm2").innerHTML = "After swapping (method2) - A : " + input1 + " and B : " + input2
+    }
+  </script>
+</body>
+</html>
