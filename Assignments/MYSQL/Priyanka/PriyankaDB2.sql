@@ -59,18 +59,18 @@ LIMIT 0,6;
 # Q10. Display the customer details of the cutomers whose firstname starts with J and state is not null.
 SELECT *
 FROM customers
-WHERE (customerName LIKE 'J%' AND state != null);
+WHERE (customerName LIKE 'J%' AND state IS NOT NULL);
 /*Q11. Display the customer details of the cutomers whose firstname starts with J and state is not null in
 descending order of creditlimit.*/
 SELECT *
 FROM customers
-WHERE (customerName LIKE 'J%' AND state != null)
+WHERE (customerName LIKE 'J%' AND state IS NOT NULL)
 ORDER BY creditLimit DESC;
 /*Q12.Display the customer details of the first two cutomers whose firstname starts with J and state is not
 null in descending order of creditlimit.*/
 SELECT *
 FROM customers
-WHERE (customerName LIKE 'J%' AND state != null)
+WHERE (customerName LIKE 'J%' AND state IS NOT NULL)
 LIMIT 0,2;
 
 
