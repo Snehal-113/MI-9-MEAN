@@ -54,10 +54,10 @@ tempDesc VARCHAR(20));
 DROP TABLE temp;
 
 #6 Display all the employees whose first name start from F.
-SELECT * FROM employees WHERE firstName LIKE '%F';
+SELECT * FROM employees WHERE firstName LIKE 'F%';
 
 #7 Display all the employees whose first name has exactly 6 characters and lastname ends with n;
-SELECT * FROM employees WHERE firstName LIKE '______' AND lastName LIKE 'n%';
+SELECT * FROM employees WHERE firstName LIKE '______' AND lastName LIKE '%n';
 
 #8 Display the officeCode,postalcode and city of country USA(use table offices)
 SELECT officeCode, postalCode, city FROM offices WHERE  country = 'USA';
