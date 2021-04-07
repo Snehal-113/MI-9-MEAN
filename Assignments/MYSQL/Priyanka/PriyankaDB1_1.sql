@@ -19,7 +19,7 @@ from customers;
 # Q6 Display the details of customers where the state is null.
 SELECT * 
 FROM customers
-WHERE state = null;
+WHERE state IS NULL;
 # Q7 Display the details of customers who are from country France.
 SELECT * 
 FROM customers
@@ -66,8 +66,7 @@ AND (creditLimit+2000) <85000;
 #USING BETWEEN statement 16. Display only those records whose creditlimit after inceasing by 2000 is between 70000 and 90000.
 SELECT  * ,creditLimit+2000
 FROM  customers
-WHERE creditLimit between 70000 
-AND  85000;
+WHERE(creditLimit+2000) BETWEEN 70000 AND 85000;
 
 
 
