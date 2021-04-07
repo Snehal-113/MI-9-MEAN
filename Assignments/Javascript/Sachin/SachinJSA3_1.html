@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> Leap Year</title>
+    </head>
+    <body>
+        <label for="yr">Year  : </label>
+        <input type="text" id="yr" name="year">
+        <button type="button" onclick="LYear()"> Show</button>
+        <p id="pid"></p>
+    <script language="JavaScript">
+        function LYear(){
+            var y;
+            y= document.getElementById("yr").value;
+            if(y % 4 == 0)
+            {
+                document.getElementById("pid").innerHTML=y+" is a leaf year";
+            }
+            else{
+                document.getElementById("pid").innerHTML=y+"is not leaf year";
+            }
+        }
+    </script>
+    </body>
+</html>

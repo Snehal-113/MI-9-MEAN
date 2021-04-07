@@ -1,0 +1,19 @@
+<head></head>
+    <body>
+        <label for="num">Enter a number:</label>
+        <input type="text" id="num" name="num">
+        <button type="button" onclick="evenorodd()">Check</button>
+        <p id="pid"></p>
+        <script language="JavaScript">
+            function evenorodd(){
+                var a = parseInt(document.getElementById("num").value);
+                if(a % 2 == 0){
+                    document.getElementById("pid").innerHTML=a+"is Even Number";
+                }
+                else{
+                    document.getElementById("pid").innerHTML=a+"is odd Number";
+                }
+            }
+        </script>
+    </body>
+</html> 

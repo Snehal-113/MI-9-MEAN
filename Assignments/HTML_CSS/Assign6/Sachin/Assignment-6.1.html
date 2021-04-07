@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<title>form2</title>
+</head>
+<body>
+<form>
+    <label>Age:</label>
+    <input type="radio" id="less than 18" name="Age" value="less than 18s">
+    <label for="less than 18">less than 18</label>
+    <input type="radio" id="18-25" name="Age" value="18-25">
+    <label for="18-25">18-25</label>
+    <input type="radio" value="26-40" name="Age">
+    <label for="26-40">26-40</label>
+    <style>
+        .frmt_cls{
+            background-color: darkturquoise;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border: 1px;
+        }
+        .frmt_font{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: right;
+        }
+        </style>
+<h2 class="frm_cls frmt_font" style="background-color: darkturquoise;">Profesinal Details</h2>
+
+    <fieldset>
+    <legend>Academic Details</legend>
+<label>Skill Set:</label>
+<input type="checkbox" id="chtml" name="course" value="HTML">
+<label for="chtml">HTMl</label>
+<input type="checkbox" id="cjsp" name="course1" value="javascript">
+
+<label for="cjp">Javascript</label>
+ <input type="checkbox" id="java" name="course" value="java">
+ <label for="cjp">Java</label> 
+ <input type="checkbox" id="oracle" name="course" value="orcale">
+ <label for="oracle">Oracle</label>
+<br></br>
+
+<label for="Univercity">Univercity:&nbsp;<label>
+    <input type="text" id="i Univercity" name="Univercity">
+  <br><br>
+  <label for="Expertise">Area of Expertise</label>
+    <select id="batch" name="batch">
+        <option value="Software">Software</option>
+        <option value="training">training</option>
+        <option value="Networking">Networking</option>
+        <option value="Managment">Managment</option>
+        <option value="ios Developer">ios Developer</option>
+        </select>
+        </fieldset>
+        <br>
+        <fieldset>
+           <legend>RESUME</legend>
+           Upload Resume:<input type="file" name ="resume"><br><br>
+           comments:<label for="comments">
+           <textarea name="" id="" cols="20" rows="5"></textarea>
+            </fieldset>
+            <br>
+            <button type="button" align="center">Submit</button>    
+   </form>
+    
+        </body>
+   </html>
