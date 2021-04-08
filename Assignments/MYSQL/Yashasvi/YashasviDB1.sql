@@ -24,7 +24,7 @@ SELECT customerName,phone,city,country FROM customers;
 #Q6. Display the details of customers where the state is null.
 SELECT customerName,customerName
 FROM customers
-WHERE state=NULL;
+WHERE state IS NULL;
 
 #Q7. Display the details of customers who are from country France.
 SELECT*
