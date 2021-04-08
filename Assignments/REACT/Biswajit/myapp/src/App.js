@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import IncDec from "./Components/Assn1";
+import CurrencyConverter from "./Components/Assn2";
+import TempConverter from "./Components/Assn3";
 
 function App() {
   return (
     <div className="App">
-      <h1>This is my server</h1>
       <IncDec />
+      <CurrencyConverter />
+      <TempConverter />
     </div>
   );
 }
