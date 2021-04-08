@@ -50,7 +50,12 @@ SELECT * FROM employees WHERE officeCode IN (1,3,4);
 SELECT * FROM customers WHERE  creditLimit between 70000 AND 85000; 
 
 #15 Increase the credit limit by 2000 for all and display the customer code,name and credit limit.
-SELECT customerNumber CustomerName, creditLimit FROM customers
-WHERE (creditLimit+2000) >= 70000 AND (creditLimit+2000) <= 850000;
+select postalCode,customerName from customers where creaditLimit = creaditLimit + 2000 ;
+
+#16. Display only those records whose creditlimit after inceasing by 2000 is between 70000 and 90000.
+ SELECT  creditLimit+2000
+FROM  customers
+WHERE (creditLimit+2000) >70000
+AND (creditLimit+2000) <85000;
 
 
