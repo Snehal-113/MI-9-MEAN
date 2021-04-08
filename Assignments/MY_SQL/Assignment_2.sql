@@ -1,52 +1,52 @@
-
-courseId   number
-courseName varchar(20)
+/* Q1.
+courseId   NUMBER
+courseName VARCHAR(20)
 add following constraints to it
-courseId – Primary Key
-courseName – Not Null and Unique
+courseId – PRIMAY KEY
+courseName – NOT NULL and UNIQUE
 */
 
 CREATE  TABLE course(
 courseId char,
-courseName varchar(20) not null,
-primary key(courseId)
+courseName VARCHAR(20) NOT NULL,
+PRIMARY KEY(courseId)
 );
 DESCRIBE course;
 
 /*#Q2. Create a table student with the following details
-studId number,studName varchar(20),studAadhar varchar(12),mobileNo varchar(8),
-stream varchar(10) ,studCourseId number
+studId NUMBER,studName VARCHAR(20),studAadhar VARCHAR(12),mobileNo VARCHAR(8),
+stream VARCHAR(10) ,studCourseId NUMBER
 
 add following constraints to it
-studId – Primary Key,studName – Not Null,studAadhar – unique,stream – check(science,commerce)studCourseId – 
+studId – PRIMAY KEY,studName – NOT NULL,studAadhar – UNIQUE,stream – check(science,commerce)studCourseId – 
 Foreign key reference courseID from crourse table */
 
 CREATE  TABLE emp(
-empno  int primary key,
-empname varchar(20) not null,
-address varchar(29),
-aadharno char(12) unique,
-salary double(7,2) not null check(salary>0),
+empno  int PRIMAY KEY,
+empname VARCHAR(20) NOT NULL,
+address VARCHAR(29),
+aadharno char(12) UNIQUE,
+salary double(7,2) NOT NULL check(salary>0),
 dname int,
-foreign key(dname)
-references dep(depno)
-on update restrict
-on delete cascade);
+FOREIGN KEY (dname)
+REFERENCE dep(depno)
+ON UPDATE RESTRICt
+ON DELET CASCADE);
 DESCRIBE emp ;
 
-/* Q3 . Alter the student table – add a column address varchar(30) and DOB Date
-modify mobieNo varchar(10) */
+/* Q3 . Alter the student table – add a column address VARCHAR(30) and DOB Date
+modify mobieNo VARCHAR(10) */
 ALTER TABLE student
-ADD address varchar(30),	
-ADD Date1 date;
+ADD address VARCHAR(30),	
+ADD Date1 DATE;
 
 
 /*Q4. Create a table temp
-tempid number,tempDesc varchar(20) */
+tempid NUMBER,tempDesc VARCHAR(20) */
 
 CREATE  TABLE temp(
-tempId int,
-tempDesc varchar(20)
+tempId INT,
+tempDesc VARCHAR(20)
 );
 DESCRIBE temp;
 
@@ -74,10 +74,9 @@ SELECT firstName FROM employees WHERE firstName LIKE '______' ORDER BY firstName
 SELECT* FROM customers WHERE customerName LIKE 'J%' AND  state is NOT NULL;
 
 /* Q11. Display the  customer details of the cutomers whose firstname starts with J and state is 
-not null in descending order of creditlimit. */
+NOT NULL in descending order of creditlimit. */
 SELECT * FROM customers WHERE customerName like 'J%' AND state IS NOT NULL ORDER BY creditLimit DESC;
 
 
-#Q12. Display the customer details of the cutomers whose firstname starts with J AND state is NOT NULL IN
-#escendINg order of creditlimit.
+/* Q12. Display the customer details of the cutomers whose firstname starts with J AND state is NOT NULL IN escendINg order of creditlimit.*/
 SELECT * FROM customers WHERE customerName LIKE 'J%' AND state is NOT NULL ORDER BY creditLimit DESC;
