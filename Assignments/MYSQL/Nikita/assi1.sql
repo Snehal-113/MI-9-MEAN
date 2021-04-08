@@ -46,9 +46,9 @@ WHERE productLine = 'Motorcycles'
 AND quantityinStock > 6000;
 
 #10 Display all products whose productline is cars.
-SELECT *
+SELECT*
 FROM products
-WHERE productLine = 'Classic Cars';
+WHERE productLine IN("Vintage Cars", "Classic Cars");
 
 #11. Display all the employees who are Sales Rep.
 SELECT * FROM employees;
