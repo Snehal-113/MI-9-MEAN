@@ -42,18 +42,15 @@ SELECT * FROM employees WHERE jobTitle = 'Sales Rep';
 
 # 12 Display all the employees with office code 4.
 SELECT * FROM employees WHERE officeCode = 4;
-
 #13 Display all the employees with office code 1,3 and 4.
 SELECT * FROM employees WHERE officeCode IN (1,3,4);
-
 #14 Display all the customers with credit limit between 70000 and 85000.
 SELECT * FROM customers WHERE  creditLimit between 70000 AND 85000; 
-
 #15 Increase the credit limit by 2000 for all and display the customer code,name and credit limit.
-SELECT customerNumber CustomerName, creditLimit FROM customers
-WHERE (creditLimit+2000) >= 70000 AND (creditLimit+2000) <= 850000;
-
-
-
+SELECT customerNumber, customerName , creditLimit+2000
+FROM customers;
 #16 Display only those records whose creditlimit after inceasing by 2000 is between 70000 and 90000.
-
+SELECT customerNumber, customerName , creditLimit+2000
+FROM customers
+WHERE (creditLimit+2000) > 70000
+AND (creditLimit+2000) <= 85000;
