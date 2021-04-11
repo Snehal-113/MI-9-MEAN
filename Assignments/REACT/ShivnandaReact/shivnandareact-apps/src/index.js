@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Counter from './ShivComponent/AssignmentQ1';
+import Currency from './ShivComponent/Assignent2_Q1';
+import Temp from './ShivComponent/Assignment2_Q2';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Counter/>
+    <Currency />
+    <Temp />
   </React.StrictMode>,
   document.getElementById('root')
 );
